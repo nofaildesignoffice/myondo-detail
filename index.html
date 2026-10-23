@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마이온도 심부발열 밴드</title>
+<meta name="description" content="전기·충전·데우기 없이 배와 허리에 두르는 마이온도 원적외선 심부발열 밴드 상세페이지 (리뉴얼 v1)">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --ink:#151314; --ink2:#2a2627; --paper:#ffffff; --stone:#f4f1ee; --line:#e4dfdb;
+  --muted:#6f6869; --soft:#9a9293;
+  --wine:#7d1a35; --berry:#b8325a; --rose:#f6e6ea; --warm:#fff6ef;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:#d9d4d0;color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:16px;line-height:1.65;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
+img,video{display:block;width:100%;height:auto}
+.page{max-width:480px;margin:0 auto;background:var(--paper);overflow:hidden}
+section{position:relative;padding:64px 22px}
+.bg-stone{background:var(--stone)} .bg-ink{background:var(--ink);color:#fff} .bg-warm{background:var(--warm)}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--berry);text-transform:uppercase;margin-bottom:14px}
+.bg-ink .eyebrow{color:#ff8fae}
+h2.t{font-size:28px;line-height:1.38;font-weight:800;letter-spacing:-.035em;margin-bottom:16px}
+h2.t em{font-style:normal;color:var(--wine)}
+.bg-ink h2.t em{color:#ff8fae}
+.lead{font-size:16px;color:var(--muted);line-height:1.75}
+.bg-ink .lead{color:#c9c1c3}
+.center{text-align:center}
+.note{font-size:13px;color:var(--soft);line-height:1.6;margin-top:18px}
+.bg-ink .note{color:#8f8789}
+.full{margin-left:-22px;margin-right:-22px;width:calc(100% + 44px);max-width:none}
+.round{border-radius:var(--r);overflow:hidden}
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt32{margin-top:32px}.mt40{margin-top:40px}
+
+/* dot motif */
+.dots{background-image:radial-gradient(circle,rgba(184,50,90,.55) 2.2px,transparent 2.6px);background-size:16px 16px}
+
+/* reveal */
+.rv-in{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv-in.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv-in{opacity:1;transform:none;transition:none}}
+
+/* review-mode notes (?review) */
+.rvnote{display:none}
+html.review .rvnote{display:block;margin:12px 0;padding:10px 12px;border:1.5px dashed #d08a00;background:#fff8e1;color:#7a5200;font-size:12.5px;line-height:1.55;border-radius:10px;text-align:left;letter-spacing:0}
+html.review .rvnote b{color:#a35f00}
+.rv-only{display:none}
+html.review .rv-only{display:block}
+.rvbar{display:none}
+html.review .rvbar{display:block;position:sticky;top:0;z-index:50;background:#d08a00;color:#fff;font-size:12px;padding:8px 14px;text-align:center}
+
+/* HERO */
+.hero{padding:0;background:var(--ink);color:#fff}
+.hero-img{position:relative}
+.hero-img img{aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,19,20,0) 55%,rgba(21,19,20,.92) 100%)}
+.hero-tag{position:absolute;left:22px;top:22px;z-index:2;font-size:12px;font-weight:700;letter-spacing:.06em;background:rgba(255,255,255,.92);color:var(--wine);padding:7px 12px;border-radius:99px}
+.hero-body{padding:6px 22px 40px;margin-top:-90px;position:relative;z-index:2}
+.hero h1{font-size:33px;line-height:1.3;font-weight:800;letter-spacing:-.045em}
+.hero h1 span{color:#ff8fae}
+.hero .sub{margin-top:14px;color:#d6cfd1;font-size:16px}
+.hero .sub b{color:#fff}
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:24px}
+.chip{border:1px solid #3d3739;border-radius:12px;padding:12px 12px;font-size:14px;font-weight:600;display:flex;gap:8px;align-items:center}
+.chip i{width:8px;height:8px;border-radius:50%;background:#ff6f96;flex:none}
+.heads-up{display:block;margin-top:22px;background:#fff;color:var(--ink);border-radius:14px;padding:16px 16px 16px 18px;text-decoration:none;border-left:5px solid var(--berry)}
+.heads-up strong{display:block;font-size:16px;line-height:1.45}
+.heads-up span{display:block;font-size:14px;color:var(--muted);margin-top:4px}
+.heads-up u{color:var(--wine);font-weight:700;text-decoration:none}
+
+/* chat */
+.chat{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.bub{max-width:86%;padding:13px 16px;border-radius:18px 18px 18px 4px;background:#fff;box-shadow:0 1px 0 var(--line);font-size:15.5px;line-height:1.55;opacity:0;transform:translateY(10px);transition:all .5s ease}
+.bub:nth-child(even){align-self:flex-end;border-radius:18px 18px 4px 18px;background:var(--rose)}
+.chat.on .bub{opacity:1;transform:none}
+.chat.on .bub:nth-child(2){transition-delay:.35s}.chat.on .bub:nth-child(3){transition-delay:.7s}.chat.on .bub:nth-child(4){transition-delay:1.05s}.chat.on .bub:nth-child(5){transition-delay:1.4s}.chat.on .bub:nth-child(6){transition-delay:1.75s}
+@media (prefers-reduced-motion:reduce){.bub{opacity:1;transform:none}}
+
+.bridge{padding:56px 22px;text-align:center}
+.bridge p{font-size:22px;line-height:1.5;font-weight:700;letter-spacing:-.03em}
+.bridge p em{font-style:normal;color:#ff8fae}
+
+/* compare */
+.cmp{margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;font-size:13.5px}
+.cmp table{width:100%;border-collapse:collapse;table-layout:fixed}
+.cmp th,.cmp td{padding:12px 6px;text-align:center;border-bottom:1px solid var(--line);vertical-align:middle;line-height:1.45}
+.cmp thead th{font-size:12.5px;font-weight:700;color:var(--muted);background:#faf8f6}
+.cmp tbody th{font-size:12.5px;color:var(--muted);font-weight:600;width:20%}
+.cmp .me{background:var(--rose);color:var(--wine);font-weight:700}
+.cmp thead .me{background:var(--wine);color:#fff}
+.cmp tr:last-child td,.cmp tr:last-child th{border-bottom:0}
+.cmp .weak{color:var(--ink);font-weight:700}
+
+/* solution */
+.sol{padding-bottom:0}
+.sol .nuk{margin:34px auto 0;width:92%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.sol-band{height:120px;margin:0 -22px;opacity:.9}
+.terms{margin-top:28px;display:grid;gap:10px}
+.term{border:1px solid #3d3739;border-radius:14px;padding:16px}
+.term b{display:block;font-size:15px;color:#fff}
+.term span{display:block;font-size:14px;color:#bdb4b6;margin-top:4px}
+
+/* timeline */
+.tl{margin-top:32px;position:relative;padding-left:30px}
+.tl::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--line),var(--berry))}
+.step{position:relative;background:#fff;border-radius:16px;padding:18px 18px;margin-bottom:12px}
+.step::before{content:"";position:absolute;left:-26px;top:22px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--berry)}
+.step:first-child::before{border-color:#cfc7c9}
+.step .when{font-size:12.5px;font-weight:700;color:var(--berry);letter-spacing:.02em}
+.step:first-child .when{color:var(--soft)}
+.step h3{font-size:18px;line-height:1.4;margin-top:3px;letter-spacing:-.03em}
+.step p{font-size:14.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+.check{margin-top:26px;background:var(--ink);color:#fff;border-radius:18px;padding:22px 20px}
+.check h3{font-size:18px;letter-spacing:-.03em}
+.check ol{list-style:none;margin-top:14px;display:grid;gap:10px;counter-reset:c}
+.check li{counter-increment:c;display:flex;gap:12px;font-size:14.5px;line-height:1.55;color:#ddd5d7}
+.check li::before{content:counter(c);flex:none;width:24px;height:24px;border-radius:50%;background:var(--berry);color:#fff;font-size:13px;font-weight:700;display:grid;place-items:center;margin-top:1px}
+.check li b{color:#fff}
+.cs{margin-top:16px;padding-top:14px;border-top:1px solid #3a3436;font-size:14px;color:#c9c1c3}
+.cs b{color:#fff}
+
+/* media card */
+.vid{border-radius:var(--r);overflow:hidden;background:#000}
+.cap{font-size:13px;color:var(--soft);margin-top:10px;text-align:center}
+
+/* scenes */
+.scenes{display:grid;gap:14px;margin-top:28px}
+.scene{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;background:#fff;border-radius:16px;overflow:hidden}
+.scene img{height:150px;object-fit:cover}
+.scene div{padding:12px 14px 12px 0}
+.scene b{display:block;font-size:16.5px;line-height:1.4;letter-spacing:-.03em}
+.scene span{display:block;font-size:14px;color:var(--muted);margin-top:6px;line-height:1.55}
+
+/* reviews */
+.revs{display:grid;gap:12px;margin-top:28px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.rev .star{color:var(--berry);font-size:13px;letter-spacing:2px}
+.rev p{font-size:15.5px;line-height:1.65;margin-top:8px}
+.rev small{display:block;margin-top:10px;font-size:12.5px;color:var(--soft)}
+
+/* renewal */
+.renew{display:grid;gap:10px;margin-top:24px}
+.renew div{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:14px;background:#fff}
+.renew i{flex:none;width:34px;height:34px;border-radius:50%;background:var(--wine);color:#fff;font-style:normal;font-weight:800;font-size:14px;display:grid;place-items:center}
+.renew b{display:block;font-size:16px}
+.renew span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.mats{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.mats span{font-size:13px;padding:6px 11px;border-radius:99px;background:#fff;border:1px solid var(--line)}
+
+/* docs */
+.docs{display:grid;gap:10px;margin-top:26px}
+.doc{background:#fff;border-radius:14px;padding:16px 16px 16px 18px;border-left:4px solid var(--wine)}
+.doc .k{font-size:12px;font-weight:700;color:var(--berry);letter-spacing:.04em}
+.doc b{display:block;font-size:15.5px;line-height:1.45;margin-top:3px}
+.doc span{display:block;font-size:13px;color:var(--muted);margin-top:5px;line-height:1.55}
+.subh{font-size:19px;font-weight:800;letter-spacing:-.03em;margin-top:40px}
+.tests{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.test{background:#fff;border-radius:14px;padding:16px 14px}
+.test .v{font-size:24px;font-weight:800;letter-spacing:-.03em;color:var(--wine);line-height:1.2}
+.test .v small{font-size:13px;font-weight:700}
+.test b{display:block;font-size:14px;margin-top:6px}
+.test span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5}
+
+/* size */
+.sizes{display:grid;gap:12px;margin-top:26px}
+.size{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.size .h{display:flex;align-items:baseline;gap:10px}
+.size .h b{font-size:30px;font-weight:800;color:var(--wine);line-height:1}
+.size .h span{font-size:15px;font-weight:700}
+.size dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:14px;font-size:14.5px}
+.size dt{color:var(--muted)}
+.size dd{font-weight:600}
+
+/* how-to */
+.howto{display:grid;gap:18px;margin-top:28px}
+.how img{border-radius:16px;aspect-ratio:3/2;object-fit:cover}
+.how .n{font-size:13px;font-weight:800;color:var(--berry);margin-top:12px}
+.how b{display:block;font-size:17px;letter-spacing:-.03em;margin-top:2px}
+.how span{display:block;font-size:14.5px;color:var(--muted);margin-top:4px}
+.tips{margin-top:24px;display:grid;gap:8px}
+.tip{display:flex;gap:10px;font-size:14.5px;background:#fff;border-radius:12px;padding:13px 14px;line-height:1.55}
+.tip b{flex:none;color:var(--wine)}
+
+/* care */
+.care{display:grid;gap:10px;margin-top:24px}
+.care div{background:#fff;border-radius:14px;padding:16px}
+.care b{display:block;font-size:16px}
+.care span{display:block;font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.6}
+
+/* caution */
+.warn{margin-top:22px;border:2px solid var(--ink);border-radius:16px;padding:20px}
+.warn h3{font-size:17px}
+.warn ul{list-style:none;margin-top:12px;display:grid;gap:7px}
+.warn li{font-size:14.5px;padding-left:16px;position:relative;line-height:1.55}
+.warn li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--berry)}
+.stop{margin-top:12px;background:var(--rose);border-radius:14px;padding:16px;font-size:14.5px;line-height:1.6}
+.stop b{color:var(--wine)}
+
+/* faq */
+.faq{margin-top:24px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;font-size:16px;font-weight:700;position:relative;line-height:1.45}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q.";color:var(--berry);margin-right:6px}
+.faq summary::after{content:"";position:absolute;right:6px;top:24px;width:9px;height:9px;border-right:2px solid var(--soft);border-bottom:2px solid var(--soft);transform:rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);top:28px}
+.faq .a{padding:0 4px 20px;font-size:15px;color:var(--muted);line-height:1.7}
+.faq .a b{color:var(--ink)}
+
+/* closing */
+.closing{padding:0;position:relative;background:var(--ink);color:#fff}
+.closing img{aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;opacity:.88}
+.closing .txt{position:absolute;left:0;right:0;bottom:0;padding:120px 22px 44px;background:linear-gradient(180deg,rgba(21,19,20,0),rgba(21,19,20,.95) 55%)}
+.closing p{font-size:27px;line-height:1.4;font-weight:800;letter-spacing:-.04em}
+.closing p em{font-style:normal;color:#ff8fae}
+.closing small{display:block;margin-top:14px;font-size:14px;color:#bdb4b6;letter-spacing:.2em}
+
+/* notice */
+.notice{padding:48px 22px 56px;background:#faf9f8}
+.notice h3{font-size:15px;font-weight:800;margin:28px 0 10px;letter-spacing:.02em}
+.notice h3:first-child{margin-top:0}
+.notice ul{list-style:none;display:grid;gap:5px}
+.notice li{font-size:13.5px;color:var(--muted);padding-left:12px;position:relative;line-height:1.6}
+.notice li::before{content:"·";position:absolute;left:2px}
+.info{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
+.info th,.info td{border-top:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top;line-height:1.55}
+.info th{width:30%;color:var(--muted);font-weight:600;background:#f3f0ed}
+.info tr:last-child th,.info tr:last-child td{border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <div class="hero-img">
+    <img src="img/hero.jpg" alt="허리에 마이온도 밴드를 두른 모델" fetchpriority="high">
+    <span class="hero-tag">2026 리뉴얼 · 버건디 도트</span>
+  </div>
+  <div class="hero-body">
+    <h1>물 끓이고, 충전하고, 붙이던<br>배 보온<span>.</span><br>이제 <span>두르는 밴드</span> 하나로</h1>
+    <p class="sub">전기도, 충전도, 데우기도 필요 없습니다.<br><b>필요한 건 오직 나의 체온.</b><br>마이온도 원적외선 심부발열 밴드</p>
+    <div class="chips">
+      <div class="chip"><i></i>전원·충전 불필요</div>
+      <div class="chip"><i></i>벨크로로 감아 고정</div>
+      <div class="chip"><i></i>옷 안에 착용</div>
+      <div class="chip"><i></i>국내 생산</div>
+    </div>
+    <a class="heads-up" href="#expect">
+      <strong>단, 착용 직후에는 열감이 없을 수 있어요.</strong>
+      <span>느끼는 시점과 세기는 사람마다 다릅니다. <u>구매 전 확인하기 ↓</u></span>
+    </a>
+    
+  </div>
+</section>
+
+<!-- 2. PROBLEM -->
+<section class="bg-stone" id="problem">
+  <span class="eyebrow">Sound familiar?</span>
+  <h2 class="t rv-in">따뜻해지려고<br>이만큼 하고 있었다면</h2>
+  <div class="chat" id="chat">
+    <div class="bub">몸이 늘 차가운 편이라<br>핫팩을 주머니에 달고 살아요.</div>
+    <div class="bub">물주머니는 금방 식고,<br>물 끓여서 담고 버리는 게 일이에요.</div>
+    <div class="bub">유선 찜질기는 콘센트 옆에서만 쓸 수 있잖아요.</div>
+    <div class="bub">충전식 복대는 또 충전을 챙겨야 하고요.</div>
+    <div class="bub">배에 올려두는 찜질기는 움직일 때마다 흘러내려요.</div>
+    <div class="bub">붙이는 핫팩은 쓸 때마다<br>새로 뜯어야 하고요.</div>
+  </div>
+  <p class="note center">온열 제품 사용 후기에 나온 불편 사례를 재구성했습니다.</p>
+  
+</section>
+
+<!-- 3. BRIDGE -->
+<section class="bridge bg-ink">
+  <p class="rv-in">따뜻함이 필요한 날은 많은데<br>준비가 번거롭게 느껴졌다면,<br><em>방법을 바꿔볼 때입니다.</em></p>
+</section>
+
+<!-- 4. COMPARE (선택 기준) -->
+<section id="compare">
+  <span class="eyebrow">How to choose</span>
+  <h2 class="t rv-in">배 보온, 이제<br>'얼마나 뜨거운가'보다<br><em>'얼마나 간편한가'</em>로</h2>
+  <p class="lead">매일 쓰려면 준비와 뒷정리가 가벼워야 합니다. 사용 방식만 놓고 비교해 보세요.</p>
+  <div class="cmp rv-in">
+    <table>
+      <thead><tr><th></th><th>물주머니</th><th>전기 찜질기<br>(유선·충전식)</th><th>붙이는<br>핫팩</th><th class="me">마이온도</th></tr></thead>
+      <tbody>
+        <tr><th>준비</th><td>물 끓여<br>담기</td><td>전원 연결<br>또는 충전</td><td>포장 뜯어<br>붙이기</td><td class="me">감고<br>벨크로 고정</td></tr>
+        <tr><th>전원</th><td>불필요</td><td>필요</td><td>불필요</td><td class="me">불필요</td></tr>
+        <tr><th>쓰고<br>나서</th><td>물 버리고<br>말리기</td><td>선 정리<br>또는 재충전</td><td>버리고<br>새로 구매</td><td class="me">풀어서<br>보관</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">온수 주입식 물주머니, 일회용 부착형 핫팩 등 제품군별 일반적인 사용 방식 비교이며, 성능 비교가 아닙니다.</p>
+  <div class="stop mt16"><b>꼭 함께 알아 두세요.</b> 마이온도는 착용 직후 열감이 없을 수 있고, 느끼는 시점과 세기에 개인차가 있습니다.</div>
+</section>
+
+<!-- 5. SOLUTION -->
+<section class="bg-ink sol" id="solution">
+  <span class="eyebrow">myONDO</span>
+  <h2 class="t rv-in">필요한 건 오직,<br><em>나의 체온</em></h2>
+  <p class="lead">마이온도는 전원 장치가 없는 밴드입니다.<br>안쪽 버건디 도트 면이 몸 쪽을 향하도록 감아 고정합니다. 데우거나 충전할 일이 없습니다.</p>
+  <div class="terms">
+    <div class="term"><b>버건디 광물 도트</b><span>밴드 안쪽에 촘촘히 찍힌 도트입니다. 상품정보에 표시된 재질은 그래핀·게르마늄·규소·티타늄 등입니다.</span></div>
+    <div class="term"><b>네오플란 원단 + 벨크로</b><span>허리에 감아 벨크로로 고정하는 방식이라, 손으로 받치거나 배 위에 올려둘 필요가 없습니다.</span></div>
+  </div>
+  
+  <img class="nuk rv-in" src="img/nukki.png" alt="마이온도 밴드 제품컷">
+  <div class="sol-band dots" aria-hidden="true"></div>
+</section>
+
+<!-- 6. EXPECT (핵심 기대치 안내) -->
+<section class="bg-stone" id="expect">
+  <span class="eyebrow">Before you buy</span>
+  <h2 class="t rv-in">처음 두른 날,<br>아무 느낌이 없을 수 있어요</h2>
+  <p class="lead">마이온도는 두르자마자 뜨거워지는 제품이 아닙니다. 따뜻함을 느끼는 시점과 세기는 사람마다 다릅니다. 처음 사용할 때 참고할 내용을 정리했습니다.</p>
+  <div class="tl">
+    <div class="step rv-in"><span class="when">두른 직후</span><h3>열감이 거의 없을 수 있어요</h3><p>전원이 없는 밴드라 '켜지는 순간'이 없습니다.</p></div>
+    <div class="step rv-in"><span class="when">착용하는 동안</span><h3>체감 시점은 사람마다 달라요</h3><p>브랜드 안내 기준으로, 한 시간 남짓에 느끼는 분도 있고 며칠 이상 걸리는 분도 있습니다.</p></div>
+    <div class="step rv-in"><span class="when">너무 뜨겁거나 피부가 불편하면</span><h3>바로 풀어 주세요</h3><p>과도한 열감이나 따가움·가려움·붉어짐이 생기면 착용을 멈추고 고객센터에 문의해 주세요.</p></div>
+    <div class="step rv-in"><span class="when">벗은 뒤</span><h3>따뜻함이 다시 느껴질 수도 있어요</h3><p>브랜드 안내에 따르면, 벗은 뒤 샤워나 운동을 할 때 따뜻함을 다시 느끼는 경우가 있습니다. 느끼지 못하는 분도 있으며, 지속 시간을 보장하지 않습니다.</p></div>
+  </div>
+  
+  <div class="check rv-in">
+    <h3>느낌이 계속 없다면, 이것부터 확인하세요</h3>
+    <ol>
+      <li><span><b>도트 면이 피부에 닿았나요?</b><br>옷 위가 아니라 맨살에 닿아야 합니다.</span></li>
+      <li><span><b>너무 느슨하거나 너무 조이지 않나요?</b><br>코르셋처럼 조이지 말고, 들뜨지 않을 만큼만 감아 주세요.</span></li>
+      <li><span><b>피부가 많이 건조한가요?</b><br>브랜드 안내에 따라 밴드 안쪽에 물을 살짝 뿌린 뒤 착용해 보세요. 매번 하실 필요는 없습니다.</span></li>
+    </ol>
+    <p class="cs">그래도 느낌이 없다면 <b>고객센터 1577-1857</b> 또는 <b>카카오톡 채널 'myondo'</b>로 착용 상태를 알려 주세요.</p>
+  </div>
+</section>
+
+<!-- 7. WEAR -->
+<section id="wear">
+  <span class="eyebrow">Easy to wear</span>
+  <h2 class="t rv-in">두르는 데 필요한 건<br><em>벨크로 한 번</em></h2>
+  <p class="lead">매번 새 포장을 뜯거나 선을 꽂을 필요 없이, 아침에 옷 입기 전 허리에 감고 고정하면 됩니다.</p>
+  <div class="vid mt24 rv-in"><video src="img/v_wear.mp4" poster="img/v_wear.jpg" muted loop playsinline preload="none" aria-label="밴드를 허리에 감아 고정하는 영상"></video></div>
+  <img class="round mt16 rv-in" src="img/wear_hidden.jpg" alt="하의 허리선 안으로 밴드를 넣어 입은 모습" loading="lazy">
+  <p class="cap">하의를 밴드 위로 덮어 입을 수 있어요.<br>착용 방법 예시는 리뉴얼 전 제품으로 촬영했습니다. 현재 제품의 안쪽 도트는 버건디입니다.</p>
+  
+</section>
+
+<!-- 8. SCENES -->
+<section class="bg-warm" id="scenes">
+  <span class="eyebrow">Daily routine</span>
+  <h2 class="t rv-in">핫팩을 찾던 순간에,<br>미리 둘러 두세요</h2>
+  <p class="lead">착용 직후 열감이 없을 수 있으니, 필요해지기 전에 미리 두르는 습관이 잘 맞습니다.</p>
+  <div class="scenes">
+    <div class="scene rv-in"><img src="img/model_hands.jpg" alt="" loading="lazy"><div><b>배가 유난히 찬 날,<br>집을 나서기 전에</b><span>출근 준비할 때 둘러 두면, 이동하는 동안 충전하거나 데울 일이 없어요.</span></div></div>
+    <div class="scene rv-in"><img src="img/model_full.jpg" alt="" loading="lazy"><div><b>에어컨 바람 아래,<br>추운 사무실·매장에서</b><span>전원이 필요 없어서 콘센트가 없는 자리에서도 쓸 수 있어요.</span></div></div>
+    <div class="scene rv-in"><img src="img/model_side.jpg" alt="" loading="lazy"><div><b>그날이 다가올 때도<br>평소처럼</b><span>급할 때 꺼내기보다, 평소 루틴으로 두르는 분들께 맞습니다.</span></div></div>
+  </div>
+  
+</section>
+
+<!-- 9. REVIEWS -->
+
+
+<!-- 10. MOOD -->
+<section style="padding:0">
+  <video src="img/v_jacket.mp4" poster="img/v_jacket.jpg" muted loop playsinline preload="none" aria-label="재킷 아래로 밴드를 착용한 모델 영상"></video>
+</section>
+
+<!-- 11. RENEWAL / MATERIAL -->
+<section class="bg-stone" id="renewal">
+  <span class="eyebrow">2026 Renewal</span>
+  <h2 class="t rv-in">2026년,<br>안쪽이 <em>버건디 도트</em>로<br>바뀌었어요</h2>
+  <img class="round mt24 rv-in" src="img/dot_tall.jpg" alt="버건디 도트가 보이는 2026 리뉴얼 밴드" loading="lazy">
+  <div class="renew">
+    <div class="rv-in"><i>1</i><p><b>시그니처 버건디 도트</b><span>밴드 안쪽 도트 컬러가 블랙에서 버건디로 바뀌었습니다.</span></p></div>
+    <div class="rv-in"><i>2</i><p><b>원료를 새로 바꿨습니다</b><span>도트에 들어가는 원료를 변경했습니다.</span></p></div>
+    <div class="rv-in"><i>3</i><p><b>S·M을 하나로, 새 M 사이즈</b><span>기존 S·M 착용 범위를 통합한 새 M 사이즈입니다. L은 그대로입니다.</span></p></div>
+  </div>
+  
+  <p class="subh">제품에 쓰인 소재</p>
+  <div class="mats">
+    <span>네오플란 원단</span><span>그래핀</span><span>게르마늄</span><span>규소</span><span>티타늄</span><span>미네랄 융복합 물질</span><span>바이오스톤</span><span>황토</span>
+  </div>
+  <p class="note">상품정보에 표시된 재질입니다.</p>
+  <img class="round mt24 rv-in" src="img/dot_macro.jpg" alt="버건디 도트 접사" loading="lazy">
+</section>
+
+<!-- 12. DOCUMENTS -->
+<section id="docs">
+  <span class="eyebrow">Documents</span>
+  <h2 class="t rv-in">말 대신,<br>등록된 서류로 보여드릴게요</h2>
+  <p class="lead">마이온도 관련 기술의 한국·미국·일본·중국 특허 등록 자료입니다.</p>
+  <div class="docs">
+    <div class="doc rv-in"><span class="k">KOREA · 2016.05.24 등록</span><b>그래핀과 나노 무기물질을 이용한 자가발열성과 내기능성을 갖는 벨트 첨가용 물질과 그를 이용한 벨트 및 그 제조방법</b></div>
+    <div class="doc rv-in"><span class="k">KOREA · 2017.09.01 등록</span><b>발열 섬유와 그 제조방법</b></div>
+    <div class="doc rv-in"><span class="k">USA · US 10,543,120 B2</span><b>Belt additional substance having self-heating and functionality using graphene and nano inorganic substance, and belt and manufacturing method using the same</b><span>2020.01.28 등록</span></div>
+    <div class="doc rv-in"><span class="k">JAPAN · 特許第6427548号</span><b>그래핀 및 무기 나노물질을 이용한 자기발열성·다기능성 벨트 첨가용 물질, 이를 이용한 벨트 및 그 제조방법</b><span>2018.11.02 등록 · 명칭 번역</span></div>
+    <div class="doc rv-in"><span class="k">CHINA · ZL 2016 1 1160999.1</span><b>자가발열성과 내기능성을 갖는 허리 벨트 및 허리 벨트 발열 부품의 제조방법</b><span>2019.01.11 등록 · 명칭 번역</span></div>
+  </div>
+  <p class="note">특허 등록은 기술에 대한 권리를 뜻하며, 제품의 효능이나 안전성을 인증하는 것은 아닙니다.</p>
+  
+
+  
+  
+</section>
+
+<!-- 13. MADE IN KOREA -->
+<section class="bg-ink" id="korea">
+  <span class="eyebrow">Made in Korea</span>
+  <h2 class="t rv-in">개발부터 생산까지,<br><em>국내에서</em></h2>
+  <div class="vid mt24 rv-in"><video src="img/v_factory.mp4" poster="img/v_factory.jpg" muted loop playsinline preload="none" aria-label="국내 공장에서 원단을 생산하는 영상"></video></div>
+  <p class="cap">국내 생산 공장의 원단 생산 과정</p>
+  
+</section>
+
+<!-- 14. SIZE -->
+<section id="size">
+  <span class="eyebrow">Size guide</span>
+  <h2 class="t rv-in">허리둘레를 재고<br>사이즈를 골라 주세요</h2>
+  <p class="lead">줄자로 허리둘레를 잰 뒤 아래 범위와 비교해 주세요. 두 범위가 겹치는 84~88cm라면 구매 전에 문의해 주세요.</p>
+  <img class="mt24 rv-in" src="img/nukki2.png" alt="마이온도 밴드" loading="lazy">
+  <div class="sizes">
+    <div class="size rv-in"><div class="h"><b>M</b><span>기존 S·M 통합</span></div>
+      <dl><dt>허리둘레</dt><dd>60~88cm</dd><dt>밴드 길이</dt><dd>107cm</dd><dt>밴드 폭</dt><dd>16cm / 13cm</dd></dl></div>
+    <div class="size rv-in"><div class="h"><b>L</b><span>기존과 동일</span></div>
+      <dl><dt>허리둘레</dt><dd>84~106cm</dd><dt>밴드 길이</dt><dd>120cm</dd><dt>밴드 폭</dt><dd>16cm / 13cm</dd></dl></div>
+  </div>
+  
+</section>
+
+<!-- 15. HOW TO -->
+<section class="bg-stone" id="howto">
+  <span class="eyebrow">How to use</span>
+  <h2 class="t rv-in">도트 면은 안쪽으로,<br>조이지 말고 감싸듯이</h2>
+  <div class="howto">
+    <div class="how rv-in"><img src="img/wear_open.jpg" alt="밴드를 펼쳐 든 모습" loading="lazy"><p class="n">STEP 1</p><b>도트 면이 몸 쪽으로 오게 펼쳐요</b><span>도트 면이 맨살에 닿아야 합니다.</span></div>
+    <div class="how rv-in"><img src="img/wear_wrap.jpg" alt="밴드를 허리에 감는 모습" loading="lazy"><p class="n">STEP 2</p><b>허리에 감고 벨크로를 붙여요</b><span>들뜨지 않을 만큼만. 세게 당기면 원단이 늘어나 도트가 상할 수 있어요.</span></div>
+    <div class="how rv-in"><img src="img/wear_done.jpg" alt="밴드 착용을 마친 모습" loading="lazy"><p class="n">STEP 3</p><b>밴드 위로 하의를 덮어 입어요</b><span>하의 허리선이 밴드를 살짝 덮도록 입을 수 있습니다.</span></div>
+  </div>
+  <p class="cap">착용 방법 예시는 리뉴얼 전 제품으로 촬영했습니다.</p>
+  <div class="tips">
+    <div class="tip"><b>TIP</b><span>골반이 큰 편이라면 허리에서 골반 라인을 따라 대각선으로 두르세요.</span></div>
+    <div class="tip"><b>주의</b><span>마이온도는 코르셋이 아닙니다. 배를 조이는 용도로 쓰지 마세요.</span></div>
+  </div>
+  
+</section>
+
+<!-- 16. CARE -->
+<section id="care">
+  <span class="eyebrow">Care</span>
+  <h2 class="t rv-in">오래 쓰려면,<br>이렇게 관리해 주세요</h2>
+  <div class="care">
+    <div class="rv-in"><b>하루 사용 (브랜드 안내)</b><span>아침·저녁, 뜨거워지기 시작한 시점부터 1~2시간씩 착용하기를 권합니다. 오래 계속 두르면 따뜻함이 덜 느껴질 수 있어요. 그럴 땐 쉬었다가 다시 착용하고, 계속 느낌이 없으면 문의해 주세요.</span></div>
+    <div class="rv-in"><b>세탁</b><span>세탁기는 피해 주세요. 젖은 수건으로 가볍게 닦고, 꼭 필요할 때만 물로 손세탁한 뒤 그늘에서 말립니다. 물티슈는 쓰지 마세요.</span></div>
+    <div class="rv-in"><b>도트가 닳았다면</b><span>도트가 닳거나 손상된 것 같다면 고객센터로 문의해 주세요.</span></div>
+  </div>
+  
+</section>
+
+<!-- 17. CAUTION -->
+<section class="bg-stone" id="caution">
+  <span class="eyebrow">Caution</span>
+  <h2 class="t rv-in">구매 전에<br>꼭 확인해 주세요</h2>
+  <div class="warn rv-in">
+    <h3>이런 분은 착용하지 마세요 <small style="font-weight:500;color:#9a9293;font-size:13px">(브랜드 안내)</small></h3>
+    <ul>
+      <li>임산부, 14세 미만 어린이·유아</li>
+      <li>아토피·습진 등 피부가 예민한 분, 심한 알레르기 체질</li>
+      <li>상처나 피부 질환이 있는 부위</li>
+      <li>심장 보조기·인슐린 펌프를 사용하는 분</li>
+      <li>수술 후 회복 중이거나 악성 빈혈이 있는 분</li>
+      <li>술에 많이 취한 상태</li>
+      <li>부항·찜질·사우나 직후 (하루 정도 지난 뒤 착용)</li>
+    </ul>
+  </div>
+  <div class="stop rv-in"><b>바로 벗어 주세요.</b> 과도한 열감, 따가움, 가려움, 붉어짐 등 불편함이 느껴지면 착용을 멈추고 고객센터로 문의해 주세요. 지병이 있거나 치료 중이라면 사용 전 전문가와 상의하세요.</div>
+  <p class="note">마이온도는 의료기기가 아닙니다. 질병의 예방·치료를 목적으로 사용하지 마세요.</p>
+  
+</section>
+
+<!-- 18. FAQ -->
+<section id="faq">
+  <span class="eyebrow">FAQ</span>
+  <h2 class="t rv-in">자주 묻는 질문</h2>
+  <div class="faq">
+    <details><summary>처음 둘렀는데 아무 느낌이 없어요. 불량인가요?</summary><div class="a">처음엔 열감이 거의 없을 수 있습니다. 두르자마자 뜨거워지는 제품이 아니에요. 먼저 <b>도트 면이 맨살에 닿았는지, 너무 느슨하거나 조이지 않은지</b> 확인해 주세요. 그래도 계속 느낌이 없다면 고객센터로 문의해 주세요.</div></details>
+    <details><summary>언제부터 따뜻해지나요?</summary><div class="a">사람마다 다릅니다. 브랜드 안내 기준으로, 한 시간 남짓에 느끼는 분도 있고 며칠 이상 걸리는 분도 있습니다. 피부가 건조하다면 밴드 안쪽에 물을 살짝 뿌린 뒤 착용해 보세요.</div></details>
+    <details><summary>착용하다가 너무 뜨거워요.</summary><div class="a">열감이 불편하거나 따가움·가려움·붉어짐이 생기면 <b>바로 밴드를 풀고</b> 고객센터로 문의해 주세요.</div></details>
+    <details><summary>벗고 샤워하는데 다시 따뜻해졌어요.</summary><div class="a">브랜드 안내에 따르면, 벗은 뒤 샤워나 운동을 할 때 따뜻함을 다시 느끼는 경우가 있습니다. 느끼는 정도는 사람마다 다르며, 모두에게 같은 경험을 보장하지는 않습니다.</div></details>
+    <details><summary>착용 부위에 도트 자국이 남아요.</summary><div class="a">착용 후 도트 모양 자국이 남을 수 있습니다. 따가움이나 가려움이 함께 있거나 불편하면 착용을 멈추고 문의해 주세요.</div></details>
+    
+    <details><summary>세탁은 어떻게 하나요?</summary><div class="a">세탁기는 피해 주세요. 젖은 수건으로 닦고, 필요할 때만 물로 손세탁해 그늘에서 말려 주세요.</div></details>
+    <details><summary>사이즈가 애매해요.</summary><div class="a">허리둘레 60~88cm는 M, 84~106cm는 L입니다. 두 사이즈가 겹치는 구간이라면 고객센터로 문의해 주세요.</div></details>
+    <details><summary>교환·반품이 되나요?</summary><div class="a">상품 수령 후 7일 이내, <b>미개봉 상태</b>일 때 가능합니다. 단순 변심은 왕복 배송비가 부과됩니다. 자세한 내용은 아래 안내를 확인해 주세요.</div></details>
+  </div>
+  
+</section>
+
+<!-- 19. CLOSING -->
+<section class="closing">
+  <img src="img/model_kneel.jpg" alt="마이온도 밴드를 착용한 모델" loading="lazy">
+  <div class="txt">
+    <p class="rv-in">데우는 수고는 내려놓고,<br>따뜻함은 <em>나의 체온</em>으로.</p>
+    <small>myONDO</small>
+  </div>
+</section>
+
+<!-- 20. NOTICE -->
+<section class="notice" id="notice">
+  <h3>배송 안내</h3>
+  <ul>
+    <li>평일 오전 11시까지 결제 완료 시 당일 출고됩니다.</li>
+    <li>평균 배송 기간은 1~3일입니다.</li>
+  </ul>
+  <h3>교환·반품 안내</h3>
+  <ul>
+    <li>상품 수령 후 7일 이내, 미개봉 상태일 때 교환·반품이 가능합니다.</li>
+    <li>단순 변심에 의한 교환·반품은 왕복 배송비를 고객님이 부담합니다.</li>
+  </ul>
+  <h3>고객센터</h3>
+  <ul>
+    <li>1577-1857 · myondo5757@naver.com</li>
+    <li>운영 시간: 평일 10:00~17:00</li>
+    <li>카카오톡 채널: myondo</li>
+  </ul>
+  <h3>상품정보 제공고시</h3>
+  <table class="info">
+    <tr><th>제품명</th><td>마이온도 원적외선 심부발열 밴드</td></tr>
+    <tr><th>재질</th><td>네오플란 원단, 그래핀, 게르마늄, 규소, 미네랄 융복합 추출물, 티타늄, 바이오스톤 등 천연광물</td></tr>
+    <tr><th>사이즈</th><td>M: 허리 60~88cm, 길이 107cm / L: 허리 84~106cm, 길이 120cm (폭 16·13cm)</td></tr>
+    <tr><th>제조국</th><td>대한민국</td></tr>
+    <tr><th>판매원</th><td>마이온도</td></tr>
+    <tr><th>취급 시 주의사항</th><td>위 '구매 전에 꼭 확인해 주세요' 참조</td></tr>
+    <tr><th>품질보증기준</th><td>관련 법 및 소비자분쟁해결기준에 따름</td></tr>
+    <tr><th>고객센터</th><td>마이온도 1577-1857</td></tr>
+  </table>
+  
+</section>
+
+</div>
+<script>
+(function(){
+  if(/[?&]review\b/.test(location.search)) document.documentElement.classList.add('review');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.18});
+  document.querySelectorAll('.rv-in,#chat').forEach(function(el){io.observe(el)});
+  var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}})},{threshold:.35});
+  document.querySelectorAll('video').forEach(function(v){vo.observe(v)});
+})();
+</script>
+</body>
+</html>
