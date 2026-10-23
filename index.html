@@ -71,6 +71,20 @@ html.review .rvbar{display:block;position:sticky;top:0;z-index:50;background:#d0
 .heads-up span{display:block;font-size:14px;color:var(--muted);margin-top:4px}
 .heads-up u{color:var(--wine);font-weight:700;text-decoration:none}
 
+/* pain */
+.pain{background:#fff}
+.pain-list{display:grid;gap:14px;margin-top:28px}
+.pain-card{position:relative;background:var(--stone);border-radius:18px;padding:20px 20px 18px 20px;overflow:hidden}
+.pain-card::before{content:"";position:absolute;right:-28px;top:-28px;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle,#dfe6ec 0 35%,transparent 36%) 0 0/24px 24px;opacity:.9}
+.pain-card .lbl{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#4d6577;background:#e6edf2;border-radius:99px;padding:5px 11px}
+.pain-card .lbl i{width:6px;height:6px;border-radius:50%;background:#7e9bb0}
+.pain-card b{display:block;font-size:19px;line-height:1.42;letter-spacing:-.035em;margin-top:12px;position:relative}
+.pain-card p{margin-top:10px;font-size:14.5px;color:var(--muted);line-height:1.6;padding-left:12px;border-left:2px solid #cfd8df;position:relative}
+.pain-src{margin-top:14px;font-size:12.5px;color:var(--soft);line-height:1.55;background:var(--stone);border-radius:10px;padding:9px 12px}
+.pain-end{margin-top:30px;text-align:center;font-size:19px;line-height:1.55;font-weight:700;letter-spacing:-.03em}
+.pain-end em{font-style:normal;color:var(--wine)}
+.pain-end small{display:block;font-size:15px;font-weight:500;color:var(--muted);margin-top:8px}
+
 /* chat */
 .chat{display:flex;flex-direction:column;gap:12px;margin-top:28px}
 .bub{max-width:86%;padding:13px 16px;border-radius:18px 18px 18px 4px;background:#fff;box-shadow:0 1px 0 var(--line);font-size:15.5px;line-height:1.55;opacity:0;transform:translateY(10px);transition:all .5s ease}
@@ -257,12 +271,27 @@ html.review .rvbar{display:block;position:sticky;top:0;z-index:50;background:#d0
   </div>
 </section>
 
-<!-- 2. PROBLEM -->
+<!-- 2. PAIN (타겟 공감) -->
+<section class="pain" id="pain">
+  <span class="eyebrow">Always cold</span>
+  <h2 class="t rv-in">같은 공간인데,<br><em>나만 추운</em> 날들</h2>
+  <p class="lead">여름 냉방 속에서도, 겨울 외출길에서도<br>보온을 따로 챙기는 사람들이 있습니다.</p>
+  <p class="pain-src">보온 관련 공개 게시글·후기 사례를 바탕으로 만든 상황 예시입니다. 실제 발언 인용이나 마이온도 구매 후기가 아닙니다.</p>
+  <div class="pain-list">
+    <div class="pain-card rv-in"><span class="lbl"><i></i>아침 출근 전</span><b>옷을 챙겨 입고도,<br>배에 붙일 핫팩까지 챙기는 아침</b><p>여름에도 배 쪽이 유난히 차갑게 느껴져, 보온을 따로 챙깁니다.</p></div>
+    <div class="pain-card rv-in"><span class="lbl"><i></i>냉방 중인 사무실</span><b>밖은 한여름인데,<br>사무실에선 가디건을 꺼내 입는 날</b><p>에어컨 온도를 조절해 달라고 부탁하는 일도 매번 신경 쓰입니다.</p></div>
+    <div class="pain-card rv-in"><span class="lbl"><i></i>겨울 외출</span><b>겹겹이 껴입어도<br>추위가 가시지 않는 날</b><p>껴입으면 얼굴은 화끈거리고, 일할 때는 움직이기 불편합니다.</p></div>
+    <div class="pain-card rv-in"><span class="lbl"><i></i>가방 속</span><b>외출할 때마다 챙기는 핫팩,<br>쓰고 나면 또 버리고</b><p>반복해서 사는 비용도, 쌓이는 쓰레기도 마음에 걸립니다.</p></div>
+  </div>
+  <p class="pain-end rv-in">유난이 아니에요.<br>따뜻하게 지내려고 매번<br><em>하나 더 챙겨 왔을</em> 뿐이죠.</p>
+  
+</section>
+
+<!-- 3. PROBLEM (기존 보온 방식의 번거로움) -->
 <section class="bg-stone" id="problem">
-  <span class="eyebrow">Sound familiar?</span>
+  <span class="eyebrow">Every day</span>
   <h2 class="t rv-in">따뜻해지려고<br>이만큼 하고 있었다면</h2>
   <div class="chat" id="chat">
-    <div class="bub">몸이 늘 차가운 편이라<br>핫팩을 주머니에 달고 살아요.</div>
     <div class="bub">물주머니는 금방 식고,<br>물 끓여서 담고 버리는 게 일이에요.</div>
     <div class="bub">유선 찜질기는 콘센트 옆에서만 쓸 수 있잖아요.</div>
     <div class="bub">충전식 복대는 또 충전을 챙겨야 하고요.</div>
