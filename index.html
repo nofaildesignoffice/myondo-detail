@@ -206,26 +206,44 @@ section.step-sec{background:var(--navy);color:#fff}
 .cmp-cell.dia:not(.first)::before{border-top-color:rgba(142,31,63,.3)}
 .cmp-note{margin-top:34px}
 
-/* 리뉴얼 구조 도해 */
-section.diag{background:#170A0E;color:#fff;padding:76px 20px 60px;text-align:center;overflow:hidden}
-section.diag .section-title{color:#fff}
-section.diag .section-title strong{color:var(--sky)}
-.diag-lead{font-size:15px;color:rgba(255,255,255,.85);line-height:1.75}
-.diag-lead strong{color:#fff}
-.diag-stage{position:relative;margin:34px auto 0}
-.diag-band{width:34%;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.45)}
-.diag-band img{width:100%;aspect-ratio:1/2.4;object-fit:cover}
-.dg{position:absolute;width:31%}
-.dg.r{right:0;text-align:left}
-.dg.l{left:0;text-align:right}
-.dg-thumb{width:58px;height:58px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.8);display:inline-block;box-shadow:0 6px 14px rgba(0,0,0,.4)}
-.dg-thumb img{width:100%;height:100%;object-fit:cover}
-.dg small{display:block;margin-top:6px;font-size:11px;color:rgba(255,255,255,.65)}
-.dg b{display:block;font-size:16px;font-weight:800;letter-spacing:-.02em}
-.dg p{margin-top:4px;font-size:12px;line-height:1.6;color:rgba(255,255,255,.88)}
-.dg p em{font-style:normal;font-weight:700;color:#fff;border-bottom:1.2px solid rgba(255,255,255,.8)}
-.diag-mats{margin-top:64px;padding:18px 16px;border:1px solid rgba(255,255,255,.22);border-radius:12px;font-size:12.5px;line-height:1.8;color:rgba(255,255,255,.85)}
-.diag-mats b{display:block;color:#fff;font-size:13px;margin-bottom:4px}
+/* 소재 구조 도해 (스피큘 3중 코팅 도해 구조) */
+section.spic-sec{position:relative;overflow:hidden;background:#170A0E;color:#fff;padding:76px 20px 56px}
+section.spic-sec .section-title{color:#fff}
+section.spic-sec .section-title strong{color:var(--sky)}
+.sp-lead{font-size:14px;color:rgba(255,255,255,.88);text-align:center;line-height:1.85;margin-bottom:22px}
+.sp-lead strong{color:#fff}
+.sp-wrap{position:relative;margin-top:30px;padding:4px 0}
+.sp-figure{position:absolute;left:50%;transform:translateX(-50%);top:0;bottom:0;width:150px;
+  background:url('img/band_vertical.jpg') center / cover no-repeat;border-radius:10px;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 7%,#000 90%,transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 7%,#000 90%,transparent 100%)}
+.sp-lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.sp-item{position:relative;width:calc(50% - 87px);height:140px;margin-bottom:-66px}
+.sp-item:last-of-type{margin-bottom:0}
+.sp-item.right{margin-left:auto;text-align:left}
+.sp-item.left{margin-right:auto;text-align:right}
+.sp-item.c1{color:#F2B9C9}.sp-item.c2{color:#9AA1A8}.sp-item.c3{color:#E8C25A}.sp-item.c4{color:#63B6C7}
+.sp-item.c5{color:#9B93D6}.sp-item.c6{color:#E58A9F}.sp-item.c7{color:#D9A066}
+.sp-thumb{position:relative;width:52px;height:52px;border-radius:50%;border:2px solid currentColor;overflow:hidden;
+  display:inline-flex;align-items:center;justify-content:center;background:#2A1119 center / cover no-repeat;
+  font-size:17px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.sp-label{margin-top:8px;font-size:11px;color:rgba(255,255,255,.7)}
+.sp-name{margin-top:1px;font-size:15px;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.3}
+.sp-body{margin-top:5px;font-size:12px;color:rgba(255,255,255,.9);line-height:1.6;letter-spacing:-.02em}
+.sp-item.left .sp-body{text-align:right}
+.sp-body em{font-style:normal;font-weight:700;color:#fff;border-bottom:1.2px solid rgba(255,255,255,.8)}
+.sp-foot{margin-top:34px;font-size:11px;color:rgba(255,255,255,.55);line-height:1.55}
+.sp-item .sp-thumb{opacity:0;transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+.sp-item.right .sp-thumb{transform:translateX(-30px)}
+.sp-item.left .sp-thumb{transform:translateX(30px)}
+.sp-item.shown .sp-thumb{opacity:1;transform:none}
+.sp-item .sp-label,.sp-item .sp-name,.sp-item .sp-body{opacity:0;transform:translateY(-16px);filter:blur(5px);
+  transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1),filter .6s ease}
+.sp-item.shown .sp-label{transition-delay:.15s}
+.sp-item.shown .sp-name{transition-delay:.23s}
+.sp-item.shown .sp-body{transition-delay:.36s}
+.sp-item.shown .sp-label,.sp-item.shown .sp-name,.sp-item.shown .sp-body{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){.sp-item .sp-thumb,.sp-item .sp-label,.sp-item .sp-name,.sp-item .sp-body{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
 
 /* 사용법 */
 .htu-step{display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;padding:18px 0}
@@ -476,17 +494,22 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="note cmp-note">물주머니·전기 찜질기·붙이는 핫팩의 일반적인 사용 방식 비교이며, 성능 비교가 아닙니다.</p>
 </section>
 
-<!-- [10] 리뉴얼 구조 도해 -->
-<section class="diag">
-  <h2 class="section-title rv-up">2026년, 새로 바뀐<br><strong>버건디 도트 밴드</strong></h2>
-  <p class="diag-lead rv-up">안쪽 도트의 <strong>색과 원료</strong>를 바꾸고,<br>사이즈를 <strong>M·L 두 가지</strong>로 정리했습니다.</p>
-  <div class="diag-stage">
-    <div class="diag-band rv-up"><img src="img/dot_tall.jpg" alt="버건디 도트가 보이는 리뉴얼 밴드"></div>
-    <div class="dg r rv-up" style="top:0"><span class="dg-thumb"><img src="img/dot_flat.jpg" alt=""></span><div class="dg-text"><small>01 · Color</small><b>Burgundy Dot</b><p>안쪽 도트 컬러가<br><em>블랙에서 버건디</em>로</p></div></div>
-    <div class="dg l rv-up" style="top:30%"><span class="dg-thumb"><img src="img/dot_box2.jpg" alt=""></span><div class="dg-text"><small>02 · Material</small><b>New Material</b><p>도트에 들어가는<br><em>원료를 변경</em></p></div></div>
-    <div class="dg r rv-up" style="top:58%"><span class="dg-thumb"><img src="img/dot_long.jpg" alt=""></span><div class="dg-text"><small>03 · Size</small><b>New M Size</b><p>기존 S·M 범위를<br><em>새 M으로 통합</em></p></div></div>
+<!-- [10] 소재 구조 도해 -->
+<section class="spic-sec">
+  <h2 class="section-title rv-up">버건디 도트에 담은<br><strong>7가지 소재</strong></h2>
+  <p class="sp-lead rv-up">마이온도 밴드는 <strong>네오플란 원단</strong> 위에 광물 소재를 담은 도트를 촘촘히 올린 구조입니다. 2026년, 이 <strong>도트의 색과 원료</strong>를 새로 바꿨습니다.</p>
+  <div class="sp-wrap">
+    <div class="sp-figure" role="img" aria-label="세로로 놓인 버건디 도트 밴드"></div>
+    <svg class="sp-lines" aria-hidden="true"></svg>
+    <div class="sp-item right c1"><span class="sp-thumb" style="background-image:url('img/dot_flat.jpg')"></span><p class="sp-label">Fabric</p><h4 class="sp-name">네오플란 원단</h4><p class="sp-body">신축성·보온성이 좋은<br><em>합성고무 원단</em></p></div>
+    <div class="sp-item left c2"><span class="sp-thumb">C</span><p class="sp-label">Graphene</p><h4 class="sp-name">그래핀</h4><p class="sp-body">열을 빠르게 퍼뜨리는<br><em>탄소 신소재</em></p></div>
+    <div class="sp-item right c3"><span class="sp-thumb">Ge</span><p class="sp-label">Germanium</p><h4 class="sp-name">게르마늄</h4><p class="sp-body"><em>원적외선 방사</em> 소재로<br>쓰이는 반도체 원소</p></div>
+    <div class="sp-item left c4"><span class="sp-thumb">Si</span><p class="sp-label">Silicon</p><h4 class="sp-name">규소</h4><p class="sp-body">열을 잘 전달하는<br><em>반도체 원소</em></p></div>
+    <div class="sp-item right c5"><span class="sp-thumb">Ti</span><p class="sp-label">Titanium</p><h4 class="sp-name">티타늄</h4><p class="sp-body">가볍고 부식에 강한<br><em>금속 소재</em></p></div>
+    <div class="sp-item left c6"><span class="sp-thumb" style="background-image:url('img/dot_macro.jpg')"></span><p class="sp-label">Mineral Complex</p><h4 class="sp-name">미네랄 융복합 물질</h4><p class="sp-body">여러 광물을 융합한<br><em>원적외선 방사</em> 배합</p></div>
+    <div class="sp-item right c7"><span class="sp-thumb" style="background:#8A5A2B;font-size:12px">Stone</span><p class="sp-label">Natural Mineral</p><h4 class="sp-name">바이오스톤·황토</h4><p class="sp-body"><em>온열 소재</em>로 쓰여 온<br>광물·흙</p></div>
   </div>
-  <div class="diag-mats rv-up"><b>상품정보 표기 재질</b>네오플란 원단 · 그래핀 · 게르마늄 · 규소 · 티타늄 · 미네랄 융복합 물질 · 바이오스톤 · 황토</div>
+  <p class="sp-foot">* 소재 목록은 상품정보 표기 기준입니다. 각 소재의 설명은 소재의 일반적인 특성이며, 원적외선 방사는 브랜드 설명입니다. 이 설명은 착용 시 인체에 미치는 효과를 뜻하지 않습니다.</p>
   
 </section>
 
@@ -600,6 +623,30 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   document.querySelectorAll('.rv-up,#chat').forEach(function(el){io.observe(el)});
   var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}})},{threshold:.35});
   document.querySelectorAll('video').forEach(function(v){vo.observe(v)});
+  // 소재 도해: 밴드 사진의 점에서 각 소재 블록으로 선을 그림 (스피큘 도해 방식)
+  (function(){
+    var NS='http://www.w3.org/2000/svg',wrap=document.querySelector('.sp-wrap');if(!wrap)return;
+    var svg=wrap.querySelector('.sp-lines'),fig=wrap.querySelector('.sp-figure'),items=wrap.querySelectorAll('.sp-item');
+    var OFF=[.35,.5,.2,.45,.3,.55,.25];
+    function draw(){
+      var w=wrap.clientWidth,h=wrap.clientHeight;if(!w)return;
+      svg.setAttribute('viewBox','0 0 '+w+' '+h);svg.innerHTML='';var cx=w/2,half=fig.offsetWidth/2;
+      Array.prototype.forEach.call(items,function(it,i){
+        var th=it.querySelector('.sp-thumb'),y=it.offsetTop+th.offsetTop+th.offsetHeight/2,right=it.classList.contains('right');
+        var dotX=right?cx+OFF[i]*half:cx-OFF[i]*half,startX=right?it.offsetLeft:it.offsetLeft+it.offsetWidth,color=getComputedStyle(it).color;
+        var ln=document.createElementNS(NS,'line');ln.setAttribute('x1',dotX);ln.setAttribute('y1',y);ln.setAttribute('x2',startX);ln.setAttribute('y2',y);
+        ln.setAttribute('stroke',color);ln.setAttribute('stroke-width','1.5');var len=Math.abs(startX-dotX)+1;
+        ln.style.strokeDasharray=len;ln.style.transition='stroke-dashoffset .7s cubic-bezier(.22,1,.36,1) .05s';ln.style.strokeDashoffset=it.classList.contains('shown')?0:len;svg.appendChild(ln);
+        var dt=document.createElementNS(NS,'circle');dt.setAttribute('cx',dotX);dt.setAttribute('cy',y);dt.setAttribute('r','4');dt.setAttribute('fill',color);dt.setAttribute('stroke','#fff');dt.setAttribute('stroke-width','1.5');
+        dt.style.transformOrigin=dotX+'px '+y+'px';dt.style.transition='transform .45s cubic-bezier(.34,1.56,.64,1), opacity .35s ease';
+        if(!it.classList.contains('shown')){dt.style.transform='scale(0)';dt.style.opacity='0';}svg.appendChild(dt);it._l=ln;it._d=dt;
+      });
+    }
+    var spIO=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var it=e.target;it.classList.add('shown');
+      if(it._l)it._l.style.strokeDashoffset=0;if(it._d){it._d.style.transform='scale(1)';it._d.style.opacity='1';}spIO.unobserve(it);});},{threshold:.3});
+    Array.prototype.forEach.call(items,function(it){spIO.observe(it)});
+    draw();window.addEventListener('load',draw);window.addEventListener('resize',draw);
+  })();
   // 특허 카드 슬라이더: 3.6초 자동 전환, 스와이프, 터치 시 정지
   var s=document.getElementById('docSlider');if(!s)return;
   var vp=s.querySelector('.doc-viewport'),track=s.querySelector('.doc-track'),cards=track.children,dots=s.querySelectorAll('.doc-dots b'),
