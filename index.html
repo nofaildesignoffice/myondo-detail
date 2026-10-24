@@ -169,6 +169,18 @@ section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0
 /* 카피 밴드 */
 .copy-band{background:var(--navy);padding:44px 20px;text-align:center}
 .copy-band p{font-size:22px;font-weight:800;line-height:1.55;color:#fff;letter-spacing:-.03em}
+.copy-band .cb-lead{font-size:17px;font-weight:500;color:rgba(255,255,255,.88);line-height:1.6}
+.cb-items{display:flex;justify-content:center;gap:8px;margin:18px 0 20px}
+.cb-items li{font-size:14.5px;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:7px 14px}
+.copy-band p strong{color:var(--sky)}
+.cause-sum{margin:8px -20px 26px;padding:44px 24px 46px;background:var(--navy);color:#fff;text-align:center}
+.cs-q{font-size:23px;font-weight:800;line-height:1.4;letter-spacing:-.03em}
+.cs-q strong{color:var(--sky)}
+.cs-list{margin:20px auto 0;display:inline-grid;gap:8px;text-align:left}
+.cs-list li{position:relative;padding-left:24px;font-size:15.5px;color:rgba(255,255,255,.92)}
+.cs-list li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2px solid var(--sky);border-bottom:2px solid var(--sky);transform:rotate(-45deg)}
+.cs-a{margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);font-size:18px;line-height:1.6;letter-spacing:-.02em;color:rgba(255,255,255,.9)}
+.cs-a strong{color:#fff;font-weight:800;background:linear-gradient(transparent 60%,rgba(242,185,201,.45) 60%)}
 
 /* 원인 카드 */
 .cause-card{margin-bottom:52px;text-align:center}
@@ -594,7 +606,11 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 </section>
 
 <!-- [4] 카피 밴드 -->
-<div class="copy-band"><p class="rv-up">핫팩·물주머니·찜질기,<br>다 써 봐도 쓸 때만 따뜻하고<br>떼면 다시 차가워지는 이유!</p></div>
+<div class="copy-band">
+  <p class="cb-lead rv-up">배가 차서, 에어컨 바람에, 겨울 추위에<br>몸을 데우려고 이것저것 써 보셨죠?</p>
+  <ul class="cb-items rv-up"><li>물주머니</li><li>전기 찜질기</li><li>일회용 핫팩</li></ul>
+  <p class="rv-up">그런데 쓸 때마다<br><strong>아쉬운 점이 하나씩</strong> 있었을 거예요.</p>
+</div>
 
 <!-- [5] 원인 -->
 <section class="cause-sec">
@@ -618,7 +634,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   </div>
   <div class="cause-card key rv-up">
     <span class="cause-no">4</span>
-    <h3 class="cause-title">무엇보다, 모두<br><strong>대고 있을 때만 따뜻해요</strong></h3>
+    <h3 class="cause-title">심지어 모두<br><strong>쓸 때만 따뜻해요</strong></h3>
     <div class="cause-img"><svg viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round" font-family="Pretendard,sans-serif">
       <path d="M30 130h250" stroke="#B9A9AE" stroke-width="1.5"/>
       <path d="M30 22v108" stroke="#B9A9AE" stroke-width="1.5"/>
@@ -629,14 +645,19 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <text x="128" y="148" fill="#8E1F3F" font-size="11" text-anchor="middle" stroke="none">뗀 순간</text>
       <text x="22" y="28" fill="#6B5A60" font-size="10" text-anchor="end" stroke="none" transform="rotate(-90 22 28)">따뜻함</text>
     </svg></div>
-    <p class="cause-body">핫팩·물주머니·찜질기는 몸 바깥에서 열을 대 주는 방식이라, 떼고 나면 따뜻함도 금방 사라집니다. 쓰는 동안만 따뜻하고, 벗으면 배는 다시 차가워져요. 그래서 매번 다시 데우고, 다시 붙이게 됩니다.</p>
+    <p class="cause-body">물주머니도, 전기 찜질기도, 일회용 핫팩도 몸 바깥에서 열을 대 주는 방식입니다. 쓰는 동안에는 따뜻하지만, 떼고 나면 따뜻함도 금방 사라지고 배는 다시 차가워져요.</p>
+  </div>
+  <div class="cause-sum rv-up">
+    <p class="cs-q">몸이 따뜻해야<br><strong>하루가 편해집니다</strong></p>
+    <ul class="cs-list"><li>추위에 몸이 덜 움츠러들고</li><li>겹겹이 껴입지 않아도 되고</li><li>핫팩을 챙기는 일도 줄어들죠</li></ul>
+    <p class="cs-a">하지만 잠깐 대 주는 방법으로는<br>체온이 오르는 게 아니라<br><strong>차가운 순간을 잠깐 넘길 뿐</strong>입니다.</p>
   </div>
   <p class="note">제품군별 일반적인 사용 방식이며, 특정 제품의 성능을 비교한 내용이 아닙니다. 그래프는 이해를 돕기 위한 개념도입니다.</p>
 </section>
 
 <!-- [6] 결론 -->
 <section class="conclusion">
-  <p class="cc-lead rv-up">그래서 배 보온에는<br><strong>쓰는 동안만이 아니라,<br>벗은 뒤에도 따뜻함이 남는</strong><br>방법이 필요합니다.</p>
+  <p class="cc-lead rv-up">그래서 잠깐 데우는 것이 아니라<br><strong>체온을 끌어올리고,<br>벗은 뒤에도 따뜻함이 남는</strong><br>방법이 필요합니다.</p>
   <div class="cc-img rv-up"><video src="img/v_cell.mp4" poster="img/v_cell.jpg" muted loop playsinline preload="none" aria-label="피부 아래로 온기가 전해지는 모습"></video></div>
   <p class="cc-next rv-up">체온을 몸속 깊은 곳까지 전하고<br>벗은 뒤에도 <strong>최대 10시간</strong> 온기가 머무는<br><strong>마이온도를 소개합니다</strong></p>
   <p class="cc-note">* 심부 전달·최대 10시간 지속은 브랜드 안내 기준입니다. 지속 시간과 체감은 사람마다 다르며 보장하지 않습니다.</p>
