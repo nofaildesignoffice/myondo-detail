@@ -91,14 +91,31 @@ section.summary{background:var(--bg-gray);padding:60px 20px 56px;text-align:cent
 .syn-name{font-size:15px;font-weight:800;margin-top:2px}
 .src-line{margin-top:22px;font-size:12px;color:var(--text-gray);line-height:1.6}
 
-/* 리뷰 (검토 모드 전용) */
-section.reviews{padding:56px 18px 46px}
-.rv-title{text-align:center;font-size:29px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
-.rv-title strong{color:var(--brand)}
-.rv{margin-top:30px}
-.rv-stars{font-size:13px;letter-spacing:3px;color:var(--brand)}
+/* 대표 스토리 (스피큘 founder 구조) */
+section.founder{min-height:720px;padding:74px 26px 44px;color:#fff;
+  background:linear-gradient(to bottom,rgba(28,9,15,.82) 0%,rgba(28,9,15,.62) 55%,rgba(28,9,15,.86) 100%),url('img/dot_warm.jpg') center 40% / cover no-repeat}
+.fd-title{font-size:27px;font-weight:800;line-height:1.4;letter-spacing:-.03em;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.fd-body{margin-top:26px;font-size:15px;font-weight:500;line-height:1.75;color:rgba(255,255,255,.95);text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.fd-sign{margin-top:34px;font-size:15px;font-weight:500;color:rgba(255,255,255,.95)}
+
+/* 리뷰 (스피큘 GLOBAL REVIEWS 구조) */
+section.reviews{padding:0 18px 46px;background:linear-gradient(to bottom,#F3F1F1 0%,#F3F1F1 42%,#F8F6F6 72%,#fff 100%)}
+.rv-top{height:600px;margin:0 -18px 12px;padding:34px 18px 0;text-align:center;
+  background:linear-gradient(to bottom,rgba(28,9,15,.55) 0%,rgba(28,9,15,0) 34%,rgba(243,241,241,0) 76%,rgba(243,241,241,.6) 91%,#F3F1F1 100%),
+    url('img/model_side.jpg') center 30% / cover no-repeat;
+  -webkit-mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%)}
+.rv-eyebrow{font-size:15px;font-weight:600;letter-spacing:.06em;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.rv-title{margin-top:12px;font-size:29px;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.35;text-shadow:0 3px 16px rgba(0,0,0,.38)}
+.rv-title strong{color:#fff}
+.rv{margin-bottom:34px}
+.rv-img{aspect-ratio:482/279;background:#D9D2D4 center / cover no-repeat}
+.rv-stars{margin-top:14px;font-size:13px;letter-spacing:3px;color:var(--brand)}
 .rv-who{margin-top:8px;font-size:13.5px;color:#8A8F96}
-.rv-text{margin-top:8px;font-size:15.5px;color:#222;line-height:1.55;letter-spacing:-.02em}
+.rv-text{margin-top:10px;font-size:15.5px;color:#222;line-height:1.6;letter-spacing:-.02em}
+.rv-text b{font-weight:700;color:var(--brand)}
+
+
 
 /* 고민 (채팅) */
 section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0%,var(--bg-soft) 100%)}
@@ -372,8 +389,60 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="src-line">착용 직후에는 열감이 없을 수 있으며, 따뜻함을 느끼는 시점과 세기는 사람마다 다릅니다.</p>
 </section>
 
-<!-- [2] 리뷰 (원문 확인 전 · 검토 모드 전용) -->
+<!-- [2] 대표 스토리 -->
+<section class="founder">
+  <h2 class="fd-title rv-up">떼는 순간 식어 버리는<br>핫팩으로는 부족했어요</h2>
+  <p class="fd-body rv-up">엄마들, 어르신들과 함께 건강한 생활 습관을<br>나누는 모임을 오래 운영해 왔어요.<br>배가 차서 핫팩과 찜질기를 달고 사는 분들을<br>정말 많이 만났죠.</p>
+  <p class="fd-body rv-up">그런데 핫팩은 떼는 순간 금방 식었어요.<br>쓰는 동안만이 아니라 벗은 뒤에도<br>따뜻함이 남는 방법을 찾다가 이 밴드를 만났고,<br>제조사와 함께 마이온도로 선보이게 되었습니다.</p>
+  <p class="fd-sign rv-up">마이온도 대표 한해이</p>
+  
+</section>
 
+<!-- [2b] 리뷰 (공식몰 구매 리뷰 원문 발췌) -->
+<section class="reviews">
+  <div class="rv-top">
+    <p class="rv-eyebrow rv-up">REAL REVIEWS</p>
+    <h2 class="rv-title rv-up">리뷰가 말해주는 진짜<br><strong>#벗어도_따뜻한_밴드</strong></h2>
+  </div>
+  <div class="rv">
+    <div class="rv-img rv-up" style="background-image:url('img/reviews/r06_2.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">r**** · 공식몰 구매 리뷰 · 2025.03.20</div>
+    <p class="rv-text rv-up">핫팩, 찜질기, 따뜻한 장비들? 다 써봤다 … 그 모든것들의 공통점은 하나 늘 그때 뿐이라는것, 금방 식어버린다는것 … <b>벨트를 푼 후에도 속에서 따뜻함이 유지되고 있었다.</b> 늘 사용할때만 따듯하던 다른 제품과는 차원이 달랐다</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img rv-up" style="background-image:url('img/reviews/r08_4.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">박**** · 공식몰 구매 리뷰 · 2025.04.13</div>
+    <p class="rv-text rv-up">한번 오른 체온은 잘 내려가지 않았어요 <b>밴드를 벗은 후에도 37도를 유지했지요.</b></p>
+  </div>
+  <div class="rv">
+    <div class="rv-img rv-up" style="background-image:url('img/reviews/r11_1.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">손**** · 공식몰 구매 리뷰 · 2025.04.13</div>
+    <p class="rv-text rv-up">30분 이후부터 열감이 올라 오더니 <b>마이온도를 탈거하고도 1시간 이상의 열감</b>이 느껴 지더라고요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img rv-up" style="background-image:url('img/reviews/r15_1.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">소**** · 공식몰 구매 리뷰 · 2025.04.14</div>
+    <p class="rv-text rv-up">아침에 출근전에 2,30분정도 하고 빼고 나가면 <b>차차 열이 은근하게 오름</b> 넘 신기해!! … 둘러서 착용하면 겉으로 티 안남!</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img rv-up" style="background-image:url('img/reviews/r12_3.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">늘**** · 공식몰 구매 리뷰 · 2025.04.13</div>
+    <p class="rv-text rv-up">몸의 반응이 느린편이라서 거의 하루종일 착용하니 미지근한온도로 따수워서 좋았어요!! … <b>외출시도 여행시에도 이제 필수품</b>이되었어요</p>
+  </div>
+  <div class="rv">
+    <div class="rv-img rv-up" style="background-image:url('img/reviews/r05_1.jpg')"></div>
+    <div class="rv-stars">★★★★★</div>
+    <div class="rv-who">내**** · 공식몰 구매 리뷰 · 2025.03.19</div>
+    <p class="rv-text rv-up">핫팩은 한번쓰면 죄다 쓰레기잖아요 … 집에있는 다른 온열기기들은 손이 안가는데 <b>이건 진짜 매일 매일 쓰거든요</b></p>
+  </div>
+  <p class="note" style="text-align:center;margin-top:12px">※ 마이온도 공식몰 구매 리뷰 원문에서 발췌했으며(중략은 …), 맞춤법은 원문 그대로입니다.<br>개인의 사용 경험이며, 체감과 지속 시간은 사람마다 다릅니다.</p>
+  
+</section>
 
 <!-- [3] 고민 -->
 <section class="worry">
