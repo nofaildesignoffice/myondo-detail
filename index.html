@@ -93,6 +93,8 @@ section.sub{padding:0}
 .sub-inner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;pointer-events:none;
   background:linear-gradient(to top,#F3F1F1 0%,rgba(243,241,241,.85) 22%,rgba(243,241,241,.4) 60%,rgba(243,241,241,0) 100%)}
 .sub-inner > *{position:relative;z-index:1}
+.daily-inner{isolation:isolate;background:#E9E7E6}
+.sub-inner > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:-1}
 .sub-inner > .sub-word{position:absolute;left:0;bottom:0;width:100%;height:auto;display:block}
 .sub-eyebrow{font-size:17px;font-weight:400;line-height:1.7;letter-spacing:-.02em;text-shadow:0 2px 16px rgba(0,0,0,.6)}
 .sub-eyebrow strong{font-weight:800}
@@ -502,14 +504,20 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 </section>
 
 <!-- [1c] 요약 -->
+<section class="sub daily">
+  <div class="sub-inner daily-inner">
+    <video src="img/v_daily.mp4" poster="img/daily_first.jpg" muted loop playsinline preload="none" aria-label="밴드 위로 평소 옷을 입는 모습"></video>
+    <p class="sub-eyebrow rv-up">DAILY · WARMTH</p>
+    <h2 class="sub-title rv-up">입던 옷은 그대로,<br>안에 밴드 하나만</h2>
+  </div>
+</section>
+
 <section class="summary">
-  <p class="eyebrow">DAILY · WARMTH</p>
-  <h2 class="section-title rv-up">입던 옷은 그대로,<br><strong>안에 밴드 하나만</strong></h2>
   <p class="lead rv-up">옷 입기 전 허리에 감아 <strong>벨크로로 고정</strong>하고,<br>그 위로 평소 옷을 입으면 됩니다.<br>물을 데우거나 충전할 일이 없습니다.</p>
   <div class="syn rv-up">
-    <div class="syn-item"><div class="syn-circle"><img src="img/wear_wrap.jpg" alt="허리에 밴드를 감는 모습" style="object-position:50% 70%"></div><p class="syn-step">STEP 1</p><p class="syn-name">마이온도 밴드</p></div>
+    <div class="syn-item"><div class="syn-circle"><img src="img/wear_hidden.jpg" alt="허리에 밴드를 두른 모습" style="object-position:50% 40%"></div><p class="syn-step">STEP 1</p><p class="syn-name">마이온도 밴드</p></div>
     <div class="syn-plus">+</div>
-    <div class="syn-item"><div class="syn-circle"><img src="img/wear_hidden.jpg" alt="밴드 위로 하의를 입은 모습" style="object-position:50% 40%"></div><p class="syn-step">STEP 2</p><p class="syn-name">입던 옷</p></div>
+    <div class="syn-item"><div class="syn-circle"><img src="img/daily_first_s.jpg" alt="밴드 위로 평소 옷을 입은 모습" style="object-position:50% 30%"></div><p class="syn-step">STEP 2</p><p class="syn-name">입던 옷</p></div>
   </div>
   <p class="src-line">착용 직후에는 열감이 없을 수 있으며, 따뜻함을 느끼는 시점과 세기는 사람마다 다릅니다.</p>
 </section>
