@@ -148,6 +148,9 @@ section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0
 .wr-chat{display:flex;flex-direction:column;gap:22px;padding:0 6px}
 .wb{max-width:86%;padding:16px 20px;border-radius:20px;font-size:14.5px;font-weight:500;line-height:1.6;letter-spacing:-.02em;
   background:#fff;color:#1A1A1A;box-shadow:0 4px 14px rgba(90,20,40,.08);opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.wb em{font-style:normal;font-weight:800;color:var(--brand);background:linear-gradient(transparent 58%,rgba(242,185,201,.75) 58%)}
+.wb.me em{color:#fff;background:linear-gradient(transparent 58%,rgba(255,255,255,.28) 58%)}
+.wb strong{display:block;margin-top:6px;font-weight:800;color:#111}
 .wb.me{align-self:flex-end;background:var(--brand);color:#fff;font-weight:600;box-shadow:0 6px 16px rgba(142,31,63,.25)}
 /* 말풍선 꼬리 */
 .wb{position:relative;align-self:flex-start;border-bottom-left-radius:6px}
@@ -191,12 +194,12 @@ section.sponge-sec{position:relative;color:#fff;text-align:center;padding:76px 2
     linear-gradient(rgba(42,17,25,.38),rgba(42,17,25,.5)),
     url('img/dot_tall.jpg') center / cover no-repeat}
 .sg-lead{display:block;font-size:17px;font-weight:600;letter-spacing:-.02em;text-shadow:0 2px 14px rgba(20,4,10,.6)}
-.sg-big{display:block;margin-top:8px;font-size:38px;font-weight:800;letter-spacing:.04em;line-height:1.2;text-shadow:0 2px 14px rgba(20,4,10,.6)}
+.sg-big{display:block;margin-top:10px;font-size:30px;font-weight:800;letter-spacing:-.01em;line-height:1.22;text-shadow:0 2px 14px rgba(20,4,10,.6)}
 .sg-img{width:300px;margin:22px auto 26px;filter:drop-shadow(0 14px 28px rgba(10,0,4,.5))}
 .spx-box{margin:18px 0 6px;padding:26px 20px 22px;border-radius:16px;text-align:center;
   background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.5);box-shadow:0 10px 30px rgba(20,0,8,.2)}
 .spx-label{font-size:13px;color:rgba(255,255,255,.85)}
-.spx-name{margin-top:2px;font-size:26px;font-weight:800;letter-spacing:.06em}
+.spx-name{margin-top:2px;font-size:24px;font-weight:800;letter-spacing:-.02em}
 .spx-desc{margin-top:14px;font-size:14px;line-height:1.8}
 .spx-desc strong{font-weight:800}
 .spx-note{margin-top:10px;font-size:11px;color:rgba(255,255,255,.78)}
@@ -572,11 +575,11 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <h2 class="wr-title rv-up">핫팩 달고 사는 사람들의<br><strong>배 보온 고민</strong></h2>
   <div class="wr-circle rv-up"><img src="img/model_hands.jpg" alt="배 위에 손을 얹은 모습"></div>
   <div class="wr-chat" id="chat">
-    <div class="wb">여름에도 배가 유난히 차갑게 느껴져요. 출근 전에 배에 붙일 핫팩부터 챙겨요.</div>
-    <div class="wb me">에어컨 아래선 한여름에도 가디건을 꺼내 입어요. 온도 올려 달라고 부탁하는 것도 매번 신경 쓰이고요.</div>
-    <div class="wb">겨울엔 겹겹이 껴입어도 추워요. 얼굴은 화끈거리는데 움직이기는 불편하고요.</div>
-    <div class="wb me">가방엔 늘 핫팩이 있어요. 쓰고 버리고를 반복하니 비용도 쓰레기도 쌓여요.</div>
-    <div class="wb">그런데 핫팩을 떼고 나면 금방 다시 차가워져요. 붙이고 있을 때만 따뜻하고, 몸은 그대로예요.</div>
+    <div class="wb">여름에도 <em>배가 유난히 차갑게</em> 느껴져요. 출근 전에 <em>배에 붙일 핫팩부터</em> 챙겨요.</div>
+    <div class="wb me">에어컨 아래선 <em>한여름에도 가디건</em>을 꺼내 입어요. 온도 올려 달라고 부탁하는 것도 매번 신경 쓰이고요.</div>
+    <div class="wb">겨울엔 <em>겹겹이 껴입어도 추워요.</em> 얼굴은 화끈거리는데 움직이기는 불편하고요.</div>
+    <div class="wb me">가방엔 늘 핫팩이 있어요. 쓰고 버리고를 반복하니 <em>비용도 쓰레기도</em> 쌓여요.</div>
+    <div class="wb">그런데 핫팩을 떼고 나면 <em>금방 다시 차가워져요.</em> <strong>붙이고 있을 때만 따뜻하고, 몸은 그대로예요.</strong></div>
   </div>
   <p class="wr-note">보온 관련 공개 게시글·후기 사례를 바탕으로 재구성한 상황 예시이며,<br>마이온도 구매 후기가 아닙니다.</p>
   
@@ -634,11 +637,11 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [7] 핵심 소재 -->
 <section class="sponge-sec">
   <span class="sg-lead rv-up">밴드 안쪽, 체온이 닿는 면</span>
-  <span class="sg-big rv-up">BURGUNDY DOT</span>
+  <span class="sg-big rv-up">마이온도<br>원적외선 심부발열 밴드</span>
   <img class="sg-img rv-up" src="img/nukki.png" alt="마이온도 밴드 제품컷">
   <div class="spx-box rv-up">
-    <p class="spx-label">2026 리뉴얼 광물 도트</p>
-    <p class="spx-name">BURGUNDY DOT</p>
+    <p class="spx-label">2026 리뉴얼 · 밴드 안쪽 면</p>
+    <p class="spx-name">버건디 광물 도트</p>
     <p class="spx-desc">밴드 안쪽에 촘촘히 찍힌 도트입니다.<br>상품정보에 표시된 재질은<br><strong>그래핀·게르마늄·규소·티타늄</strong> 등이며,<br>2026년 <strong>도트 원료를 새로 바꿨습니다.</strong></p>
     <p class="spx-note">* 재질은 상품정보 표기 기준입니다.</p>
     <div class="spx-grid">
