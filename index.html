@@ -179,6 +179,10 @@ section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0
 .cs-list{margin:20px auto 0;display:inline-grid;gap:8px;text-align:left}
 .cs-list li{position:relative;padding-left:24px;font-size:15.5px;color:rgba(255,255,255,.92)}
 .cs-list li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2px solid var(--sky);border-bottom:2px solid var(--sky);transform:rotate(-45deg)}
+.cs-mid{margin-top:16px;font-size:15.5px;color:rgba(255,255,255,.8)}
+.cause-quote{margin-top:16px;padding:16px 18px;background:var(--bg-soft);border-left:3px solid var(--brand);text-align:left;font-size:14.5px;line-height:1.65;color:#333}
+.cause-quote strong{color:var(--brand);font-weight:800}
+.cause-quote span{display:block;margin-top:6px;font-size:12px;color:#8a7c81}
 .cs-a{margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2);font-size:18px;line-height:1.6;letter-spacing:-.02em;color:rgba(255,255,255,.9)}
 .cs-a strong{color:#fff;font-weight:800;background:linear-gradient(transparent 60%,rgba(242,185,201,.45) 60%)}
 
@@ -601,7 +605,6 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <div class="wb me">에어컨 아래선 <em>한여름에도 가디건</em>을 꺼내 입어요. 온도 올려 달라고 부탁하는 것도 매번 신경 쓰이고요.</div>
     <div class="wb">겨울엔 <em>겹겹이 껴입어도 추워요.</em> 얼굴은 화끈거리는데 움직이기는 불편하고요.</div>
     <div class="wb me">가방엔 늘 핫팩이 있어요. 쓰고 버리고를 반복하니 <em>비용도 쓰레기도</em> 쌓여요.</div>
-    <div class="wb">그런데 핫팩을 떼고 나면 <em>금방 다시 차가워져요.</em> <strong>붙이고 있을 때만 따뜻하고, 몸은 그대로예요.</strong></div>
   </div>
   <p class="wr-note">보온 관련 공개 게시글·후기 사례를 바탕으로 재구성한 상황 예시이며,<br>마이온도 구매 후기가 아닙니다.</p>
   
@@ -609,57 +612,62 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [4] 카피 밴드 -->
 <div class="copy-band">
-  <p class="cb-lead rv-up">배가 차서, 에어컨 바람에, 겨울 추위에<br>몸을 데우려고 이것저것 써 보셨죠?</p>
+  <p class="cb-lead rv-up">몸을 따뜻하게 하고 싶은 이유는 저마다 달라도</p>
+  <p class="rv-up">결국 자주 찾게 되는 건<br>이 세 가지죠</p>
   <ul class="cb-items rv-up"><li>물주머니</li><li>전기 찜질기</li><li>일회용 핫팩</li></ul>
-  <p class="rv-up">그런데 쓸 때마다<br><strong>아쉬운 점이 하나씩</strong> 있었을 거예요.</p>
+  <p class="rv-up">그런데 하나씩 써 보면<br><strong>저마다 아쉬운 점이 있어요.</strong></p>
 </div>
 
 <!-- [5] 원인 -->
 <section class="cause-sec">
   <div class="cause-card rv-up">
     <span class="cause-no">1</span>
-    <h3 class="cause-title">물주머니는<br>채우고, 비우고, 말려야 해요</h3>
+    <h3 class="cause-title">물주머니는<br>데우고, 채우고, 식으면 또 갈아야 해요</h3>
     <div class="cause-img"><svg viewBox="0 0 260 150" fill="none" stroke="#8E1F3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M40 120h70l-6-58H46z"/><path d="M58 62c0-14 34-14 34 0"/><path d="M110 78c12 0 16 10 10 20"/><path d="M62 48c-4-8 4-12 0-20M78 48c-4-8 4-12 0-20"/><rect x="150" y="40" width="74" height="86" rx="28"/><path d="M174 40v-12h26v12"/><path d="M164 74h46M164 90h46" stroke-dasharray="4 7"/></svg></div>
-    <p class="cause-body">뜨거운 물을 채워 쓰는 물주머니는 쓰고 나면 물을 버리고 말려야 합니다. 식으면 다시 채워야 하고요.</p>
+    <p class="cause-body">물을 데워 채우는 것부터 일이고, 식으면 다시 갈아 줘야 합니다. 마개가 잘 잠겼는지, 새지는 않는지도 매번 확인하게 되고요.</p>
   </div>
   <div class="cause-card rv-up">
     <span class="cause-no">2</span>
-    <h3 class="cause-title">전기 찜질기는<br>전원과 충전에 묶여요</h3>
+    <h3 class="cause-title">전기 찜질기는<br>선에 묶이거나, 충전을 기다려야 해요</h3>
     <div class="cause-img"><svg viewBox="0 0 260 150" fill="none" stroke="#8E1F3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M52 36v22M76 36v22"/><path d="M42 58h44v18a22 22 0 0 1-44 0z"/><path d="M64 98v14c0 14 22 14 30 14h34"/><rect x="150" y="54" width="70" height="40" rx="8"/><path d="M220 66h8v16h-8"/><rect x="158" y="62" width="14" height="24" rx="2" fill="#8E1F3F" stroke="none"/></svg></div>
-    <p class="cause-body">유선 제품은 콘센트 근처에서, 충전식 제품은 배터리를 챙겨야 합니다. 고정 장치 없이 배 위에 올려두는 제품은 움직이면 자리를 벗어나기 쉬워요.</p>
+    <p class="cause-body">유선 제품은 선이 닿는 곳에서만 쓸 수 있어 자리를 옮기기 번거롭고, 충전식은 다 쓰고 나면 다시 충전될 때까지 기다려야 합니다.</p>
   </div>
   <div class="cause-card rv-up">
     <span class="cause-no">3</span>
-    <h3 class="cause-title">일회용 핫팩은<br>매번 새로 뜯고, 버려요</h3>
+    <h3 class="cause-title">일회용 핫팩은<br>식으면 끝, 매번 새로 뜯어야 해요</h3>
     <div class="cause-img"><svg viewBox="0 0 260 150" fill="none" stroke="#8E1F3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="34" y="34" width="62" height="84" rx="8"/><path d="M34 50h62" stroke-dasharray="3 5"/><rect x="104" y="44" width="52" height="70" rx="8" transform="rotate(12 130 79)"/><path d="M178 58h52M186 58l5 62h30l5-62"/><path d="M196 50h20"/><path d="M200 72v38M212 72v38"/></svg></div>
-    <p class="cause-body">일회용 핫팩은 한 번 쓰면 버려야 해서, 필요할 때마다 새로 챙겨야 합니다. 쓴 만큼 사야 하고, 쓴 만큼 쓰레기가 남습니다.</p>
+    <p class="cause-body">한 번 식은 핫팩은 다시 쓸 수 없어, 쓸 때마다 새것이 필요합니다. 떨어지기 전에 남은 개수도 늘 챙겨야 하죠.</p>
   </div>
   <div class="cause-card key rv-up">
     <span class="cause-no">4</span>
     <h3 class="cause-title">심지어 모두<br><strong>쓸 때만 따뜻해요</strong></h3>
     <div class="cause-img"><svg viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round" font-family="Pretendard,sans-serif">
-      <path d="M30 130h250" stroke="#B9A9AE" stroke-width="1.5"/>
-      <path d="M30 22v108" stroke="#B9A9AE" stroke-width="1.5"/>
-      <path d="M128 30v100" stroke="#8E1F3F" stroke-width="1.5" stroke-dasharray="4 5"/>
-      <path d="M30 112C52 112 56 48 78 46S110 46 128 48C140 50 146 108 170 112S240 112 280 112" stroke="#8E1F3F" stroke-width="3.5"/>
-      <text x="79" y="34" fill="#8E1F3F" font-size="12" font-weight="700" text-anchor="middle" stroke="none">대고 있는 동안</text>
-      <text x="206" y="100" fill="#6B5A60" font-size="12" font-weight="700" text-anchor="middle" stroke="none">떼면 다시 그대로</text>
-      <text x="128" y="148" fill="#8E1F3F" font-size="11" text-anchor="middle" stroke="none">뗀 순간</text>
-      <text x="22" y="28" fill="#6B5A60" font-size="10" text-anchor="end" stroke="none" transform="rotate(-90 22 28)">따뜻함</text>
+      <path d="M24 122h258" stroke="#B9A9AE" stroke-width="1.5"/>
+      <path d="M24 26v96" stroke="#B9A9AE" stroke-width="1.5"/>
+      <path d="M24 108C36 108 38 52 52 50S74 52 80 60C88 74 92 106 104 108S114 108 118 108C130 108 132 52 146 50S168 52 174 60C182 74 186 106 198 108S208 108 212 108C224 108 226 52 240 50S262 52 268 60C274 72 276 104 282 108" stroke="#8E1F3F" stroke-width="3.5"/>
+      <text x="56" y="38" fill="#8E1F3F" font-size="11.5" font-weight="700" text-anchor="middle" stroke="none">다시 데우고</text>
+      <text x="150" y="38" fill="#8E1F3F" font-size="11.5" font-weight="700" text-anchor="middle" stroke="none">다시 켜고</text>
+      <text x="244" y="38" fill="#8E1F3F" font-size="11.5" font-weight="700" text-anchor="middle" stroke="none">새로 뜯고</text>
+      <text x="104" y="142" fill="#6B5A60" font-size="11" text-anchor="middle" stroke="none">다 쓰면 다시 추위</text>
+      <text x="198" y="142" fill="#6B5A60" font-size="11" text-anchor="middle" stroke="none">다 쓰면 다시 추위</text>
+      <text x="16" y="30" fill="#6B5A60" font-size="10" text-anchor="end" stroke="none" transform="rotate(-90 16 30)">따뜻함</text>
     </svg></div>
-    <p class="cause-body">물주머니도, 전기 찜질기도, 일회용 핫팩도 몸 바깥에서 열을 대 주는 방식입니다. 쓰는 동안에는 따뜻하지만, 떼고 나면 따뜻함도 금방 사라지고 배는 다시 차가워져요.</p>
+    <p class="cause-body">세 가지 모두 쓰는 동안 몸 바깥에서 열을 전해 주는 방식입니다. 그래서 다 쓰고 나서 다시 추워지면, 또 데우고, 켜고, 새로 뜯게 되죠.</p>
+    <p class="cause-quote">“핫팩, 찜질기, 따뜻한 장비들? 다 써봤다 … 그 모든것들의 공통점은 하나 <strong>늘 그때 뿐이라는것</strong>”<span>마이온도 공식몰 구매 리뷰 r**** · 2025.03.20 중 발췌</span></p>
   </div>
   <div class="cause-sum rv-up">
-    <p class="cs-q">몸이 따뜻해야<br><strong>하루가 편해집니다</strong></p>
-    <ul class="cs-list"><li>추위에 몸이 덜 움츠러들고</li><li>겹겹이 껴입지 않아도 되고</li><li>핫팩을 챙기는 일도 줄어들죠</li></ul>
-    <p class="cs-a">하지만 잠깐 대 주는 방법으로는<br>체온이 오르는 게 아니라<br><strong>차가운 순간을 잠깐 넘길 뿐</strong>입니다.</p>
+    <p class="cs-q">몸이 따뜻해야<br><strong>하루가 편안합니다</strong></p>
+    <ul class="cs-list"><li>출근길 찬 바람 앞에서도</li><li>냉방 켜진 책상 앞에서도</li><li>집에서 편한 옷차림으로 쉴 때도</li></ul>
+    <p class="cs-mid">추위가 덜 신경 쓰여야 하루가 편하니까요.</p>
+    <p class="cs-a">하지만 추울 때마다 잠깐 대고 마는 방법은<br><strong>그 순간을 넘길 뿐</strong>,<br>다시 추워지면 또 찾게 됩니다.</p>
   </div>
-  <p class="note">제품군별 일반적인 사용 방식이며, 특정 제품의 성능을 비교한 내용이 아닙니다. 그래프는 이해를 돕기 위한 개념도입니다.</p>
+  <p class="note">제품군별 일반적인 사용 방식이며, 특정 제품의 성능을 비교한 내용이 아닙니다. 그래프는 이해를 돕기 위한 개념도이며, 인용 후기는 개인의 사용 경험입니다.</p>
+  
 </section>
 
 <!-- [6] 결론 -->
 <section class="conclusion">
-  <p class="cc-lead rv-up">그래서 잠깐 데우는 것이 아니라<br><strong>체온을 끌어올리고,<br>벗은 뒤에도 따뜻함이 남는</strong><br>방법이 필요합니다.</p>
+  <p class="cc-lead rv-up">그래서 필요한 건<br>잠깐 대는 열이 아니라<br><strong>벗은 뒤에도 따뜻함이 남는</strong><br>방법입니다.</p>
   <div class="cc-img rv-up"><video src="img/v_cell.mp4" poster="img/v_cell.jpg" muted loop playsinline preload="none" aria-label="피부 아래로 온기가 전해지는 모습"></video></div>
   <p class="cc-next rv-up">체온을 몸속 깊은 곳까지 전하고<br>벗은 뒤에도 <strong>최대 10시간</strong> 온기가 머무는<br><strong>마이온도를 소개합니다</strong></p>
   <p class="cc-note">* 심부 전달·최대 10시간 지속은 브랜드 안내 기준입니다. 지속 시간과 체감은 사람마다 다르며 보장하지 않습니다.</p>
