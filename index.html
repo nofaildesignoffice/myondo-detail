@@ -56,6 +56,23 @@ section.hero{padding:0}
 .hero-inner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:32%;pointer-events:none;
   background:linear-gradient(to top,rgba(0,0,0,.66) 0%,rgba(0,0,0,.42) 38%,rgba(0,0,0,.15) 70%,rgba(0,0,0,0) 100%)}
 .hero-inner > *{position:relative;z-index:1}
+/* 히어로 체온 상승 모션 (사진 좌표계 SVG) */
+.hero-inner > .hero-heat{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;font-family:var(--font-sans);mix-blend-mode:screen}
+.hero-inner > .hero-badge{mix-blend-mode:normal}
+.hh-glow{transform-box:fill-box;transform-origin:center;animation:hhGlow 6s ease-in-out infinite}
+.hh-skin{animation:hhSkin 6s ease-in-out infinite}
+.hh-w{fill:none;stroke:url(#hhLine);stroke-width:6;stroke-linecap:round;opacity:0;animation:hhWave 3.9s ease-out infinite}
+.hh-p{fill:#FFB07A;opacity:0;animation:hhRise 4.4s ease-out infinite}
+.hh-merc{transform-box:fill-box;transform-origin:50% 100%;animation:hhMerc 6s ease-in-out infinite}
+.hh-arrow{animation:hhArrow 1.6s ease-in-out infinite}
+@keyframes hhGlow{0%{opacity:.15}45%,75%{opacity:.85}100%{opacity:.15}}
+@keyframes hhSkin{0%{opacity:.1}50%,75%{opacity:.75}100%{opacity:.1}}
+@keyframes hhWave{0%{opacity:0;transform:translate(0,0)}20%{opacity:.8}100%{opacity:0;transform:translate(-26px,-120px)}}
+@keyframes hhRise{0%{opacity:0;transform:translate(0,0) scale(.6)}18%{opacity:.95}100%{opacity:0;transform:translate(-30px,-170px) scale(1.1)}}
+@keyframes hhMerc{0%{transform:scaleY(.18)}50%,78%{transform:scaleY(1)}100%{transform:scaleY(.18)}}
+@keyframes hhArrow{0%,100%{transform:translate(-6px,-10px)}50%{transform:translate(-6px,-16px)}}
+@media (prefers-reduced-motion:reduce){.hh-glow,.hh-skin,.hh-w,.hh-p,.hh-merc,.hh-arrow{animation:none}.hh-glow{opacity:.7}.hh-w,.hh-p{opacity:0}}
+
 .hero-copy{text-shadow:0 2px 14px rgba(0,0,0,.3)}
 .hero-title{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.03em}
 .hero-title strong{color:var(--sky)}
@@ -359,7 +376,7 @@ section.htu-sec{padding-top:0}
   mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%)}
 .htu-top video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;z-index:-2}
 .htu-top::before{content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(to bottom,rgba(28,9,15,.6) 0%,rgba(28,9,15,.25) 26%,rgba(28,9,15,0) 40%,rgba(255,255,255,0) 76%,rgba(255,255,255,.6) 91%,#fff 100%)}
+  background:linear-gradient(to bottom,rgba(0,0,0,.66) 0%,rgba(0,0,0,.3) 26%,rgba(0,0,0,0) 42%,rgba(255,255,255,0) 76%,rgba(255,255,255,.6) 91%,#fff 100%)}
 .htu-top{isolation:isolate}
 .htu-top-sub{margin-top:10px;font-size:15px;font-weight:500;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.4)}
 
@@ -427,6 +444,36 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [1] HERO -->
 <section class="hero">
   <div class="hero-inner">
+    <svg class="hero-heat" viewBox="0 0 960 1440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <radialGradient id="hhGlow"><stop offset="0" stop-color="#FF9A5A" stop-opacity=".95"/><stop offset=".45" stop-color="#FF6A3D" stop-opacity=".45"/><stop offset="1" stop-color="#FF5A3A" stop-opacity="0"/></radialGradient>
+        <radialGradient id="hhCore"><stop offset="0" stop-color="#FFD2A0" stop-opacity=".9"/><stop offset="1" stop-color="#FF8A4C" stop-opacity="0"/></radialGradient>
+        <linearGradient id="hhLine" x1="0" x2="1"><stop offset="0" stop-color="#FFB27A" stop-opacity="0"/><stop offset=".3" stop-color="#FFB27A"/><stop offset=".7" stop-color="#FF8F6B"/><stop offset="1" stop-color="#FF8F6B" stop-opacity="0"/></linearGradient>
+        <filter id="hhBlur" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="hhSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+        <clipPath id="hhTher"><rect x="0" y="-60" width="10" height="60"/></clipPath>
+      </defs>
+      <g class="hh-glow">
+        <ellipse cx="610" cy="1005" rx="330" ry="150" transform="rotate(-17 610 1005)" fill="url(#hhGlow)"/>
+        <ellipse cx="560" cy="905" rx="170" ry="62" transform="rotate(-20 560 905)" fill="url(#hhCore)" class="hh-skin"/>
+      </g>
+      <g class="hh-waves" filter="url(#hhBlur)"><path class="hh-w" style="animation-delay:0.0s" d="M418 972 C520 946 640 912 830 846"/><path class="hh-w" style="animation-delay:1.3s" d="M418 972 C520 946 640 912 830 846"/><path class="hh-w" style="animation-delay:2.6s" d="M418 972 C520 946 640 912 830 846"/></g>
+      <g class="hh-parts" filter="url(#hhSoft)"><circle class="hh-p" cx="554" cy="935" r="5.3" style="animation-delay:0.35s;animation-duration:4.46s"/><circle class="hh-p" cx="572" cy="928" r="4.9" style="animation-delay:0.18s;animation-duration:4.29s"/><circle class="hh-p" cx="449" cy="967" r="4.6" style="animation-delay:3.97s;animation-duration:3.80s"/><circle class="hh-p" cx="513" cy="955" r="6.3" style="animation-delay:2.77s;animation-duration:4.23s"/><circle class="hh-p" cx="825" cy="850" r="6.0" style="animation-delay:1.39s;animation-duration:3.83s"/><circle class="hh-p" cx="469" cy="964" r="5.9" style="animation-delay:0.87s;animation-duration:4.53s"/><circle class="hh-p" cx="685" cy="898" r="5.0" style="animation-delay:0.30s;animation-duration:3.70s"/><circle class="hh-p" cx="505" cy="959" r="4.6" style="animation-delay:1.51s;animation-duration:4.54s"/><circle class="hh-p" cx="608" cy="921" r="5.8" style="animation-delay:3.36s;animation-duration:3.99s"/><circle class="hh-p" cx="658" cy="909" r="6.1" style="animation-delay:3.50s;animation-duration:4.06s"/><circle class="hh-p" cx="827" cy="850" r="4.6" style="animation-delay:3.63s;animation-duration:3.84s"/><circle class="hh-p" cx="623" cy="912" r="5.4" style="animation-delay:3.67s;animation-duration:4.52s"/><circle class="hh-p" cx="783" cy="867" r="5.5" style="animation-delay:2.85s;animation-duration:4.53s"/><circle class="hh-p" cx="609" cy="929" r="6.3" style="animation-delay:2.28s;animation-duration:4.66s"/><circle class="hh-p" cx="445" cy="977" r="5.3" style="animation-delay:4.77s;animation-duration:4.92s"/><circle class="hh-p" cx="538" cy="944" r="5.4" style="animation-delay:0.11s;animation-duration:4.34s"/></g>
+    </svg>
+    <svg class="hero-heat hero-badge" viewBox="0 0 960 1440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="hhMerc" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#E8484F"/><stop offset="1" stop-color="#FF9A5A"/></linearGradient></defs>
+      <g class="hh-badge" transform="translate(160 1030)">
+        <rect width="256" height="92" rx="46" fill="rgba(255,255,255,.82)"/>
+        <g transform="translate(34 18)">
+          <rect x="6" y="0" width="16" height="44" rx="8" fill="#fff" stroke="#C9B9BE" stroke-width="2"/>
+          <circle cx="14" cy="50" r="12" fill="url(#hhMerc)"/>
+          <rect class="hh-merc" x="10" y="8" width="8" height="42" rx="4" fill="url(#hhMerc)"/>
+        </g>
+        <text x="86" y="40" font-size="23" font-weight="600" fill="#5A4A50" letter-spacing="-.5">밴드를 두르면</text>
+        <text x="86" y="72" font-size="28" font-weight="800" fill="#24141A" letter-spacing="-.5">체온 <tspan fill="#C8382E">UP</tspan></text>
+        <path class="hh-arrow" d="M196 70 l10 -14 l10 14 M206 56 v22" stroke="#C8382E" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-6 -12)"/>
+      </g>
+    </svg>
     <div class="hero-copy">
       <p class="hero-sub rv-up">물 데우기도, 충전도 필요 없이<br>허리에 두르는 보온 밴드</p>
       <h1 class="hero-title rv-up">떼면 식는 핫팩 말고,<br>심부까지 데워 벗어도<br><strong>최대 10시간*</strong></h1>
@@ -828,11 +875,16 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [12] 사이즈 (기존 상세 33번 SIZE 구조) -->
 <section class="size-sec">
   <h2 class="sz-head rv-up">SIZE</h2>
-  <p class="section-subtitle">기존 S사이즈와 M사이즈까지 모두 이용 가능한<br>새로운 M사이즈로 변경되었습니다.</p>
+  <p class="section-subtitle">허리둘레에 맞춰<br>S·M·L 중에서 골라 주세요.</p>
   <div class="sz-measure rv-up"><img src="img/size_measure.jpg" alt="줄자로 허리둘레를 재는 모습"><p>* 내 허리 둘레는 몇 cm?<br>끈이나 줄자로 허리를 한 바퀴 감아 주세요</p></div>
-  <p class="sz-name rv-up"><b>M</b>둘레 60cm ~ 88cm 이신 분들 추천<br><span>약 23~35인치 (S 가능)</span></p>
+  <p class="sz-name rv-up"><b>S</b>허리 사이즈 23인치 착용 가능</p>
   <div class="sz-fig rv-up">
-    <div class="sz-band" style="width:89%"><img src="img/size_band_m.png" alt="107cm 밴드">
+    <div class="sz-band" style="width:70%"><img src="img/size_band_m.png" alt="88cm 밴드">
+      <span class="sz-v l"><i>15.5cm</i></span><span class="sz-v r"><i>11.5cm</i></span><span class="sz-h"><i>88cm</i></span></div>
+  </div>
+  <p class="sz-name rv-up"><b>M</b>둘레 60cm ~ 88cm 이신 분들 추천<br><span>약 23~35인치</span></p>
+  <div class="sz-fig rv-up">
+    <div class="sz-band" style="width:86%"><img src="img/size_band_m.png" alt="107cm 밴드">
       <span class="sz-v l"><i>16cm</i></span><span class="sz-v r"><i>13cm</i></span><span class="sz-h"><i>107cm</i></span></div>
   </div>
   <p class="sz-name rv-up"><b>L</b>둘레 84cm ~ 106cm 이신 분들 추천<br><span>약 33~42인치</span></p>
@@ -893,7 +945,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <div class="info-table">
     <div class="info-row"><strong>제품명</strong><span>마이온도 원적외선 심부발열 밴드</span></div>
     <div class="info-row"><strong>재질</strong><span>네오플란 원단, 그래핀, 게르마늄, 규소, 미네랄 융복합 추출물, 티타늄, 바이오스톤 등 천연광물</span></div>
-    <div class="info-row"><strong>사이즈</strong><span>M: 허리 60~88cm, 길이 107cm / L: 허리 84~106cm, 길이 120cm (폭 16·13cm)</span></div>
+    <div class="info-row"><strong>사이즈</strong><span>S: 허리 23인치, 길이 88cm (폭 15.5·11.5cm) / M: 허리 60~88cm, 길이 107cm / L: 허리 84~106cm, 길이 120cm (폭 16·13cm)</span></div>
     <div class="info-row"><strong>제조국</strong><span>대한민국</span></div>
     <div class="info-row"><strong>판매원</strong><span>마이온도</span></div>
     <div class="info-row"><strong>취급 시 주의사항</strong><span>상세페이지 Q&amp;A 참조</span></div>
