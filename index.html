@@ -127,10 +127,16 @@ section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0
 .wr-title strong{color:var(--brand)}
 .wr-circle{width:180px;height:180px;margin:34px auto 40px;border-radius:50%;overflow:hidden}
 .wr-circle img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
-.wr-chat{display:flex;flex-direction:column;gap:18px}
+.wr-chat{display:flex;flex-direction:column;gap:22px;padding:0 6px}
 .wb{max-width:86%;padding:16px 20px;border-radius:20px;font-size:14.5px;font-weight:500;line-height:1.6;letter-spacing:-.02em;
   background:#fff;color:#1A1A1A;box-shadow:0 4px 14px rgba(90,20,40,.08);opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
 .wb.me{align-self:flex-end;background:var(--brand);color:#fff;font-weight:600;box-shadow:0 6px 16px rgba(142,31,63,.25)}
+/* 말풍선 꼬리 */
+.wb{position:relative;align-self:flex-start;border-bottom-left-radius:6px}
+.wb.me{border-bottom-left-radius:20px;border-bottom-right-radius:6px}
+.wb::after{content:"";position:absolute;bottom:0;left:-8px;width:18px;height:16px;background:inherit;
+  clip-path:path('M18 0 C18 9 12 15 0 16 C8 12 9 6 9 0 Z')}
+.wb.me::after{left:auto;right:-8px;clip-path:path('M0 0 C0 9 6 15 18 16 C10 12 9 6 9 0 Z')}
 .wr-chat.shown .wb{opacity:1;transform:none}
 .wr-chat.shown .wb:nth-child(2){transition-delay:.45s}.wr-chat.shown .wb:nth-child(3){transition-delay:.9s}.wr-chat.shown .wb:nth-child(4){transition-delay:1.35s}.wr-chat.shown .wb:nth-child(5){transition-delay:1.8s}
 @media (prefers-reduced-motion:reduce){.wb{opacity:1;transform:none}}
