@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>마이온도 심부발열 밴드</title>
-<meta name="description" content="전기도 충전도 없이 허리에 두르는 마이온도 버건디 도트 밴드">
+<meta name="description" content="전기도 충전도 없이 허리에 두르는 마이온도 원적외선 심부발열 밴드">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 /* 스피큘 상세페이지(v3) 컴포넌트·토큰 체계를 마이온도 버건디로 치환 */
@@ -58,7 +58,9 @@ section.hero{padding:0}
 .hero-inner > *{position:relative;z-index:1}
 .hero-copy{text-shadow:0 2px 14px rgba(40,10,20,.3)}
 .hero-title{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.03em}
-.hero-sub{margin-top:12px;font-size:17px;font-weight:500;line-height:1.5;letter-spacing:-.02em}
+.hero-title strong{color:var(--sky)}
+.hero-foot{margin-top:14px;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
+.hero-sub{margin-bottom:12px;font-size:17px;font-weight:500;line-height:1.5;letter-spacing:-.02em}
 .hero-certs{display:grid;grid-template-columns:repeat(4,1fr)}
 .hero-certs li{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;line-height:1.35;color:rgba(255,255,255,.94)}
 .hero-certs li + li{border-left:1px solid rgba(255,255,255,.45)}
@@ -68,7 +70,7 @@ section.hero{padding:0}
 /* 1b. 브랜드 비주얼 */
 section.sub{padding:0}
 .sub-inner{position:relative;min-height:700px;text-align:center;padding:78px 20px 38px;color:#fff;
-  background:#3A1220 url('img/dot_macro.jpg') center 40% / cover no-repeat}
+  background:#1E1C1D url('img/sub_lava.jpg') center / cover no-repeat;display:flex;flex-direction:column}
 .sub-inner::before{content:"";position:absolute;left:0;right:0;top:0;height:46%;pointer-events:none;
   background:linear-gradient(to bottom,rgba(42,17,25,.78) 0%,rgba(42,17,25,.55) 35%,rgba(42,17,25,.2) 70%,rgba(42,17,25,0) 100%)}
 .sub-inner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;pointer-events:none;
@@ -76,7 +78,9 @@ section.sub{padding:0}
 .sub-inner > *{position:relative;z-index:1}
 .sub-eyebrow{font-size:17px;font-weight:400;line-height:1.7;letter-spacing:-.02em;text-shadow:0 2px 16px rgba(30,5,12,.6)}
 .sub-eyebrow strong{font-weight:800}
-.sub-title{margin-top:16px;font-size:38px;font-weight:800;line-height:1.22;letter-spacing:-.01em;text-shadow:0 3px 20px rgba(30,5,12,.6)}
+.sub-logo{flex:1;display:flex;align-items:center;justify-content:center;padding:30px 0 90px}
+.sub-logo img{width:150px;height:auto;filter:drop-shadow(0 4px 18px rgba(0,0,0,.55))}
+.sub-title{margin-top:16px;font-size:30px;font-weight:800;line-height:1.22;letter-spacing:-.01em;text-shadow:0 3px 20px rgba(30,5,12,.6)}
 
 /* 1c. 요약 (STEP 1 + STEP 2) */
 section.summary{background:var(--bg-gray);padding:60px 20px 56px;text-align:center}
@@ -266,6 +270,17 @@ section.spic-sec .section-title strong{color:var(--sky)}
 .sp-item.shown .sp-label,.sp-item.shown .sp-name,.sp-item.shown .sp-body{opacity:1;transform:none;filter:none}
 @media (prefers-reduced-motion:reduce){.sp-item .sp-thumb,.sp-item .sp-label,.sp-item .sp-name,.sp-item .sp-body{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
 
+/* 원리 3단계 (기존 상세 13번 하이테크 메커니즘 차용) */
+section.how-sec{background:#fff}
+.how-list{margin-top:30px;display:grid;gap:14px}
+.how-row{display:flex;gap:16px;align-items:flex-start;background:var(--bg-soft);border-radius:18px;padding:20px 18px}
+.how-no{flex:0 0 46px;height:46px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:.04em}
+.how-row h3{font-size:18px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
+.how-row p{margin-top:6px;font-size:14px;color:#333;line-height:1.6;letter-spacing:-.02em}
+.how-arrow{text-align:center;color:var(--brand);font-size:14px;line-height:1;margin:-6px 0}
+.how-tech{margin-top:22px;text-align:center;font-size:13px;color:var(--text-gray)}
+.how-tech b{color:var(--brand)}
+
 /* 사용법 */
 .htu-step{display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;padding:18px 0}
 .htu-step + .htu-step{border-top:1px solid var(--line-soft)}
@@ -299,6 +314,8 @@ section.evi-sec{background:var(--bg-gray)}
 .doc-track{display:flex;gap:12px;touch-action:pan-y;transition:transform .55s cubic-bezier(.22,1,.36,1)}
 .doc-card{flex:0 0 70%;min-height:250px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px rgba(80,20,40,.08);
   padding:24px 20px;display:flex;flex-direction:column;position:relative;overflow:hidden;text-align:left}
+.doc-card.doc-img-card{padding:10px;min-height:0;aspect-ratio:3/4;align-items:center;justify-content:center;background:#fff}
+.doc-img-card img{width:100%;height:100%;object-fit:contain}
 .doc-country{font-size:11.5px;font-weight:800;letter-spacing:.2em;color:var(--brand)}
 .doc-kind{margin-top:6px;font-size:22px;font-weight:800;letter-spacing:-.02em}
 .doc-no{margin-top:4px;font-size:12.5px;color:var(--text-gray)}
@@ -355,8 +372,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <h1 class="hero-title rv-up">핫팩 챙기던 배 보온,<br>이제 마이온도<br>밴드 하나로</h1>
       <p class="hero-sub rv-up">물 데우기도, 충전도 필요 없이<br>허리에 두르는 보온 밴드</p>
+      <h1 class="hero-title rv-up">떼면 식는 핫팩 말고,<br>속까지 데워 벗어도<br><strong>최대 10시간*</strong></h1>
     </div>
     <ul class="hero-certs">
       <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><polyline points="12.41 6.75 13 2 10.57 4.92"/><polyline points="18.57 12.91 21 10 15.66 10"/><polyline points="8 8 3 14 12 14 11 22 16 16"/><line x1="2" y1="2" x2="22" y2="22"/></svg></span>전원·충전<br>불필요</li>
@@ -364,6 +381,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg></span>국내<br>생산</li>
       <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>보관 후<br>다시 착용</li>
     </ul>
+    <p class="hero-foot">* 심부 전달·벗은 뒤 최대 10시간 지속은 브랜드 안내 기준이며, 사람마다 다릅니다.</p>
   </div>
   
 </section>
@@ -372,7 +390,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <section class="sub">
   <div class="sub-inner">
     <p class="sub-eyebrow rv-up">전기도, 충전도 없이<br><strong>필요한 건 오직 나의 체온</strong></p>
-    <h2 class="sub-title rv-up">BURGUNDY DOT<br>BAND</h2>
+    <h2 class="sub-title rv-up">마이온도<br>원적외선 심부발열 밴드</h2>
+    <div class="sub-logo rv-up"><img src="img/logo_white.png" alt="my ONDO 로고"></div>
   </div>
 </section>
 
@@ -391,9 +410,10 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [2] 대표 스토리 -->
 <section class="founder">
-  <h2 class="fd-title rv-up">떼는 순간 식어 버리는<br>핫팩으로는 부족했어요</h2>
-  <p class="fd-body rv-up">엄마들, 어르신들과 함께 건강한 생활 습관을<br>나누는 모임을 오래 운영해 왔어요.<br>배가 차서 핫팩과 찜질기를 달고 사는 분들을<br>정말 많이 만났죠.</p>
-  <p class="fd-body rv-up">그런데 핫팩은 떼는 순간 금방 식었어요.<br>쓰는 동안만이 아니라 벗은 뒤에도<br>따뜻함이 남는 방법을 찾다가 이 밴드를 만났고,<br>제조사와 함께 마이온도로 선보이게 되었습니다.</p>
+  <h2 class="fd-title rv-up">"여자는 몸이 따뜻해야 한다"<br>엄마가 수백 번 하던 말이었어요</h2>
+  <p class="fd-body rv-up">어릴 때부터 엄마는 배를 차게 하지 말라고<br>수없이 말했어요. 그 말을 흘려듣다가<br>손발과 배가 늘 차가워 오래 고생했죠.</p>
+  <p class="fd-body rv-up">4년 동안 엄마들, 어르신들과 건강 챌린지를<br>함께하며 알게 됐어요. 아무리 잘 먹고 운동해도<br>기본은 몸을 따뜻하게 지키는 일이라는 걸요.</p>
+  <p class="fd-body rv-up">내 딸들은 나처럼 고생하지 않았으면 하는 마음으로<br>가장 간편하게 체온을 지킬 방법을 찾다가<br>이 밴드를 발굴했습니다.</p>
   <p class="fd-sign rv-up">마이온도 대표 한해이</p>
   
 </section>
@@ -529,6 +549,21 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   
 </section>
 
+<!-- [7b] 원리 3단계 -->
+<section class="how-sec">
+  <h2 class="section-title rv-up">전기 없이 따뜻해지는<br><strong>마이온도의 원리</strong></h2>
+  <div class="how-list">
+    <div class="how-row rv-up"><span class="how-no">01</span><div><h3>체온 복사</h3><p>밴드 안쪽 광물 도트가 맨살에 닿아 내 몸의 체온을 받아들입니다.</p></div></div>
+    <div class="how-arrow" aria-hidden="true">▼</div>
+    <div class="how-row rv-up"><span class="how-no">02</span><div><h3>원적외선 방사</h3><p>체온을 받은 도트의 광물 소재가 원적외선을 내보냅니다.</p></div></div>
+    <div class="how-arrow" aria-hidden="true">▼</div>
+    <div class="how-row rv-up"><span class="how-no">03</span><div><h3>속까지 전해지는 온기</h3><p>겉만 뜨거운 열이 아니라 몸속 깊은 곳까지 온기가 전해지고, 벗은 뒤에도 한동안 남습니다.</p></div></div>
+  </div>
+  <p class="how-tech">약 40여 가지 광물을 융합한 <b>NBT 융복합 기술</b></p>
+  <p class="note">* 원리와 지속 시간은 브랜드 설명이며, 체감 시점과 정도는 사람마다 다릅니다.</p>
+  
+</section>
+
 <!-- [8] 착용 후 4단계 -->
 <section class="step-sec">
   <h2 class="section-title rv-up">마이온도를 두른 뒤<br><strong>알아 두실 4단계</strong></h2>
@@ -563,8 +598,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 </section>
 
 <div class="marquee" aria-hidden="true"><div class="marquee-track">
-  <span>MYONDO BURGUNDY DOT BAND</span><i>◆</i><span>MYONDO BURGUNDY DOT BAND</span><i>◆</i><span>MYONDO BURGUNDY DOT BAND</span><i>◆</i><span>MYONDO BURGUNDY DOT BAND</span><i>◆</i>
-  <span>MYONDO BURGUNDY DOT BAND</span><i>◆</i><span>MYONDO BURGUNDY DOT BAND</span><i>◆</i><span>MYONDO BURGUNDY DOT BAND</span><i>◆</i><span>MYONDO BURGUNDY DOT BAND</span><i>◆</i>
+  <span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i><span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i><span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i><span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i>
+  <span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i><span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i><span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i><span>MY ONDO 원적외선 심부발열 밴드</span><i>◆</i>
 </div></div>
 
 <!-- [9] 비교 -->
@@ -590,7 +625,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <h2 class="section-title rv-up">버건디 도트에 담은<br><strong>7가지 소재</strong></h2>
   <p class="sp-lead rv-up">마이온도 밴드는 <strong>네오플란 원단</strong> 위에 광물 소재를 담은 도트를 촘촘히 올린 구조입니다. 2026년, 이 <strong>도트의 색과 원료</strong>를 새로 바꿨습니다.</p>
   <div class="sp-wrap">
-    <div class="sp-figure" role="img" aria-label="세로로 놓인 버건디 도트 밴드"></div>
+    <div class="sp-figure" role="img" aria-label="세로로 놓인 마이온도 원적외선 심부발열 밴드"></div>
     <svg class="sp-lines" aria-hidden="true"></svg>
     <div class="sp-item right c1"><span class="sp-thumb" style="background-image:url('img/dot_flat.jpg')"></span><p class="sp-label">Fabric</p><h4 class="sp-name">네오플란 원단</h4><p class="sp-body">신축성·보온성이 좋은<br><em>합성고무 원단</em></p></div>
     <div class="sp-item left c2"><span class="sp-thumb">C</span><p class="sp-label">Graphene</p><h4 class="sp-name">그래핀</h4><p class="sp-body">열을 빠르게 퍼뜨리는<br><em>탄소 신소재</em></p></div>
@@ -638,13 +673,13 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="section-subtitle">한국·미국·일본·중국에 등록된 관련 기술 특허입니다.</p>
   <div class="doc-slider" id="docSlider">
     <div class="doc-viewport"><div class="doc-track">
-      <div class="doc-card"><p class="doc-country">KOREA</p><p class="doc-kind">특허 등록</p><p class="doc-no">2016.05.24 등록</p><p class="doc-name">그래핀과 나노 무기물질을 이용한 자가발열성과 내기능성을 갖는 벨트 첨가용 물질과 그를 이용한 벨트 및 그 제조방법</p></div>
-      <div class="doc-card"><p class="doc-country">KOREA</p><p class="doc-kind">특허 등록</p><p class="doc-no">2017.09.01 등록</p><p class="doc-name">발열 섬유와 그 제조방법</p></div>
-      <div class="doc-card"><p class="doc-country">USA</p><p class="doc-kind">Patent</p><p class="doc-no">US 10,543,120 B2 · 2020.01.28</p><p class="doc-name">Belt additional substance having self-heating and functionality using graphene and nano inorganic substance, and belt and manufacturing method using the same</p></div>
-      <div class="doc-card"><p class="doc-country">JAPAN</p><p class="doc-kind">特許</p><p class="doc-no">特許第6427548号 · 2018.11.02</p><p class="doc-name">그래핀 및 무기 나노물질을 이용한 자기발열성·다기능성 벨트 첨가용 물질, 이를 이용한 벨트 및 그 제조방법 (명칭 번역)</p></div>
-      <div class="doc-card"><p class="doc-country">CHINA</p><p class="doc-kind">发明专利</p><p class="doc-no">ZL 2016 1 1160999.1 · 2019.01.11</p><p class="doc-name">자가발열성과 내기능성을 갖는 허리 벨트 및 허리 벨트 발열 부품의 제조방법 (명칭 번역)</p></div>
+      <div class="doc-card doc-img-card"><img src="img/pat_kr1.jpg" alt="한국 특허증 2016.05.24 등록"></div>
+      <div class="doc-card doc-img-card"><img src="img/pat_kr2.jpg" alt="한국 특허증 2017.09.01 등록"></div>
+      <div class="doc-card doc-img-card"><img src="img/pat_us.jpg" alt="미국 특허 US 10,543,120 B2"></div>
+      <div class="doc-card doc-img-card"><img src="img/pat_jp.jpg" alt="일본 특허증 特許第6427548号"></div>
+      <div class="doc-card doc-img-card"><img src="img/pat_cn.jpg" alt="중국 발명특허증 ZL 2016 1 1160999.1"></div>
     </div></div>
-    <div class="doc-cap"><p class="doc-cap-title" id="docTitle">한국 특허</p><p class="doc-cap-body" id="docBody">그래핀·나노 무기물질 벨트 첨가 물질</p></div>
+    <div class="doc-cap"><p class="doc-cap-title" id="docTitle">한국 특허 · 2016.05.24 등록</p><p class="doc-cap-body" id="docBody">그래핀과 나노 무기물질을 이용한 자가발열성과 내기능성을 갖는 벨트 첨가용 물질</p></div>
     <div class="doc-dots"><b class="on"></b><b></b><b></b><b></b><b></b></div>
   </div>
   <p class="note">* 특허 등록은 기술에 대한 권리를 뜻하며, 제품의 효능이나 안전성을 인증하는 것은 아닙니다.</p>
@@ -742,7 +777,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   var s=document.getElementById('docSlider');if(!s)return;
   var vp=s.querySelector('.doc-viewport'),track=s.querySelector('.doc-track'),cards=track.children,dots=s.querySelectorAll('.doc-dots b'),
       title=document.getElementById('docTitle'),body=document.getElementById('docBody'),i=0,timer,x0=null;
-  var caps=[['한국 특허','그래핀·나노 무기물질 벨트 첨가 물질'],['한국 특허','발열 섬유와 그 제조방법'],['미국 특허','US 10,543,120 B2'],['일본 특허','特許第6427548号'],['중국 특허','ZL 2016 1 1160999.1']];
+  var caps=[['한국 특허 · 2016.05.24 등록','그래핀과 나노 무기물질을 이용한 자가발열성과 내기능성을 갖는 벨트 첨가용 물질'],['한국 특허 · 2017.09.01 등록','발열 섬유와 그 제조방법'],['미국 특허 · 2020.01.28','US 10,543,120 B2 · 그래핀·나노 무기물질 자가발열 벨트 첨가 물질'],['일본 특허 · 2018.11.02','特許第6427548号 · 그래핀·무기 나노물질 자기발열성 벨트 첨가 물질'],['중국 발명특허 · 2019.01.11','ZL 2016 1 1160999.1 · 자가발열성 허리 벨트 및 발열 부품 제조방법']];
   function go(n){i=(n+cards.length)%cards.length;var c=cards[i];
     track.style.transform='translateX('+(vp.clientWidth/2-c.offsetLeft-c.offsetWidth/2)+'px)';
     dots.forEach(function(d,k){d.classList.toggle('on',k===i)});title.textContent=caps[i][0];body.textContent=caps[i][1];}
