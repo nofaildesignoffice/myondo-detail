@@ -322,14 +322,45 @@ section.how-sec{background:var(--bg-gray)}
 
 /* 사이즈 (카드) */
 section.size-sec{background:var(--bg-gray)}
-.pg-card{margin-bottom:12px;position:relative}
-.pg-tag{position:absolute;right:16px;top:18px;font-size:11.5px;font-weight:700;color:var(--brand);background:var(--bg-soft);padding:4px 10px;border-radius:999px}
-.pg-title{font-size:26px;font-weight:800;letter-spacing:-.02em}
-.pg-spec{margin-top:10px;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;align-items:baseline}
-.pg-spec dt{color:var(--text-gray)}
-.pg-spec dd{font-weight:700}
-.pg-spec dd strong{color:var(--brand);font-size:18px}
-.size-img{margin:0 auto 20px;width:78%}
+.sz-head{font-size:44px;font-weight:800;text-align:center;letter-spacing:-.01em;line-height:1.1;margin-bottom:12px}
+.sz-measure{position:relative;margin:28px 0 8px;overflow:hidden;border-radius:4px}
+.sz-measure img{width:100%;filter:grayscale(1)}
+.sz-measure p{position:absolute;left:0;right:0;bottom:12px;text-align:center;color:#fff;font-size:14.5px;font-weight:600;line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.sz-name{margin-top:40px;text-align:center;font-size:18px;font-weight:600;letter-spacing:-.03em;line-height:1.45}
+.sz-name b{font-size:30px;font-weight:800;margin-right:10px;vertical-align:-3px}
+.sz-name span{font-size:16px;font-weight:500;color:var(--text-dark)}
+.sz-fig{padding:26px 6px 34px}
+.sz-band{position:relative;margin:0 auto}
+.sz-band img{width:100%}
+.sz-v,.sz-h{position:absolute;font-size:12px;color:#555;font-weight:500}
+.sz-v{top:0;bottom:0;border-left:1px dotted #8a8a8a}
+.sz-v.l{left:-6px}
+.sz-v.r{right:-6px;top:11%;bottom:11%}
+.sz-v i,.sz-h i{position:absolute;font-style:normal;white-space:nowrap}
+.sz-v.l i{left:-2px;top:-20px}
+.sz-v.r i{right:-2px;top:-20px}
+.sz-h{left:-6px;right:-6px;bottom:-12px;border-top:1px dotted #8a8a8a}
+.sz-h i{left:50%;top:5px;transform:translateX(-50%)}
+
+/* 착용 TIP (기존 상세 33번 하단) */
+section.tip-sec{background:var(--bg-gray);padding-top:20px}
+.tip-grid{margin:26px -14px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:start}
+.tip{text-align:center}
+.tip-tag{display:inline-block;background:#111;color:#fff;font-size:12.5px;font-weight:700;padding:5px 9px;letter-spacing:-.02em;white-space:nowrap}
+.tip img{margin-top:10px;width:100%;aspect-ratio:266/334;object-fit:cover;border:1px solid #444}
+.tip p{margin-top:12px;font-size:12.5px;line-height:1.6;color:var(--text-dark);letter-spacing:-.03em}
+.tip p strong{color:#111}
+
+/* 사용법 상단 (리뷰 rv-top 구조 + 착용 영상) */
+section.htu-sec{padding-top:0}
+.htu-top{position:relative;height:560px;margin:0 -20px 10px;padding:34px 18px 0;text-align:center;overflow:hidden;
+  -webkit-mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%);
+  mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%)}
+.htu-top video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;z-index:-2}
+.htu-top::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(to bottom,rgba(28,9,15,.6) 0%,rgba(28,9,15,.25) 26%,rgba(28,9,15,0) 40%,rgba(255,255,255,0) 76%,rgba(255,255,255,.6) 91%,#fff 100%)}
+.htu-top{isolation:isolate}
+.htu-top-sub{margin-top:10px;font-size:15px;font-weight:500;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.4)}
 
 /* 근거 (특허 카드 슬라이더) */
 section.evi-sec{background:var(--bg-gray)}
@@ -546,7 +577,6 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [6] 결론 -->
 <section class="conclusion">
   <p class="cc-lead rv-up">그래서 배 보온에는<br><strong>쓰는 동안만이 아니라,<br>벗은 뒤에도 따뜻함이 남는</strong><br>방법이 필요합니다.</p>
-  <div class="cc-img rv-up"><video src="img/v_wear.mp4" poster="img/v_wear.jpg" muted loop playsinline preload="none" aria-label="밴드를 허리에 감아 고정하는 영상"></video></div>
   <p class="cc-next rv-up">체온을 몸속 깊은 곳까지 전하고<br>벗은 뒤에도 <strong>최대 10시간</strong> 온기가 머무는<br><strong>마이온도를 소개합니다</strong></p>
   <p class="cc-note">* 심부 전달·최대 10시간 지속은 브랜드 안내 기준입니다. 지속 시간과 체감은 사람마다 다르며 보장하지 않습니다.</p>
   
@@ -776,30 +806,52 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [11] 사용법 -->
 <section class="htu-sec">
-  <h2 class="section-title rv-up">도트 면은 안쪽으로,<br><strong>이렇게 착용하세요</strong></h2>
-  <p class="section-subtitle">옷 입기 전, 허리에 감아 벨크로로 고정합니다.</p>
+  <div class="htu-top">
+    <video src="img/v_wear.mp4" poster="img/v_wear.jpg" muted loop playsinline preload="none" aria-label="밴드를 허리에 감아 고정하는 영상"></video>
+    <p class="rv-eyebrow rv-up">HOW TO WEAR</p>
+    <h2 class="rv-title rv-up">도트 면은 안쪽으로,<br><strong>이렇게 착용하세요</strong></h2>
+    <p class="htu-top-sub rv-up">옷 입기 전, 허리에 감아 벨크로로 고정합니다.</p>
+  </div>
   <div class="htu-step rv-up"><div class="htu-img"><img src="img/wear_open.jpg" alt="밴드를 펼쳐 든 모습"></div><div><span class="htu-badge">STEP 1</span><p class="htu-title">도트 면을 몸 쪽으로</p><p class="htu-body">도트 면이 몸 쪽을 향하게 펼쳐 주세요. 도트 면이 맨살에 닿아야 합니다.</p></div></div>
   <div class="htu-step rv-up"><div class="htu-img"><img src="img/wear_wrap.jpg" alt="밴드를 허리에 감는 모습"></div><div><span class="htu-badge">STEP 2</span><p class="htu-title">허리에 감고 벨크로 고정</p><p class="htu-body">들뜨지 않을 만큼만 감아 주세요. 세게 당기면 원단이 늘어나 도트가 상할 수 있어요.</p></div></div>
   <div class="htu-step rv-up"><div class="htu-img"><img src="img/wear_done.jpg" alt="밴드 착용을 마친 모습"></div><div><span class="htu-badge">STEP 3</span><p class="htu-title">밴드 위로 옷 입기</p><p class="htu-body">하의 허리선이 밴드를 살짝 덮도록 입을 수 있습니다.</p></div></div>
   <p class="htu-cap">착용 방법 예시는 리뉴얼 전 제품으로 촬영했습니다. 현재 제품의 안쪽 도트는 버건디입니다.</p>
   <div class="card htu-warn rv-up">
     <h3><svg viewBox="0 0 24 24" fill="#F2B233" stroke="#7A4E00" stroke-width="1.4" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18.2A2 2 0 0 0 3.5 21h17a2 2 0 0 0 1.7-2.8L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01" stroke="#5A3A00" stroke-width="2" stroke-linecap="round"/></svg>처음 착용할 땐 이렇게</h3>
-    <p>두른 직후에는 열감이 없을 수 있어요. <strong>필요해지기 전에 미리 둘러 두세요.</strong> 마이온도는 코르셋이 아니니 <strong>배를 조이지 마세요.</strong> 과도한 열감·따가움·가려움·붉어짐이 생기면 <strong>바로 풀고</strong> 고객센터로 문의해 주세요. 골반이 큰 편이라면 허리에서 골반 라인을 따라 대각선으로 두르세요.</p>
+    <p>두른 직후에는 열감이 없을 수 있어요. <strong>필요해지기 전에 미리 둘러 두세요.</strong> 마이온도는 코르셋이 아니니 <strong>배를 조이지 마세요.</strong> 과도한 열감·따가움·가려움·붉어짐이 생기면 <strong>바로 풀고</strong> 고객센터로 문의해 주세요.</p>
   </div>
   
 </section>
 
-<!-- [12] 사이즈 -->
+<!-- [12] 사이즈 (기존 상세 33번 SIZE 구조) -->
 <section class="size-sec">
-  <h2 class="section-title rv-up">허리둘레로 고르는<br><strong>내 사이즈</strong></h2>
-  <p class="section-subtitle">줄자로 허리둘레를 잰 뒤 아래 범위와 비교해 주세요.</p>
-  <img class="size-img rv-up" src="img/nukki2.png" alt="마이온도 밴드">
-  <div class="card pg-card rv-up"><span class="pg-tag">기존 S·M 통합</span><p class="pg-title">M</p>
-    <dl class="pg-spec"><dt>허리둘레</dt><dd><strong>60~88cm</strong></dd><dt>밴드 길이</dt><dd>107cm</dd><dt>밴드 폭</dt><dd>16cm / 13cm</dd></dl></div>
-  <div class="card pg-card rv-up"><span class="pg-tag">기존과 동일</span><p class="pg-title">L</p>
-    <dl class="pg-spec"><dt>허리둘레</dt><dd><strong>84~106cm</strong></dd><dt>밴드 길이</dt><dd>120cm</dd><dt>밴드 폭</dt><dd>16cm / 13cm</dd></dl></div>
-  <p class="note" style="text-align:center">허리둘레 84~88cm는 두 사이즈에 모두 해당합니다. 구매 전 고객센터로 문의해 주세요.</p>
+  <h2 class="sz-head rv-up">SIZE</h2>
+  <p class="section-subtitle">기존 S사이즈와 M사이즈까지 모두 이용 가능한<br>새로운 M사이즈로 변경되었습니다.</p>
+  <div class="sz-measure rv-up"><img src="img/size_measure.jpg" alt="줄자로 허리둘레를 재는 모습"><p>* 내 허리 둘레는 몇 cm?<br>끈이나 줄자로 허리를 한 바퀴 감아 주세요</p></div>
+  <p class="sz-name rv-up"><b>M</b>둘레 60cm ~ 88cm 이신 분들 추천<br><span>약 23~35인치 (S 가능)</span></p>
+  <div class="sz-fig rv-up">
+    <div class="sz-band" style="width:89%"><img src="img/size_band_m.png" alt="107cm 밴드">
+      <span class="sz-v l"><i>16cm</i></span><span class="sz-v r"><i>13cm</i></span><span class="sz-h"><i>107cm</i></span></div>
+  </div>
+  <p class="sz-name rv-up"><b>L</b>둘레 84cm ~ 106cm 이신 분들 추천<br><span>약 33~42인치</span></p>
+  <div class="sz-fig rv-up">
+    <div class="sz-band" style="width:96%"><img src="img/size_band_l.png" alt="120cm 밴드">
+      <span class="sz-v l"><i>16cm</i></span><span class="sz-v r"><i>13cm</i></span><span class="sz-h"><i>120cm</i></span></div>
+  </div>
+  <p class="note" style="text-align:center">사이즈는 측정 방법에 따라 약간의 오차가 있을 수 있습니다.<br>허리둘레 84~88cm는 두 사이즈에 모두 해당하니 구매 전 고객센터로 문의해 주세요.</p>
   
+</section>
+
+<!-- [12b] 착용 TIP (기존 상세 33번 하단) -->
+<section class="tip-sec">
+  <h2 class="section-title rv-up">착용 <strong>TIP</strong></h2>
+  <p class="section-subtitle">광물 도트가 있는 면을 피부에 밀착시켜 착용하세요.</p>
+  <div class="tip-grid">
+    <div class="tip rv-up"><span class="tip-tag">올바른 착용법</span><img src="img/tip_1.jpg" alt="허리에 수평으로 두른 모습"><p>허리에 <strong>수평으로</strong><br>밀착해 두르세요.</p></div>
+    <div class="tip rv-up"><span class="tip-tag">골반이 큰 경우</span><img src="img/tip_2.jpg" alt="골반 라인을 따라 대각선으로 두른 모습"><p><strong>허리·골반 라인을 따라<br>대각선으로</strong> 착용하세요.</p></div>
+    <div class="tip rv-up"><span class="tip-tag">TIP</span><img src="img/tip_3.jpg" alt="밴드 위로 하의를 덮은 모습"><p>마이온도 위로<br><strong>하의를 덮으면<br>착용감 UP!</strong></p></div>
+  </div>
+  <p class="note" style="text-align:center">착용 사진은 리뉴얼 전 제품으로 촬영했습니다.</p>
 </section>
 
 <!-- [14] 국내 생산 밴드 -->
