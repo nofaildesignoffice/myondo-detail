@@ -104,6 +104,43 @@ section.founder{position:relative;padding-bottom:170px !important;overflow:hidde
 .sub-title{margin-top:16px;font-size:30px;font-weight:800;line-height:1.22;letter-spacing:-.01em;text-shadow:0 3px 20px rgba(30,5,12,.6)}
 
 /* 1c. 요약 (STEP 1 + STEP 2) */
+section.result-sec{background:var(--bg-gray);padding:20px 20px 56px;text-align:center}
+.rs-eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.16em;color:var(--brand)}
+.rs-title{margin-top:10px;font-size:30px;font-weight:800;line-height:1.35;letter-spacing:-.03em}
+.rs-title strong{color:var(--brand)}
+.rs-sub{margin-top:12px;font-size:15px;color:var(--text-gray);line-height:1.6}
+.rs-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:30px}
+.rs-pair figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#0a0410}
+.rs-pair img{width:100%;height:100%;object-fit:cover;display:block}
+.rs-pair figcaption{position:absolute;left:8px;top:8px;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:700}
+.rs-pair figcaption.on{background:var(--brand)}
+.rs-scale{display:flex;align-items:center;gap:8px;margin:12px auto 0;max-width:260px;font-size:10.5px;font-weight:700;color:var(--text-gray);letter-spacing:.08em}
+.rs-scale i{flex:1;height:7px;border-radius:4px;background:linear-gradient(90deg,#10043a,#68098c,#cc2854,#f6800c,#fedb46,#fffff0)}
+.rs-cap{margin-top:8px;font-size:11.5px;color:var(--text-light)}
+.rs-card{margin-top:22px;padding:30px 20px 26px;background:#fff;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.06)}
+.rs-name{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.rs-delta{margin-top:6px;font-size:20px;font-weight:700;color:var(--brand)}
+.rs-delta b{font-size:46px;font-weight:800;letter-spacing:-.03em}
+.rs-meta{margin-top:6px;font-size:13.5px;color:var(--text-gray);line-height:1.6}
+.rs-chart{position:relative;display:flex;align-items:flex-end;gap:5px;height:170px;margin-top:22px;padding:0 2px;border-bottom:1.4px solid #D9CDD1}
+.rs-bar{position:relative;flex:1;height:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#C04A6B,#8E1F3F);transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.rs-chart.shown .rs-bar{height:var(--h)}
+.rs-bar span{position:absolute;left:50%;top:-18px;transform:translateX(-50%);font-size:9.5px;font-weight:700;color:var(--brand);white-space:nowrap;opacity:0;transition:opacity .4s 1s}
+.rs-chart.shown .rs-bar span{opacity:1}
+.rs-ref{position:absolute;left:0;right:0;bottom:25%;border-top:1.4px dashed #9A8A90;z-index:1;pointer-events:none}
+.rs-ref span{position:absolute;left:-2px;top:2px;font-size:10px;font-weight:700;color:#7A6C71;background:#fff;padding:0 3px}
+.rs-axis{display:flex;justify-content:space-between;margin-top:6px;font-size:10.5px;color:var(--text-light)}
+.rs-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:20px}
+.rs-thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}
+.rs-avg{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:8px;background:var(--brand);color:#fff}
+.rs-avg b{font-size:17px;font-weight:800}
+.rs-avg span{font-size:11px;opacity:.85}
+.rs-line{margin-top:14px}
+.rs-line svg{width:100%;height:auto;display:block}
+.rs-curve{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.8s ease}
+.rs-line.shown .rs-curve{stroke-dashoffset:0}
+.rs-note{margin-top:18px;text-align:left}
+@media (prefers-reduced-motion:reduce){.rs-bar{transition:none}.rs-curve{transition:none;stroke-dashoffset:0}}
 section.summary{background:var(--bg-gray);padding:60px 20px 56px;text-align:center}
 .summary .lead{font-size:15px;color:var(--text-dark);line-height:1.8;margin-top:14px}
 .summary .lead strong{color:var(--brand)}
@@ -526,6 +563,52 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <div class="syn-item"><div class="syn-circle"><img src="img/daily_first_s.jpg" alt="밴드 위로 평소 옷을 입은 모습" style="object-position:50% 30%"></div><p class="syn-step">STEP 2</p><p class="syn-name">입던 옷</p></div>
   </div>
   <p class="src-line">착용 직후에는 열감이 없을 수 있으며, 따뜻함을 느끼는 시점과 세기는 사람마다 다릅니다.</p>
+</section>
+
+<!-- [3-1] 착용 후 온기 변화 -->
+<section class="result-sec">
+  <p class="rs-eyebrow rv-up">AFTER WEARING</p>
+  <h2 class="rs-title rv-up">착용 후,<br><strong>달라지는 온기</strong></h2>
+  <p class="rs-sub rv-up">열화상 연출로 보는 착용 전후와<br>실제 착용자들이 직접 잰 체온 기록</p>
+
+  <div class="rs-pair rv-up">
+    <figure><img src="img/thermal_before.jpg" alt="착용 전 배 주변이 상대적으로 차갑게 표시된 열화상 연출"><figcaption>착용 전</figcaption></figure>
+    <figure><img src="img/thermal_after.jpg" alt="착용 후 밴드 주변에서 몸 안쪽으로 따뜻함이 퍼진 열화상 연출"><figcaption class="on">착용 약 1시간 후</figcaption></figure>
+  </div>
+  <div class="rs-scale"><span>LOW</span><i></i><span>HIGH</span></div>
+  <p class="rs-cap">* 열화상 카메라 화면을 재현한 연출 이미지이며, 실제 측정 영상이 아닙니다.</p>
+
+  <div class="rs-card">
+    <h3 class="rs-name rv-up">실제 착용자들의 체온 기록</h3>
+    <p class="rs-delta rv-up">평균 <b>37.3</b>℃</p>
+    <p class="rs-meta rv-up">착용자가 귀 체온계로 직접 잰 사진 12장 기준</p>
+    <div class="rs-chart rv-up">
+      <div class="rs-ref"><span>36.5℃</span></div>
+      <div class="rs-bar" style="--h:70%;transition-delay:0.00s"><span>37.4</span></div><div class="rs-bar" style="--h:40%;transition-delay:0.06s"><span>36.8</span></div><div class="rs-bar" style="--h:40%;transition-delay:0.12s"><span>36.8</span></div><div class="rs-bar" style="--h:50%;transition-delay:0.18s"><span>37.0</span></div><div class="rs-bar" style="--h:80%;transition-delay:0.24s"><span>37.6</span></div><div class="rs-bar" style="--h:75%;transition-delay:0.30s"><span>37.5</span></div><div class="rs-bar" style="--h:55%;transition-delay:0.36s"><span>37.1</span></div><div class="rs-bar" style="--h:75%;transition-delay:0.42s"><span>37.5</span></div><div class="rs-bar" style="--h:75%;transition-delay:0.48s"><span>37.5</span></div><div class="rs-bar" style="--h:55%;transition-delay:0.54s"><span>37.1</span></div><div class="rs-bar" style="--h:70%;transition-delay:0.60s"><span>37.4</span></div><div class="rs-bar" style="--h:85%;transition-delay:0.66s"><span>37.7</span></div>
+    </div>
+    <div class="rs-axis"><span>36.0℃</span><span>38.0℃</span></div>
+    <div class="rs-thumbs rv-up"><img src="img/thermo_1.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_2.jpg" alt="귀 체온계 화면 36.8℃" loading="lazy"><img src="img/thermo_3.jpg" alt="귀 체온계 화면 36.8℃" loading="lazy"><img src="img/thermo_4.jpg" alt="귀 체온계 화면 37.0℃" loading="lazy"><img src="img/thermo_5.jpg" alt="귀 체온계 화면 37.6℃" loading="lazy"><img src="img/thermo_6.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_7.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_8.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_9.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_10.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_11.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><div class="rs-avg"><b>37.3℃</b><span>평균</span></div></div>
+  </div>
+
+  <div class="rs-card">
+    <h3 class="rs-name rv-up">두른 뒤, 따뜻함이 이어지는 흐름</h3>
+    <div class="rs-line rv-up"><svg viewBox="0 0 320 170" fill="none" font-family="Pretendard,sans-serif" overflow="visible" aria-label="착용 직후에는 열감이 적고, 약 1시간 뒤부터 따뜻해지며, 벗은 뒤에도 서서히 이어지는 흐름의 개념도">
+      <path d="M20 140h290" stroke="#D9CDD1" stroke-width="1.4"/>
+      <path class="rs-curve" d="M20 134C56 134 72 126 96 100S126 52 150 48L210 46C240 50 278 78 305 98" stroke="#8E1F3F" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M210 40v100" stroke="#8E1F3F" stroke-width="1.2" stroke-dasharray="4 4"/>
+      <path d="M214 24h90M214 20v8M304 20v8" stroke="#8E1F3F" stroke-width="1.4"/>
+      <circle cx="20" cy="134" r="4.5" fill="#8E1F3F"/><circle cx="96" cy="100" r="4.5" fill="#8E1F3F"/><circle cx="210" cy="46" r="5" fill="#8E1F3F"/>
+      <text x="20" y="160" font-size="11" fill="#6B5A60" text-anchor="start">두른 직후</text>
+      <text x="100" y="160" font-size="11" fill="#6B5A60" text-anchor="middle">약 1시간</text>
+      <text x="152" y="34" font-size="11" fill="#6B5A60" text-anchor="middle">착용 중</text>
+      <text x="210" y="160" font-size="11" fill="#8E1F3F" font-weight="700" text-anchor="middle">벗은 뒤</text>
+      <text x="259" y="14" font-size="11.5" fill="#8E1F3F" font-weight="800" text-anchor="middle">최대 10시간*</text>
+    </svg></div>
+    <p class="rs-meta">전원이 없는 밴드라 두르자마자 뜨거워지지 않아요.<br>체온이 닿아 서서히 따뜻해지고, 벗은 뒤에도 이어집니다.</p>
+  </div>
+
+  <p class="note rs-note">* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다. 흐름 그래프는 브랜드 안내(벗은 뒤 최대 10시간)를 바탕으로 한 개념도이며, 느끼는 시점과 지속 시간은 사람마다 다릅니다.</p>
+  
 </section>
 
 <!-- [2] 대표 스토리 -->
