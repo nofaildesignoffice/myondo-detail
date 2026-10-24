@@ -274,16 +274,36 @@ section.spic-sec .section-title strong{color:var(--sky)}
 .sp-item.shown .sp-label,.sp-item.shown .sp-name,.sp-item.shown .sp-body{opacity:1;transform:none;filter:none}
 @media (prefers-reduced-motion:reduce){.sp-item .sp-thumb,.sp-item .sp-label,.sp-item .sp-name,.sp-item .sp-body{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}}
 
-/* 원리 3단계 (기존 상세 13번 하이테크 메커니즘 차용) */
-section.how-sec{background:#fff}
-.how-list{margin-top:30px;display:grid;gap:14px}
-.how-row{display:flex;gap:16px;align-items:flex-start;background:var(--bg-soft);border-radius:18px;padding:20px 18px}
-.how-no{flex:0 0 46px;height:46px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:.04em}
-.how-row h3{font-size:18px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
-.how-row p{margin-top:6px;font-size:14px;color:#333;line-height:1.6;letter-spacing:-.02em}
-.how-arrow{text-align:center;color:var(--brand);font-size:14px;line-height:1;margin:-6px 0}
-.how-tech{margin-top:22px;text-align:center;font-size:13px;color:var(--text-gray)}
+/* 원리 3단계 (기존 상세 13번 하이테크 메커니즘 → 피부 단면 일러스트 + 단계별 애니메이션) */
+section.how-sec{background:var(--bg-gray)}
+.how-defs{position:absolute;width:0;height:0;overflow:hidden}
+.how-eyebrow{text-align:center;font-size:15px;color:var(--text-gray);margin-bottom:8px}
+.how-list{margin-top:30px;display:grid;gap:22px}
+.how-row{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 26px rgba(80,20,40,.08)}
+.how-fig{position:relative;background:#F4F1F0}
+.how-fig svg{display:block;width:100%;height:auto}
+.how-txt{padding:18px 22px 22px}
+.how-no{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.12em;color:var(--brand)}
+.how-txt h3{margin-top:6px;font-size:21px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
+.how-txt p{margin-top:8px;font-size:14.5px;color:#333;line-height:1.65;letter-spacing:-.02em}
+.how-tech{margin-top:24px;text-align:center;font-size:13px;color:var(--text-gray)}
 .how-tech b{color:var(--brand)}
+/* 카드가 화면에 들어오면(.shown) 재생 */
+.how-row .h1p,.how-row .h2w,.how-row .h3c,.how-row .h3h,.how-row .hd{animation-play-state:paused}
+.how-row.shown .h1p,.how-row.shown .h2w,.how-row.shown .h3c,.how-row.shown .h3h,.how-row.shown .hd{animation-play-state:running}
+.h1p{opacity:0;animation:h1move 2.4s cubic-bezier(.45,0,.3,1) infinite}
+@keyframes h1move{0%{transform:translateX(110px);opacity:0}25%{opacity:1}80%{transform:translateX(226px);opacity:.9}100%{transform:translateX(226px);opacity:0}}
+.s1 .hd{animation:hdglow 2.4s ease-in-out infinite}
+@keyframes hdglow{0%,55%{filter:none}80%{filter:brightness(1.5) drop-shadow(0 0 4px #FF6A8F)}100%{filter:none}}
+.h2w{opacity:0;transform-box:view-box;animation:h2move 2.4s ease-out infinite}
+@keyframes h2move{0%{transform:translateX(0) scaleX(.15);opacity:0}20%{opacity:.95}100%{transform:translateX(-46px) scaleX(1);opacity:0}}
+.s2 .hd{animation:hdpulse 1.2s ease-in-out infinite}
+@keyframes hdpulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.6) drop-shadow(0 0 5px #FF6A8F)}}
+.h3c{opacity:0;animation:h3move 1.8s linear infinite}
+@keyframes h3move{0%{transform:translateX(212px);opacity:0}15%{opacity:1}85%{opacity:.85}100%{transform:translateX(40px);opacity:0}}
+.h3h{transform-origin:70px 150px;animation:h3heat 3.2s ease-in-out infinite}
+@keyframes h3heat{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.05)}}
+@media (prefers-reduced-motion:reduce){.h1p,.h2w,.h3c{animation:none;opacity:.9}.h3h,.hd{animation:none}}
 
 /* 사용법 */
 .htu-step{display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;padding:18px 0}
@@ -554,16 +574,108 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [7b] 원리 3단계 -->
 <section class="how-sec">
+  <svg class="how-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="hMus" x1="0" x2="1"><stop offset="0" stop-color="#7E1F27"/><stop offset=".7" stop-color="#A3343A"/><stop offset="1" stop-color="#B9474B"/></linearGradient>
+  <pattern id="hFib" width="400" height="9" patternUnits="userSpaceOnUse"><path d="M0 4.5 Q25 2 50 4.5 T100 4.5 T150 4.5 T200 4.5" stroke="#5E141B" stroke-opacity=".45" stroke-width="1.1" fill="none"/><path d="M0 8 Q30 6.5 60 8 T120 8 T180 8" stroke="#D96E6E" stroke-opacity=".35" stroke-width=".8" fill="none"/></pattern>
+  <linearGradient id="hFatG" x1="0" x2="1"><stop offset="0" stop-color="#EFCB86"/><stop offset="1" stop-color="#F6DDA6"/></linearGradient>
+  <pattern id="hFat" width="30" height="26" patternUnits="userSpaceOnUse"><ellipse cx="8" cy="7" rx="9" ry="7.5" fill="#FBE7B9" stroke="#D8AE62" stroke-width=".9"/><ellipse cx="23" cy="10" rx="8" ry="8.5" fill="#F8E0A8" stroke="#D8AE62" stroke-width=".9"/><ellipse cx="14" cy="21" rx="9" ry="6.5" fill="#FAE4B3" stroke="#D8AE62" stroke-width=".9"/><ellipse cx="29" cy="24" rx="6" ry="5" fill="#F7DDA3" stroke="#D8AE62" stroke-width=".9"/><ellipse cx="0" cy="22" rx="5" ry="5" fill="#F7DDA3" stroke="#D8AE62" stroke-width=".9"/></pattern>
+  <linearGradient id="hDer" x1="0" x2="1"><stop offset="0" stop-color="#E49A8C"/><stop offset="1" stop-color="#EDB2A2"/></linearGradient>
+  <filter id="hTex" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .12  0 0 0 0 .12  0 0 0 .22 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+  <filter id="hNeo" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="8"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+  <linearGradient id="hBand" x1="0" x2="1"><stop offset="0" stop-color="#2A2A2C"/><stop offset=".5" stop-color="#151516"/><stop offset="1" stop-color="#0B0B0C"/></linearGradient>
+  <radialGradient id="hDot"><stop offset="0" stop-color="#E25C86"/><stop offset=".7" stop-color="#A6264F"/><stop offset="1" stop-color="#6E1532"/></radialGradient>
+  <radialGradient id="hHeat"><stop offset="0" stop-color="#FF7A3C" stop-opacity=".85"/><stop offset=".45" stop-color="#FF5A3C" stop-opacity=".45"/><stop offset="1" stop-color="#FF5A3C" stop-opacity="0"/></radialGradient>
+  <linearGradient id="hAir" x1="0" x2="1"><stop offset="0" stop-color="#FBF8F7"/><stop offset="1" stop-color="#EEE9E8"/></linearGradient>
+  <filter id="hGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="hBody"><path d="M0 0H214 C220 60 210 120 216 180 C222 240 212 280 216 300H0Z"/></clipPath>
+</defs></svg>
+  <p class="how-eyebrow rv-up">오직 마이온도에서 확인할 수 있는</p>
   <h2 class="section-title rv-up">전기 없이 따뜻해지는<br><strong>마이온도의 원리</strong></h2>
   <div class="how-list">
-    <div class="how-row rv-up"><span class="how-no">01</span><div><h3>체온 복사</h3><p>밴드 안쪽 광물 도트가 맨살에 닿아 내 몸의 체온을 받아들입니다.</p></div></div>
-    <div class="how-arrow" aria-hidden="true">▼</div>
-    <div class="how-row rv-up"><span class="how-no">02</span><div><h3>원적외선 방사</h3><p>체온을 받은 도트의 광물 소재가 원적외선을 내보냅니다.</p></div></div>
-    <div class="how-arrow" aria-hidden="true">▼</div>
-    <div class="how-row rv-up"><span class="how-no">03</span><div><h3>속까지 전해지는 온기</h3><p>겉만 뜨거운 열이 아니라 몸속 깊은 곳까지 온기가 전해지고, 벗은 뒤에도 한동안 남습니다.</p></div></div>
+    <div class="how-row s1 rv-up"><div class="how-fig"><svg viewBox="0 0 400 300" role="img" aria-label="피부의 온기가 밴드 안쪽 버건디 도트로 옮겨 가는 모습" font-family="Pretendard,sans-serif"><rect width="400" height="300" fill="url(#hAir)"/>
+  <g clip-path="url(#hBody)">
+    <rect x="0" y="0" width="92" height="300" fill="url(#hMus)"/><rect x="0" y="0" width="92" height="300" fill="url(#hFib)"/>
+    <path d="M92 0 C96 80 88 160 94 240 C96 270 92 290 92 300 H170 V0Z" fill="url(#hFatG)"/>
+    <path d="M92 0 C96 80 88 160 94 240 C96 270 92 290 92 300 H170 V0Z" fill="url(#hFat)" opacity=".95"/>
+    <path d="M168 0 C174 70 164 150 170 220 C174 260 168 285 170 300 H230 V0Z" fill="url(#hDer)"/>
+    <rect x="0" y="0" width="230" height="300" fill="#fff" filter="url(#hTex)" opacity=".9"/>
+    <path d="M178 40 c6 10 -4 18 2 30 M184 120 c-6 12 6 20 0 34 M180 210 c6 10 -4 20 2 32" stroke="#C4545A" stroke-width="1.4" fill="none" opacity=".55"/>
+    
+  </g>
+  <path d="M214 0 C220 60 210 120 216 180 C222 240 212 280 216 300" stroke="#F6CDBE" stroke-width="7" fill="none"/>
+  <path d="M214 0 C220 60 210 120 216 180 C222 240 212 280 216 300" stroke="#C97F70" stroke-width="1.2" fill="none" transform="translate(3.5 0)"/>
+  <g class="h-band">
+    <rect x="229" y="10" width="38" height="280" rx="9" fill="url(#hBand)"/>
+    <rect x="229" y="10" width="38" height="280" rx="9" fill="#fff" filter="url(#hNeo)"/>
+    <rect x="264" y="10" width="3" height="280" rx="1.5" fill="#3A3A3D"/>
+    <rect class="hd" x="221" y="22" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="40" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="58" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="76" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="94" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="112" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="130" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="148" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="166" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="184" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="202" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="220" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="238" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="256" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="274" width="9" height="12" rx="4" fill="url(#hDot)"/>
+  </g>
+  <g filter="url(#hGlow)"><circle class="h1p" cx="0" cy="46" r="4.2" fill="#FF7A45" style="animation-delay:0.9s"/><circle class="h1p" cx="0" cy="70" r="4.2" fill="#FF7A45" style="animation-delay:0s"/><circle class="h1p" cx="0" cy="88" r="4.2" fill="#FF7A45" style="animation-delay:1.9s"/><circle class="h1p" cx="0" cy="104" r="4.2" fill="#FF7A45" style="animation-delay:0.5s"/><circle class="h1p" cx="0" cy="122" r="4.2" fill="#FF7A45" style="animation-delay:1.5s"/><circle class="h1p" cx="0" cy="140" r="4.2" fill="#FF7A45" style="animation-delay:1.0s"/><circle class="h1p" cx="0" cy="158" r="4.2" fill="#FF7A45" style="animation-delay:2.1s"/><circle class="h1p" cx="0" cy="176" r="4.2" fill="#FF7A45" style="animation-delay:0.25s"/><circle class="h1p" cx="0" cy="194" r="4.2" fill="#FF7A45" style="animation-delay:1.75s"/><circle class="h1p" cx="0" cy="212" r="4.2" fill="#FF7A45" style="animation-delay:0.75s"/><circle class="h1p" cx="0" cy="230" r="4.2" fill="#FF7A45" style="animation-delay:1.2s"/><circle class="h1p" cx="0" cy="248" r="4.2" fill="#FF7A45" style="animation-delay:1.25s"/><circle class="h1p" cx="0" cy="266" r="4.2" fill="#FF7A45" style="animation-delay:0.4s"/></g>
+  <g class="h-lbl" font-size="10.5" font-weight="700" fill="#3B2A2E">
+    <text x="46" y="292" text-anchor="middle" fill="#fff">근육</text>
+    <text x="131" y="292" text-anchor="middle">피하지방</text>
+    <text x="192" y="292" text-anchor="middle">진피</text>
+    <path d="M220 24 L300 24" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="27">표피</text>
+    <path d="M267 54 L300 54" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="57">마이온도 밴드</text>
+    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#8E1F3F">버건디 도트</text>
+  </g></svg></div><div class="how-txt"><span class="how-no">STEP 01</span><h3>체온 복사</h3><p>밴드 안쪽 버건디 도트가 맨살에 닿아,<br>피부의 온기를 받아들입니다.</p></div></div>
+    <div class="how-row s2 rv-up"><div class="how-fig"><svg viewBox="0 0 400 300" role="img" aria-label="버건디 도트에서 원적외선 파동이 피부 쪽으로 퍼지는 모습" font-family="Pretendard,sans-serif"><rect width="400" height="300" fill="url(#hAir)"/>
+  <g clip-path="url(#hBody)">
+    <rect x="0" y="0" width="92" height="300" fill="url(#hMus)"/><rect x="0" y="0" width="92" height="300" fill="url(#hFib)"/>
+    <path d="M92 0 C96 80 88 160 94 240 C96 270 92 290 92 300 H170 V0Z" fill="url(#hFatG)"/>
+    <path d="M92 0 C96 80 88 160 94 240 C96 270 92 290 92 300 H170 V0Z" fill="url(#hFat)" opacity=".95"/>
+    <path d="M168 0 C174 70 164 150 170 220 C174 260 168 285 170 300 H230 V0Z" fill="url(#hDer)"/>
+    <rect x="0" y="0" width="230" height="300" fill="#fff" filter="url(#hTex)" opacity=".9"/>
+    <path d="M178 40 c6 10 -4 18 2 30 M184 120 c-6 12 6 20 0 34 M180 210 c6 10 -4 20 2 32" stroke="#C4545A" stroke-width="1.4" fill="none" opacity=".55"/>
+    
+  </g>
+  <path d="M214 0 C220 60 210 120 216 180 C222 240 212 280 216 300" stroke="#F6CDBE" stroke-width="7" fill="none"/>
+  <path d="M214 0 C220 60 210 120 216 180 C222 240 212 280 216 300" stroke="#C97F70" stroke-width="1.2" fill="none" transform="translate(3.5 0)"/>
+  <g class="h-band">
+    <rect x="229" y="10" width="38" height="280" rx="9" fill="url(#hBand)"/>
+    <rect x="229" y="10" width="38" height="280" rx="9" fill="#fff" filter="url(#hNeo)"/>
+    <rect x="264" y="10" width="3" height="280" rx="1.5" fill="#3A3A3D"/>
+    <rect class="hd" x="221" y="22" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="40" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="58" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="76" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="94" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="112" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="130" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="148" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="166" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="184" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="202" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="220" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="238" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="256" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="274" width="9" height="12" rx="4" fill="url(#hDot)"/>
+  </g>
+  <g filter="url(#hGlow)"><g transform="translate(222 60)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.00s"/></g><g transform="translate(222 60)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.80s"/></g><g transform="translate(222 60)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:1.60s"/></g><g transform="translate(222 110)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.15s"/></g><g transform="translate(222 110)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.95s"/></g><g transform="translate(222 110)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:1.75s"/></g><g transform="translate(222 160)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.30s"/></g><g transform="translate(222 160)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:1.10s"/></g><g transform="translate(222 160)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:1.90s"/></g><g transform="translate(222 210)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.45s"/></g><g transform="translate(222 210)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:1.25s"/></g><g transform="translate(222 210)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:2.05s"/></g><g transform="translate(222 250)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:0.60s"/></g><g transform="translate(222 250)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:1.40s"/></g><g transform="translate(222 250)"><path class="h2w" d="M0 0 Q-6 -7 -12 0 Q-18 7 -24 0 Q-30 -7 -36 0 Q-42 7 -48 0 Q-54 -7 -60 0" stroke="#E2456E" stroke-width="2" fill="none" stroke-linecap="round" style="animation-delay:2.20s"/></g></g>
+  <g class="h-lbl" font-size="10.5" font-weight="700" fill="#3B2A2E">
+    <text x="46" y="292" text-anchor="middle" fill="#fff">근육</text>
+    <text x="131" y="292" text-anchor="middle">피하지방</text>
+    <text x="192" y="292" text-anchor="middle">진피</text>
+    <path d="M220 24 L300 24" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="27">표피</text>
+    <path d="M267 54 L300 54" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="57">마이온도 밴드</text>
+    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#8E1F3F">버건디 도트</text>
+  </g></svg></div><div class="how-txt"><span class="how-no">STEP 02</span><h3>원적외선 방사</h3><p>체온을 받은 도트 속 광물 소재가<br>원적외선과 열에너지를 내보냅니다.</p></div></div>
+    <div class="how-row s3 rv-up"><div class="how-fig"><svg viewBox="0 0 400 300" role="img" aria-label="온기가 피부를 지나 피하지방과 근육 쪽 깊은 곳으로 전해지는 모습" font-family="Pretendard,sans-serif"><rect width="400" height="300" fill="url(#hAir)"/>
+  <g clip-path="url(#hBody)">
+    <rect x="0" y="0" width="92" height="300" fill="url(#hMus)"/><rect x="0" y="0" width="92" height="300" fill="url(#hFib)"/>
+    <path d="M92 0 C96 80 88 160 94 240 C96 270 92 290 92 300 H170 V0Z" fill="url(#hFatG)"/>
+    <path d="M92 0 C96 80 88 160 94 240 C96 270 92 290 92 300 H170 V0Z" fill="url(#hFat)" opacity=".95"/>
+    <path d="M168 0 C174 70 164 150 170 220 C174 260 168 285 170 300 H230 V0Z" fill="url(#hDer)"/>
+    <rect x="0" y="0" width="230" height="300" fill="#fff" filter="url(#hTex)" opacity=".9"/>
+    <path d="M178 40 c6 10 -4 18 2 30 M184 120 c-6 12 6 20 0 34 M180 210 c6 10 -4 20 2 32" stroke="#C4545A" stroke-width="1.4" fill="none" opacity=".55"/>
+    <ellipse class="h3h" cx="70" cy="150" rx="120" ry="150" fill="url(#hHeat)"/>
+  </g>
+  <path d="M214 0 C220 60 210 120 216 180 C222 240 212 280 216 300" stroke="#F6CDBE" stroke-width="7" fill="none"/>
+  <path d="M214 0 C220 60 210 120 216 180 C222 240 212 280 216 300" stroke="#C97F70" stroke-width="1.2" fill="none" transform="translate(3.5 0)"/>
+  <g class="h-band">
+    <rect x="229" y="10" width="38" height="280" rx="9" fill="url(#hBand)"/>
+    <rect x="229" y="10" width="38" height="280" rx="9" fill="#fff" filter="url(#hNeo)"/>
+    <rect x="264" y="10" width="3" height="280" rx="1.5" fill="#3A3A3D"/>
+    <rect class="hd" x="221" y="22" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="40" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="58" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="76" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="94" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="112" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="130" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="148" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="166" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="184" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="202" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="220" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="238" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="256" width="9" height="12" rx="4" fill="url(#hDot)"/><rect class="hd" x="221" y="274" width="9" height="12" rx="4" fill="url(#hDot)"/>
+  </g>
+  <g filter="url(#hGlow)"><g transform="translate(0 80)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:0.0s"/></g><g transform="translate(0 80)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:0.6s"/></g><g transform="translate(0 80)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.2s"/></g><g transform="translate(0 150)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:0.2s"/></g><g transform="translate(0 150)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:0.8s"/></g><g transform="translate(0 150)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.4s"/></g><g transform="translate(0 220)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:0.4s"/></g><g transform="translate(0 220)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.0s"/></g><g transform="translate(0 220)"><path class="h3c" d="M0 -9 L-9 0 L0 9" stroke="#FF6A3D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:1.6s"/></g></g>
+  <g class="h-lbl" font-size="10.5" font-weight="700" fill="#3B2A2E">
+    <text x="46" y="292" text-anchor="middle" fill="#fff">근육</text>
+    <text x="131" y="292" text-anchor="middle">피하지방</text>
+    <text x="192" y="292" text-anchor="middle">진피</text>
+    <path d="M220 24 L300 24" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="27">표피</text>
+    <path d="M267 54 L300 54" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="57">마이온도 밴드</text>
+    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#8E1F3F">버건디 도트</text>
+  </g></svg></div><div class="how-txt"><span class="how-no">STEP 03</span><h3>심부까지 전해지는 온기</h3><p>겉만 뜨겁게 데우는 열이 아니라<br>몸속 깊은 곳까지 온기가 전해지고,<br>벗은 뒤에도 한동안 남습니다.</p></div></div>
   </div>
   <p class="how-tech">약 40여 가지 광물을 융합한 <b>NBT 융복합 기술</b></p>
-  <p class="note">* 원리와 지속 시간은 브랜드 설명이며, 체감 시점과 정도는 사람마다 다릅니다.</p>
+  <p class="note">* 원리와 지속 시간은 브랜드 설명이며, 체감 시점과 정도는 사람마다 다릅니다. 일러스트는 이해를 돕기 위한 개념도입니다.</p>
   
 </section>
 
