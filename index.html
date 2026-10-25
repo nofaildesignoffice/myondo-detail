@@ -122,14 +122,14 @@ section.result-sec{background:var(--bg-gray);padding:20px 20px 56px;text-align:c
 .rs-delta{margin-top:6px;font-size:20px;font-weight:700;color:var(--brand)}
 .rs-delta b{font-size:46px;font-weight:800;letter-spacing:-.03em}
 .rs-meta{margin-top:6px;font-size:13.5px;color:var(--text-gray);line-height:1.6}
-.rs-chart{position:relative;display:flex;align-items:flex-end;gap:5px;height:170px;margin-top:22px;padding:0 2px;border-bottom:1.4px solid #D9CDD1}
+.rs-chart{position:relative;display:flex;align-items:flex-end;gap:5px;height:170px;margin-top:22px;padding:0 2px 0 40px;border-bottom:1.4px solid #D9CDD1}
 .rs-bar{position:relative;flex:1;height:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#C04A6B,#8E1F3F);transition:height 1s cubic-bezier(.2,.8,.2,1)}
 .rs-chart.shown .rs-bar{height:var(--h)}
 .rs-bar span{position:absolute;left:50%;top:-18px;transform:translateX(-50%);font-size:9.5px;font-weight:700;color:var(--brand);white-space:nowrap;opacity:0;transition:opacity .4s 1s}
 .rs-chart.shown .rs-bar span{opacity:1}
-.rs-ref{position:absolute;left:0;right:0;bottom:25%;border-top:1.4px dashed #9A8A90;z-index:1;pointer-events:none}
-.rs-ref span{position:absolute;left:-2px;top:2px;font-size:10px;font-weight:700;color:#7A6C71;background:#fff;padding:0 3px}
-.rs-axis{display:flex;justify-content:space-between;margin-top:6px;font-size:10.5px;color:var(--text-light)}
+.rs-ref{position:absolute;left:40px;right:0;bottom:25%;border-top:0;z-index:1;pointer-events:none}
+.rs-ref span{position:absolute;left:-40px;top:-6px;font-size:10px;font-weight:700;color:#7A6C71;line-height:1}
+.rs-axis{display:flex;justify-content:space-between;margin-top:6px;padding-left:40px;font-size:10.5px;color:var(--text-light)}
 .rs-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-top:20px}
 .rs-thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}
 .rs-avg{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:8px;background:var(--brand);color:#fff}
@@ -139,6 +139,8 @@ section.result-sec{background:var(--bg-gray);padding:20px 20px 56px;text-align:c
 .rs-line svg{width:100%;height:auto;display:block}
 .rs-curve{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.8s ease}
 .rs-line.shown .rs-curve{stroke-dashoffset:0}
+.rs-tip{margin-top:14px;padding:14px 16px;border-radius:12px;background:#F7EEF0;font-size:13.5px;line-height:1.6;color:var(--text-gray)}
+.rs-tip strong{color:var(--brand)}
 .rs-note{margin-top:18px;text-align:left}
 @media (prefers-reduced-motion:reduce){.rs-bar{transition:none}.rs-curve{transition:none;stroke-dashoffset:0}}
 section.summary{background:var(--bg-gray);padding:60px 20px 56px;text-align:center}
@@ -627,6 +629,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <text x="259" y="14" font-size="11.5" fill="#8E1F3F" font-weight="800" text-anchor="middle">최대 10시간*</text>
     </svg></div>
     <p class="rs-meta">전원이 없는 밴드라 두르자마자 뜨거워지지 않아요.<br>체온이 닿아 서서히 따뜻해지고, 벗은 뒤에도 이어집니다.</p>
+    <p class="rs-tip">따뜻함이 느껴지기까지 걸리는 시간은 사람마다 다릅니다.<br>평소 몸이 많이 찬 분은 변화가 더 천천히 느껴져<br><strong>며칠 꾸준히 착용한 뒤에야</strong> 느끼실 수도 있어요.</p>
   </div>
 
   <p class="note rs-note">* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다. 흐름 그래프는 브랜드 안내(벗은 뒤 최대 10시간)를 바탕으로 한 개념도이며, 느끼는 시점과 지속 시간은 사람마다 다릅니다.</p>
@@ -732,7 +735,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <p class="cause-body">한 번 식은 핫팩은 다시 쓸 수 없어, 쓸 때마다 새것이 필요합니다. 떨어지기 전에 남은 개수도 늘 챙겨야 하죠.</p>
   </div>
   <div class="cause-card key rv-up">
-    <h3 class="cause-title">심지어 모두<br><strong>쓸 때만 따뜻해요</strong></h3>
+    <h3 class="cause-title">심지어 전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 다시 체온이 떨어집니다.</strong></h3>
     <div class="cause-img"><svg viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round" font-family="Pretendard,sans-serif">
       <path d="M24 122h258" stroke="#B9A9AE" stroke-width="1.5"/>
       <path d="M24 26v96" stroke="#B9A9AE" stroke-width="1.5"/>
@@ -745,10 +748,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <text x="16" y="30" fill="#6B5A60" font-size="10" text-anchor="end" stroke="none" transform="rotate(-90 16 30)">따뜻함</text>
     </svg></div>
     <p class="cause-body">세 가지 모두 쓰는 동안 몸 바깥에서 열을 전해 주는 방식입니다. 그래서 다 쓰고 나서 다시 추워지면, 또 데우고, 켜고, 새로 뜯게 되죠.</p>
-    <p class="cause-quote">“핫팩, 찜질기, 따뜻한 장비들? 다 써봤다 … 그 모든것들의 공통점은 하나 <strong>늘 그때 뿐이라는것</strong>”<span>마이온도 공식몰 구매 리뷰 r**** · 2025.03.20 중 발췌</span></p>
   </div>
   
-  <p class="note cause-note">제품군별 일반적인 사용 방식이며, 특정 제품의 성능을 비교한 내용이 아닙니다. 그래프는 이해를 돕기 위한 개념도이며, 인용 후기는 개인의 사용 경험입니다.</p>
   <div class="cause-sum rv-up">
     <p class="cs-q">몸이 따뜻해야<br><strong>하루가 편안합니다</strong></p>
     <ul class="cs-list"><li>출근길 찬 바람 앞에서도</li><li>냉방 켜진 책상 앞에서도</li><li>집에서 편한 옷차림으로 쉴 때도</li></ul>
