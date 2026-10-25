@@ -110,7 +110,7 @@ section.result-sec{background:var(--bg-gray);padding:20px 20px 56px;text-align:c
 .rs-title strong{color:var(--brand)}
 .rs-sub{margin-top:12px;font-size:15px;color:var(--text-gray);line-height:1.6}
 .rs-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:30px}
-.rs-pair figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#0a0410}
+.rs-pair figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#0a0410}
 .rs-pair img{width:100%;height:100%;object-fit:cover;display:block}
 .rs-pair figcaption{position:absolute;left:8px;top:8px;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:700}
 .rs-pair figcaption.on{background:var(--brand)}
@@ -265,6 +265,23 @@ section.conclusion{background:var(--navy);padding:52px 20px 56px;color:#fff}
 .ci-merc{transform-box:fill-box;transform-origin:50% 100%;animation:ciMerc 3.2s ease-in-out infinite}
 @keyframes ciMerc{0%{transform:scaleY(.18)}35%,50%{transform:scaleY(1)}100%{transform:scaleY(.18)}}
 @media (prefers-reduced-motion:reduce){.cause-ic *{animation:none!important}}
+.hg{display:block;aspect-ratio:auto;padding:22px 18px 18px;text-align:left}
+.hg-cap{font-size:13px;font-weight:800;color:var(--brand);margin-bottom:14px}
+.hg-row+.hg-row{margin-top:16px}
+.hg-top{display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
+.hg-top b{font-weight:800;color:#24141A}.hg-top span{font-weight:800;color:var(--brand);font-size:14px}
+.hg-track{position:relative;height:12px;margin-top:6px;border-radius:6px;background:#fff;overflow:hidden}
+.hg-track i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:6px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.hg-bar{background:linear-gradient(90deg,#C04A6B,#8E1F3F)}
+.hg-ext{background:repeating-linear-gradient(135deg,rgba(142,31,63,.28) 0 4px,rgba(142,31,63,.12) 4px 8px)}
+.hg.shown .hg-track i{width:var(--w)}
+.hg-sub{margin-top:5px;font-size:12px;color:var(--text-gray);line-height:1.5}
+.hg-sub em{font-style:normal;font-weight:700;color:#24141A}
+.hg-axis{display:flex;justify-content:space-between;margin-top:12px;padding-top:6px;border-top:1px solid #D9CDD1;font-size:10.5px;color:var(--text-light)}
+.hg-src{margin:14px 0 0;padding-left:14px;font-size:10.5px;line-height:1.55;color:var(--text-light)}
+.hg-src li+li{margin-top:3px}
+.hg-note{margin-top:8px;font-size:10.5px;line-height:1.5;color:var(--text-light)}
+@media (prefers-reduced-motion:reduce){.hg-track i{transition:none}}
 .cause-card.key .cause-no{background:var(--brand);border-color:var(--brand);color:#fff}
 .cause-card.key .cause-title strong{color:var(--brand)}
 .cause-card.key .cause-img svg{width:84%}
@@ -639,7 +656,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [2] 대표 스토리 -->
 <section class="founder">
   <h2 class="fd-title rv-up">"여자는 몸이 따뜻해야 한다"<br>엄마가 수백 번 하던 말이었어요</h2>
-  <p class="fd-body rv-up">어릴 때부터 엄마는 배를 차게 하지 말라고<br>수없이 말했어요. 그 말을 흘려듣다가<br>손발과 배가 늘 차가워 오래 고생했죠.</p>
+  <p class="fd-body rv-up">어릴 때부터 엄마는 배를 차게 하지 말라고<br>수없이 말했어요. 그 말을 흘려듣다가<br>손발과 배가 늘 차가워 오래 고생했고,<br><strong>네 번의 출산 이후로는 더 심해졌죠.</strong></p>
   <p class="fd-body rv-up">4년 동안 엄마들, 어르신들과 건강 챌린지를<br>함께하며 알게 됐어요. 아무리 잘 먹고 운동해도<br>기본은 몸을 따뜻하게 지키는 일이라는 걸요.</p>
   <p class="fd-body rv-up">내 딸들은 나처럼 고생하지 않았으면 하는 마음으로<br>가장 간편하게 체온을 지킬 방법을 찾다가<br>이 밴드를 발굴했습니다.</p>
   <p class="fd-sign rv-up">마이온도 대표 한해이</p>
@@ -736,17 +753,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   </div>
   <div class="cause-card key rv-up">
     <h3 class="cause-title">심지어 전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 다시 체온이 떨어집니다.</strong></h3>
-    <div class="cause-img"><svg viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round" font-family="Pretendard,sans-serif">
-      <path d="M24 122h258" stroke="#B9A9AE" stroke-width="1.5"/>
-      <path d="M24 26v96" stroke="#B9A9AE" stroke-width="1.5"/>
-      <path d="M24 108C36 108 38 52 52 50S74 52 80 60C88 74 92 106 104 108S114 108 118 108C130 108 132 52 146 50S168 52 174 60C182 74 186 106 198 108S208 108 212 108C224 108 226 52 240 50S262 52 268 60C274 72 276 104 282 108" stroke="#8E1F3F" stroke-width="3.5"/>
-      <text x="56" y="38" fill="#8E1F3F" font-size="11.5" font-weight="700" text-anchor="middle" stroke="none">다시 데우고</text>
-      <text x="150" y="38" fill="#8E1F3F" font-size="11.5" font-weight="700" text-anchor="middle" stroke="none">다시 켜고</text>
-      <text x="244" y="38" fill="#8E1F3F" font-size="11.5" font-weight="700" text-anchor="middle" stroke="none">새로 뜯고</text>
-      <text x="104" y="142" fill="#6B5A60" font-size="11" text-anchor="middle" stroke="none">다 쓰면 다시 추위</text>
-      <text x="198" y="142" fill="#6B5A60" font-size="11" text-anchor="middle" stroke="none">다 쓰면 다시 추위</text>
-      <text x="16" y="30" fill="#6B5A60" font-size="10" text-anchor="end" stroke="none" transform="rotate(-90 16 30)">따뜻함</text>
-    </svg></div>
+    <div class="cause-img hg rv-up"><p class="hg-cap">한 번 쓰고 나서 따뜻함이 유지되는 시간</p><div class="hg-row"><div class="hg-top"><b>물주머니</b><span>약 4.5시간</span></div><div class="hg-track"><i class="hg-bar" style="--w:45%"></i></div><p class="hg-sub">60~80℃ 물 기준, 이불 속 쾌적 온도 유지 <em>→ 다시 데워 채우기</em></p></div><div class="hg-row"><div class="hg-top"><b>충전식 전기 찜질기</b><span>90분 자동 꺼짐</span></div><div class="hg-track"><i class="hg-ext" style="--w:80%"></i><i class="hg-bar" style="--w:15%"></i></div><p class="hg-sub">배터리 최대 8시간 <em>→ 다시 켜기 · 충전</em></p></div><div class="hg-row"><div class="hg-top"><b>붙이는 일회용 핫팩</b><span>약 6~9시간</span></div><div class="hg-track"><i class="hg-ext" style="--w:90%"></i><i class="hg-bar" style="--w:60%"></i></div><p class="hg-sub">40℃ 이상 유지 기준 <em>→ 새로 뜯기</em></p></div><div class="hg-axis"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10시간</span></div><ol class="hg-src"><li>물주머니: 오니시 외, 「물주머니(湯たんぽ)에 의한 이불 속 온도의 시간 경과 변화와 보온 범위」, 일본간호기술학회지 9(2), 2010 — 쾌적 이불 속 온도(32~34℃) 약 4시간 30분 지속</li><li>전기 찜질기: Beurer HK 78 Heaty 제품 사양서(2025) — “Soothing heat for up to 8 hours”, “Safety switch-off after 90 minutes”</li><li>일회용 핫팩: 다이소몰 「붙이는 미니 핫팩」 표시 지속시간 6시간 / 롯데 호카론 붙이는 미니 표시 약 9시간(40℃ 이상 유지)</li></ol><p class="hg-note">* 제품마다 측정 조건과 기준이 달라 서로의 성능을 비교한 자료가 아닙니다. 각 출처의 공개 수치를 옮겨 표시했습니다.</p></div>
     <p class="cause-body">세 가지 모두 쓰는 동안 몸 바깥에서 열을 전해 주는 방식입니다. 그래서 다 쓰고 나서 다시 추워지면, 또 데우고, 켜고, 새로 뜯게 되죠.</p>
   </div>
   
