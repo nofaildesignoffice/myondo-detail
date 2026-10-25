@@ -244,6 +244,25 @@ section.conclusion{background:var(--navy);padding:52px 20px 56px;color:#fff}
 .cc-img{margin-top:28px;border-radius:4px;overflow:hidden;background:rgba(255,255,255,.08)}
 .cc-next{margin-top:30px}
 .cc-note{margin-top:14px;text-align:center;font-size:11.5px;color:rgba(255,255,255,.6);line-height:1.55}
+.cause-ic{width:60px;height:60px;color:var(--brand);border-color:rgba(142,31,63,.35);background:#fff}
+.cause-ic svg{width:38px;height:38px;overflow:visible}
+.cause-card.key .cause-ic{color:#fff}
+.ci-steam path{animation:ciSteam 2.4s ease-in-out infinite}
+.ci-steam path:nth-child(2){animation-delay:.4s}.ci-steam path:nth-child(3){animation-delay:.8s}
+@keyframes ciSteam{0%{opacity:0;transform:translateY(3px)}40%{opacity:1}100%{opacity:0;transform:translateY(-3px)}}
+.ci-water{animation:ciWater 2.4s ease-in-out infinite}
+@keyframes ciWater{0%,100%{transform:translateY(0)}50%{transform:translateY(1.6px)}}
+.ci-zig{stroke-dasharray:3 2.2;animation:ciZig .9s linear infinite}
+@keyframes ciZig{from{stroke-dashoffset:10.4}to{stroke-dashoffset:0}}
+.ci-spark{animation:ciSpark 1.6s ease-in-out infinite}
+@keyframes ciSpark{0%,100%{opacity:.2}50%{opacity:1}}
+.ci-pack{transform-origin:16px 28px;animation:ciShake 2.6s ease-in-out infinite}
+@keyframes ciShake{0%,60%,100%{transform:rotate(0)}66%{transform:rotate(-6deg)}72%{transform:rotate(6deg)}78%{transform:rotate(-4deg)}84%{transform:rotate(2deg)}}
+.ci-wave{animation:ciWave 2.6s ease-in-out infinite}.ci-wave.w2{animation-delay:.3s}.ci-wave.w3{animation-delay:.6s}
+@keyframes ciWave{0%,100%{opacity:.15;transform:translateY(1px)}50%{opacity:1;transform:translateY(-1px)}}
+.ci-merc{transform-box:fill-box;transform-origin:50% 100%;animation:ciMerc 3.2s ease-in-out infinite}
+@keyframes ciMerc{0%{transform:scaleY(.18)}35%,50%{transform:scaleY(1)}100%{transform:scaleY(.18)}}
+@media (prefers-reduced-motion:reduce){.cause-ic *{animation:none!important}}
 .cause-card.key .cause-no{background:var(--brand);border-color:var(--brand);color:#fff}
 .cause-card.key .cause-title strong{color:var(--brand)}
 .cause-card.key .cause-img svg{width:84%}
@@ -689,31 +708,30 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [4] 카피 밴드 -->
 <div class="copy-band">
-  <p class="rv-up">그날마다 배가 아프고<br>늘 손이 차고 가족이 아파서<br>물주머니, 전기찜질기, 일회용핫팩 등<br>다양한 보온 제품을 사용해 보지만<br><strong>항상 아쉬움이 있죠.</strong></p>
+  <p class="rv-up">그날마다 배가 아프고<br>항상 손과 발이 차고 가족이 아파서<br>물주머니, 전기찜질기, 일회용핫팩 등<br>다양한 보온 제품을 사용해 보지만<br><strong>항상 아쉬움이 있죠.</strong></p>
 </div>
 
 <!-- [5] 원인 -->
 <section class="cause-sec">
   <div class="cause-card rv-up">
-    <span class="cause-no">1</span>
+    <span class="cause-no cause-ic ci-1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-steam"><path d="M12 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M16 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M20 7c-1.2-1.4 1.2-2.6 0-4"/></g><path d="M14 9h4v2.5"/><path d="M14 11.5V9"/><path d="M11 12h10c2.2 0 3.5 1.6 3.5 3.6v8.9c0 2.2-1.6 3.5-3.6 3.5H11.1c-2 0-3.6-1.3-3.6-3.5v-8.9C7.5 13.6 8.8 12 11 12z"/><path class="ci-water" d="M8.5 21c2.5-1.3 5-1.3 7.5 0s5 1.3 7.5 0"/></svg></span>
     <h3 class="cause-title">물주머니는<br>데우고, 채우고, 식으면 또 갈아야 해요</h3>
     <div class="cause-img"><svg viewBox="0 0 260 150" fill="none" stroke="#8E1F3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M40 120h70l-6-58H46z"/><path d="M58 62c0-14 34-14 34 0"/><path d="M110 78c12 0 16 10 10 20"/><path d="M62 48c-4-8 4-12 0-20M78 48c-4-8 4-12 0-20"/><rect x="150" y="40" width="74" height="86" rx="28"/><path d="M174 40v-12h26v12"/><path d="M164 74h46M164 90h46" stroke-dasharray="4 7"/></svg></div>
     <p class="cause-body">물을 데워 채우는 것부터 일이고, 식으면 다시 갈아 줘야 합니다. 마개가 잘 잠겼는지, 새지는 않는지도 매번 확인하게 되고요.</p>
   </div>
   <div class="cause-card rv-up">
-    <span class="cause-no">2</span>
+    <span class="cause-no cause-ic ci-2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="17" height="14" rx="3"/><path class="ci-zig" d="M7.5 13l2-2.5 2 5 2-5 2 5 2-2.5"/><path d="M21 15h3.5c2 0 3 1.2 3 3v3.5c0 1.8-1 3-3 3"/><rect x="21" y="23" width="5" height="4" rx="1"/><circle class="ci-spark" cx="24.5" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg></span>
     <h3 class="cause-title">전기 찜질기는<br>선에 묶이거나, 충전을 기다려야 해요</h3>
     <div class="cause-img"><svg viewBox="0 0 260 150" fill="none" stroke="#8E1F3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M52 36v22M76 36v22"/><path d="M42 58h44v18a22 22 0 0 1-44 0z"/><path d="M64 98v14c0 14 22 14 30 14h34"/><rect x="150" y="54" width="70" height="40" rx="8"/><path d="M220 66h8v16h-8"/><rect x="158" y="62" width="14" height="24" rx="2" fill="#8E1F3F" stroke="none"/></svg></div>
     <p class="cause-body">유선 제품은 선이 닿는 곳에서만 쓸 수 있어 자리를 옮기기 번거롭고, 충전식은 다 쓰고 나면 다시 충전될 때까지 기다려야 합니다.</p>
   </div>
   <div class="cause-card rv-up">
-    <span class="cause-no">3</span>
+    <span class="cause-no cause-ic ci-3"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-pack"><path d="M7 12h18v14c0 1.4-1.1 2.5-2.5 2.5h-13C8.1 28.5 7 27.4 7 26V12z"/><path d="M7 12l1.5-1.5L10 12l1.5-1.5L13 12l1.5-1.5L16 12l1.5-1.5L19 12l1.5-1.5L22 12l1.5-1.5L25 12"/><text x="16" y="23.5" font-size="7.5" font-weight="800" fill="currentColor" stroke="none" text-anchor="middle" font-family="Pretendard,sans-serif">HOT</text></g><path class="ci-wave" d="M11 7c-.8-1 .8-2 0-3"/><path class="ci-wave w2" d="M16 7c-.8-1 .8-2 0-3"/><path class="ci-wave w3" d="M21 7c-.8-1 .8-2 0-3"/></svg></span>
     <h3 class="cause-title">일회용 핫팩은<br>식으면 끝, 매번 새로 뜯어야 해요</h3>
     <div class="cause-img"><svg viewBox="0 0 260 150" fill="none" stroke="#8E1F3F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="34" y="34" width="62" height="84" rx="8"/><path d="M34 50h62" stroke-dasharray="3 5"/><rect x="104" y="44" width="52" height="70" rx="8" transform="rotate(12 130 79)"/><path d="M178 58h52M186 58l5 62h30l5-62"/><path d="M196 50h20"/><path d="M200 72v38M212 72v38"/></svg></div>
     <p class="cause-body">한 번 식은 핫팩은 다시 쓸 수 없어, 쓸 때마다 새것이 필요합니다. 떨어지기 전에 남은 개수도 늘 챙겨야 하죠.</p>
   </div>
   <div class="cause-card key rv-up">
-    <span class="cause-no">4</span>
     <h3 class="cause-title">심지어 모두<br><strong>쓸 때만 따뜻해요</strong></h3>
     <div class="cause-img"><svg viewBox="0 0 300 160" fill="none" stroke-linecap="round" stroke-linejoin="round" font-family="Pretendard,sans-serif">
       <path d="M24 122h258" stroke="#B9A9AE" stroke-width="1.5"/>
