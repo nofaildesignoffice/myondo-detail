@@ -51,6 +51,10 @@ html.review .rvbar{display:block;position:sticky;top:0;z-index:50;background:#d0
 section.intro-sec{position:relative;overflow:hidden;background:#141414;color:#fff;text-align:center;padding:92px 20px 0}
 .it-in{position:relative}
 .it-big{margin-top:22px;font-size:22px;font-weight:300;line-height:1.7}
+.it-big s{position:relative;text-decoration:none;display:inline-block}
+.it-big s::after{content:"";position:absolute;left:-6px;right:-6px;top:52%;height:1.5px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .5s ease}
+.it-big.shown s::after{transform:scaleX(1)}
+.it-big.shown s:nth-of-type(1)::after{transition-delay:.5s}.it-big.shown s:nth-of-type(2)::after{transition-delay:.75s}.it-big.shown s:nth-of-type(3)::after{transition-delay:1s}
 .it-none{font-size:52px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
 .it-line{display:block;width:1px;height:96px;margin:30px auto 0;background:rgba(255,255,255,.55);transform-origin:top}
 .it-line.shown{animation:itLine 1.2s ease both}
@@ -566,7 +570,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <section class="intro-sec">
   <div class="it-in">
     <p class="it-none rv-up">쓸 때만<br>잠깐 따뜻한</p>
-    <p class="it-big rv-up">핫팩<br>찜질기<br>물주머니</p>
+    <p class="it-big rv-up"><s>핫팩</s><br><s>찜질기</s><br><s>물주머니</s></p>
     <i class="it-line rv-up"></i>
   </div>
 </section>
