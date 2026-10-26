@@ -57,11 +57,11 @@ section.intro-sec{position:relative;overflow:hidden;background:#141414;color:#ff
 @keyframes itLine{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 .it-only{font-size:22px;font-weight:300}
 .it-only u{text-decoration:none;border-bottom:1.5px solid #fff;padding-bottom:2px;font-weight:400}
-.it-me{margin-top:22px;font-size:62px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
+.it-me{margin-top:18px;font-size:52px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
 .it-me span{position:relative;display:inline-block}
 .it-me span::before,.it-me span::after{content:"";position:absolute;bottom:2px;height:5px;background:#D9535F;border-radius:2px;transform:scaleX(0);transition:transform .7s .6s ease}
-.it-me span::before{left:10%;width:14%;transform-origin:left}
-.it-me span::after{right:0;width:20%;transform-origin:right}
+.it-me span::before{left:0;top:56px;bottom:auto;width:42%;transform-origin:left}
+.it-me span::after{display:none}
 .it-me.shown span::before,.it-me.shown span::after{transform:scaleX(1)}
 @media (prefers-reduced-motion:reduce){.it-line.shown{animation:none}}
 section.hero{padding:0}
@@ -565,8 +565,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [0] 인트로: 전기·충전·데우기 없이, 나의 체온 -->
 <section class="intro-sec">
   <div class="it-in">
-    <p class="it-big rv-up">전기<br>충전<br>데우기</p>
-    <p class="it-none rv-up">모두 필요 없습니다</p>
+    <p class="it-big rv-up">핫팩<br>찜질기<br>물주머니</p>
+    <p class="it-none rv-up">쓸 때만 잠깐 따뜻합니다</p>
     <i class="it-line rv-up"></i>
   </div>
 </section>
@@ -590,8 +590,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       </g>
     </svg>
     <div class="hero-me">
-      <p class="it-only rv-up">필요한 건 <u>오직</u></p>
-      <p class="it-me rv-up"><span>나의 체온</span></p>
+      <p class="it-only rv-up">잠깐 데우는 게 <u>아니라</u></p>
+      <p class="it-me rv-up"><span>체온 자체를<br>올립니다</span></p>
     </div>
     <div class="hero-copy">
       <p class="hero-sub rv-up">체온을 복사해<br>심부까지 데우는<br>원적외선 심부 발열 밴드</p>
