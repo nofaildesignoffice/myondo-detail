@@ -234,10 +234,37 @@ section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0
 .u1-title strong{font-weight:800}
 .u1-lead{margin-top:18px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.82)}
 .u1-lead strong{color:#fff;font-weight:700}
-.u1-temp{display:flex;align-items:center;justify-content:center;gap:10px;margin:28px auto 0;font-size:15px;font-weight:700;color:rgba(255,255,255,.6)}
-.u1-temp i{width:34px;height:1.5px;background:rgba(255,255,255,.35)}
-.u1-temp b{padding:6px 14px;border-radius:999px;background:var(--brand2);color:#fff;font-size:16px;font-weight:800}
-.u1-temp .on{color:#fff;font-size:20px;font-weight:800}
+.u1-thermo{position:relative;display:flex;gap:16px;margin:34px auto 0;max-width:400px;text-align:left}
+.tm-col{position:relative;flex:none;width:64px;padding-left:22px}
+.tm-tube{position:relative;width:22px;height:300px;margin-left:8px;border-radius:12px 12px 0 0;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-bottom:0}
+.tm-fill{position:absolute;left:4px;right:4px;bottom:0;height:50%;border-radius:8px 8px 0 0;background:linear-gradient(to top,#5B8DEF 0%,#C04A6B 55%,#FF6B5B 100%);background-size:100% 300px;background-position:bottom;transition:height 2.2s cubic-bezier(.3,.7,.2,1) .4s}
+.u1-thermo.shown .tm-fill{height:83.33%}
+.tm-bulb{width:38px;height:38px;margin:-4px 0 0 0;border-radius:50%;background:radial-gradient(circle at 40% 35%,#ff9a8a,#C04A6B 60%,#8E1F3F);border:1.5px solid rgba(255,255,255,.25);box-shadow:0 0 22px rgba(255,107,91,.55);animation:tmGlow 2.4s ease-in-out infinite}
+@keyframes tmGlow{50%{box-shadow:0 0 34px rgba(255,107,91,.9)}}
+.tm-ticks{position:absolute;left:0;top:0;height:300px}
+.tm-ticks span{position:absolute;left:0;transform:translateY(50%);font-size:10.5px;font-weight:700;color:rgba(255,255,255,.45)}
+.tm-bub{position:absolute;left:calc(100% + 10px);top:-14px;white-space:nowrap;padding:4px 10px;border-radius:999px;background:#fff;color:var(--brand);font-size:13px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.tm-bub::before{content:"";position:absolute;left:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-left:0;border-right-color:#fff}
+.tm-num{font-size:17px}
+.tm-zones{flex:1;display:flex;flex-direction:column;height:300px;padding-left:64px;list-style:none}
+.tm-zones li{display:flex;flex-direction:column;justify-content:center;padding:0 12px;border-left:3px solid;font-size:12.5px;line-height:1.4;color:rgba(255,255,255,.7);opacity:.45;transition:opacity .6s,background .6s}
+.tm-zones li b{font-size:13.5px;color:#fff}
+.tm-zones .z4{flex:2;border-color:#FF6B5B}.tm-zones .z3{flex:1;border-color:#E58AA0}.tm-zones .z2{flex:1;border-color:#8E8FD8}.tm-zones .z1{flex:2;border-color:#5B8DEF}
+.u1-thermo.shown .tm-zones .z4{opacity:1;background:linear-gradient(90deg,rgba(255,107,91,.18),transparent);transition-delay:2.2s}
+.u1-thermo.shown .tm-zones .z4 span{color:#FFB3A8;font-weight:700}
+.tm-plus{position:absolute;right:0;top:20px;padding:6px 14px;border-radius:999px;background:var(--brand2);color:#fff;font-size:16px;font-weight:800;opacity:0;transform:scale(.6);transition:opacity .5s 2.4s,transform .5s cubic-bezier(.3,1.6,.5,1) 2.4s}
+.u1-thermo.shown .tm-plus{opacity:1;transform:none}
+.u1-ic{position:relative}
+.u1-ic::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--sky);opacity:0;animation:u1Ring 2.8s ease-out infinite}
+.u1-card:nth-child(2) .u1-ic::after{animation-delay:.45s}.u1-card:nth-child(3) .u1-ic::after{animation-delay:.9s}.u1-card:nth-child(4) .u1-ic::after{animation-delay:1.35s}.u1-card:nth-child(5) .u1-ic::after{animation-delay:1.8s}.u1-card:nth-child(6) .u1-ic::after{animation-delay:2.25s}
+@keyframes u1Ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+.u1-v::before{content:"▲";display:inline-block;margin-right:4px;font-size:10px;vertical-align:1px;animation:u1Up 1.6s ease-in-out infinite}
+@keyframes u1Up{50%{transform:translateY(-3px)}}
+.up1-sec{position:relative;overflow:hidden}
+.up1-sec::before{content:"";position:absolute;left:50%;top:-120px;width:520px;height:520px;margin-left:-260px;border-radius:50%;background:radial-gradient(circle,rgba(192,74,107,.35),transparent 65%);animation:u1Halo 6s ease-in-out infinite;pointer-events:none}
+.up1-sec>*{position:relative}
+@keyframes u1Halo{50%{transform:scale(1.15);opacity:.7}}
+@media (prefers-reduced-motion:reduce){.tm-fill{transition:none}.tm-bulb,.u1-ic::after,.u1-v::before,.up1-sec::before{animation:none}}
 .u1-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px;text-align:left}
 .u1-card{padding:18px 16px 18px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
 .u1-ic{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(242,185,201,.14);color:var(--sky)}
@@ -812,7 +839,20 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="u1-eyebrow rv-up">BODY TEMPERATURE +1℃</p>
   <h2 class="u1-title rv-up">내 몸의 체온이 <b>1℃</b> 높아지면,<br><strong>어떤 변화가 생길까?</strong></h2>
   <p class="u1-lead rv-up">정상 체온 36.5~37℃보다 약 1℃만 떨어져도<br>우리 몸은 평소처럼 원활하게 움직이기 어려워집니다.<br>반대로 체온이 <strong>1℃ 오르면</strong>, 몸에서는<br><strong>긍정적인 생리적 변화</strong>가 일어납니다.</p>
-  <div class="u1-temp rv-up"><span>36.5℃</span><i></i><b>+1℃</b><i></i><span class="on">37.5℃</span></div>
+  <div class="u1-thermo rv-up" id="u1Thermo">
+    <div class="tm-col">
+      <div class="tm-tube"><div class="tm-fill"><span class="tm-bub"><b class="tm-num">36.5</b>℃</span></div></div>
+      <div class="tm-bulb"></div>
+      <div class="tm-ticks"><span style="bottom:100%">38</span><span style="bottom:66.67%">37</span><span style="bottom:33.33%">36</span><span style="bottom:0">35</span></div>
+    </div>
+    <ul class="tm-zones">
+      <li class="z4"><b>37℃ 이상</b><span>강한 신진대사·면역력 상승</span></li>
+      <li class="z3"><b>36.5~37℃</b><span>정상 체온</span></li>
+      <li class="z2"><b>36~36.5℃</b><span>피로 증가·면역력 약화 시작</span></li>
+      <li class="z1"><b>35~36℃</b><span>만성 피로·소화 불량·부종</span></li>
+    </ul>
+    <span class="tm-plus">+1℃</span>
+  </div>
   <div class="u1-grid">
     <div class="u1-card rv-up"><span class="u1-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>면역력</h3><p class="u1-v">5배 증가, 감기·염증 예방</p><p class="u1-d">체온이 오르면 몸을 지키는 면역 세포의 활동이 활발해진다고 알려져 있어요.</p></div>
     <div class="u1-card rv-up"><span class="u1-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-4 2.5-5 .3 1.6 1.2 2.5 2.2 2.8C11 8.5 11 6 12 3z"/></svg></span><h3>기초대사</h3><p class="u1-v">12~15% 상승, 지방 연소촉진</p><p class="u1-d">가만히 있어도 쓰는 에너지가 늘어, 몸이 스스로 열을 내기 쉬워져요.</p></div>
@@ -1227,6 +1267,11 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   document.querySelectorAll('.rv-up').forEach(function(el){io.observe(el)});
   var vo=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){v.preload='auto';var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}})},{threshold:.35});
   document.querySelectorAll('video').forEach(function(v){vo.observe(v)});
+  // +1℃ 온도계 숫자 카운트
+  (function(){var t=document.getElementById('u1Thermo');if(!t)return;var n=t.querySelector('.tm-num');
+    var o=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;o.disconnect();var t0=null,d=2200,dl=400;
+      function f(ts){if(!t0)t0=ts;var k=Math.min(Math.max((ts-t0-dl)/d,0),1);k=1-Math.pow(1-k,3);n.textContent=(36.5+k).toFixed(1);if(k<1)requestAnimationFrame(f);}
+      requestAnimationFrame(f);},{threshold:.3});o.observe(t);})();
   // 소재 도해: 밴드 사진의 점에서 각 소재 블록으로 선을 그림 (스피큘 도해 방식)
   (function(){
     var NS='http://www.w3.org/2000/svg',wrap=document.querySelector('.sp-wrap');if(!wrap)return;
