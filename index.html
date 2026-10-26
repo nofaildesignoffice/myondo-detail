@@ -55,7 +55,7 @@ section.intro-sec{position:relative;overflow:hidden;background:#141414;color:#ff
 .it-line{display:block;width:1px;height:96px;margin:30px auto 0;background:rgba(255,255,255,.55);transform-origin:top}
 .it-line.shown{animation:itLine 1.2s ease both}
 @keyframes itLine{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.it-only{font-size:22px;font-weight:300}
+.it-only{font-size:22px;font-weight:300;line-height:1.6}
 .it-only u{text-decoration:none;border-bottom:1.5px solid #fff;padding-bottom:2px;font-weight:400}
 .it-me{margin-top:18px;font-size:52px;font-weight:700;letter-spacing:-.03em;line-height:1.1}
 .it-me span{position:relative;display:inline-block}
@@ -93,7 +93,7 @@ section.hero{padding:0}
 .hero-title{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.03em}
 .hero-title strong{color:var(--sky)}
 .hero-certs.sub-certs{margin-top:auto;padding-top:30px}
-.hero-foot{margin-top:18px;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
+.hero-foot{margin-top:auto;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
 .hero-sub{margin-bottom:12px;font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.02em}
 .hero-certs{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr)}
 .hero-certs li{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;line-height:1.35;color:rgba(255,255,255,.94)}
@@ -590,11 +590,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       </g>
     </svg>
     <div class="hero-me">
-      <p class="it-only rv-up">내 체온을 복사해 <u>심부까지</u> 데우는</p>
-      <p class="it-me rv-up">원적외선<br>심부 발열 밴드</p>
-    </div>
-    <div class="hero-copy">
-      <h1 class="hero-title rv-up">벗은 뒤에도<br><strong>최대 10시간</strong>동안<br>유지되는 체온</h1>
+      <p class="it-only rv-up">내 체온을 복사해 <u>심부까지</u> 데우고<br>벗은 후에도 최대 10시간 체온을 유지해주는</p>
+      <h1 class="it-me rv-up">원적외선<br>심부 발열 밴드</h1>
     </div>
     <p class="hero-foot">* 체온 상승·심부 전달·벗은 뒤 최대 10시간 유지는 브랜드 안내 기준이며, 사람마다 다릅니다.</p>
   </div>
