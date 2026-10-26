@@ -48,16 +48,11 @@ html.review .rvbar{display:block;position:sticky;top:0;z-index:50;background:#d0
 @media (prefers-reduced-motion:reduce){.rv-up{opacity:1;transform:none;filter:none;transition:none}}
 
 /* 1. 히어로 */
-section.intro-sec{position:relative;overflow:hidden;background:#141414;color:#fff;text-align:center;padding:92px 20px 96px}
-.it-smoke{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
-.it-s1{animation:itDrift 14s ease-in-out infinite alternate}
-.it-s2{opacity:.6;animation:itDrift2 18s ease-in-out infinite alternate}
-@keyframes itDrift{from{transform:translate(-20px,0)}to{transform:translate(30px,-24px)}}
-@keyframes itDrift2{from{transform:translate(0 260px) scale(1,-1) translate(0,-380px)}to{transform:translate(-30px 300px) scale(1,-1) translate(0,-380px)}}
+section.intro-sec{position:relative;overflow:hidden;background:#141414;color:#fff;text-align:center;padding:92px 20px 0}
 .it-in{position:relative}
 .it-big{font-size:58px;font-weight:600;line-height:1.38;letter-spacing:-.02em}
 .it-none{margin-top:26px;font-size:21px;font-weight:400;opacity:.92}
-.it-line{display:block;width:1px;height:96px;margin:30px auto;background:rgba(255,255,255,.55);transform-origin:top}
+.it-line{display:block;width:1px;height:96px;margin:30px auto 0;background:rgba(255,255,255,.55);transform-origin:top}
 .it-line.shown{animation:itLine 1.2s ease both}
 @keyframes itLine{from{transform:scaleY(0)}to{transform:scaleY(1)}}
 .it-only{font-size:22px;font-weight:300}
@@ -68,7 +63,7 @@ section.intro-sec{position:relative;overflow:hidden;background:#141414;color:#ff
 .it-me span::before{left:10%;width:14%;transform-origin:left}
 .it-me span::after{right:0;width:20%;transform-origin:right}
 .it-me.shown span::before,.it-me.shown span::after{transform:scaleX(1)}
-@media (prefers-reduced-motion:reduce){.it-s1,.it-s2,.it-line.shown{animation:none}}
+@media (prefers-reduced-motion:reduce){.it-line.shown{animation:none}}
 section.hero{padding:0}
 .hero-inner{position:relative;min-height:820px;display:flex;flex-direction:column;justify-content:flex-start;text-align:center;
   padding:40px 20px 38px;color:#fff;background:#C9C3C1 url('img/hero_sit.jpg') center 30% / cover no-repeat}
@@ -93,12 +88,13 @@ section.hero{padding:0}
 @keyframes hhArrow{0%,100%{transform:translate(-6px,-10px)}50%{transform:translate(-6px,-16px)}}
 @media (prefers-reduced-motion:reduce){.hh-glow,.hh-skin,.hh-ring,.hh-p,.hh-merc,.hh-arrow{animation:none}.hh-glow{opacity:.7}.hh-ring,.hh-p{opacity:0}}
 
-.hero-copy{text-shadow:0 2px 14px rgba(0,0,0,.3)}
+.hero-me{text-shadow:0 2px 16px rgba(0,0,0,.35)}
+.hero-copy{margin-top:auto;text-shadow:0 2px 14px rgba(0,0,0,.3)}
 .hero-title{font-size:34px;font-weight:800;line-height:1.3;letter-spacing:-.03em}
 .hero-title strong{color:var(--sky)}
 .hero-foot{margin-top:14px;font-size:10.5px;color:rgba(255,255,255,.75);text-align:center}
 .hero-sub{margin-bottom:12px;font-size:17px;font-weight:500;line-height:1.5;letter-spacing:-.02em}
-.hero-certs{margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.hero-certs{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr)}
 .hero-certs li{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;line-height:1.35;color:rgba(255,255,255,.94)}
 .hero-certs li + li{border-left:1px solid rgba(255,255,255,.45)}
 .hero-cert-ic{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.7);display:flex;align-items:center;justify-content:center;color:#fff}
@@ -567,13 +563,10 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [1] HERO -->
 <!-- [0] 인트로: 전기·충전·데우기 없이, 나의 체온 -->
 <section class="intro-sec">
-  <svg class="it-smoke" viewBox="0 0 640 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g class="it-s1" fill="none" stroke="#fff" stroke-width=".6"><path d="M-40 150 C 120 60.0, 260 260.0, 420 140.0 S 620 40, 700 120.0"/><path d="M-40 157 C 120 69.8, 260 255.8, 420 145.6 S 620 47, 700 128.4"/><path d="M-40 164 C 120 79.6, 260 251.6, 420 151.2 S 620 54, 700 136.8"/><path d="M-40 171 C 120 89.4, 260 247.4, 420 156.8 S 620 61, 700 145.2"/><path d="M-40 178 C 120 99.19999999999999, 260 243.2, 420 162.4 S 620 68, 700 153.6"/><path d="M-40 185 C 120 109.0, 260 239.0, 420 168.0 S 620 75, 700 162.0"/><path d="M-40 192 C 120 118.8, 260 234.8, 420 173.6 S 620 82, 700 170.4"/><path d="M-40 199 C 120 128.6, 260 230.6, 420 179.2 S 620 89, 700 178.8"/><path d="M-40 206 C 120 138.39999999999998, 260 226.4, 420 184.8 S 620 96, 700 187.2"/><path d="M-40 213 C 120 148.2, 260 222.2, 420 190.4 S 620 103, 700 195.6"/><path d="M-40 220 C 120 158.0, 260 218.0, 420 196.0 S 620 110, 700 204.0"/><path d="M-40 227 C 120 167.8, 260 213.8, 420 201.6 S 620 117, 700 212.39999999999998"/><path d="M-40 234 C 120 177.6, 260 209.6, 420 207.2 S 620 124, 700 220.8"/><path d="M-40 241 C 120 187.39999999999998, 260 205.4, 420 212.8 S 620 131, 700 229.2"/><path d="M-40 248 C 120 197.2, 260 201.2, 420 218.4 S 620 138, 700 237.6"/><path d="M-40 255 C 120 207.0, 260 197.0, 420 224.0 S 620 145, 700 246.0"/><path d="M-40 262 C 120 216.79999999999998, 260 192.8, 420 229.60000000000002 S 620 152, 700 254.4"/><path d="M-40 269 C 120 226.6, 260 188.60000000000002, 420 235.2 S 620 159, 700 262.79999999999995"/><path d="M-40 276 C 120 236.39999999999998, 260 184.4, 420 240.8 S 620 166, 700 271.2"/><path d="M-40 283 C 120 246.2, 260 180.2, 420 246.4 S 620 173, 700 279.6"/><path d="M-40 290 C 120 256.0, 260 176.0, 420 252.0 S 620 180, 700 288.0"/><path d="M-40 297 C 120 265.79999999999995, 260 171.8, 420 257.6 S 620 187, 700 296.4"/></g><g class="it-s2" fill="none" stroke="#fff" stroke-width=".5" transform="translate(0 260) scale(1 -1) translate(0 -380)"><path d="M-40 150 C 120 60.0, 260 260.0, 420 140.0 S 620 40, 700 120.0"/><path d="M-40 164 C 120 79.6, 260 251.6, 420 151.2 S 620 54, 700 136.8"/><path d="M-40 178 C 120 99.19999999999999, 260 243.2, 420 162.4 S 620 68, 700 153.6"/><path d="M-40 192 C 120 118.8, 260 234.8, 420 173.6 S 620 82, 700 170.4"/><path d="M-40 206 C 120 138.39999999999998, 260 226.4, 420 184.8 S 620 96, 700 187.2"/><path d="M-40 220 C 120 158.0, 260 218.0, 420 196.0 S 620 110, 700 204.0"/><path d="M-40 234 C 120 177.6, 260 209.6, 420 207.2 S 620 124, 700 220.8"/><path d="M-40 248 C 120 197.2, 260 201.2, 420 218.4 S 620 138, 700 237.6"/><path d="M-40 262 C 120 216.79999999999998, 260 192.8, 420 229.60000000000002 S 620 152, 700 254.4"/><path d="M-40 276 C 120 236.39999999999998, 260 184.4, 420 240.8 S 620 166, 700 271.2"/><path d="M-40 290 C 120 256.0, 260 176.0, 420 252.0 S 620 180, 700 288.0"/></g></svg>
   <div class="it-in">
     <p class="it-big rv-up">전기<br>충전<br>데우기</p>
     <p class="it-none rv-up">모두 필요 없습니다</p>
     <i class="it-line rv-up"></i>
-    <p class="it-only rv-up">필요한 건 <u>오직</u></p>
-    <p class="it-me rv-up"><span>나의 체온</span></p>
   </div>
 </section>
 <section class="hero">
@@ -595,6 +588,10 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <g class="hh-parts" filter="url(#hhSoft)"><circle class="hh-p" cx="816" cy="1015" r="4.1" style="--dx:-129px;--dy:388px;animation-delay:-1.39s;animation-duration:6.33s"/><circle class="hh-p" cx="737" cy="942" r="3.2" style="--dx:-339px;--dy:-429px;animation-delay:-1.24s;animation-duration:6.67s"/><circle class="hh-p" cx="740" cy="977" r="4.9" style="--dx:220px;--dy:222px;animation-delay:-6.30s;animation-duration:6.52s"/><circle class="hh-p" cx="779" cy="1074" r="6.1" style="--dx:-409px;--dy:-195px;animation-delay:-2.95s;animation-duration:6.17s"/><circle class="hh-p" cx="641" cy="1118" r="5.5" style="--dx:176px;--dy:-287px;animation-delay:-1.61s;animation-duration:5.42s"/><circle class="hh-p" cx="690" cy="1013" r="3.5" style="--dx:-324px;--dy:-228px;animation-delay:-0.82s;animation-duration:6.27s"/><circle class="hh-p" cx="655" cy="1071" r="5.9" style="--dx:99px;--dy:219px;animation-delay:-5.25s;animation-duration:4.82s"/><circle class="hh-p" cx="617" cy="1088" r="3.3" style="--dx:-173px;--dy:-490px;animation-delay:-4.08s;animation-duration:4.83s"/><circle class="hh-p" cx="640" cy="1092" r="3.3" style="--dx:311px;--dy:201px;animation-delay:-6.11s;animation-duration:4.68s"/><circle class="hh-p" cx="546" cy="1083" r="3.3" style="--dx:150px;--dy:-497px;animation-delay:-6.75s;animation-duration:5.46s"/><circle class="hh-p" cx="762" cy="914" r="4.6" style="--dx:-384px;--dy:-53px;animation-delay:-2.78s;animation-duration:7.15s"/><circle class="hh-p" cx="663" cy="1040" r="4.8" style="--dx:114px;--dy:-369px;animation-delay:-1.29s;animation-duration:6.13s"/><circle class="hh-p" cx="796" cy="1013" r="3.7" style="--dx:-379px;--dy:-148px;animation-delay:-1.88s;animation-duration:4.64s"/><circle class="hh-p" cx="693" cy="986" r="3.2" style="--dx:-335px;--dy:-206px;animation-delay:-3.92s;animation-duration:5.19s"/><circle class="hh-p" cx="543" cy="1097" r="5.8" style="--dx:207px;--dy:161px;animation-delay:-0.95s;animation-duration:4.65s"/><circle class="hh-p" cx="674" cy="1078" r="4.3" style="--dx:244px;--dy:322px;animation-delay:-2.22s;animation-duration:6.12s"/><circle class="hh-p" cx="828" cy="1069" r="5.0" style="--dx:-36px;--dy:284px;animation-delay:-0.25s;animation-duration:4.96s"/><circle class="hh-p" cx="571" cy="983" r="6.0" style="--dx:118px;--dy:-341px;animation-delay:-6.71s;animation-duration:5.60s"/><circle class="hh-p" cx="710" cy="937" r="5.3" style="--dx:100px;--dy:-52px;animation-delay:-1.10s;animation-duration:6.20s"/><circle class="hh-p" cx="628" cy="991" r="5.8" style="--dx:-216px;--dy:-103px;animation-delay:-6.19s;animation-duration:5.39s"/><circle class="hh-p" cx="554" cy="1126" r="3.1" style="--dx:260px;--dy:294px;animation-delay:-3.38s;animation-duration:6.25s"/><circle class="hh-p" cx="555" cy="1059" r="5.5" style="--dx:325px;--dy:333px;animation-delay:-1.94s;animation-duration:7.07s"/><circle class="hh-p" cx="709" cy="1035" r="6.5" style="--dx:-199px;--dy:304px;animation-delay:-5.10s;animation-duration:6.89s"/><circle class="hh-p" cx="529" cy="1083" r="5.4" style="--dx:176px;--dy:155px;animation-delay:-4.30s;animation-duration:5.89s"/><circle class="hh-p" cx="598" cy="1064" r="6.4" style="--dx:-130px;--dy:-399px;animation-delay:-4.02s;animation-duration:5.86s"/><circle class="hh-p" cx="518" cy="1074" r="3.8" style="--dx:-224px;--dy:-523px;animation-delay:-3.25s;animation-duration:4.68s"/><circle class="hh-p" cx="625" cy="966" r="5.0" style="--dx:-69px;--dy:307px;animation-delay:-2.54s;animation-duration:4.94s"/><circle class="hh-p" cx="562" cy="1049" r="4.4" style="--dx:43px;--dy:184px;animation-delay:-3.46s;animation-duration:6.23s"/><circle class="hh-p" cx="792" cy="979" r="5.0" style="--dx:65px;--dy:417px;animation-delay:-2.68s;animation-duration:6.22s"/><circle class="hh-p" cx="680" cy="1083" r="4.7" style="--dx:-129px;--dy:-337px;animation-delay:-3.20s;animation-duration:6.32s"/><circle class="hh-p" cx="764" cy="1037" r="4.2" style="--dx:94px;--dy:372px;animation-delay:-6.31s;animation-duration:6.38s"/><circle class="hh-p" cx="778" cy="942" r="5.9" style="--dx:-432px;--dy:-81px;animation-delay:-1.33s;animation-duration:5.25s"/><circle class="hh-p" cx="504" cy="998" r="5.5" style="--dx:295px;--dy:-426px;animation-delay:-5.77s;animation-duration:5.27s"/><circle class="hh-p" cx="687" cy="1045" r="4.1" style="--dx:17px;--dy:-534px;animation-delay:-5.67s;animation-duration:4.84s"/><circle class="hh-p" cx="571" cy="1038" r="3.4" style="--dx:168px;--dy:-292px;animation-delay:-1.49s;animation-duration:7.17s"/><circle class="hh-p" cx="800" cy="948" r="5.4" style="--dx:-325px;--dy:307px;animation-delay:-1.19s;animation-duration:5.13s"/></g>
       </g>
     </svg>
+    <div class="hero-me">
+      <p class="it-only rv-up">필요한 건 <u>오직</u></p>
+      <p class="it-me rv-up"><span>나의 체온</span></p>
+    </div>
     <div class="hero-copy">
       <p class="hero-sub rv-up">내 몸의 온기를 복사해<br>심부까지 데우는 원적외선 심부 발열 밴드</p>
       <h1 class="hero-title rv-up">벗은 뒤에도<br><strong>최대 10시간</strong>동안<br>유지되는 체온</h1>
