@@ -211,72 +211,59 @@ section.reviews{padding:0 18px 46px;background:linear-gradient(to bottom,#F3F1F1
 
 
 
-/* 고민 (이미지+텍스트 겹침 카드) */
-section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0%,var(--bg-soft) 100%)}
-.wr-title{text-align:center;font-size:34px;font-weight:800;line-height:1.35;letter-spacing:-.03em}
-.wr-title strong{color:var(--brand)}
-.wr-circle{width:180px;height:180px;margin:34px auto 40px;border-radius:50%;overflow:hidden}
-.wr-circle img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
-.wp-list{display:flex;flex-direction:column;gap:30px;margin-top:36px}
-.wp{position:relative;display:flex;align-items:center}
+/* 고민 (사이트 공통 카드 스타일) */
+section.worry{padding:60px 20px 56px;background:var(--bg-gray);text-align:center}
+.wp-list{display:flex;flex-direction:column;gap:14px;margin-top:4px}
+.wp{display:flex;align-items:center;gap:16px;padding:14px;background:#fff;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.06);text-align:left}
 .wp.r{flex-direction:row-reverse}
-.wp-img{flex:0 0 40%;aspect-ratio:4/5;margin:0;border-radius:18px;overflow:hidden;background:#EDE3E6}
+.wp-img{flex:0 0 40%;aspect-ratio:4/5;margin:0;border-radius:14px;overflow:hidden;background:#EDE3E6}
 .wp-img img{width:100%;height:100%;object-fit:cover;display:block}
-.wp-txt{position:relative;z-index:1;flex:1;margin:0 0 0 -8%;padding:22px 20px 24px;background:#fff;border-radius:16px;box-shadow:0 12px 30px rgba(80,20,40,.13);text-align:left}
-.wp.r .wp-txt{margin:0 -8% 0 0}
-.wp-who{display:block;margin-bottom:8px;font-size:13.5px;font-weight:800;color:var(--brand)}
-.wp-txt p{font-size:17px;font-weight:500;line-height:1.7;letter-spacing:-.03em;color:#222;word-break:keep-all}
-.wp-txt em{font-style:normal;font-weight:800;color:#111;background:linear-gradient(transparent 58%,rgba(242,185,201,.75) 58%)}
-.up1-sec{background:#141414;color:#fff;padding:64px 20px 56px;text-align:center}
-.u1-eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.16em;color:var(--sky)}
-.u1-title{margin-top:12px;font-size:30px;font-weight:700;line-height:1.38;letter-spacing:-.03em}
-.u1-title b{color:var(--sky);font-weight:800}
-.u1-title strong{font-weight:800}
-.u1-lead{margin-top:18px;font-size:15px;line-height:1.75;color:rgba(255,255,255,.82)}
-.u1-lead strong{color:#fff;font-weight:700}
-.u1-thermo{position:relative;display:flex;gap:16px;margin:34px auto 0;max-width:400px;text-align:left}
+.wp-txt{flex:1;padding:4px 2px}
+.wp.r .wp-txt{padding-left:6px}
+.wp-who{display:block;margin-bottom:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:var(--brand)}
+.wp-txt p{font-size:16.5px;font-weight:500;line-height:1.65;letter-spacing:-.03em;color:var(--text-dark);word-break:keep-all}
+.wp-txt em{font-style:normal;font-weight:800;color:var(--text-black)}
+.up1-sec{background:#fff;padding:60px 20px 56px;text-align:center}
+.u1-title{font-size:32px}
+.u1-lead{margin-top:6px;font-size:15px;line-height:1.75;color:var(--text-gray)}
+.u1-lead strong{color:var(--text-black);font-weight:700}
+.u1-thermo{position:relative;display:flex;gap:16px;margin:26px auto 0;padding:26px 18px 22px;background:#fff;border:1px solid #EFE3E7;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.08);text-align:left}
 .tm-col{position:relative;flex:none;width:64px;padding-left:22px}
-.tm-tube{position:relative;width:22px;height:300px;margin-left:8px;border-radius:12px 12px 0 0;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.25);border-bottom:0}
-.tm-fill{position:absolute;left:4px;right:4px;bottom:0;height:50%;border-radius:8px 8px 0 0;background:linear-gradient(to top,#5B8DEF 0%,#C04A6B 55%,#FF6B5B 100%);background-size:100% 300px;background-position:bottom;transition:height 2.2s cubic-bezier(.3,.7,.2,1) .4s}
+.tm-tube{position:relative;width:22px;height:300px;margin-left:8px;border-radius:12px 12px 0 0;background:var(--bg-gray);border:1.5px solid #E2D6DA;border-bottom:0}
+.tm-fill{position:absolute;left:4px;right:4px;bottom:0;height:50%;border-radius:8px 8px 0 0;background:linear-gradient(to top,#7FA2D9 0%,#C04A6B 55%,#8E1F3F 100%);background-size:100% 300px;background-position:bottom;transition:height 2.2s cubic-bezier(.3,.7,.2,1) .4s}
 .u1-thermo.shown .tm-fill{height:83.33%}
-.tm-bulb{width:38px;height:38px;margin:-4px 0 0 0;border-radius:50%;background:radial-gradient(circle at 40% 35%,#ff9a8a,#C04A6B 60%,#8E1F3F);border:1.5px solid rgba(255,255,255,.25);box-shadow:0 0 22px rgba(255,107,91,.55);animation:tmGlow 2.4s ease-in-out infinite}
-@keyframes tmGlow{50%{box-shadow:0 0 34px rgba(255,107,91,.9)}}
+.tm-bulb{width:38px;height:38px;margin-top:-4px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#D9748F,#8E1F3F 70%);border:1.5px solid #E2D6DA}
 .tm-ticks{position:absolute;left:0;top:0;height:300px}
-.tm-ticks span{position:absolute;left:0;transform:translateY(50%);font-size:10.5px;font-weight:700;color:rgba(255,255,255,.45)}
-.tm-bub{position:absolute;left:calc(100% + 10px);top:-14px;white-space:nowrap;padding:4px 10px;border-radius:999px;background:#fff;color:var(--brand);font-size:13px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.3)}
-.tm-bub::before{content:"";position:absolute;left:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-left:0;border-right-color:#fff}
+.tm-ticks span{position:absolute;left:0;transform:translateY(50%);font-size:10.5px;font-weight:700;color:var(--text-light)}
+.tm-bub{position:absolute;left:calc(100% + 10px);top:-14px;white-space:nowrap;padding:4px 10px;border-radius:999px;background:var(--brand);color:#fff;font-size:13px;font-weight:800;box-shadow:0 4px 12px rgba(142,31,63,.25)}
+.tm-bub::before{content:"";position:absolute;left:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-left:0;border-right-color:var(--brand)}
 .tm-num{font-size:17px}
-.tm-zones{flex:1;display:flex;flex-direction:column;height:300px;padding-left:64px;list-style:none}
-.tm-zones li{display:flex;flex-direction:column;justify-content:center;padding:0 12px;border-left:3px solid;font-size:12.5px;line-height:1.4;color:rgba(255,255,255,.7);opacity:.45;transition:opacity .6s,background .6s}
-.tm-zones li b{font-size:13.5px;color:#fff}
-.tm-zones .z4{flex:2;border-color:#FF6B5B}.tm-zones .z3{flex:1;border-color:#E58AA0}.tm-zones .z2{flex:1;border-color:#8E8FD8}.tm-zones .z1{flex:2;border-color:#5B8DEF}
-.u1-thermo.shown .tm-zones .z4{opacity:1;background:linear-gradient(90deg,rgba(255,107,91,.18),transparent);transition-delay:2.2s}
-.u1-thermo.shown .tm-zones .z4 span{color:#FFB3A8;font-weight:700}
-.tm-plus{position:absolute;right:0;top:20px;padding:6px 14px;border-radius:999px;background:var(--brand2);color:#fff;font-size:16px;font-weight:800;opacity:0;transform:scale(.6);transition:opacity .5s 2.4s,transform .5s cubic-bezier(.3,1.6,.5,1) 2.4s}
+.tm-zones{flex:1;display:flex;flex-direction:column;height:300px;padding-left:60px;list-style:none}
+.tm-zones li{display:flex;flex-direction:column;justify-content:center;padding:0 12px;border-left:3px solid;font-size:12.5px;line-height:1.4;color:var(--text-gray);opacity:.55;transition:opacity .6s,background .6s}
+.tm-zones li b{font-size:13.5px;color:var(--text-black)}
+.tm-zones .z4{flex:2;border-color:var(--brand)}.tm-zones .z3{flex:1;border-color:#D9748F}.tm-zones .z2{flex:1;border-color:#B8B4D6}.tm-zones .z1{flex:2;border-color:#7FA2D9}
+.u1-thermo.shown .tm-zones .z4{opacity:1;background:linear-gradient(90deg,var(--bg-soft),transparent);transition-delay:2.2s}
+.u1-thermo.shown .tm-zones .z4 span{color:var(--brand);font-weight:700}
+.tm-plus{position:absolute;right:16px;top:30px;padding:6px 14px;border-radius:999px;background:var(--brand);color:#fff;font-size:15px;font-weight:800;opacity:0;transform:scale(.6);transition:opacity .5s 2.4s,transform .5s cubic-bezier(.3,1.6,.5,1) 2.4s}
 .u1-thermo.shown .tm-plus{opacity:1;transform:none}
-.u1-ic{position:relative}
-.u1-ic::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--sky);opacity:0;animation:u1Ring 2.8s ease-out infinite}
+.u1-ic::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--brand2);opacity:0;animation:u1Ring 2.8s ease-out infinite}
 .u1-card:nth-child(2) .u1-ic::after{animation-delay:.45s}.u1-card:nth-child(3) .u1-ic::after{animation-delay:.9s}.u1-card:nth-child(4) .u1-ic::after{animation-delay:1.35s}.u1-card:nth-child(5) .u1-ic::after{animation-delay:1.8s}.u1-card:nth-child(6) .u1-ic::after{animation-delay:2.25s}
-@keyframes u1Ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
+@keyframes u1Ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
 .u1-v::before{content:"▲";display:inline-block;margin-right:4px;font-size:10px;vertical-align:1px;animation:u1Up 1.6s ease-in-out infinite}
 @keyframes u1Up{50%{transform:translateY(-3px)}}
-.up1-sec{position:relative;overflow:hidden}
-.up1-sec::before{content:"";position:absolute;left:50%;top:-120px;width:520px;height:520px;margin-left:-260px;border-radius:50%;background:radial-gradient(circle,rgba(192,74,107,.35),transparent 65%);animation:u1Halo 6s ease-in-out infinite;pointer-events:none}
-.up1-sec>*{position:relative}
-@keyframes u1Halo{50%{transform:scale(1.15);opacity:.7}}
-@media (prefers-reduced-motion:reduce){.tm-fill{transition:none}.tm-bulb,.u1-ic::after,.u1-v::before,.up1-sec::before{animation:none}}
-.u1-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px;text-align:left}
-.u1-card{padding:18px 16px 18px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
-.u1-ic{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(242,185,201,.14);color:var(--sky)}
+@media (prefers-reduced-motion:reduce){.tm-fill{transition:none}.u1-ic::after,.u1-v::before{animation:none}}
+.u1-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;text-align:left}
+.u1-card{padding:18px 16px;border-radius:18px;background:var(--bg-gray)}
+.u1-ic{position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--brand)}
 .u1-ic svg{width:22px;height:22px}
-.u1-card h3{margin-top:12px;font-size:18px;font-weight:800;letter-spacing:-.02em}
-.u1-v{margin-top:4px;font-size:13.5px;font-weight:700;line-height:1.45;color:var(--sky)}
-.u1-d{margin-top:8px;font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.72)}
-.u1-end{margin-top:46px;font-size:25px;font-weight:500;line-height:1.45;letter-spacing:-.03em}
-.u1-end strong{font-weight:800}
-.u1-end u{text-decoration:none;color:var(--sky);border-bottom:2px solid var(--sky)}
-.u1-note{margin-top:22px;color:rgba(255,255,255,.5)}
-.wr-note{margin-top:22px;text-align:center;font-size:11.5px;color:var(--text-light);line-height:1.55}
+.u1-card h3{margin-top:12px;font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--text-black)}
+.u1-v{margin-top:4px;font-size:13.5px;font-weight:700;line-height:1.45;color:var(--brand)}
+.u1-d{margin-top:8px;font-size:12.5px;line-height:1.6;color:var(--text-gray)}
+.u1-end{margin-top:40px;font-size:24px;font-weight:500;line-height:1.45;letter-spacing:-.03em;color:var(--text-black)}
+.u1-end strong{font-weight:800;color:var(--brand)}
+.u1-end u{text-decoration:none;border-bottom:2px solid var(--brand)}
+.u1-note{margin-top:18px}
+.wr-note{margin-top:18px;text-align:center;font-size:11.5px;color:var(--text-light);line-height:1.55}
 
 /* 카피 밴드 */
 .copy-band{background:var(--navy);padding:44px 20px;text-align:center}
@@ -288,9 +275,24 @@ section.worry{padding:56px 20px 60px;background:linear-gradient(to bottom,#fff 0
 .cb-items li{font-size:14.5px;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:7px 14px}
 .copy-band p strong{color:var(--sky)}
 .cause-note{margin:-6px 0 34px}
-section.cause-sec{padding-bottom:0}
-.cause-lead{margin:0 0 48px;text-align:center;font-size:26px;font-weight:700;line-height:1.45;letter-spacing:-.03em;color:#111}
-.cause-lead strong{font-weight:800;color:var(--brand)}
+section.cause-sec{padding-bottom:0;background:var(--bg-gray);text-align:center}
+.cz-title{font-size:30px}
+.cz-card{margin-top:16px;padding:22px 16px 8px;background:#fff;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.06);text-align:left}
+.cz-head{display:flex;align-items:center;gap:12px;padding:0 4px 14px}
+.cz-head .cause-ic{width:46px;height:46px;flex:none}
+.cz-head .cause-ic svg{width:28px;height:28px}
+.cz-head h3{font-size:20px;font-weight:800;letter-spacing:-.03em;color:var(--text-black)}
+.cz-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--line-soft)}
+.cz-img{flex:0 0 34%;aspect-ratio:1;margin:0;border-radius:14px;overflow:hidden;background:#EDE3E6}
+.cz-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cz-txt{flex:1}
+.cz-txt b{display:block;font-size:16.5px;font-weight:800;line-height:1.4;letter-spacing:-.03em;color:var(--text-black);word-break:keep-all}
+.cz-q{margin-top:8px;font-size:13px;line-height:1.55;color:var(--text-dark);word-break:keep-all}
+.cz-src{display:block;margin-top:4px;font-size:11px;color:var(--text-light)}
+.cz-note{margin:14px 0 40px;text-align:center}
+.cause-sec .cause-card.key{margin:0 0 24px;padding:28px 16px 22px;background:#fff;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.06)}
+.cause-sec .cause-card.key .cause-title{margin-top:0}
+.cause-sec .cause-card.key .cause-body{padding:0 4px}
 .cause-quote{margin-top:16px;padding:16px 18px;background:var(--bg-soft);border-left:3px solid var(--brand);text-align:left;font-size:14.5px;line-height:1.65;color:#333}
 .cause-quote strong{color:var(--brand);font-weight:800}
 .cause-quote span{display:block;margin-top:6px;font-size:12px;color:#8a7c81}
@@ -302,14 +304,6 @@ section.cause-sec{padding-bottom:0}
 .cause-title{margin-top:20px;font-size:23px;font-weight:800;color:#111;line-height:1.45;letter-spacing:-.03em}
 .cause-img{position:relative;aspect-ratio:426/240;margin-top:22px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .cause-img svg{width:62%;height:auto}
-.cs-list{margin-top:22px;display:flex;flex-direction:column;gap:12px;list-style:none;padding:0}
-.cs-row{display:flex;align-items:center;gap:18px;padding:12px;background:var(--bg-soft);border-radius:18px;text-align:left}
-.cs-row:nth-child(2){flex-direction:row-reverse;text-align:right}
-.cs-img{flex:0 0 46%;aspect-ratio:4/5;margin:0;border-radius:12px;overflow:hidden;background:#EDE3E6}
-.cs-img img{width:100%;height:100%;object-fit:cover;display:block}
-.cs-txt{flex:1;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#444}
-.cs-txt span{display:block}
-.cs-txt b{display:block;margin-top:2px;font-size:19px;font-weight:800;color:#111}
 .cause-body{margin-top:18px;text-align:left;font-size:15.5px;color:#222;line-height:1.7;letter-spacing:-.02em}
 
 /* 결론 */
@@ -584,6 +578,12 @@ section.evi-sec{background:var(--bg-gray)}
 .sf-a b{display:block;font-size:17.5px;font-weight:800;letter-spacing:-.02em;color:#111}
 .sf-a p{margin-top:4px;font-size:13.5px;line-height:1.6;color:var(--text-gray)}
 .sf-a small{display:block;margin-top:6px;font-size:11.5px;color:var(--text-light)}
+.sf-docs{display:flex;justify-content:center;gap:8px;margin-top:14px;padding:12px;border-radius:12px;background:var(--bg-gray)}
+.sf-doc{margin:0;flex:0 0 58%}
+.sf-docs.two{flex-direction:column;align-items:center}
+.sf-docs.two .sf-doc{flex:none;width:58%}
+.sf-doc.wide,.sf-docs.two .sf-doc.wide{flex:0 0 100%;width:100%}
+.sf-doc img{width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
 .sf-note{text-align:left;margin-top:12px}
 .evi-sec .rs-eyebrow{text-align:center}
 .evi-sec .section-subtitle strong{display:inline-block;margin-bottom:4px;font-size:16px;font-weight:800;color:var(--brand)}
@@ -820,7 +820,9 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [3] 고민 -->
 <section class="worry">
-  <h2 class="wr-title rv-up">몸이 늘 차가워서<br><strong>따뜻함을 달고 사는 분들</strong></h2>
+  <p class="rs-eyebrow rv-up">EVERYDAY COLD</p>
+  <h2 class="section-title rv-up">몸이 늘 차가워서<br><strong>따뜻함을 달고 사는 분들</strong></h2>
+  <p class="section-subtitle rv-up">혹시 이런 하루, 익숙하지 않으신가요?</p>
   <div class="wp-list">
     <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_1.jpg" alt="수면양말 신은 발을 감싸 쥔 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>방은 따뜻한데 <em>수면양말을 신어도 발이 시려요.</em> 손은 사계절 내내 얼음장이고요.</p></div></div>
     <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_2.jpg" alt="물주머니를 끌어안은 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>밖에선 핫팩, 집에선 <em>물주머니를 끌어안고</em> 지내요. 따뜻한 걸 손에서 놓을 수가 없어요.</p></div></div>
@@ -836,8 +838,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [+1℃] 체온 1도의 변화 -->
 <section class="up1-sec">
-  <p class="u1-eyebrow rv-up">BODY TEMPERATURE +1℃</p>
-  <h2 class="u1-title rv-up">내 몸의 체온이 <b>1℃</b> 높아지면,<br><strong>어떤 변화가 생길까?</strong></h2>
+  <p class="rs-eyebrow rv-up">BODY TEMPERATURE +1℃</p>
+  <h2 class="section-title u1-title rv-up">내 몸의 체온이 1℃ 높아지면,<br><strong>어떤 변화가 생길까?</strong></h2>
   <p class="u1-lead rv-up">정상 체온 36.5~37℃보다 약 1℃만 떨어져도<br>우리 몸은 평소처럼 원활하게 움직이기 어려워집니다.<br>반대로 체온이 <strong>1℃ 오르면</strong>, 몸에서는<br><strong>긍정적인 생리적 변화</strong>가 일어납니다.</p>
   <div class="u1-thermo rv-up" id="u1Thermo">
     <div class="tm-col">
@@ -869,35 +871,28 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [5] 원인 -->
 <section class="cause-sec">
-  <h2 class="cause-lead rv-up">조금이라도 따뜻해지기 위해<br>다양한 제품을 사용해 보지만<br><strong>매번 이런 번거로움이 따라와요</strong></h2>
-  <div class="cause-card rv-up">
-    <span class="cause-no cause-ic ci-1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-steam"><path d="M12 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M16 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M20 7c-1.2-1.4 1.2-2.6 0-4"/></g><path d="M14 9h4v2.5"/><path d="M14 11.5V9"/><path d="M11 12h10c2.2 0 3.5 1.6 3.5 3.6v8.9c0 2.2-1.6 3.5-3.6 3.5H11.1c-2 0-3.6-1.3-3.6-3.5v-8.9C7.5 13.6 8.8 12 11 12z"/><path class="ci-water" d="M8.5 21c2.5-1.3 5-1.3 7.5 0s5 1.3 7.5 0"/></svg></span>
-    <h3 class="cause-title">물주머니는</h3>
-    <ul class="cs-list">
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_1.jpg" alt="물주머니의 식은 물을 쏟아 버리는 손" loading="lazy"></figure><p class="cs-txt"><span>식은 물을</span><b>다시 갈아 줘야 하고</b></p></li>
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_2.jpg" alt="주전자에 물을 데우는 모습" loading="lazy"></figure><p class="cs-txt"><span>물을 매번</span><b>다시 데워야 하고</b></p></li>
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_3.jpg" alt="물주머니 마개를 잠그며 새는지 확인하는 손" loading="lazy"></figure><p class="cs-txt"><span>마개가 새지 않는지</span><b>매번 확인해야 해요</b></p></li>
-    </ul>
+  <p class="rs-eyebrow rv-up">REAL VOICES</p>
+  <h2 class="section-title cz-title rv-up">조금이라도 따뜻해지기 위해<br>다양한 제품을 사용해 보지만<br><strong>매번 이런 번거로움이 따라와요</strong></h2>
+  <p class="section-subtitle rv-up">보온용품을 써 본 분들이 남긴 실제 후기예요.</p>
+  <div class="cz-card rv-up">
+    <div class="cz-head"><span class="cause-no cause-ic ci-1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-steam"><path d="M12 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M16 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M20 7c-1.2-1.4 1.2-2.6 0-4"/></g><path d="M14 9h4v2.5"/><path d="M14 11.5V9"/><path d="M11 12h10c2.2 0 3.5 1.6 3.5 3.6v8.9c0 2.2-1.6 3.5-3.6 3.5H11.1c-2 0-3.6-1.3-3.6-3.5v-8.9C7.5 13.6 8.8 12 11 12z"/><path class="ci-water" d="M8.5 21c2.5-1.3 5-1.3 7.5 0s5 1.3 7.5 0"/></svg></span><h3>물주머니는</h3></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d1.jpg" alt="다 식은 물주머니를 만지는 손" loading="lazy"></figure><div class="cz-txt"><b>금방 식어요</b><p class="cz-q">“물주머니는 너무 빨리 식고”</p><span class="cz-src">11번가 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c2.jpg" alt="주전자에 물을 데우는 모습" loading="lazy"></figure><div class="cz-txt"><b>물 끓여 담고, 버리는 과정이 번거로워요</b><p class="cz-q">“물 끓여서 담고 버리는 과정이 번거로웠어요”</p><span class="cz-src">11번가 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c1.jpg" alt="물주머니의 식은 물을 쏟아 버리는 손" loading="lazy"></figure><div class="cz-txt"><b>귀찮아서 물을 그대로 둘 때도 많아요</b><p class="cz-q">“사실 귀찮아서 아침에 물도 안 뺄 때가 많다.”</p><span class="cz-src">물주머니 사용기 · 개인 블로그</span></div></div>
   </div>
-  <div class="cause-card rv-up">
-    <span class="cause-no cause-ic ci-2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="17" height="14" rx="3"/><path class="ci-zig" d="M7.5 13l2-2.5 2 5 2-5 2 5 2-2.5"/><path d="M21 15h3.5c2 0 3 1.2 3 3v3.5c0 1.8-1 3-3 3"/><rect x="21" y="23" width="5" height="4" rx="1"/><circle class="ci-spark" cx="24.5" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg></span>
-    <h3 class="cause-title">전기 찜질기는</h3>
-    <ul class="cs-list">
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_4.jpg" alt="콘센트에 꽂힌 찜질 패드 전선" loading="lazy"></figure><p class="cs-txt"><span>콘센트 근처에서만</span><b>쓸 수 있고</b></p></li>
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_5.jpg" alt="충전 중인 무선 찜질기" loading="lazy"></figure><p class="cs-txt"><span>다 쓰고 나면</span><b>충전을 기다려야 하고</b></p></li>
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_6.jpg" alt="찜질 패드 컨트롤러를 다시 켜는 손" loading="lazy"></figure><p class="cs-txt"><span>자동으로 꺼지면</span><b>다시 켜야 해요</b></p></li>
-    </ul>
+  <div class="cz-card rv-up">
+    <div class="cz-head"><span class="cause-no cause-ic ci-2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="17" height="14" rx="3"/><path class="ci-zig" d="M7.5 13l2-2.5 2 5 2-5 2 5 2-2.5"/><path d="M21 15h3.5c2 0 3 1.2 3 3v3.5c0 1.8-1 3-3 3"/><rect x="21" y="23" width="5" height="4" rx="1"/><circle class="ci-spark" cx="24.5" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg></span><h3>충전식 온열기는</h3></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c5.jpg" alt="충전 중인 무선 찜질기" loading="lazy"></figure><div class="cz-txt"><b>계속 충전해야 하는 게 번거로워요</b><p class="cz-q">“무선 온열 복대의 단점은 보조배터리를 충전해야 하는 번거로움”</p><span class="cz-src">무선 온열 복대 사용기 · 개인 블로그</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d2.jpg" alt="꺼진 충전식 찜질기를 든 손" loading="lazy"></figure><div class="cz-txt"><b>배터리가 생각보다 금방 닳아요</b><p class="cz-q">“배터리가 생각보다 금방 닳는다 (네시간 정도)”</p><span class="cz-src">충전식 손난로 구매 후기</span></div></div>
   </div>
-  <div class="cause-card rv-up">
-    <span class="cause-no cause-ic ci-3"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-pack"><path d="M7 12h18v14c0 1.4-1.1 2.5-2.5 2.5h-13C8.1 28.5 7 27.4 7 26V12z"/><path d="M7 12l1.5-1.5L10 12l1.5-1.5L13 12l1.5-1.5L16 12l1.5-1.5L19 12l1.5-1.5L22 12l1.5-1.5L25 12"/><text x="16" y="23.5" font-size="7.5" font-weight="800" fill="currentColor" stroke="none" text-anchor="middle" font-family="Pretendard,sans-serif">HOT</text></g><path class="ci-wave" d="M11 7c-.8-1 .8-2 0-3"/><path class="ci-wave w2" d="M16 7c-.8-1 .8-2 0-3"/><path class="ci-wave w3" d="M21 7c-.8-1 .8-2 0-3"/></svg></span>
-    <h3 class="cause-title">일회용 핫팩은</h3>
-    <ul class="cs-list">
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_7.jpg" alt="다 식은 핫팩 더미" loading="lazy"></figure><p class="cs-txt"><span>한 번 식으면</span><b>다시 쓸 수 없고</b></p></li>
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_8.jpg" alt="핫팩 포장을 뜯는 손" loading="lazy"></figure><p class="cs-txt"><span>쓸 때마다</span><b>새로 뜯어야 하고</b></p></li>
-      <li class="cs-row rv-up"><figure class="cs-img"><img src="img/cs_9.jpg" alt="거의 비어 가는 핫팩 상자" loading="lazy"></figure><p class="cs-txt"><span>남은 개수를</span><b>늘 챙겨야 해요</b></p></li>
-    </ul>
-    <p class="note" style="text-align:center;margin-top:14px">사진은 AI로 생성한 연출 이미지입니다.</p>
+  <div class="cz-card rv-up">
+    <div class="cz-head"><span class="cause-no cause-ic ci-3"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-pack"><path d="M7 12h18v14c0 1.4-1.1 2.5-2.5 2.5h-13C8.1 28.5 7 27.4 7 26V12z"/><path d="M7 12l1.5-1.5L10 12l1.5-1.5L13 12l1.5-1.5L16 12l1.5-1.5L19 12l1.5-1.5L22 12l1.5-1.5L25 12"/><text x="16" y="23.5" font-size="7.5" font-weight="800" fill="currentColor" stroke="none" text-anchor="middle" font-family="Pretendard,sans-serif">HOT</text></g><path class="ci-wave" d="M11 7c-.8-1 .8-2 0-3"/><path class="ci-wave w2" d="M16 7c-.8-1 .8-2 0-3"/><path class="ci-wave w3" d="M21 7c-.8-1 .8-2 0-3"/></svg></span><h3>일회용 핫팩은</h3></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d3.jpg" alt="가방에 핫팩을 챙겨 넣는 손" loading="lazy"></figure><div class="cz-txt"><b>외출할 땐 늘 챙겨 다녀야 해요</b><p class="cz-q">“수족냉증이라 항상 가방에 두개씩 가지고 다녀요”</p><span class="cz-src">핫팩 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c9.jpg" alt="거의 비어 가는 핫팩 상자" loading="lazy"></figure><div class="cz-txt"><b>계속 사다 보니 비용이 부담돼요</b><p class="cz-q">“핫팩을 계속 사용하다보니, 비용도 비용인지라..”</p><span class="cz-src">손난로 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c7.jpg" alt="다 쓴 핫팩 더미" loading="lazy"></figure><div class="cz-txt"><b>매일 쓰고 버리는 쓰레기가 쌓여요</b><p class="cz-q">“이게 하루에 하나씩 소모되니까 버려지는 쓰레기양이 많더라구요…”</p><span class="cz-src">손난로 구매 후기</span></div></div>
   </div>
+  <p class="note cz-note">후기는 공개된 구매 후기·사용기에서 발췌했으며 맞춤법은 원문 그대로입니다. 사진은 AI로 생성한 연출 이미지입니다.</p>
+  
   <div class="cause-card key rv-up">
     <h3 class="cause-title">심지어 전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 다시 체온이 떨어집니다.</strong></h3>
     <div class="cause-img hg rv-up"><p class="hg-cap">한 번 쓰고 나서 따뜻함이 유지되는 시간</p><div class="hg-row"><div class="hg-top"><b>물주머니</b><span>약 4.5시간</span></div><div class="hg-track"><i class="hg-bar" style="--w:45%"></i></div><p class="hg-sub">60~80℃ 물 기준, 이불 속 쾌적 온도 유지 <em>→ 다시 데워 채우기</em></p></div><div class="hg-row"><div class="hg-top"><b>충전식 전기 찜질기</b><span>90분 자동 꺼짐</span></div><div class="hg-track"><i class="hg-ext" style="--w:80%"></i><i class="hg-bar" style="--w:15%"></i></div><p class="hg-sub">배터리 최대 8시간 <em>→ 다시 켜기 · 충전</em></p></div><div class="hg-row"><div class="hg-top"><b>붙이는 일회용 핫팩</b><span>약 6~9시간</span></div><div class="hg-track"><i class="hg-ext" style="--w:90%"></i><i class="hg-bar" style="--w:60%"></i></div><p class="hg-sub">40℃ 이상 유지 기준 <em>→ 새로 뜯기</em></p></div><div class="hg-axis"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10시간</span></div><ol class="hg-src"><li>물주머니: 오니시 외, 「물주머니(湯たんぽ)에 의한 이불 속 온도의 시간 경과 변화와 보온 범위」, 일본간호기술학회지 9(2), 2010 — 쾌적 이불 속 온도(32~34℃) 약 4시간 30분 지속</li><li>전기 찜질기: Beurer HK 78 Heaty 제품 사양서(2025) — “Soothing heat for up to 8 hours”, “Safety switch-off after 90 minutes”</li><li>일회용 핫팩: 다이소몰 「붙이는 미니 핫팩」 표시 지속시간 6시간 / 롯데 호카론 붙이는 미니 표시 약 9시간(40℃ 이상 유지)</li></ol><p class="hg-note">* 제품마다 측정 조건과 기준이 달라 서로의 성능을 비교한 자료가 아닙니다. 각 출처의 공개 수치를 옮겨 표시했습니다.</p></div>
@@ -1091,13 +1086,13 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="section-subtitle"><strong>6종 시험 성적을 통과한 인체 무해 발열 벨트</strong><br>걱정되실 만한 부분을 시험 결과와 특허로 답해 드려요.</p>
   <div class="sf-list">
     <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>전기를 쓰는 제품은 아닐까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>전원·배터리·전선이 없습니다</b><p>충전하거나 콘센트에 꽂지 않는 밴드라, 몸에 두르는 동안 전기가 흐르지 않아요.</p><small>무전원 구조</small></div></div></div>
-    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>원단에 유해물질은 없을까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>유해물질 4개 항목 적합</b><p>포름알데히드·아릴아민·유기주석·pH 시험에서 모두 기준에 적합했어요.</p><small>FITI시험연구원 · 2016</small></div></div></div>
-    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>광물 소재라는데 방사능은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>환경방사능(핵종 감마) 불검출</b><p>광물 도트 소재의 방사능 분석에서 검출되지 않았어요.</p><small>(주)환경방사능분석연구센터 · 2016</small></div></div></div>
-    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>매일 두르는데 위생은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>정균감소율 99.9% · 탈취율 79.5%</b><p>황색포도상구균·폐렴균·대장균 정균감소율 99.9%(KS K 0693), 암모니아 탈취율 79.5%(2시간 후).</p><small>FITI시험연구원 · 2016</small></div></div></div>
-    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>광물 소재에서 라돈이 나오진 않을까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>라돈 23.8 Bq/m³</b><p>WHO 권고 기준 100 Bq/m³, 미국 EPA 기준 148 Bq/m³보다 낮게 측정됐어요.</p><small>한일원자력(주) · 2016</small></div></div></div>
-    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>원적외선은 실제로 나올까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>원적외선 방사율 0.901</b><p>40℃, 5~20㎛ 파장에서 방사율 0.901, 방사에너지 3.63×10² W/m²·㎛로 측정됐어요.</p><small>한국원적외선응용평가연구원 · 2016</small></div></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>원단에 유해물질은 없을까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>유해물질 4개 항목 적합</b><p>포름알데히드·아릴아민·유기주석·pH 시험에서 모두 기준에 적합했어요.</p><small>FITI시험연구원 · 2016</small></div></div><div class="sf-docs"><figure class="sf-doc"><img src="img/doc_fiti.jpg" alt="FITI시험연구원 유해물질 시험 성적서 - 모두 적합" loading="lazy"></figure></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>광물 소재라는데 방사능은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>환경방사능(핵종 감마) 불검출</b><p>광물 도트 소재의 방사능 분석에서 검출되지 않았어요.</p><small>(주)환경방사능분석연구센터 · 2016</small></div></div><div class="sf-docs"><figure class="sf-doc"><img src="img/doc_rad.jpg" alt="환경방사능분석연구센터 분석 성적서 - 불검출" loading="lazy"></figure></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>매일 두르는데 위생은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>정균감소율 99.9% · 탈취율 79.5%</b><p>황색포도상구균·폐렴균·대장균 정균감소율 99.9%(KS K 0693), 암모니아 탈취율 79.5%(2시간 후).</p><small>FITI시험연구원 · 2016</small></div></div><div class="sf-docs two"><figure class="sf-doc wide"><img src="img/doc_anti.jpg" alt="FITI 포도상구균·폐렴균 시험, 정균감소율 성적서 - 99.9% 감소" loading="lazy"></figure><figure class="sf-doc"><img src="img/doc_deo.jpg" alt="FITI 탈취 시험 성적서 - 79.5" loading="lazy"></figure></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>광물 소재에서 라돈이 나오진 않을까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>라돈 23.8 Bq/m³</b><p>WHO 권고 기준 100 Bq/m³, 미국 EPA 기준 148 Bq/m³보다 낮게 측정됐어요.</p><small>한일원자력(주) · 2016</small></div></div><div class="sf-docs"><figure class="sf-doc"><img src="img/doc_radon.jpg" alt="한일원자력 라돈 시험 분석 성적서 - 23.8 Bq/m³" loading="lazy"></figure></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>원적외선은 실제로 나올까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>원적외선 방사율 0.901</b><p>40℃, 5~20㎛ 파장에서 방사율 0.901, 방사에너지 3.63×10² W/m²·㎛로 측정됐어요.</p><small>한국원적외선응용평가연구원 · 2016</small></div></div><div class="sf-docs"><figure class="sf-doc"><img src="img/doc_far.jpg" alt="한국원적외선협회 시험 성적서 - 방사율 0.901" loading="lazy"></figure></div></div>
   </div>
-  <p class="note sf-note">시험 결과는 2016년 제출 시료(원단·벨트) 기준이며, 체온 변화나 착용 효과를 측정한 시험이 아닙니다.</p>
+  <p class="note sf-note">시험 성적서는 기존 상세페이지 게재본입니다. 시험 결과는 2016년 제출 시료(원단·벨트) 기준이며, 체온 변화나 착용 효과를 측정한 시험이 아닙니다.</p>
   
   <div class="pt-box rv-up">
     <p class="pt-head">소재 기술 <strong>4개국 특허 등록</strong></p>
