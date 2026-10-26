@@ -532,6 +532,27 @@ section.evi-sec{background:var(--bg-gray)}
 .doc-dots{display:flex;justify-content:center;gap:6px;margin-top:14px}
 .doc-dots b{width:6px;height:6px;border-radius:50%;background:#D9CDD1;transition:width .3s ease,background .3s ease}
 .doc-dots b.on{width:18px;background:var(--brand)}
+.sf-list{display:flex;flex-direction:column;gap:12px;margin-top:26px;text-align:left}
+.sf-item{background:#fff;border-radius:16px;padding:18px 18px 18px;box-shadow:0 8px 22px rgba(80,20,40,.06)}
+.sf-q{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text-gray)}
+.sf-q span{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#EFE3E7;color:var(--brand);font-size:12px;font-weight:800}
+.sf-a{display:flex;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid #F1E7EA}
+.sf-ok{flex:none;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff}
+.sf-ok svg{width:14px;height:14px}
+.sf-a b{display:block;font-size:17.5px;font-weight:800;letter-spacing:-.02em;color:#111}
+.sf-a p{margin-top:4px;font-size:13.5px;line-height:1.6;color:var(--text-gray)}
+.sf-a small{display:block;margin-top:6px;font-size:11.5px;color:var(--text-light)}
+.sf-note{text-align:left;margin-top:12px}
+.evi-sec .rs-eyebrow{text-align:center}
+.pt-box{text-align:center;margin-top:30px;padding:24px 16px 18px;background:#fff;border-radius:18px;box-shadow:0 8px 22px rgba(80,20,40,.06)}
+.pt-head{font-size:20px;font-weight:700;letter-spacing:-.03em}
+.pt-head strong{color:var(--brand);font-weight:800}
+.pt-sub{margin-top:4px;font-size:13px;color:var(--text-gray)}
+.pt-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 8px;margin-top:18px}
+.pt-grid figure{flex:0 0 calc((100% - 16px)/3);margin:0}
+.pt-grid img{width:100%;aspect-ratio:3/4;object-fit:contain;background:#FAF7F8;border:1px solid var(--line);border-radius:8px;padding:4px;display:block}
+.pt-grid figcaption{margin-top:6px;font-size:10.5px;line-height:1.4;color:var(--text-gray)}
+.pt-grid figcaption b{display:block;font-size:12px;color:#111}
 .tests{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 .test{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;font-size:12px;color:var(--text-gray)}
 .test .v{display:block;font-size:24px;font-weight:800;color:var(--brand)}
@@ -997,21 +1018,29 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [13] 근거 -->
 <section class="evi-sec">
-  <h2 class="section-title rv-up">발열 소재 기술<br><strong>4개국 특허 등록</strong></h2>
-  <p class="section-subtitle">한국·미국·일본·중국에 등록된 관련 기술 특허입니다.</p>
-  <div class="doc-slider" id="docSlider">
-    <div class="doc-viewport"><div class="doc-track">
-      <div class="doc-card doc-img-card"><img src="img/pat_kr1.jpg" alt="한국 특허증 2016.05.24 등록"></div>
-      <div class="doc-card doc-img-card"><img src="img/pat_kr2.jpg" alt="한국 특허증 2017.09.01 등록"></div>
-      <div class="doc-card doc-img-card"><img src="img/pat_us.jpg" alt="미국 특허 US 10,543,120 B2"></div>
-      <div class="doc-card doc-img-card"><img src="img/pat_jp.jpg" alt="일본 특허증 特許第6427548号"></div>
-      <div class="doc-card doc-img-card"><img src="img/pat_cn.jpg" alt="중국 발명특허증 ZL 2016 1 1160999.1"></div>
-    </div></div>
-    <div class="doc-cap"><p class="doc-cap-title" id="docTitle">한국 특허 · 2016.05.24 등록</p><p class="doc-cap-body" id="docBody">그래핀과 나노 무기물질을 이용한 자가발열성과 내기능성을 갖는 벨트 첨가용 물질</p></div>
-    <div class="doc-dots"><b class="on"></b><b></b><b></b><b></b><b></b></div>
+  <p class="rs-eyebrow rv-up">SAFETY</p>
+  <h2 class="section-title rv-up">매일 몸에 닿는 밴드라서<br><strong>안전부터 확인했습니다</strong></h2>
+  <p class="section-subtitle">걱정되실 만한 부분을 시험 결과와 특허로 답해 드려요.</p>
+  <div class="sf-list">
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>전기를 쓰는 제품은 아닐까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>전원·배터리·전선이 없습니다</b><p>충전하거나 콘센트에 꽂지 않는 밴드라, 몸에 두르는 동안 전기가 흐르지 않아요.</p><small>무전원 구조</small></div></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>원단에 유해물질은 없을까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>유해물질 4개 항목 적합</b><p>포름알데히드·아릴아민·유기주석·pH 시험에서 모두 기준에 적합했어요.</p><small>FITI시험연구원 · 2016</small></div></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>광물 소재라는데 방사능은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>환경방사능(핵종 감마) 불검출</b><p>광물 도트 소재의 방사능 분석에서 검출되지 않았어요.</p><small>(주)환경방사능분석연구센터 · 2016</small></div></div></div>
+    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>매일 두르는데 위생은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>정균감소율 99.9% · 탈취율 79.5%</b><p>황색포도상구균·폐렴균 정균감소율 99.9%(KS K 0693), 암모니아 탈취율 79.5%(2시간 후).</p><small>FITI시험연구원 · 2016</small></div></div></div>
+  </div>
+  <p class="note sf-note">시험 결과는 2016년 제출 시료(원단·벨트) 기준이며, 체온 변화나 착용 효과를 측정한 시험이 아닙니다.</p>
+  
+  <div class="pt-box rv-up">
+    <p class="pt-head">소재 기술 <strong>4개국 특허 등록</strong></p>
+    <p class="pt-sub">한국 2건 · 미국 · 일본 · 중국</p>
+    <div class="pt-grid">
+      <figure><img src="img/pat_kr1.jpg" alt="한국 특허 2016.05.24 등록" loading="lazy"><figcaption><b>한국 특허</b>2016.05.24 등록</figcaption></figure>
+      <figure><img src="img/pat_kr2.jpg" alt="한국 특허 2017.09.01 등록" loading="lazy"><figcaption><b>한국 특허</b>2017.09.01 등록</figcaption></figure>
+      <figure><img src="img/pat_us.jpg" alt="미국 특허 US 10,543,120 B2" loading="lazy"><figcaption><b>미국 특허</b>US 10,543,120 B2</figcaption></figure>
+      <figure><img src="img/pat_jp.jpg" alt="일본 특허 特許第6427548号" loading="lazy"><figcaption><b>일본 특허</b>特許第6427548号</figcaption></figure>
+      <figure><img src="img/pat_cn.jpg" alt="중국 특허 ZL 2016 1 1160999.1" loading="lazy"><figcaption><b>중국 특허</b>ZL 2016 1 1160999.1</figcaption></figure>
+    </div>
   </div>
   <p class="note">* 특허 등록은 기술에 대한 권리를 뜻하며, 제품의 효능이나 안전성을 인증하는 것은 아닙니다.</p>
-  
   
 </section>
 
