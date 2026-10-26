@@ -166,6 +166,12 @@ section.result-sec{background:var(--bg-gray);padding:20px 20px 56px;text-align:c
 .rs-tip{margin-top:14px;padding:14px 16px;border-radius:12px;background:#F7EEF0;font-size:13.5px;line-height:1.6;color:var(--text-gray)}
 .rs-tip strong{color:var(--brand)}
 .rs-note{margin-top:18px;text-align:left}
+section.flow-sec{background:#fff;padding:60px 20px 56px;text-align:center}
+.flow-sec .rs-delta{margin-top:14px}
+.fl-box{margin-top:22px;padding:26px 18px 18px;background:#fff;border-radius:20px;border:1px solid #EFE3E7;box-shadow:0 10px 26px rgba(80,20,40,.08)}
+.fl-box .rs-line{margin-top:0}
+.fl-meta{margin-top:20px;font-size:15px}
+.fl-note{margin-top:18px;text-align:left}
 @media (prefers-reduced-motion:reduce){.rs-bar{transition:none}.rs-curve{transition:none;stroke-dashoffset:0}}
 section.summary{background:var(--bg-gray);padding:60px 20px 56px;text-align:center}
 .summary .lead{font-size:15px;color:var(--text-dark);line-height:1.8;margin-top:14px}
@@ -662,10 +668,16 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <div class="rs-axis"><span>36.0℃</span><span>38.0℃</span></div>
     <div class="rs-thumbs rv-up"><img src="img/thermo_1.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_4.jpg" alt="귀 체온계 화면 37.0℃" loading="lazy"><img src="img/thermo_5.jpg" alt="귀 체온계 화면 37.6℃" loading="lazy"><img src="img/thermo_6.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_7.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_8.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_9.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_10.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_11.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div></div>
   </div>
+  <p class="note rs-note">* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다.</p>
+  
+</section>
 
-  <div class="rs-card">
-    <h3 class="rs-name rv-up">두른 뒤, 따뜻함이 이어지는 흐름</h3>
-    <p class="rs-delta rv-up">최대 <b>10</b>시간</p>
+<!-- [1-2] 따뜻함 흐름 -->
+<section class="flow-sec">
+  <p class="rs-eyebrow rv-up">WARMTH FLOW</p>
+  <h2 class="rs-title rv-up">두른 뒤,<br><strong>따뜻함이 이어지는 흐름</strong></h2>
+  <p class="rs-delta rv-up">최대 <b>10</b>시간</p>
+  <div class="fl-box">
     <div class="rs-line rv-up"><svg viewBox="0 0 320 170" fill="none" font-family="Pretendard,sans-serif" overflow="visible" aria-label="착용 직후에는 열감이 적고, 약 1시간 뒤부터 따뜻해지며, 벗은 뒤에도 서서히 이어지는 흐름의 개념도">
       <path d="M20 140h290" stroke="#D9CDD1" stroke-width="1.4"/>
       <path class="rs-curve" d="M20 134C56 134 72 126 96 100S126 52 150 48L210 46C240 50 278 78 305 98" stroke="#8E1F3F" stroke-width="3.5" stroke-linecap="round"/>
@@ -678,12 +690,10 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <text x="210" y="160" font-size="11" fill="#8E1F3F" font-weight="700" text-anchor="middle">벗은 뒤</text>
       <text x="259" y="14" font-size="11.5" fill="#8E1F3F" font-weight="800" text-anchor="middle">최대 10시간*</text>
     </svg></div>
-    <p class="rs-meta">전원이 없는 밴드라 두르자마자 뜨거워지지 않아요.<br>체온이 닿아 서서히 따뜻해지고, 벗은 뒤에도 이어집니다.</p>
-    <p class="rs-tip">따뜻함이 느껴지기까지 걸리는 시간은 사람마다 다릅니다.<br>평소 몸이 많이 찬 분은 변화가 더 천천히 느껴져<br><strong>며칠 꾸준히 착용한 뒤에야</strong> 느끼실 수도 있어요.</p>
   </div>
-
-  <p class="note rs-note">* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다. 흐름 그래프는 브랜드 안내(벗은 뒤 최대 10시간)를 바탕으로 한 개념도이며, 느끼는 시점과 지속 시간은 사람마다 다릅니다.</p>
-  
+  <p class="rs-meta fl-meta">전원이 없는 밴드라 두르자마자 뜨거워지지 않아요.<br>체온이 닿아 서서히 따뜻해지고, 벗은 뒤에도 이어집니다.</p>
+  <p class="rs-tip">따뜻함이 느껴지기까지 걸리는 시간은 사람마다 다릅니다.<br>평소 몸이 많이 찬 분은 변화가 더 천천히 느껴져<br><strong>며칠 꾸준히 착용한 뒤에야</strong> 느끼실 수도 있어요.</p>
+  <p class="note fl-note">* 흐름 그래프는 브랜드 안내(벗은 뒤 최대 10시간)를 바탕으로 한 개념도이며, 느끼는 시점과 지속 시간은 사람마다 다릅니다.</p>
 </section>
 
 <!-- [2] 대표 스토리 -->
