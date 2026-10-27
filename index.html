@@ -953,10 +953,66 @@ section.made-sec{background:linear-gradient(to bottom,#fff 0%,#fff 45%,rgba(255,
 section.cause-sec:not(.ka-sec) .cz-head h3{text-shadow:0 2px 12px rgba(0,0,0,.75),0 0 3px rgba(0,0,0,.5)}
 section.conclusion{background:#000!important}
 section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8%,rgba(0,0,0,.45) 22%,rgba(0,0,0,0) 36%),
-    linear-gradient(to top,#000 0%,rgba(0,0,0,.92) 14%,rgba(0,0,0,.5) 34%,rgba(0,0,0,0) 58%),
     linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.5)),
     url('img/sponge_bg.jpg') center / cover no-repeat}
 .cause-sec .cz-nk img[src*="nk_water2"]{height:230px;width:auto;top:-6px;left:-28px}
+section.evi-sec{background:#fff!important}
+/* sf: Q&A → 타이틀/본문 (이미지 왼쪽, 텍스트 오른쪽) */
+.sf-item{grid-template-rows:auto 1fr;align-items:start;padding:28px 0}
+.sf-q span,.sf-ok{display:none!important}
+.sf-q{grid-column:2;grid-row:1;display:block;margin:0 0 6px;font-size:21px;font-weight:800;letter-spacing:-.03em;line-height:1.35;color:var(--text-black)}
+.sf-docs{grid-row:1/3}
+.sf-a{grid-row:2;display:block}
+.sf-item:not(:has(.sf-docs)) .sf-q{grid-column:1/-1}
+.sf-a b{font-size:16px;font-weight:600;color:var(--brand)}
+.sf-a p{margin-top:10px;font-size:15.5px;line-height:1.7;color:#222;letter-spacing:-.02em}
+.sf-a small{margin-top:8px;font-size:12.5px}
+section.ka-sec .cause-title{font-size:22px;font-weight:300;line-height:1.6;letter-spacing:0}
+.cc-lead2{font-size:22px!important;font-weight:300!important;line-height:1.6!important;letter-spacing:0!important;color:#fff;text-align:center}
+.cc-line{margin:24px auto;background:rgba(255,255,255,.5)}
+.cc-big{margin:0;font-size:34px;font-weight:800;letter-spacing:-.01em;line-height:1.22;color:#fff;text-align:center}
+section.sponge-sec{padding:0!important;aspect-ratio:1021/1540}
+.how-eyebrow{font-size:22px!important;font-weight:300!important;line-height:1.6!important;letter-spacing:0!important}
+/* 말풍선 꼬리 v3 */
+.cause-sec .cz-row{border:0;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.cause-sec .cz-row::before{left:-15px;top:0;width:16px;height:20px;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='20' viewBox='0 0 16 20'><path d='M16 0H2.4C.6 0 .1 1.3 1.4 2.4 6.6 6.4 11.6 11.8 14.6 20H16Z' fill='%23fff'/></svg>") no-repeat;border:0;filter:none}
+.cause-sec .cz-r .cz-row::before{left:auto;right:-15px}
+.cause-sec .cz-nk img[src*="nk_water2"]{height:310px;top:-50px;left:-55px}
+.ka-even{margin:0 0 14px;font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.3;color:#fff;text-align:center}
+.how-eyebrow{color:var(--text-black)!important}
+.sf-a b{color:var(--text-black)!important}
+section.intro-sec{padding-top:16px!important}
+.it-logo{width:calc((100% + 40px) * .95);max-width:none;margin:0 0 44px calc((100% - (100% + 40px) * .95) / 2);-webkit-mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 55%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.55) 55%,rgba(0,0,0,0) 100%)}
+/* stop-sec */
+section.stop-sec{background:#000!important;color:#fff;text-align:center;padding:90px 15px 100px!important}
+.stop-row{display:flex;gap:10px;justify-content:center}
+.stop-card{flex:1;margin:0;min-width:0}
+.stop-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px}
+.stop-card figcaption{margin-top:12px;font-size:16px;font-weight:600;color:#fff;letter-spacing:-.02em}
+.stop-card:nth-child(2){transition-delay:.15s}.stop-card:nth-child(3){transition-delay:.3s}
+.stop-lead{margin:64px 0 0;font-size:22px;font-weight:300;line-height:1.6;color:#fff}
+.stop-big{margin:10px 0 0;font-size:34px;font-weight:800;letter-spacing:-.01em;line-height:1.3;color:#fff}
+.stop-top{margin:0 0 36px}
+.sub-inner:not(.daily-inner)::before{height:55%;background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.88) 14%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.2) 72%,rgba(0,0,0,0) 100%)}
+.stop-card img{border-radius:0}
+section.stop-sec{padding-bottom:0!important}
+.mk-lead{margin:0;font-size:22px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.85);text-align:center}
+.mk-big{margin:10px 0 0;font-size:46px;font-weight:800;letter-spacing:-.01em;line-height:1.15;color:#fff;text-align:center}
+.mk-desc{margin:22px 0 32px;font-size:16px;font-weight:400;line-height:1.7;color:rgba(255,255,255,.75);text-align:center}
+/* 눈송이 스크롤 이동 (worry → low-sec) */
+section.worry.wc{position:relative;z-index:1}
+section.low-sec{position:relative;z-index:2;background:transparent!important}
+.lw-flake.r{visibility:hidden}
+.wc-flake{will-change:transform;transform-origin:50% 50%}
+/* 밴드 경계 열감 */
+.sub-inner:not(.daily-inner){background-position:center center!important}
+.sub-inner .hh-glow{display:none}
+.hb-fill{mix-blend-mode:screen;animation:hbPulse 4.8s ease-in-out infinite}
+.hb-bloom{mix-blend-mode:screen;animation:hbBloomP 4.8s ease-in-out infinite}
+@keyframes hbPulse{0%,100%{opacity:.08}45%,60%{opacity:.62}}
+@keyframes hbBloomP{0%,100%{opacity:0}45%,60%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.hb-fill{animation:none;opacity:.4}.hb-bloom{animation:none;opacity:.15}}
+section.sponge-sec{aspect-ratio:4/5!important}
 </style>
 </head>
 <body>
@@ -965,7 +1021,7 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
 <!-- [0] 인트로: 전기·충전·데우기 없이, 나의 체온 -->
 <section class="intro-sec">
   <div class="it-in">
-    <img class="it-logo rv-up" src="img/logo_text_white.png" alt="myONDO">
+    <img class="it-logo rv-up" src="img/logo_text_white.svg" alt="myONDO">
     <p class="it-none rv-up">쓸 때만<br>잠깐 따뜻한</p>
     <p class="it-big rv-up"><s>핫팩</s><br><s>찜질기</s><br><s>물주머니</s></p>
     <i class="it-line rv-up"></i>
@@ -981,6 +1037,16 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
   </div>
   
 </section>
+<section class="stop-sec">
+  <p class="stop-big stop-top rv-up">매일 같이</p>
+  <div class="stop-row">
+    <figure class="stop-card rv-up"><img src="img/cz_c7.jpg" alt="다 쓰고 버린 핫팩" loading="lazy"><figcaption>매일 버리고</figcaption></figure>
+    <figure class="stop-card rv-up"><img src="img/st_micro.jpg" alt="찜질팩을 전자레인지에 넣는 손" loading="lazy"><figcaption>데우고</figcaption></figure>
+    <figure class="stop-card rv-up"><img src="img/st_plug.jpg" alt="콘센트에 꽂힌 충전기" loading="lazy"><figcaption>충전하고</figcaption></figure>
+  </div>
+  <p class="stop-lead rv-up">이제 그만,</p>
+  <p class="stop-big rv-up">필요한 건<br>오직 나의 체온</p>
+</section>
 
 <!-- [1b] 브랜드 비주얼 -->
 <section class="sub">
@@ -994,6 +1060,7 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
         <filter id="hhSoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
         <clipPath id="hhTher"><rect x="0" y="-60" width="10" height="60"/></clipPath>
       </defs>
+      <g class="hb-band"><image class="hb-bloom" href="img/band_bloom.png" x="365" y="529" width="512" height="357"/><image class="hb-fill" href="img/band_heat.png" x="365" y="529" width="512" height="357"/></g>
       <g transform="translate(0 -270)">
       <g class="hh-glow">
         <ellipse cx="620" cy="975" rx="330" ry="150" transform="rotate(-10 620 975)" fill="url(#hhGlow)"/>
@@ -1002,14 +1069,6 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
       <g class="hh-parts" filter="url(#hhSoft)"><circle class="hh-p" cx="816" cy="1015" r="4.1" style="--dx:-129px;--dy:388px;animation-delay:-1.39s;animation-duration:6.33s"/><circle class="hh-p" cx="737" cy="942" r="3.2" style="--dx:-339px;--dy:-429px;animation-delay:-1.24s;animation-duration:6.67s"/><circle class="hh-p" cx="740" cy="977" r="4.9" style="--dx:220px;--dy:222px;animation-delay:-6.30s;animation-duration:6.52s"/><circle class="hh-p" cx="779" cy="1074" r="6.1" style="--dx:-409px;--dy:-195px;animation-delay:-2.95s;animation-duration:6.17s"/><circle class="hh-p" cx="641" cy="1118" r="5.5" style="--dx:176px;--dy:-287px;animation-delay:-1.61s;animation-duration:5.42s"/><circle class="hh-p" cx="690" cy="1013" r="3.5" style="--dx:-324px;--dy:-228px;animation-delay:-0.82s;animation-duration:6.27s"/><circle class="hh-p" cx="655" cy="1071" r="5.9" style="--dx:99px;--dy:219px;animation-delay:-5.25s;animation-duration:4.82s"/><circle class="hh-p" cx="617" cy="1088" r="3.3" style="--dx:-173px;--dy:-490px;animation-delay:-4.08s;animation-duration:4.83s"/><circle class="hh-p" cx="640" cy="1092" r="3.3" style="--dx:311px;--dy:201px;animation-delay:-6.11s;animation-duration:4.68s"/><circle class="hh-p" cx="546" cy="1083" r="3.3" style="--dx:150px;--dy:-497px;animation-delay:-6.75s;animation-duration:5.46s"/><circle class="hh-p" cx="762" cy="914" r="4.6" style="--dx:-384px;--dy:-53px;animation-delay:-2.78s;animation-duration:7.15s"/><circle class="hh-p" cx="663" cy="1040" r="4.8" style="--dx:114px;--dy:-369px;animation-delay:-1.29s;animation-duration:6.13s"/><circle class="hh-p" cx="796" cy="1013" r="3.7" style="--dx:-379px;--dy:-148px;animation-delay:-1.88s;animation-duration:4.64s"/><circle class="hh-p" cx="693" cy="986" r="3.2" style="--dx:-335px;--dy:-206px;animation-delay:-3.92s;animation-duration:5.19s"/><circle class="hh-p" cx="543" cy="1097" r="5.8" style="--dx:207px;--dy:161px;animation-delay:-0.95s;animation-duration:4.65s"/><circle class="hh-p" cx="674" cy="1078" r="4.3" style="--dx:244px;--dy:322px;animation-delay:-2.22s;animation-duration:6.12s"/><circle class="hh-p" cx="828" cy="1069" r="5.0" style="--dx:-36px;--dy:284px;animation-delay:-0.25s;animation-duration:4.96s"/><circle class="hh-p" cx="571" cy="983" r="6.0" style="--dx:118px;--dy:-341px;animation-delay:-6.71s;animation-duration:5.60s"/><circle class="hh-p" cx="710" cy="937" r="5.3" style="--dx:100px;--dy:-52px;animation-delay:-1.10s;animation-duration:6.20s"/><circle class="hh-p" cx="628" cy="991" r="5.8" style="--dx:-216px;--dy:-103px;animation-delay:-6.19s;animation-duration:5.39s"/><circle class="hh-p" cx="554" cy="1126" r="3.1" style="--dx:260px;--dy:294px;animation-delay:-3.38s;animation-duration:6.25s"/><circle class="hh-p" cx="555" cy="1059" r="5.5" style="--dx:325px;--dy:333px;animation-delay:-1.94s;animation-duration:7.07s"/><circle class="hh-p" cx="709" cy="1035" r="6.5" style="--dx:-199px;--dy:304px;animation-delay:-5.10s;animation-duration:6.89s"/><circle class="hh-p" cx="529" cy="1083" r="5.4" style="--dx:176px;--dy:155px;animation-delay:-4.30s;animation-duration:5.89s"/><circle class="hh-p" cx="598" cy="1064" r="6.4" style="--dx:-130px;--dy:-399px;animation-delay:-4.02s;animation-duration:5.86s"/><circle class="hh-p" cx="518" cy="1074" r="3.8" style="--dx:-224px;--dy:-523px;animation-delay:-3.25s;animation-duration:4.68s"/><circle class="hh-p" cx="625" cy="966" r="5.0" style="--dx:-69px;--dy:307px;animation-delay:-2.54s;animation-duration:4.94s"/><circle class="hh-p" cx="562" cy="1049" r="4.4" style="--dx:43px;--dy:184px;animation-delay:-3.46s;animation-duration:6.23s"/><circle class="hh-p" cx="792" cy="979" r="5.0" style="--dx:65px;--dy:417px;animation-delay:-2.68s;animation-duration:6.22s"/><circle class="hh-p" cx="680" cy="1083" r="4.7" style="--dx:-129px;--dy:-337px;animation-delay:-3.20s;animation-duration:6.32s"/><circle class="hh-p" cx="764" cy="1037" r="4.2" style="--dx:94px;--dy:372px;animation-delay:-6.31s;animation-duration:6.38s"/><circle class="hh-p" cx="778" cy="942" r="5.9" style="--dx:-432px;--dy:-81px;animation-delay:-1.33s;animation-duration:5.25s"/><circle class="hh-p" cx="504" cy="998" r="5.5" style="--dx:295px;--dy:-426px;animation-delay:-5.77s;animation-duration:5.27s"/><circle class="hh-p" cx="687" cy="1045" r="4.1" style="--dx:17px;--dy:-534px;animation-delay:-5.67s;animation-duration:4.84s"/><circle class="hh-p" cx="571" cy="1038" r="3.4" style="--dx:168px;--dy:-292px;animation-delay:-1.49s;animation-duration:7.17s"/><circle class="hh-p" cx="800" cy="948" r="5.4" style="--dx:-325px;--dy:307px;animation-delay:-1.19s;animation-duration:5.13s"/></g>
       </g>
     </svg>
-    <p class="sub-eyebrow rv-up">전기, 충전, 물데우기 없이<br><strong>필요한 건 오직 나의 체온</strong></p>
-    <h2 class="sub-title rv-up">마이온도<br><strong>원적외선 심부발열 밴드</strong></h2>
-    <ul class="hero-certs sub-certs">
-      <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><polyline points="12.41 6.75 13 2 10.57 4.92"/><polyline points="18.57 12.91 21 10 15.66 10"/><polyline points="8 8 3 14 12 14 11 22 16 16"/><line x1="2" y1="2" x2="22" y2="22"/></svg></span>전원·충전<br>불필요</li>
-      <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>관련 기술<br>4개국 특허*</li>
-      <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg></span>국내<br>생산</li>
-      <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>보관 후<br>다시 착용</li>
-    </ul>
   </div>
 </section>
 
@@ -1030,6 +1089,14 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
     <div class="syn-item"><div class="syn-circle"><img src="img/daily_first_s.jpg" alt="밴드 위로 평소 옷을 입은 모습" style="object-position:50% 30%"></div><p class="syn-step">STEP 2</p><p class="syn-name">입던 옷</p></div>
   </div>
   <p class="src-line">착용 직후에는 열감이 없을 수 있으며, 따뜻함을 느끼는 시점과 세기는 사람마다 다릅니다.</p>
+</section>
+<section class="band-sec">
+  <p class="mk-lead rv-up">믿을 수 있는</p>
+  <h2 class="mk-big rv-up">100% MADE<br>IN KOREA</h2>
+  <p class="mk-desc rv-up">기술개발부터 제품생산까지<br>모두 국내생산으로 더욱 믿을 수 있습니다.</p>
+    <div class="band-media rv-up"><video src="img/v_factory.mp4" poster="img/v_factory.jpg" muted loop playsinline preload="none" aria-label="원단 생산 과정 영상"></video></div>
+  <p class="band-cap">원단 생산 과정</p>
+  
 </section>
 
 <!-- [3-1] 착용 후 온기 변화 -->
@@ -1233,7 +1300,8 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
 </section>
 <section class="cause-sec ka-sec">
   <div class="cause-card key rv-up">
-    <h3 class="cause-title">심지어 전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 다시 체온이 떨어집니다.</strong></h3>
+    <p class="ka-even">심지어</p>
+    <h3 class="cause-title">전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 체온이 떨어집니다.</strong></h3>
     <div class="cause-img ac2 rv-up"><div class="ac2-box"><p class="ac2-cap">떼고(벗고) 난 뒤, 따뜻함이 남는 시간</p>
 <p class="cause-body ac2-body">세 가지 모두 쓰는 동안 몸 바깥에서 열을 전해 주는 방식입니다. 그래서 다 쓰고 나서 다시 추워지면, 또 데우고, 켜고, 새로 뜯게 되죠.</p>
 <div class="vb"><div class="vb-grid"><span>10시간</span><span>8</span><span>6</span><span>4</span><span>2</span><span>0</span></div><div class="vb-cols"><div class="vb-col "><span class="vb-v">약 20분</span><i class="vb-b" style="--h:3.3"></i><span class="vb-n">물주머니</span></div><div class="vb-col "><span class="vb-v">약 20분</span><i class="vb-b" style="--h:3.3"></i><span class="vb-n">핫팩</span></div><div class="vb-col "><span class="vb-v">약 20분</span><i class="vb-b" style="--h:3.3"></i><span class="vb-n">전기<br>찜질기</span></div><div class="vb-col my"><span class="vb-v">최대 10시간*</span><i class="vb-b" style="--h:100"></i><span class="vb-n">마이온도<br>밴드</span></div></div></div>
@@ -1243,31 +1311,16 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
   </div>
 </section>
 <section class="conclusion">
-  <p class="cc-lead rv-up">필요한 건<br>잠깐 대는 열이 아니라<br><strong>벗은 뒤에도 유지되는 체온입니다</strong></p>
+  <p class="cc-lead cc-lead2 rv-up">필요한 건<br>잠깐의 따뜻함이 아니라</p>
+  <i class="lw-line cc-line rv-up"></i>
+  <p class="cc-big rv-up">심부 깊숙이 데워 벗은 뒤에도<br>유지되는 체온입니다</p>
   <div class="cc-img rv-up"><video src="img/v_cell.mp4" poster="img/v_cell.jpg" muted loop playsinline preload="none" aria-label="피부 아래로 온기가 전해지는 모습"></video></div>
-  <p class="cc-next rv-up">체온을 몸속 깊은 곳까지 전하고<br>벗은 뒤에도 <strong>최대 10시간</strong> 온기가 머무는<br><strong>마이온도를 소개합니다</strong></p>
   <p class="cc-note">* 심부 전달·최대 10시간 지속은 브랜드 안내 기준입니다. 지속 시간과 체감은 사람마다 다르며 보장하지 않습니다.</p>
   
 </section>
 
 <!-- [7] 핵심 소재 -->
-<section class="sponge-sec">
-  <span class="sg-lead rv-up">밴드 안쪽, 체온이 닿는 면</span>
-  <span class="sg-big rv-up">마이온도<br>원적외선 심부발열 밴드</span>
-  <img class="sg-img rv-up" src="img/nukki.png" alt="마이온도 밴드 제품컷">
-  <div class="spx-box rv-up">
-    <p class="spx-label">2026 리뉴얼 · 밴드 안쪽 면</p>
-    <p class="spx-name">버건디 광물 도트</p>
-    <p class="spx-desc">밴드 안쪽에 촘촘히 찍힌 도트입니다.<br>상품정보에 표시된 재질은<br><strong>그래핀·게르마늄·규소·티타늄</strong> 등이며,<br>2026년 <strong>도트 원료를 새로 바꿨습니다.</strong></p>
-    <p class="spx-note">* 재질은 상품정보 표기 기준입니다.</p>
-    <div class="spx-grid">
-      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24"><polyline points="12.41 6.75 13 2 10.57 4.92"/><polyline points="18.57 12.91 21 10 15.66 10"/><polyline points="8 8 3 14 12 14 11 22 16 16"/><line x1="2" y1="2" x2="22" y2="22"/></svg></span><h3>무전원</h3><p>충전·데우기 없음</p></div>
-      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg></span><h3>체온 활용</h3><p>몸에 닿는 도트 면</p></div>
-      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="2"/><path d="M8 8v8M16 8v8"/></svg></span><h3>벨크로</h3><p>감아서 고정</p></div>
-      <div class="spx-cell"><span class="spx-ic"><svg viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg></span><h3>옷 안 착용</h3><p>하의로 덮어 입기</p></div>
-    </div>
-  </div>
-  
+<section class="sponge-sec" role="img" aria-label="마이온도 밴드 안쪽 버건디 도트">
 </section>
 
 <!-- [9] 비교 -->
@@ -1290,7 +1343,7 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
   <filter id="hGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <clipPath id="hBody"><path d="M0 0H214 C220 60 210 120 216 180 C222 240 212 280 216 300H0Z"/></clipPath>
 </defs></svg>
-  <p class="how-eyebrow rv-up">오직 마이온도에서 확인할 수 있는</p>
+  <p class="how-eyebrow rv-up">체온을 복사한 복사열로 심부 깊숙이 데워</p>
   <h2 class="section-title rv-up">전기 없이 따뜻해지는<br><strong>마이온도의 원리</strong></h2>
   <div class="how-list">
     <div class="how-row s1 rv-up"><div class="how-fig"><svg viewBox="0 0 400 300" role="img" aria-label="피부의 온기가 밴드 안쪽 버건디 도트로 옮겨 가는 모습" font-family="Pretendard,sans-serif"><rect width="400" height="300" fill="url(#hAir)"/>
@@ -1401,11 +1454,8 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
 
 <!-- [13] 근거 -->
 <section class="evi-sec">
-  <p class="rs-eyebrow rv-up">SAFETY</p>
   <h2 class="section-title rv-up">매일 몸에 닿는 밴드,<br><strong>안전부터 챙겼어요</strong></h2>
-  <p class="section-subtitle"><strong>6종 시험 성적을 통과한 인체 무해 발열 벨트</strong><br>걱정되실 만한 부분을 시험 결과와 특허로 답해 드려요.</p>
   <div class="sf-list">
-    <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>전기를 쓰는 제품은 아닐까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>전원·배터리·전선이 없습니다</b><p>충전하거나 콘센트에 꽂지 않는 밴드라, 몸에 두르는 동안 전기가 흐르지 않아요.</p><small>무전원 구조</small></div></div></div>
     <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>원단에 유해물질은 없을까?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>유해물질 4개 항목 적합</b><p>포름알데히드·아릴아민·유기주석·pH 시험에서 모두 기준에 적합했어요.</p><small>FITI시험연구원 · 2016</small></div></div><div class="sf-docs"><figure class="sf-doc"><img src="img/doc_fiti.jpg" alt="FITI시험연구원 유해물질 시험 성적서 - 모두 적합" loading="lazy"></figure></div></div>
     <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>광물 소재라는데 방사능은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>환경방사능(핵종 감마) 불검출</b><p>광물 도트 소재의 방사능 분석에서 검출되지 않았어요.</p><small>(주)환경방사능분석연구센터 · 2016</small></div></div><div class="sf-docs"><figure class="sf-doc"><img src="img/doc_rad.jpg" alt="환경방사능분석연구센터 분석 성적서 - 불검출" loading="lazy"></figure></div></div>
     <div class="sf-item rv-up"><p class="sf-q"><span>Q</span>매일 두르는데 위생은?</p><div class="sf-a"><span class="sf-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>정균감소율 99.9% · 탈취율 79.5%</b><p>황색포도상구균·폐렴균·대장균 정균감소율 99.9%(KS K 0693), 암모니아 탈취율 79.5%(2시간 후).</p><small>FITI시험연구원 · 2016</small></div></div><div class="sf-docs two"><figure class="sf-doc wide"><img src="img/doc_anti.jpg" alt="FITI 포도상구균·폐렴균 시험, 정균감소율 성적서 - 99.9% 감소" loading="lazy"></figure><figure class="sf-doc"><img src="img/doc_deo.jpg" alt="FITI 탈취 시험 성적서 - 79.5" loading="lazy"></figure></div></div>
@@ -1517,13 +1567,6 @@ section.sponge-sec{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.9) 8
 </section>
 
 <!-- [14] 국내 생산 밴드 -->
-<section class="band-sec">
-  <p class="eyebrow" style="color:rgba(255,255,255,.6)">MADE IN KOREA</p>
-  <h2 class="section-title rv-up">기술 개발부터 생산까지<br><strong>국내에서</strong></h2>
-    <div class="band-media rv-up"><video src="img/v_factory.mp4" poster="img/v_factory.jpg" muted loop playsinline preload="none" aria-label="원단 생산 과정 영상"></video></div>
-  <p class="band-cap">원단 생산 과정</p>
-  
-</section>
 
 <!-- [15] 브랜드 문장 -->
 <div class="full-img"><img src="img/model_kneel.jpg" alt="마이온도 밴드를 착용한 모델"><p class="rv-up">데우는 수고는 내려놓고,<br>따뜻함은 나의 체온으로.<small>myONDO</small></p></div>
@@ -1628,6 +1671,34 @@ els.forEach(function(el){var to=parseFloat(el.dataset.count),dec=(el.dataset.cou
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.disconnect();var t0=null,d=1600;
 function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/d,1),v=to*(1-Math.pow(1-k,3));el.textContent=v.toFixed(dec);if(k<1)requestAnimationFrame(f);else el.textContent=to.toFixed(dec);}
 requestAnimationFrame(f);});},{threshold:.4});io.observe(el);});})();
+</script>
+<script>
+(function(){
+  var f=document.querySelector('.wc-flake'),t=document.querySelector('.lw-flake.r'),sec=document.querySelector('section.worry.wc');
+  if(!f||!t||!sec)return;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var s0,dx,dy,startY,endY,ticking=false;
+  function measure(){
+    f.style.transform='none';
+    var a=f.getBoundingClientRect(),b=t.getBoundingClientRect(),sy=window.scrollY,vh=window.innerHeight;
+    dx=b.left-a.left;dy=b.top-a.top;
+    startY=sec.getBoundingClientRect().top+sy-vh*0.15;
+    endY=b.top+sy+b.height/2-vh*0.55;
+    update();
+  }
+  function update(){
+    ticking=false;
+    var p=(window.scrollY-startY)/(endY-startY);p=p<0?0:p>1?1:p;
+    if(reduce)p=p<1?0:1;
+    var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+    var sway=Math.sin(p*Math.PI*3)*70*(1-p);
+    f.style.transform='translate('+(dx*e+sway).toFixed(1)+'px,'+(dy*p).toFixed(1)+'px) rotate('+(p*120).toFixed(1)+'deg)';
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+  window.addEventListener('resize',measure);
+  window.addEventListener('load',measure);
+  measure();
+})();
 </script>
 </body>
 </html>
