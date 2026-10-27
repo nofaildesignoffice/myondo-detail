@@ -156,9 +156,16 @@ section.result-sec{background:#fff;padding:20px 20px 56px;text-align:center}
 .rs-ref{position:absolute;left:40px;right:0;bottom:25%;border-top:0;z-index:1;pointer-events:none}
 .rs-ref span{position:absolute;left:-40px;top:-6px;font-size:10px;font-weight:700;color:#7A6C71;line-height:1}
 .rs-axis{display:flex;justify-content:space-between;margin-top:6px;padding-left:40px;font-size:10.5px;color:var(--text-light)}
-.rs-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-top:20px}
-.rs-thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}
-.rs-avg{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:8px;background:var(--brand);color:#fff}
+.rs-strip{margin:22px -20px 0;display:grid;gap:6px;overflow:hidden}
+.rs-row{overflow:hidden}
+.rs-track{display:flex;width:max-content;animation:rsL 40s linear infinite}
+.rs-row.r .rs-track{animation-name:rsR}
+.rs-track img,.rs-track .rs-avg{flex:none;width:110px;height:110px;margin-right:6px;border-radius:0}
+.rs-track img{object-fit:cover;display:block}
+@keyframes rsL{from{transform:translateX(0)}to{transform:translateX(-25%)}}
+@keyframes rsR{from{transform:translateX(-25%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.rs-track{animation:none}}
+.rs-avg{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:0;background:var(--brand);color:#fff}
 .rs-avg b{font-size:17px;font-weight:800}
 .rs-avg span{font-size:11px;opacity:.85}
 .rs-line{margin-top:14px}
@@ -210,7 +217,7 @@ section.reviews{padding:0 18px 46px;background:linear-gradient(to bottom,#F4F4F4
 .rv-title strong{color:#fff;font-weight:800}
 .rv{margin-bottom:34px}
 .rv-img{aspect-ratio:482/279;background:#D9D2D4 center / cover no-repeat}
-.rv-stars{margin-top:14px;font-size:13px;letter-spacing:3px;color:var(--brand)}
+.rv-stars{margin-top:14px;font-size:13px;letter-spacing:3px;color:#F5B800}
 .rv-who{margin-top:8px;font-size:13.5px;color:#8A8F96}
 .rv-text{margin-top:10px;font-size:15.5px;color:#222;line-height:1.6;letter-spacing:-.02em}
 .rv-text b{font-weight:700;color:var(--brand)}
@@ -743,8 +750,9 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
       <div class="rs-bar" style="--h:70%;transition-delay:0.00s"><span>37.4</span></div><div class="rs-bar" style="--h:50%;transition-delay:0.06s"><span>37.0</span></div><div class="rs-bar" style="--h:80%;transition-delay:0.12s"><span>37.6</span></div><div class="rs-bar" style="--h:75%;transition-delay:0.18s"><span>37.5</span></div><div class="rs-bar" style="--h:55%;transition-delay:0.24s"><span>37.1</span></div><div class="rs-bar" style="--h:75%;transition-delay:0.30s"><span>37.5</span></div><div class="rs-bar" style="--h:75%;transition-delay:0.36s"><span>37.5</span></div><div class="rs-bar" style="--h:55%;transition-delay:0.42s"><span>37.1</span></div><div class="rs-bar" style="--h:70%;transition-delay:0.48s"><span>37.4</span></div><div class="rs-bar" style="--h:85%;transition-delay:0.54s"><span>37.7</span></div>
     </div>
     <div class="rs-axis"><span>36.0℃</span><span>38.0℃</span></div>
-    <div class="rs-thumbs rv-up"><img src="img/thermo_1.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_4.jpg" alt="귀 체온계 화면 37.0℃" loading="lazy"><img src="img/thermo_5.jpg" alt="귀 체온계 화면 37.6℃" loading="lazy"><img src="img/thermo_6.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_7.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_8.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_9.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_10.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_11.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div></div>
+    
   </div>
+  <div class="rs-strip rv-up"><div class="rs-row l"><div class="rs-track"><img src="img/thermo_1.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_4.jpg" alt="귀 체온계 화면 37.0℃" loading="lazy"><img src="img/thermo_5.jpg" alt="귀 체온계 화면 37.6℃" loading="lazy"><img src="img/thermo_6.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_7.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"></div></div><div class="rs-row r"><div class="rs-track"><img src="img/thermo_8.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_9.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_10.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_11.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div></div></div></div>
   <p class="note rs-note">* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다.</p>
   
 </section>
