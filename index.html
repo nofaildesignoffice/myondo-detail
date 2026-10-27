@@ -26,8 +26,8 @@ img,video{display:block;max-width:100%}
 video{width:100%}
 ul{list-style:none}
 section{padding:var(--pad-section);background:#fff}
-.section-title{font-size:34px;font-weight:800;text-align:center;line-height:1.3;margin-bottom:10px;letter-spacing:-.03em}
-.section-title strong{color:inherit}
+.section-title{font-size:34px;font-weight:400;text-align:center;line-height:1.3;margin-bottom:10px;letter-spacing:-.03em}
+.section-title strong{color:inherit;font-weight:800}
 .section-subtitle{font-size:14px;color:var(--text-gray);text-align:center;margin-bottom:28px;line-height:1.6}
 .eyebrow{font-size:12.5px;color:var(--text-gray);text-align:center;margin-bottom:8px;letter-spacing:.14em;font-weight:400}
 .note{font-size:11.5px;color:var(--text-light);margin-top:8px;line-height:1.55}
@@ -126,13 +126,14 @@ section.founder{position:relative;padding-bottom:170px !important;overflow:hidde
 section.daily .sub-eyebrow{font-weight:300;color:#D6D0D2;letter-spacing:.06em}
 .sub-logo{flex:1;display:flex;align-items:center;justify-content:center;padding:30px 0 90px}
 .sub-logo img{width:150px;height:auto;filter:drop-shadow(0 4px 18px rgba(0,0,0,.55))}
-.sub-title{margin-top:16px;font-size:34px;font-weight:800;line-height:1.22;letter-spacing:-.01em;text-shadow:0 3px 20px rgba(30,5,12,.6)}
+.sub-title{margin-top:16px;font-size:34px;font-weight:400;line-height:1.22;letter-spacing:-.01em;text-shadow:0 3px 20px rgba(30,5,12,.6)}
+.sub-title strong{font-weight:800}
 
 /* 1c. 요약 (STEP 1 + STEP 2) */
 section.result-sec{background:var(--bg-gray);padding:20px 20px 56px;text-align:center}
 .rs-eyebrow{font-size:12.5px;font-weight:400;letter-spacing:.16em;color:var(--text-gray)}
-.rs-title{margin-top:10px;font-size:34px;font-weight:800;line-height:1.35;letter-spacing:-.03em}
-.rs-title strong{color:inherit}
+.rs-title{margin-top:10px;font-size:34px;font-weight:400;line-height:1.35;letter-spacing:-.03em}
+.rs-title strong{color:inherit;font-weight:800}
 .rs-sub{margin-top:12px;font-size:15px;color:var(--text-gray);line-height:1.6}
 .rs-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:30px}
 .rs-pair figure{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:#0a0410}
@@ -172,8 +173,7 @@ section.flow-sec{background:#fff;padding:180px 20px 56px;text-align:center}
 .fl-max{text-align:left;font-size:94px;font-weight:200;line-height:1;letter-spacing:-.04em;color:var(--text-black)}
 .fl-max span{font-weight:200}
 .fl-max b{font-weight:700}
-.fl-title{margin-top:14px;text-align:left;font-weight:400}
-.fl-title strong{font-weight:400}
+.fl-title{margin-top:14px;text-align:left}
 .fl-box{margin-top:22px;padding:26px 18px 18px;background:var(--bg-gray);border-radius:0;border:1px solid #EFE3E7}
 .fl-box .rs-line{margin-top:0}
 .fl-meta{margin-top:20px;font-size:15px}
@@ -206,8 +206,8 @@ section.reviews{padding:0 18px 46px;background:linear-gradient(to bottom,#F3F1F1
   -webkit-mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%);
   mask-image:linear-gradient(to bottom,#000 84%,rgba(0,0,0,.5) 94%,transparent 100%)}
 .rv-eyebrow{font-size:15px;font-weight:300;letter-spacing:.06em;color:#D6D0D2;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.rv-title{margin-top:12px;font-size:29px;font-weight:800;color:#fff;letter-spacing:-.03em;line-height:1.35;text-shadow:0 3px 16px rgba(0,0,0,.38)}
-.rv-title strong{color:#fff}
+.rv-title{margin-top:12px;font-size:29px;font-weight:400;color:#fff;letter-spacing:-.03em;line-height:1.35;text-shadow:0 3px 16px rgba(0,0,0,.38)}
+.rv-title strong{color:#fff;font-weight:800}
 .rv{margin-bottom:34px}
 .rv-img{aspect-ratio:482/279;background:#D9D2D4 center / cover no-repeat}
 .rv-stars{margin-top:14px;font-size:13px;letter-spacing:3px;color:var(--brand)}
@@ -361,7 +361,8 @@ section.conclusion{background:var(--navy);padding:52px 20px 56px;color:#fff}
 .hg-note{margin-top:8px;font-size:10.5px;line-height:1.5;color:var(--text-light)}
 @media (prefers-reduced-motion:reduce){.hg-track i{transition:none}}
 .cause-card.key .cause-no{background:var(--brand);border-color:var(--brand);color:#fff}
-.cause-card.key .cause-title strong{color:inherit}
+.cause-card.key .cause-title{font-weight:400}
+.cause-card.key .cause-title strong{color:inherit;font-weight:800}
 .cause-card.key .cause-img svg{width:84%}
 
 /* 핵심 소재 (글래스 카드) */
@@ -691,7 +692,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <section class="sub">
   <div class="sub-inner">
     <p class="sub-eyebrow rv-up">전기, 충전, 물데우기 없이<br><strong>필요한 건 오직 나의 체온</strong></p>
-    <h2 class="sub-title rv-up">마이온도<br>원적외선 심부발열 밴드</h2>
+    <h2 class="sub-title rv-up">마이온도<br><strong>원적외선 심부발열 밴드</strong></h2>
     <ul class="hero-certs sub-certs">
       <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><polyline points="12.41 6.75 13 2 10.57 4.92"/><polyline points="18.57 12.91 21 10 15.66 10"/><polyline points="8 8 3 14 12 14 11 22 16 16"/><line x1="2" y1="2" x2="22" y2="22"/></svg></span>전원·충전<br>불필요</li>
       <li class="rv-up"><span class="hero-cert-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>관련 기술<br>4개국 특허*</li>
@@ -706,7 +707,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <div class="sub-inner daily-inner">
     <video src="img/v_daily.mp4" poster="img/daily_first.jpg" muted loop playsinline preload="none" aria-label="밴드 위로 평소 옷을 입는 모습"></video>
     <p class="sub-eyebrow rv-up">DAILY · WARMTH</p>
-    <h2 class="sub-title rv-up">입던 옷은 그대로,<br>안에 밴드 하나만</h2>
+    <h2 class="sub-title rv-up">입던 옷은 그대로,<br><strong>안에 밴드 하나만</strong></h2>
   </div>
 </section>
 
@@ -833,12 +834,12 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="rs-eyebrow rv-up">EVERYDAY COLD</p>
   <h2 class="section-title rv-up" style="margin-bottom:30px">몸이 늘 차가운<br><strong>현대인들의 고민</strong></h2>
   <div class="wp-list">
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_1.jpg" alt="수면양말 신은 발을 감싸 쥔 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>방은 따뜻한데 <em>수면양말을 신어도 발이 시려요.</em> 손은 사계절 내내 얼음장이고요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_2.jpg" alt="물주머니를 끌어안은 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>밖에선 핫팩, 집에선 <em>물주머니를 끌어안고</em> 지내요. 따뜻한 걸 손에서 놓을 수가 없어요.</p></div></div>
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_3.jpg" alt="아랫배에 물주머니를 대고 누운 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">그날이 힘든 20대</span><p><em>그날엔 한여름에도 물주머니</em>를 배에 대고 있어야 하루를 버텨요.</p></div></div>
+    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_1.jpg" alt="회색 수면양말 신은 발을 두 손으로 감싼 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>방은 따뜻한데 <em>수면양말을 신어도 발이 시려요.</em> 손은 사계절 내내 얼음장이고요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_2.jpg" alt="니트 커버 물주머니를 무릎 위에서 감싸 쥔 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>밖에선 핫팩, 집에선 <em>물주머니를 끌어안고</em> 지내요. 따뜻한 걸 손에서 놓을 수가 없어요.</p></div></div>
+    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_3.jpg" alt="침대에 웅크려 누워 분홍 물주머니를 배에 댄 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">그날이 힘든 20대</span><p><em>그날엔 한여름에도 물주머니</em>를 배에 대고 있어야 하루를 버텨요.</p></div></div>
     <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_4.jpg" alt="달력 앞에 핫팩과 찜질 패드를 챙기는 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">그날이 힘든 20대</span><p>달력에 그날이 다가오면 <em>핫팩이랑 찜질기부터</em> 챙겨요. 매달 돌아오는 준비예요.</p></div></div>
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_5.jpg" alt="털 실내화를 신고 가디건을 여민 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">몸을 회복 중인 50대</span><p>남들은 괜찮다는데 <em>나는 벌써 겨울 같아요.</em> 실내 슬리퍼부터 두툼한 걸로 바꿨어요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_6.jpg" alt="어머니께 가디건을 걸쳐 드리는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">엄마를 돌보는 40대</span><p>엄마가 아프고 나서는 <em>몸을 따뜻하게 지키는 것부터</em> 챙겨요. 가디건은 꼭 챙겨 드리고요.</p></div></div>
+    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_5.jpg" alt="털 실내화를 신고 가디건을 여미는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">몸을 회복 중인 50대</span><p>남들은 괜찮다는데 <em>나는 벌써 겨울 같아요.</em> 실내 슬리퍼부터 두툼한 걸로 바꿨어요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_6.jpg" alt="어르신 어깨에 가디건을 걸쳐 드리는 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">엄마를 돌보는 40대</span><p>엄마가 아프고 나서는 <em>몸을 따뜻하게 지키는 것부터</em> 챙겨요. 가디건은 꼭 챙겨 드리고요.</p></div></div>
   </div>
   <p class="wr-note">고민 사례는 보온 관련 공개 게시글·후기를 바탕으로 재구성한 상황 예시이며, 마이온도 구매 후기가 아닙니다.<br>사진은 AI로 생성한 연출 이미지입니다.</p>
   
@@ -1211,7 +1212,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 <!-- [14] 국내 생산 밴드 -->
 <section class="band-sec">
   <p class="eyebrow" style="color:rgba(255,255,255,.6)">MADE IN KOREA</p>
-  <h2 class="section-title rv-up">기술 개발부터 생산까지<br>국내에서</h2>
+  <h2 class="section-title rv-up">기술 개발부터 생산까지<br><strong>국내에서</strong></h2>
     <div class="band-media rv-up"><video src="img/v_factory.mp4" poster="img/v_factory.jpg" muted loop playsinline preload="none" aria-label="원단 생산 과정 영상"></video></div>
   <p class="band-cap">원단 생산 과정</p>
   
