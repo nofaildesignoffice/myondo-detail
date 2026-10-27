@@ -9,7 +9,7 @@
 <style>
 /* 스피큘 상세페이지(v3) 컴포넌트·토큰 체계를 마이온도 버건디로 치환 */
 :root{
-  --navy:#141414; --brand:#8E1F3F; --brand2:#C04A6B; --sky:#FFFFFF; --cream:#FFF6F0;
+  --navy:#141414; --brand:#6B1530; --brand2:#8A2A45; --sky:#FFFFFF; --cream:#FFF6F0;
   --brand-deep:#1E1E1E;
   --text-black:#24141A; --text-dark:#4A3A40; --text-gray:#7A6C71; --text-light:#A89BA0;
   --line:#EADFE2; --line-soft:#F2EBED;
@@ -18,7 +18,7 @@
   --font-sans:'Pretendard Variable','Pretendard','Apple SD Gothic Neo',-apple-system,BlinkMacSystemFont,system-ui,'Segoe UI',Roboto,'Noto Sans KR',sans-serif;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;font-family:var(--font-sans)}
-html{background:#E9E4E5}
+html{background:#3A3A3A}
 html,body{width:100%;overflow-x:hidden}
 body{-webkit-font-smoothing:antialiased;color:var(--text-black);background:var(--bg);line-height:1.65;
   word-break:keep-all;letter-spacing:-.01em;max-width:480px;margin:0 auto;box-shadow:0 0 30px rgba(80,20,40,.12)}
@@ -31,7 +31,7 @@ section{padding:var(--pad-section);background:#fff}
 .section-subtitle{font-size:14px;color:var(--text-gray);text-align:center;margin-bottom:28px;line-height:1.6}
 .eyebrow{font-size:12.5px;color:var(--text-gray);text-align:center;margin-bottom:8px;letter-spacing:.14em;font-weight:400}
 .note{font-size:11.5px;color:var(--text-light);margin-top:8px;line-height:1.55}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(142,31,63,.06)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(107,21,48,.06)}
 
 /* 검토 모드(?review) */
 .rvnote{display:none}
@@ -118,8 +118,8 @@ section.sub{padding:0}
 .sub-inner > *{position:relative;z-index:1}
 .daily-inner{isolation:isolate;background:#E9E7E6}
 .sub-inner > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:-1}
-section.founder{position:relative;padding-bottom:170px !important;overflow:hidden}
-.fd-word{position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;opacity:.55}
+section.founder{position:relative;padding-bottom:186px !important;overflow:hidden}
+.fd-word{position:absolute;left:0;bottom:16px;width:100%;height:auto;display:block;opacity:.55}
 .sub-inner:not(.daily-inner)::after{background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.5) 30%,rgba(0,0,0,.2) 65%,rgba(0,0,0,0) 100%);height:34%}
 .sub-eyebrow{font-size:17px;font-weight:400;line-height:1.7;letter-spacing:-.02em;text-shadow:0 2px 16px rgba(0,0,0,.6)}
 .sub-eyebrow strong{font-weight:800}
@@ -130,7 +130,7 @@ section.daily .sub-eyebrow{font-weight:300;color:#D6D0D2;letter-spacing:.06em}
 .sub-title strong{font-weight:800}
 
 /* 1c. 요약 (STEP 1 + STEP 2) */
-section.result-sec{background:#fff;padding:20px 20px 56px;text-align:center}
+section.result-sec{background:#000;color:#fff;padding:180px 20px 56px;text-align:center}
 .rs-eyebrow{font-size:12.5px;font-weight:400;letter-spacing:.16em;color:var(--text-gray)}
 .rs-title{margin-top:10px;font-size:34px;font-weight:400;line-height:1.35;letter-spacing:-.03em}
 .rs-title strong{color:inherit;font-weight:800}
@@ -143,15 +143,15 @@ section.result-sec{background:#fff;padding:20px 20px 56px;text-align:center}
 .rs-scale{display:flex;align-items:center;gap:8px;margin:12px auto 0;max-width:260px;font-size:10.5px;font-weight:700;color:var(--text-gray);letter-spacing:.08em}
 .rs-scale i{flex:1;height:7px;border-radius:4px;background:linear-gradient(90deg,#10043a,#68098c,#cc2854,#f6800c,#fedb46,#fffff0)}
 .rs-cap{margin-top:8px;font-size:11.5px;color:var(--text-light)}
-.rs-card{margin-top:22px;padding:30px 20px 26px;background:#fff;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.06)}
+.rs-card{margin-top:22px;padding:30px 20px 26px;background:#fff;border-radius:0;box-shadow:0 10px 26px rgba(80,20,40,.06)}
 .rs-name{font-size:19px;font-weight:800;letter-spacing:-.02em}
-.rs-delta{margin-top:6px;font-size:20px;font-weight:700;color:var(--brand)}
+.rs-delta{margin-top:6px;font-size:20px;font-weight:700;color:var(--text-black)}
 .rs-delta b{font-size:46px;font-weight:800;letter-spacing:-.03em}
 .rs-meta{margin-top:6px;font-size:13.5px;color:var(--text-gray);line-height:1.6}
 .rs-chart{position:relative;display:flex;align-items:flex-end;gap:5px;height:170px;margin-top:22px;padding:0 2px 0 40px;border-bottom:1.4px solid #D9CDD1}
-.rs-bar{position:relative;flex:1;height:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#C04A6B,#8E1F3F);transition:height 1s cubic-bezier(.2,.8,.2,1)}
+.rs-bar{position:relative;flex:1;height:0;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#8A2A45,#6B1530);transition:height 1s cubic-bezier(.2,.8,.2,1)}
 .rs-chart.shown .rs-bar{height:var(--h)}
-.rs-bar span{position:absolute;left:50%;top:-18px;transform:translateX(-50%);font-size:9.5px;font-weight:700;color:var(--brand);white-space:nowrap;opacity:0;transition:opacity .4s 1s}
+.rs-bar span{position:absolute;left:50%;top:-18px;transform:translateX(-50%);font-size:9.5px;font-weight:700;color:var(--text-black);white-space:nowrap;opacity:0;transition:opacity .4s 1s}
 .rs-chart.shown .rs-bar span{opacity:1}
 .rs-ref{position:absolute;left:40px;right:0;bottom:25%;border-top:0;z-index:1;pointer-events:none}
 .rs-ref span{position:absolute;left:-40px;top:-6px;font-size:10px;font-weight:700;color:#7A6C71;line-height:1}
@@ -174,27 +174,34 @@ section.result-sec{background:#fff;padding:20px 20px 56px;text-align:center}
 .rs-line.shown .rs-curve{stroke-dashoffset:0}
 .rs-curve2{transition-delay:1.3s}
 .rs-tip{margin-top:14px;padding:14px 16px;border-radius:0;background:#fff;border:1px solid #D9D4D6;font-size:13.5px;line-height:1.6;color:var(--text-gray)}
-.rs-tip strong{color:var(--brand)}
+.rs-tip strong{color:var(--text-black)}
 .rs-note{margin-top:18px;text-align:left}
-section.flow-sec{background:#fff;padding:180px 20px 56px;text-align:center}
+section.result-sec .rs-max,section.result-sec .rs-title{color:#fff}
+section.result-sec .rs-scale{color:#9A9A9A}
+section.result-sec .rs-note{color:#8A8A8A}
+section.result-sec .rs-card{color:var(--text-black)}
+section.flow-sec{background:#000;padding:180px 20px 56px;text-align:center}
 .fl-max{text-align:left;font-size:94px;font-weight:200;line-height:1;letter-spacing:-.04em;color:var(--text-black)}
 .fl-max span{font-weight:200}
 .fl-max b{font-weight:700}
-.rs-max{text-align:center;margin:10px 0 18px}
+.rs-max{text-align:left;margin:10px 0 18px}
 .fl-title{margin-top:14px;text-align:left}
 .fl-box{margin-top:22px;padding:26px 18px 18px;background:var(--bg-gray);border-radius:0;border:1px solid #E6E6E6}
 .fl-box .rs-line{margin-top:0}
 .fl-meta{margin-top:20px;font-size:15px}
 .fl-note{margin-top:18px;text-align:left}
+section.flow-sec .fl-max,section.flow-sec .fl-title{color:#fff}
+section.flow-sec .fl-meta{color:#BDBDBD}
+section.flow-sec .fl-note{color:#8A8A8A}
 @media (prefers-reduced-motion:reduce){.rs-bar{transition:none}.rs-curve{transition:none;stroke-dashoffset:0}}
 section.summary{background:#fff;padding:60px 20px 56px;text-align:center}
 .summary .lead{font-size:15px;color:var(--text-dark);line-height:1.8;margin-top:14px}
-.summary .lead strong{color:var(--brand)}
+.summary .lead strong{color:var(--text-black)}
 .syn{display:flex;align-items:flex-start;justify-content:center;gap:8px;margin-top:30px}
 .syn-item{width:150px}
 .syn-circle{width:150px;height:150px;border-radius:50%;overflow:hidden;box-shadow:0 10px 26px rgba(80,20,40,.14)}
 .syn-circle img{width:100%;height:100%;object-fit:cover}
-.syn-plus{margin-top:66px;font-size:22px;font-weight:800;color:var(--brand)}
+.syn-plus{margin-top:66px;font-size:22px;font-weight:800;color:var(--text-black)}
 .syn-step{margin-top:14px;font-size:11.5px;font-weight:700;letter-spacing:.12em;color:var(--text-light)}
 .syn-name{font-size:15px;font-weight:800;margin-top:2px}
 .src-line{margin-top:22px;font-size:12px;color:var(--text-gray);line-height:1.6}
@@ -221,7 +228,7 @@ section.reviews{padding:0 18px 46px;background:linear-gradient(to bottom,#F4F4F4
 .rv-stars{margin-top:14px;font-size:13px;letter-spacing:3px;color:#F5B800}
 .rv-who{margin-top:8px;font-size:13.5px;color:#8A8F96}
 .rv-text{margin-top:10px;font-size:15.5px;color:#222;line-height:1.6;letter-spacing:-.02em}
-.rv-text b{font-weight:700;color:var(--brand)}
+.rv-text b{font-weight:700;color:var(--text-black)}
 
 
 
@@ -234,12 +241,16 @@ section.worry{padding:60px 20px 56px;background:#fff;text-align:center}
 .wp-img img{width:100%;height:100%;object-fit:cover;display:block}
 .wp-txt{flex:1;padding:4px 2px}
 .wp.r .wp-txt{padding-left:6px}
-.wp-who{display:block;margin-bottom:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:var(--brand)}
+.wp-who{display:block;margin-bottom:8px;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:var(--text-black)}
 .wp-txt p{font-size:16.5px;font-weight:500;line-height:1.65;letter-spacing:-.03em;color:var(--text-dark);word-break:keep-all}
 .wp-txt em{font-style:normal;font-weight:800;color:var(--text-black)}
 .low-sec{background:var(--bg-gray);padding:64px 20px 52px;text-align:center}
-.lw-list{list-style:none;margin:26px 0 0;padding:0;text-align:left;border-top:1px solid #DDD}
-.lw-item{display:flex;gap:16px;padding:22px 2px;border-bottom:1px solid #DDD}
+.lw-list{list-style:none;margin:26px 0 0;padding:0;text-align:left}
+.lw-item{display:flex;flex-wrap:wrap;gap:12px 16px;padding:0 0 28px;margin-bottom:28px;border-bottom:1px solid #DDD}
+.lw-item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.lw-img{flex:0 0 100%;margin:0;aspect-ratio:4/3;overflow:hidden;background:#E6E6E6}
+.lw-img img{width:100%;height:100%;object-fit:cover;display:block}
+.lw-txt{flex:1;min-width:0}
 .lw-no{flex:none;font-size:28px;font-weight:200;line-height:1;color:var(--text-black);letter-spacing:-.03em}
 .lw-txt h3{font-size:19px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
 .lw-txt p{margin-top:6px;font-size:14.5px;color:var(--text-dark);line-height:1.65}
@@ -260,12 +271,12 @@ section.worry{padding:60px 20px 56px;background:#fff;text-align:center}
 .u1-thermo{position:relative;display:flex;gap:16px;margin:26px auto 0;padding:26px 18px 22px;background:#fff;border:1px solid #EFE3E7;border-radius:20px;box-shadow:0 10px 26px rgba(80,20,40,.08);text-align:left}
 .tm-col{position:relative;flex:none;width:64px;padding-left:22px}
 .tm-tube{position:relative;width:22px;height:300px;margin-left:8px;border-radius:12px 12px 0 0;background:var(--bg-gray);border:1.5px solid #E2D6DA;border-bottom:0}
-.tm-fill{position:absolute;left:4px;right:4px;bottom:0;height:50%;border-radius:8px 8px 0 0;background:linear-gradient(to top,#7FA2D9 0%,#C04A6B 55%,#8E1F3F 100%);background-size:100% 300px;background-position:bottom;transition:height 2.2s cubic-bezier(.3,.7,.2,1) .4s}
+.tm-fill{position:absolute;left:4px;right:4px;bottom:0;height:50%;border-radius:8px 8px 0 0;background:linear-gradient(to top,#7FA2D9 0%,#8A2A45 55%,#6B1530 100%);background-size:100% 300px;background-position:bottom;transition:height 2.2s cubic-bezier(.3,.7,.2,1) .4s}
 .u1-thermo.shown .tm-fill{height:83.33%}
-.tm-bulb{width:38px;height:38px;margin-top:-4px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#D9748F,#8E1F3F 70%);border:1.5px solid #E2D6DA}
+.tm-bulb{width:38px;height:38px;margin-top:-4px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#D9748F,#6B1530 70%);border:1.5px solid #E2D6DA}
 .tm-ticks{position:absolute;left:0;top:0;height:300px}
 .tm-ticks span{position:absolute;left:0;transform:translateY(50%);font-size:10.5px;font-weight:700;color:var(--text-light)}
-.tm-bub{position:absolute;left:calc(100% + 10px);top:-14px;white-space:nowrap;padding:4px 10px;border-radius:999px;background:var(--brand);color:#fff;font-size:13px;font-weight:800;box-shadow:0 4px 12px rgba(142,31,63,.25)}
+.tm-bub{position:absolute;left:calc(100% + 10px);top:-14px;white-space:nowrap;padding:4px 10px;border-radius:999px;background:var(--brand);color:#fff;font-size:13px;font-weight:800;box-shadow:0 4px 12px rgba(107,21,48,.25)}
 .tm-bub::before{content:"";position:absolute;left:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-left:0;border-right-color:var(--brand)}
 .tm-num{font-size:17px}
 .tm-zones{flex:1;display:flex;flex-direction:column;height:300px;padding-left:60px;list-style:none}
@@ -273,7 +284,7 @@ section.worry{padding:60px 20px 56px;background:#fff;text-align:center}
 .tm-zones li b{font-size:13.5px;color:var(--text-black)}
 .tm-zones .z4{flex:2;border-color:var(--brand)}.tm-zones .z3{flex:1;border-color:#D9748F}.tm-zones .z2{flex:1;border-color:#B8B4D6}.tm-zones .z1{flex:2;border-color:#7FA2D9}
 .u1-thermo.shown .tm-zones .z4{opacity:1;background:linear-gradient(90deg,var(--bg-soft),transparent);transition-delay:2.2s}
-.u1-thermo.shown .tm-zones .z4 span{color:var(--brand);font-weight:700}
+.u1-thermo.shown .tm-zones .z4 span{color:var(--text-black);font-weight:700}
 .tm-plus{position:absolute;right:16px;top:30px;padding:6px 14px;border-radius:999px;background:var(--brand);color:#fff;font-size:15px;font-weight:800;opacity:0;transform:scale(.6);transition:opacity .5s 2.4s,transform .5s cubic-bezier(.3,1.6,.5,1) 2.4s}
 .u1-thermo.shown .tm-plus{opacity:1;transform:none}
 .u1-ic::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--brand2);opacity:0;animation:u1Ring 2.8s ease-out infinite}
@@ -284,16 +295,33 @@ section.worry{padding:60px 20px 56px;background:#fff;text-align:center}
 @media (prefers-reduced-motion:reduce){.tm-fill{transition:none}.u1-ic::after,.u1-v::before{animation:none}}
 .u1-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;text-align:left}
 .u1-card{padding:18px 16px;border-radius:18px;background:var(--bg-gray)}
-.u1-ic{position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--brand)}
+.u1-ic{position:relative;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--text-black)}
 .u1-ic svg{width:22px;height:22px}
 .u1-card h3{margin-top:12px;font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--text-black)}
-.u1-v{margin-top:4px;font-size:13.5px;font-weight:700;line-height:1.45;color:var(--brand)}
+.u1-v{margin-top:4px;font-size:13.5px;font-weight:700;line-height:1.45;color:var(--text-black)}
 .u1-d{margin-top:8px;font-size:12.5px;line-height:1.6;color:var(--text-gray)}
 .u1-end{margin-top:40px;font-size:24px;font-weight:500;line-height:1.45;letter-spacing:-.03em;color:var(--text-black)}
-.u1-end strong{font-weight:800;color:var(--brand)}
+.u1-end strong{font-weight:800;color:var(--text-black)}
 .u1-end u{text-decoration:none;border-bottom:2px solid var(--brand)}
 .u1-note{margin-top:18px}
 .wr-note{margin-top:18px;text-align:center;font-size:11.5px;color:var(--text-light);line-height:1.55}
+.wc .wp-list{gap:34px}
+.wc-ic{width:96px;margin:0 auto 14px}
+.wc-ic svg{display:block;width:100%;height:auto}
+.wc-merc{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(1);transition:transform 2.2s cubic-bezier(.5,0,.2,1) .3s}
+.wc-ic.shown .wc-merc{transform:scaleY(.32)}
+.wc-snow{transform-box:fill-box;transform-origin:center;animation:wcSpin 9s linear infinite}
+@keyframes wcSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.wc-snow{animation:none}.wc-merc{transition:none}}
+.wc .wp,.wc .wp.r{display:block;position:relative}
+.wc .wp-img{width:80%;aspect-ratio:4/3}
+.wc .wp.r .wp-img{margin-left:auto}
+.wc .wp-txt{position:relative;z-index:2;width:74%;margin:-46px 0 0 auto;padding:16px 18px;background:#fff;border:1px solid #E2E2E2;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.wc .wp.r .wp-txt{margin:-46px auto 0 0;padding-left:18px}
+.wc .wp-txt::before{content:"";position:absolute;top:-8px;left:28px;width:14px;height:14px;background:#fff;border-left:1px solid #E2E2E2;border-top:1px solid #E2E2E2;transform:rotate(45deg)}
+.wc .wp.r .wp-txt::before{left:auto;right:28px}
+.wc .wp-who{margin-bottom:6px}
+.wc .wp-txt p{font-size:15.5px}
 
 /* 카피 밴드 */
 .copy-band{background:var(--navy);padding:44px 20px;text-align:center}
@@ -324,7 +352,7 @@ section.cause-sec{padding-bottom:0;background:var(--bg-gray);text-align:center}
 .cause-sec .cause-card.key .cause-title{margin-top:0}
 .cause-sec .cause-card.key .cause-body{padding:0 4px}
 .cause-quote{margin-top:16px;padding:16px 18px;background:var(--bg-soft);border-left:3px solid var(--brand);text-align:left;font-size:14.5px;line-height:1.65;color:#333}
-.cause-quote strong{color:var(--brand);font-weight:800}
+.cause-quote strong{color:var(--text-black);font-weight:800}
 .cause-quote span{display:block;margin-top:6px;font-size:12px;color:#8a7c81}
 
 /* 원인 카드 */
@@ -343,7 +371,7 @@ section.conclusion{background:var(--navy);padding:52px 20px 56px;color:#fff}
 .cc-img{margin-top:28px;border-radius:4px;overflow:hidden;background:rgba(255,255,255,.08)}
 .cc-next{margin-top:30px}
 .cc-note{margin-top:14px;text-align:center;font-size:11.5px;color:rgba(255,255,255,.6);line-height:1.55}
-.cause-ic{width:60px;height:60px;color:var(--brand);border-color:rgba(142,31,63,.35);background:#fff}
+.cause-ic{width:60px;height:60px;color:var(--text-black);border-color:rgba(107,21,48,.35);background:#fff}
 .cause-ic svg{width:38px;height:38px;overflow:visible}
 .cause-card.key .cause-ic{color:#fff}
 .ci-steam path{animation:ciSteam 2.4s ease-in-out infinite}
@@ -363,14 +391,14 @@ section.conclusion{background:var(--navy);padding:52px 20px 56px;color:#fff}
 @keyframes ciMerc{0%{transform:scaleY(.18)}35%,50%{transform:scaleY(1)}100%{transform:scaleY(.18)}}
 @media (prefers-reduced-motion:reduce){.cause-ic *{animation:none!important}}
 .hg{display:block;aspect-ratio:auto;padding:22px 18px 18px;text-align:left}
-.hg-cap{font-size:13px;font-weight:800;color:var(--brand);margin-bottom:14px}
+.hg-cap{font-size:13px;font-weight:800;color:var(--text-black);margin-bottom:14px}
 .hg-row+.hg-row{margin-top:16px}
 .hg-top{display:flex;justify-content:space-between;align-items:baseline;font-size:14px}
-.hg-top b{font-weight:800;color:#24141A}.hg-top span{font-weight:800;color:var(--brand);font-size:14px}
+.hg-top b{font-weight:800;color:#24141A}.hg-top span{font-weight:800;color:var(--text-black);font-size:14px}
 .hg-track{position:relative;height:12px;margin-top:6px;border-radius:6px;background:#fff;overflow:hidden}
 .hg-track i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:6px;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
-.hg-bar{background:linear-gradient(90deg,#C04A6B,#8E1F3F)}
-.hg-ext{background:repeating-linear-gradient(135deg,rgba(142,31,63,.28) 0 4px,rgba(142,31,63,.12) 4px 8px)}
+.hg-bar{background:linear-gradient(90deg,#8A2A45,#6B1530)}
+.hg-ext{background:repeating-linear-gradient(135deg,rgba(107,21,48,.28) 0 4px,rgba(107,21,48,.12) 4px 8px)}
 .hg.shown .hg-track i{width:var(--w)}
 .hg-sub{margin-top:5px;font-size:12px;color:var(--text-gray);line-height:1.5}
 .hg-sub em{font-style:normal;font-weight:700;color:#24141A}
@@ -441,7 +469,7 @@ section.step-sec{background:var(--navy);color:#fff}
 @media (prefers-reduced-motion:reduce){.cmp-glow{animation:none}}
 .cmp-cell{position:relative;z-index:1;background:#fff;padding:16px 10px;text-align:center;font-size:13.5px;font-weight:700;line-height:1.45}
 .cmp-cell.base{border-left:1.5px solid #D6CFD1;border-right:1.5px solid #D6CFD1;color:#8F8589}
-.cmp-cell.dia{border-left:1.5px solid var(--brand);border-right:1.5px solid var(--brand);color:var(--brand)}
+.cmp-cell.dia{border-left:1.5px solid var(--brand);border-right:1.5px solid var(--brand);color:var(--text-black)}
 .cmp-cell.first{padding-top:72px;border-radius:20px 20px 0 0}
 .cmp-cell.base.first{border-top:1.5px solid #D6CFD1}
 .cmp-cell.dia.first{border-top:1.5px solid var(--brand)}
@@ -452,7 +480,7 @@ section.step-sec{background:var(--navy);color:#fff}
 .cmp-cell.base.title{color:#6E6468}
 .cmp-cell.dia.title{color:var(--brand-deep)}
 .cmp-cell:not(.first)::before{content:"";position:absolute;left:14px;right:14px;top:0;border-top:1px dotted #DDD4D7}
-.cmp-cell.dia:not(.first)::before{border-top-color:rgba(142,31,63,.3)}
+.cmp-cell.dia:not(.first)::before{border-top-color:rgba(107,21,48,.3)}
 .cmp-note{margin-top:34px}
 
 /* 소재 구조 도해 (스피큘 3중 코팅 도해 구조) */
@@ -501,11 +529,11 @@ section.how-sec{background:var(--bg-gray)}
 .how-fig{position:relative;background:#fff;border-radius:0;overflow:hidden}
 .how-fig svg{display:block;width:100%;height:auto}
 .how-txt{padding:16px 2px 6px}
-.how-no{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.12em;color:var(--brand)}
+.how-no{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.12em;color:var(--text-black)}
 .how-txt h3{margin-top:6px;font-size:21px;font-weight:800;letter-spacing:-.03em;line-height:1.35}
 .how-txt p{margin-top:8px;font-size:14.5px;color:#333;line-height:1.65;letter-spacing:-.02em}
 .how-tech{margin-top:24px;text-align:center;font-size:13px;color:var(--text-gray)}
-.how-tech b{color:var(--brand)}
+.how-tech b{color:var(--text-black)}
 /* 카드가 화면에 들어오면(.shown) 재생 */
 .how-row .h1p,.how-row .h2w,.how-row .h3c,.how-row .h3h,.how-row .hd{animation-play-state:paused}
 .how-row.shown .h1p,.how-row.shown .h2w,.how-row.shown .h3c,.how-row.shown .h3h,.how-row.shown .hd{animation-play-state:running}
@@ -589,7 +617,7 @@ section.evi-sec{background:var(--bg-gray)}
   padding:24px 20px;display:flex;flex-direction:column;position:relative;overflow:hidden;text-align:left}
 .doc-card.doc-img-card{padding:10px;min-height:0;aspect-ratio:3/4;align-items:center;justify-content:center;background:#fff}
 .doc-img-card img{width:100%;height:100%;object-fit:contain}
-.doc-country{font-size:11.5px;font-weight:800;letter-spacing:.2em;color:var(--brand)}
+.doc-country{font-size:11.5px;font-weight:800;letter-spacing:.2em;color:var(--text-black)}
 .doc-kind{margin-top:6px;font-size:22px;font-weight:800;letter-spacing:-.02em}
 .doc-no{margin-top:4px;font-size:12.5px;color:var(--text-gray)}
 .doc-name{margin-top:auto;font-size:13px;line-height:1.6;color:var(--text-dark);font-weight:600}
@@ -602,7 +630,7 @@ section.evi-sec{background:var(--bg-gray)}
 .sf-list{display:flex;flex-direction:column;gap:12px;margin-top:26px;text-align:left}
 .sf-item{background:#fff;border-radius:16px;padding:18px 18px 18px;box-shadow:0 8px 22px rgba(80,20,40,.06)}
 .sf-q{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--text-gray)}
-.sf-q span{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#EFE3E7;color:var(--brand);font-size:12px;font-weight:800}
+.sf-q span{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#EFE3E7;color:var(--text-black);font-size:12px;font-weight:800}
 .sf-a{display:flex;gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid #F1E7EA}
 .sf-ok{flex:none;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff}
 .sf-ok svg{width:14px;height:14px}
@@ -617,10 +645,10 @@ section.evi-sec{background:var(--bg-gray)}
 .sf-doc img{width:100%;height:auto;display:block;border-radius:4px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
 .sf-note{text-align:left;margin-top:12px}
 .evi-sec .rs-eyebrow{text-align:center}
-.evi-sec .section-subtitle strong{display:inline-block;margin-bottom:4px;font-size:16px;font-weight:800;color:var(--brand)}
+.evi-sec .section-subtitle strong{display:inline-block;margin-bottom:4px;font-size:16px;font-weight:800;color:var(--text-black)}
 .pt-box{text-align:center;margin-top:30px;padding:24px 16px 18px;background:#fff;border-radius:18px;box-shadow:0 8px 22px rgba(80,20,40,.06)}
 .pt-head{font-size:20px;font-weight:700;letter-spacing:-.03em}
-.pt-head strong{color:var(--brand);font-weight:800}
+.pt-head strong{color:var(--text-black);font-weight:800}
 .pt-sub{margin-top:4px;font-size:13px;color:var(--text-gray)}
 .pt-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 8px;margin-top:18px}
 .pt-grid figure{flex:0 0 calc((100% - 16px)/3);margin:0}
@@ -629,7 +657,7 @@ section.evi-sec{background:var(--bg-gray)}
 .pt-grid figcaption b{display:block;font-size:12px;color:#111}
 .tests{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
 .test{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;font-size:12px;color:var(--text-gray)}
-.test .v{display:block;font-size:24px;font-weight:800;color:var(--brand)}
+.test .v{display:block;font-size:24px;font-weight:800;color:var(--text-black)}
 .test b{display:block;color:var(--text-black);font-size:13px;margin:2px 0}
 
 /* 국내 생산 밴드 */
@@ -742,17 +770,14 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 
 <!-- [3-1] 착용 후 온기 변화 -->
 <section class="result-sec">
-  <p class="rs-eyebrow rv-up">AFTER WEARING</p>
   <p class="fl-max rs-max rv-up"><span>평균</span><br><b>37.4</b><span>℃</span></p>
-  <h2 class="rs-title rv-up">착용 후,<br><strong>달라지는 온기</strong></h2>
-  <p class="rs-sub rv-up">열화상 연출로 보는 착용 전후와<br>실제 착용자들이 직접 잰 체온 기록</p>
+  <h2 class="rs-title rv-up" style="text-align:left">착용 후,<br><strong>달라지는 온기</strong></h2>
 
   <div class="rs-pair rv-up">
     <figure><img src="img/thermal_before.jpg" alt="착용 전 배 주변이 상대적으로 차갑게 표시된 열화상 연출"><figcaption>착용 전</figcaption></figure>
     <figure><img src="img/thermal_after.jpg" alt="착용 후 밴드 주변에서 몸 안쪽으로 따뜻함이 퍼진 열화상 연출"><figcaption class="on">착용 약 1시간 후</figcaption></figure>
   </div>
   <div class="rs-scale"><span>LOW</span><i></i><span>HIGH</span></div>
-  <p class="rs-cap">* 열화상 카메라 화면을 재현한 연출 이미지이며, 실제 측정 영상이 아닙니다.</p>
 
   <div class="rs-card">
     <h3 class="rs-name rv-up">실제 착용자들의 체온 기록</h3>
@@ -764,8 +789,8 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <div class="rs-axis"><span>36.0℃</span><span>38.0℃</span></div>
     
   </div>
-  <div class="rs-strip rv-up"><div class="rs-row l"><div class="rs-track"><img src="img/thermo_1.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_4.jpg" alt="귀 체온계 화면 37.0℃" loading="lazy"><img src="img/thermo_5.jpg" alt="귀 체온계 화면 37.6℃" loading="lazy"><img src="img/thermo_6.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_7.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"></div></div><div class="rs-row r"><div class="rs-track"><img src="img/thermo_8.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_9.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_10.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_11.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><div class="rs-avg"><b>37.4℃</b><span>평균</span></div></div></div></div>
-  <p class="note rs-note">* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다.</p>
+  <div class="rs-strip rv-up"><div class="rs-row l"><div class="rs-track"><img src="img/thermo_1.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_4.jpg" alt="귀 체온계 화면 37.0℃" loading="lazy"><img src="img/thermo_5.jpg" alt="귀 체온계 화면 37.6℃" loading="lazy"><img src="img/thermo_6.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_7.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"><img src="img/thermo_1.jpg" alt="" loading="lazy"><img src="img/thermo_4.jpg" alt="" loading="lazy"><img src="img/thermo_5.jpg" alt="" loading="lazy"><img src="img/thermo_6.jpg" alt="" loading="lazy"><img src="img/thermo_7.jpg" alt="" loading="lazy"></div></div><div class="rs-row r"><div class="rs-track"><img src="img/thermo_8.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_9.jpg" alt="귀 체온계 화면 37.5℃" loading="lazy"><img src="img/thermo_10.jpg" alt="귀 체온계 화면 37.1℃" loading="lazy"><img src="img/thermo_11.jpg" alt="귀 체온계 화면 37.4℃" loading="lazy"><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"><img src="img/thermo_8.jpg" alt="" loading="lazy"><img src="img/thermo_9.jpg" alt="" loading="lazy"><img src="img/thermo_10.jpg" alt="" loading="lazy"><img src="img/thermo_11.jpg" alt="" loading="lazy"></div></div></div>
+  <p class="note rs-note">* 착용 전후 열화상은 열화상 카메라 화면을 재현한 연출 이미지입니다.<br>* 체온 기록은 착용자가 보내 온 사진의 표시값입니다. 측정 시점·조건이 저마다 다르고, 착용 전과 비교한 결과가 아니며, 체온 변화나 효과를 보장하지 않습니다.</p>
   
 </section>
 
@@ -776,15 +801,15 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <div class="fl-box">
     <div class="rs-line rv-up"><svg viewBox="0 0 320 170" fill="none" font-family="Pretendard,sans-serif" overflow="visible" aria-label="착용 직후에는 열감이 적고, 약 1시간 뒤부터 따뜻해지며, 벗은 뒤에도 서서히 이어지는 흐름의 개념도">
       <path d="M20 140h290" stroke="#555" stroke-width="1.4"/>
-      <path class="rs-curve" d="M20 134C56 134 72 126 96 100S126 52 150 48L210 46" stroke="#111" stroke-width="3.5" stroke-linecap="round"/><path class="rs-curve rs-curve2" d="M210 46C240 50 278 78 305 98" stroke="#8E1F3F" stroke-width="3.5" stroke-linecap="round"/>
+      <path class="rs-curve" d="M20 134C56 134 72 126 96 100S126 52 150 48L210 46" stroke="#111" stroke-width="3.5" stroke-linecap="round"/><path class="rs-curve rs-curve2" d="M210 46C240 50 278 78 305 98" stroke="#6B1530" stroke-width="3.5" stroke-linecap="round"/>
       <path d="M210 40v100" stroke="#111" stroke-width="1.2" stroke-dasharray="4 4"/>
       <path d="M214 24h90M214 20v8M304 20v8" stroke="#111" stroke-width="1.4"/>
-      <circle cx="20" cy="134" r="4.5" fill="#111"/><circle cx="96" cy="100" r="4.5" fill="#111"/><circle cx="210" cy="46" r="5" fill="#8E1F3F"/>
+      <circle cx="20" cy="134" r="4.5" fill="#111"/><circle cx="96" cy="100" r="4.5" fill="#111"/><circle cx="210" cy="46" r="5" fill="#6B1530"/>
       <text x="20" y="160" font-size="11" fill="#6B5A60" text-anchor="start">두른 직후</text>
       <text x="100" y="160" font-size="11" fill="#6B5A60" text-anchor="middle">약 1시간</text>
       <text x="152" y="34" font-size="11" fill="#6B5A60" text-anchor="middle">착용 중</text>
-      <text x="210" y="160" font-size="11" fill="#8E1F3F" font-weight="700" text-anchor="middle">벗은 뒤</text>
-      <text x="259" y="14" font-size="11.5" fill="#8E1F3F" font-weight="800" text-anchor="middle">최대 10시간*</text>
+      <text x="210" y="160" font-size="11" fill="#6B1530" font-weight="700" text-anchor="middle">벗은 뒤</text>
+      <text x="259" y="14" font-size="11.5" fill="#6B1530" font-weight="800" text-anchor="middle">최대 10시간*</text>
     </svg></div>
   </div>
   <p class="rs-meta fl-meta">전원이 없는 밴드라 두르자마자 뜨거워지지 않아요.<br>체온이 닿아 서서히 따뜻해지고, 벗은 뒤에도 이어집니다.</p>
@@ -850,31 +875,38 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
 </section>
 
 <!-- [3] 고민 -->
-<section class="worry">
-  <p class="rs-eyebrow rv-up">COLD BODY</p>
-  <h2 class="section-title rv-up" style="margin-bottom:30px">몸이 차가워서<br><strong>매일 겪는 불편함</strong></h2>
+<section class="worry wc">
+  <div class="wc-ic rv-up" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g class="wc-snow" stroke="#B9C3CC" stroke-width="2.2"><path d="M88 18v30M75 25l26 16M75 41l26-16"/><path d="M84 18l4 4 4-4M84 48l4-4 4 4"/></g>
+    <rect x="38" y="14" width="22" height="70" rx="11" stroke="#111" stroke-width="2.6"/>
+    <circle cx="49" cy="92" r="15" stroke="#111" stroke-width="2.6"/>
+    <circle cx="49" cy="92" r="9" fill="#6B1530"/>
+    <rect class="wc-merc" x="45" y="30" width="8" height="58" rx="4" fill="#6B1530"/>
+    <path d="M64 30h6M64 44h6M64 58h6M64 72h6" stroke="#111" stroke-width="2"/>
+  </svg></div>
+  <h2 class="section-title rv-up" style="margin-bottom:30px;font-size:29px">몸이 차가워서<br><strong>매일 겪는 불편함</strong></h2>
   <div class="wp-list">
     <div class="wp rv-up"><figure class="wp-img"><img src="img/wc_1.jpg" alt="가디건과 무릎담요를 두르고 일하는 사무실 자리" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">여름 사무실에서</span><p>밖은 한여름인데 <em>내 자리엔 가디건과 무릎담요</em>가 늘 있어요. 에어컨 바람이 닿기만 해도 추워요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/wc_2.jpg" alt="에어컨 온도 조절기 앞에서 손을 멈춘 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">같은 공간, 다른 온도</span><p>다들 덥다는데 나만 추워요. <em>에어컨 좀 올려 달라는 말</em>도 이제 눈치가 보여요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/wc_2.jpg" alt="흰 벽의 에어컨 온도 조절기를 누르는 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">같은 공간, 다른 온도</span><p>다들 덥다는데 나만 추워요. <em>에어컨 좀 올려 달라는 말</em>도 이제 눈치가 보여요.</p></div></div>
     <div class="wp rv-up"><figure class="wp-img"><img src="img/wc_3.jpg" alt="출근 준비 중 배를 두 손으로 감싼 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">배만 유난히 찬 아침</span><p>여름에도 배를 만져 보면 <em>유난히 차가워요.</em> 출근 전에 배에 붙일 핫팩부터 챙겨요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/wc_4.jpg" alt="롱패딩과 목도리까지 겹겹이 껴입는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">겹겹이 껴입는 겨울</span><p>히트텍, 니트, 롱패딩까지 <em>껴입어도 추워요.</em> 얼굴은 화끈거리고, 움직이기는 불편하고요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/wc_4.jpg" alt="눈 쌓인 길에서 검은 롱패딩과 목도리를 두른 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">겹겹이 껴입는 겨울</span><p>히트텍, 니트, 롱패딩까지 <em>껴입어도 추워요.</em> 얼굴은 화끈거리고, 움직이기는 불편하고요.</p></div></div>
     <div class="wp rv-up"><figure class="wp-img"><img src="img/wc_5.jpg" alt="눈 오는 날 담요를 덮고 창밖을 보는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">겨울이 버거운 날</span><p><em>겨울만 되면 극도로 힘들어요.</em> 추워서 나가기 싫어 집에 있는 날이 점점 늘어요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/wc_6.jpg" alt="니트 소매를 끌어내리고 키보드 위에 올린 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손끝이 굳는 오후</span><p><em>손이 얼어서 자판이 잘 안 쳐질 때</em>가 있어요. 수면양말을 신어도 발은 얼음장 같고요.</p></div></div>
+    <div class="wp r rv-up"><figure class="wp-img"><img src="img/wc_6.jpg" alt="흰 책상 위 키보드에 니트 소매를 끌어내린 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손끝이 굳는 오후</span><p><em>손이 얼어서 자판이 잘 안 쳐질 때</em>가 있어요. 수면양말을 신어도 발은 얼음장 같고요.</p></div></div>
   </div>
-  <p class="wr-note">불편 사례는 공개 게시글·후기(더쿠·82쿡·브런치·언론 인터뷰 등)의 표현을 바탕으로 재구성한 상황 예시이며, 마이온도 구매 후기가 아닙니다.<br>사진은 AI로 생성한 연출 이미지입니다.</p>
 </section>
 
 <!-- [+1℃] 체온 1도의 변화 -->
 <section class="low-sec">
   <p class="rs-eyebrow rv-up">BODY TEMPERATURE −</p>
-  <h2 class="section-title rv-up">차가운 몸, 불편함으로 끝나지 않아요<br><strong>연구가 말하는 낮은 체온의 영향</strong></h2>
-  <p class="section-subtitle rv-up">낮은 체온과 몸의 관계를 다룬 연구들이에요.</p>
+  <h2 class="section-title rv-up" style="font-size:29px">차가운 몸, 불편함으로 끝나지 않아요<br><strong>연구가 말하는 낮은 체온의 영향</strong></h2>
   <ol class="lw-list">
-    <li class="lw-item rv-up"><span class="lw-no">01</span><div class="lw-txt"><h3>피부 온도가 떨어지고 몸이 더 차갑게 느껴져요</h3><p>추위에 노출되면 몸은 먼저 피부 혈관을 수축시켜 열을 지키려 해요. <b>그만큼 피부로 가는 혈액이 줄어 피부 온도가 내려가요.</b></p><blockquote>“The initial physiological response to a cold environment is skin vasoconstriction, which decreases skin blood flow and lowers skin temperature.”<span class="lw-cond">연구 조건 · 사람의 추위 반응을 정리한 리뷰</span></blockquote><a class="lw-src" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9467574/" target="_blank" rel="noopener">Yurkevicius BR 외, 2022, Human cold habituation: Physiology, timeline, and modifiers</a></div></li>
-    <li class="lw-item rv-up"><span class="lw-no">02</span><div class="lw-txt"><h3>감기 바이러스는 낮은 온도에서 더 잘 증식했어요</h3><p>기도 세포를 33℃와 37℃에서 비교한 실험에서, <b>감기 바이러스(라이노바이러스)는 33℃에서 활발히 증식하고 37℃에서는 증식이 제한됐어요.</b></p><blockquote>“displayed temperature-dependent growth in LA-4 cells with robust replication at 33 °C but limited replication at 37 °C”<span class="lw-cond">연구 조건 · 생쥐 기도세포 배양 실험</span></blockquote><a class="lw-src" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4311828/" target="_blank" rel="noopener">Foxman EF 외, 2015, PNAS, Temperature-dependent innate defense against the common cold virus limits viral replication at warm temperature in mouse airway cells</a></div></li>
-    <li class="lw-item rv-up"><span class="lw-no">03</span><div class="lw-txt"><h3>체온이 낮았던 환자에게서 감염이 더 많았어요</h3><p>수술 중 심부체온이 평균 34.7℃까지 내려간 환자군은 36.6℃를 유지한 환자군보다 <b>수술 부위 감염률이 높았어요(19% 대 6%).</b></p><blockquote>“34.7 +/- 0.6 degrees C” … “36.6 +/- 0.5 degrees C” … “(19 percent)” … “(6 percent, P = 0.009)”<span class="lw-cond">연구 조건 · 대장·직장 수술 환자 200명 무작위 연구</span></blockquote><a class="lw-src" href="https://pubmed.ncbi.nlm.nih.gov/8606715/" target="_blank" rel="noopener">Kurz A 외, 1996, NEJM, Perioperative normothermia to reduce the incidence of surgical-wound infection and shorten hospitalization</a></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw_3.jpg" alt="침대에 웅크려 누워 두 손으로 아랫배를 감싼 모습" loading="lazy"></figure><span class="lw-no">01</span><div class="lw-txt"><h3>생리통</h3><p>30~50세 여성 3,140명을 분석한 연구에서, <b>손발이 차다고 답한 여성은 생리통을 겪는 경우가 더 많았어요.</b></p><a class="lw-src" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11930807/" target="_blank" rel="noopener">Tseng TG 외, 2025, Frontiers in Medicine, Clinical association of body symptoms and primary dysmenorrhea among young and middle-aged women</a></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw_4.jpg" alt="식탁에서 식사를 남기고 배를 문지르는 손" loading="lazy"></figure><span class="lw-no">02</span><div class="lw-txt"><h3>소화 불량</h3><p>국내 지역사회 주민 5,476명을 여러 해 조사한 연구에서, <b>수족냉증이 있는 사람은 소화불량을 포함한 위장 불편 점수가 더 높았어요.</b></p><a class="lw-src" href="https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003168185" target="_blank" rel="noopener">배광호 외, 2024, 대한한방내과학회지, 수족냉증과 위장관 증상 연관성: 지역사회 기반 코호트 연구 결과</a></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw_5.jpg" alt="밤에 이불 밖으로 나온 수면양말 신은 두 발" loading="lazy"></figure><span class="lw-no">03</span><div class="lw-txt"><h3>수면 장애</h3><p>20~40세 주민 1,810명 조사에서, 손발이 차서 불편한 사람 <b>7명 중 1명은 잠들기 어려움도 함께 겪었고, 그 비율은 약 2배였어요.</b></p><a class="lw-src" href="https://pubmed.ncbi.nlm.nih.gov/19021849/" target="_blank" rel="noopener">Kräuchi K 외, 2008, Journal of Sleep Research, Cold extremities and difficulties initiating sleep</a></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw_6.jpg" alt="창가 바닥에 앉아 무릎을 끌어안은 팔" loading="lazy"></figure><span class="lw-no">04</span><div class="lw-txt"><h3>우울감</h3><p>국내 성인 17,030명(국민건강영양조사) 분석에서, <b>수족냉증이 있는 사람은 우울 증상을 보고하는 경우가 더 많았어요.</b></p><a class="lw-src" href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003236263" target="_blank" rel="noopener">배광호, 2025, 대한예방한의학회지, 수족냉증과 건강 관련 삶의 질 및 정신 건강 연관성: 국민건강영양조사 결과</a></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw_1.jpg" alt="티슈와 따뜻한 차를 든 감기 기운 있는 날" loading="lazy"></figure><span class="lw-no">05</span><div class="lw-txt"><h3>감기 바이러스</h3><p>기도 세포를 33℃와 37℃에서 비교한 실험에서, <b>감기 바이러스(라이노바이러스)는 33℃에서 활발히 증식하고 37℃에서는 증식이 제한됐어요.</b></p><a class="lw-src" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4311828/" target="_blank" rel="noopener">Foxman EF 외, 2015, PNAS, Temperature-dependent innate defense against the common cold virus limits viral replication at warm temperature in mouse airway cells</a></div></li>
+    <li class="lw-item rv-up"><figure class="lw-img"><img src="img/lw_2.jpg" alt="병실 침대에서 담요를 덮은 환자의 다리와 손" loading="lazy"></figure><span class="lw-no">06</span><div class="lw-txt"><h3>감염 위험</h3><p>수술 중 심부체온이 평균 34.7℃까지 내려간 환자군은 36.6℃를 유지한 환자군보다 <b>수술 부위 감염률이 높았어요(19% 대 6%).</b></p><a class="lw-src" href="https://pubmed.ncbi.nlm.nih.gov/8606715/" target="_blank" rel="noopener">Kurz A 외, 1996, NEJM, Perioperative normothermia to reduce the incidence of surgical-wound infection and shorten hospitalization</a></div></li>
   </ol>
-  <p class="note lw-note">각 연구의 조건(세포 실험·수술 환자 등)에서 보고된 결과이며, 일상의 체온 변화에 그대로 적용되거나 마이온도 제품의 효과를 설명하는 연구가 아닙니다.</p>
 </section>
 
 <section class="up1-sec">
@@ -906,60 +938,11 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <div class="u1-card rv-up"><span class="u1-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="16" height="10" rx="2.5"/><path d="M21 10.5v3"/><path d="M11.5 8.5L9 12h3l-1.5 3.5"/></svg></span><h3>피로 회복</h3><p class="u1-v">세포 대사 촉진, 활력 증가</p><p class="u1-d">몸속 대사가 원활해지면서 쉽게 지치던 몸에 활력이 생겨요.</p></div>
     <div class="u1-card rv-up"><span class="u1-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19c3-4 6-6.5 9-8"/></svg></span><h3>스트레스 완화</h3><p class="u1-v">자율신경 안정, 불안감 감소</p><p class="u1-d">몸이 따뜻하면 긴장이 풀리고 마음도 한결 편안해져요.</p></div>
   </div>
-  <p class="u1-end rv-up">당신의 체온이 곧 건강,<br><strong>선택이 아닌 <u>필수</u>입니다!</strong></p>
-  <p class="note u1-note">체온과 몸의 관계에 대해 일반적으로 알려진 내용이며, 마이온도 제품의 효과나 체온 상승을 보장하지 않습니다.</p>
   
 </section>
 
 
 <!-- [5] 원인 -->
-<section class="worry">
-  <p class="rs-eyebrow rv-up">EVERYDAY COLD</p>
-  <h2 class="section-title rv-up" style="margin-bottom:30px">몸이 늘 차가운<br><strong>현대인들의 고민</strong></h2>
-  <div class="wp-list">
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_1.jpg" alt="회색 수면양말 신은 발을 두 손으로 감싼 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>방은 따뜻한데 <em>수면양말을 신어도 발이 시려요.</em> 손은 사계절 내내 얼음장이고요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_2.jpg" alt="니트 커버 물주머니를 무릎 위에서 감싸 쥔 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">손발이 늘 찬 30대</span><p>밖에선 핫팩, 집에선 <em>물주머니를 끌어안고</em> 지내요. 따뜻한 걸 손에서 놓을 수가 없어요.</p></div></div>
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_3.jpg" alt="침대에 웅크려 누워 분홍 물주머니를 배에 댄 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">그날이 힘든 20대</span><p><em>그날엔 한여름에도 물주머니</em>를 배에 대고 있어야 하루를 버텨요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_4.jpg" alt="테이블 위에 놓인 일회용 핫팩과 찜질 패드" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">그날이 힘든 20대</span><p>달력에 그날이 다가오면 <em>핫팩이랑 찜질기부터</em> 챙겨요. 매달 돌아오는 준비예요.</p></div></div>
-    <div class="wp rv-up"><figure class="wp-img"><img src="img/ws_5.jpg" alt="털 실내화를 신고 가디건을 여미는 모습" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">몸을 회복 중인 50대</span><p>남들은 괜찮다는데 <em>나는 벌써 겨울 같아요.</em> 실내 슬리퍼부터 두툼한 걸로 바꿨어요.</p></div></div>
-    <div class="wp r rv-up"><figure class="wp-img"><img src="img/ws_6.jpg" alt="어르신 어깨에 가디건을 걸쳐 드리는 손" loading="lazy"></figure><div class="wp-txt"><span class="wp-who">엄마를 돌보는 40대</span><p>엄마가 아프고 나서는 <em>몸을 따뜻하게 지키는 것부터</em> 챙겨요. 가디건은 꼭 챙겨 드리고요.</p></div></div>
-  </div>
-  <p class="wr-note">고민 사례는 보온 관련 공개 게시글·후기를 바탕으로 재구성한 상황 예시이며, 마이온도 구매 후기가 아닙니다.<br>사진은 AI로 생성한 연출 이미지입니다.</p>
-  
-  
-</section>
-
-<section class="cause-sec">
-  <p class="rs-eyebrow rv-up">REAL VOICES</p>
-  <h2 class="section-title cz-title rv-up">조금이라도 따뜻해지기 위해<br>다양한 제품을 사용해 보지만<br><strong>매번 이런 번거로움이 따라와요</strong></h2>
-  <p class="section-subtitle rv-up">보온용품을 써 본 분들이 남긴 실제 후기예요.</p>
-  <div class="cz-card rv-up">
-    <div class="cz-head"><span class="cause-no cause-ic ci-1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-steam"><path d="M12 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M16 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M20 7c-1.2-1.4 1.2-2.6 0-4"/></g><path d="M14 9h4v2.5"/><path d="M14 11.5V9"/><path d="M11 12h10c2.2 0 3.5 1.6 3.5 3.6v8.9c0 2.2-1.6 3.5-3.6 3.5H11.1c-2 0-3.6-1.3-3.6-3.5v-8.9C7.5 13.6 8.8 12 11 12z"/><path class="ci-water" d="M8.5 21c2.5-1.3 5-1.3 7.5 0s5 1.3 7.5 0"/></svg></span><h3>물주머니는</h3></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d1.jpg" alt="다 식은 물주머니를 만지는 손" loading="lazy"></figure><div class="cz-txt"><b>금방 식어요</b><p class="cz-q">“물주머니는 너무 빨리 식고”</p><span class="cz-src">11번가 구매 후기</span></div></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c2.jpg" alt="주전자에 물을 데우는 모습" loading="lazy"></figure><div class="cz-txt"><b>물 끓여 담고, 버리는 과정이 번거로워요</b><p class="cz-q">“물 끓여서 담고 버리는 과정이 번거로웠어요”</p><span class="cz-src">11번가 구매 후기</span></div></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c1.jpg" alt="물주머니의 식은 물을 쏟아 버리는 손" loading="lazy"></figure><div class="cz-txt"><b>귀찮아서 물을 그대로 둘 때도 많아요</b><p class="cz-q">“사실 귀찮아서 아침에 물도 안 뺄 때가 많다.”</p><span class="cz-src">물주머니 사용기 · 개인 블로그</span></div></div>
-  </div>
-  <div class="cz-card rv-up">
-    <div class="cz-head"><span class="cause-no cause-ic ci-2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="17" height="14" rx="3"/><path class="ci-zig" d="M7.5 13l2-2.5 2 5 2-5 2 5 2-2.5"/><path d="M21 15h3.5c2 0 3 1.2 3 3v3.5c0 1.8-1 3-3 3"/><rect x="21" y="23" width="5" height="4" rx="1"/><circle class="ci-spark" cx="24.5" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg></span><h3>충전식 온열기는</h3></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c5.jpg" alt="충전 중인 무선 찜질기" loading="lazy"></figure><div class="cz-txt"><b>계속 충전해야 하는 게 번거로워요</b><p class="cz-q">“무선 온열 복대의 단점은 보조배터리를 충전해야 하는 번거로움”</p><span class="cz-src">무선 온열 복대 사용기 · 개인 블로그</span></div></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d2.jpg" alt="꺼진 충전식 찜질기를 든 손" loading="lazy"></figure><div class="cz-txt"><b>배터리가 생각보다 금방 닳아요</b><p class="cz-q">“배터리가 생각보다 금방 닳는다 (네시간 정도)”</p><span class="cz-src">충전식 손난로 구매 후기</span></div></div>
-  </div>
-  <div class="cz-card rv-up">
-    <div class="cz-head"><span class="cause-no cause-ic ci-3"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-pack"><path d="M7 12h18v14c0 1.4-1.1 2.5-2.5 2.5h-13C8.1 28.5 7 27.4 7 26V12z"/><path d="M7 12l1.5-1.5L10 12l1.5-1.5L13 12l1.5-1.5L16 12l1.5-1.5L19 12l1.5-1.5L22 12l1.5-1.5L25 12"/><text x="16" y="23.5" font-size="7.5" font-weight="800" fill="currentColor" stroke="none" text-anchor="middle" font-family="Pretendard,sans-serif">HOT</text></g><path class="ci-wave" d="M11 7c-.8-1 .8-2 0-3"/><path class="ci-wave w2" d="M16 7c-.8-1 .8-2 0-3"/><path class="ci-wave w3" d="M21 7c-.8-1 .8-2 0-3"/></svg></span><h3>일회용 핫팩은</h3></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d3.jpg" alt="가방에 핫팩을 챙겨 넣는 손" loading="lazy"></figure><div class="cz-txt"><b>외출할 땐 늘 챙겨 다녀야 해요</b><p class="cz-q">“수족냉증이라 항상 가방에 두개씩 가지고 다녀요”</p><span class="cz-src">핫팩 구매 후기</span></div></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c9.jpg" alt="거의 비어 가는 핫팩 상자" loading="lazy"></figure><div class="cz-txt"><b>계속 사다 보니 비용이 부담돼요</b><p class="cz-q">“핫팩을 계속 사용하다보니, 비용도 비용인지라..”</p><span class="cz-src">손난로 구매 후기</span></div></div>
-    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c7.jpg" alt="다 쓴 핫팩 더미" loading="lazy"></figure><div class="cz-txt"><b>매일 쓰고 버리는 쓰레기가 쌓여요</b><p class="cz-q">“이게 하루에 하나씩 소모되니까 버려지는 쓰레기양이 많더라구요…”</p><span class="cz-src">손난로 구매 후기</span></div></div>
-  </div>
-  <p class="note cz-note">후기는 공개된 구매 후기·사용기에서 발췌했으며 맞춤법은 원문 그대로입니다. 사진은 AI로 생성한 연출 이미지입니다.</p>
-  
-  <div class="cause-card key rv-up">
-    <h3 class="cause-title">심지어 전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 다시 체온이 떨어집니다.</strong></h3>
-    <div class="cause-img hg rv-up"><p class="hg-cap">한 번 쓰고 나서 따뜻함이 유지되는 시간</p><div class="hg-row"><div class="hg-top"><b>물주머니</b><span>약 4.5시간</span></div><div class="hg-track"><i class="hg-bar" style="--w:45%"></i></div><p class="hg-sub">60~80℃ 물 기준, 이불 속 쾌적 온도 유지 <em>→ 다시 데워 채우기</em></p></div><div class="hg-row"><div class="hg-top"><b>충전식 전기 찜질기</b><span>90분 자동 꺼짐</span></div><div class="hg-track"><i class="hg-ext" style="--w:80%"></i><i class="hg-bar" style="--w:15%"></i></div><p class="hg-sub">배터리 최대 8시간 <em>→ 다시 켜기 · 충전</em></p></div><div class="hg-row"><div class="hg-top"><b>붙이는 일회용 핫팩</b><span>약 6~9시간</span></div><div class="hg-track"><i class="hg-ext" style="--w:90%"></i><i class="hg-bar" style="--w:60%"></i></div><p class="hg-sub">40℃ 이상 유지 기준 <em>→ 새로 뜯기</em></p></div><div class="hg-axis"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10시간</span></div><ol class="hg-src"><li>물주머니: 오니시 외, 「물주머니(湯たんぽ)에 의한 이불 속 온도의 시간 경과 변화와 보온 범위」, 일본간호기술학회지 9(2), 2010 — 쾌적 이불 속 온도(32~34℃) 약 4시간 30분 지속</li><li>전기 찜질기: Beurer HK 78 Heaty 제품 사양서(2025) — “Soothing heat for up to 8 hours”, “Safety switch-off after 90 minutes”</li><li>일회용 핫팩: 다이소몰 「붙이는 미니 핫팩」 표시 지속시간 6시간 / 롯데 호카론 붙이는 미니 표시 약 9시간(40℃ 이상 유지)</li></ol><p class="hg-note">* 제품마다 측정 조건과 기준이 달라 서로의 성능을 비교한 자료가 아닙니다. 각 출처의 공개 수치를 옮겨 표시했습니다.</p></div>
-    <p class="cause-body">세 가지 모두 쓰는 동안 몸 바깥에서 열을 전해 주는 방식입니다. 그래서 다 쓰고 나서 다시 추워지면, 또 데우고, 켜고, 새로 뜯게 되죠.</p>
-  </div>
-  
-</section>
-
 <!-- [6] 결론 -->
 <section class="conclusion">
   <p class="cc-lead rv-up">그래서 필요한 건<br>잠깐 대는 열이 아니라<br><strong>벗은 뒤에도 따뜻함이 남는</strong><br>방법입니다.</p>
@@ -1007,6 +990,37 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
   <p class="note cmp-note">물주머니·전기 찜질기·붙이는 핫팩의 일반적인 사용 방식 비교이며, 성능 비교가 아닙니다.</p>
 </section>
 
+<section class="cause-sec">
+  <p class="rs-eyebrow rv-up">REAL VOICES</p>
+  <h2 class="section-title cz-title rv-up">조금이라도 따뜻해지기 위해<br>다양한 제품을 사용해 보지만<br><strong>매번 이런 번거로움이 따라와요</strong></h2>
+  <p class="section-subtitle rv-up">보온용품을 써 본 분들이 남긴 실제 후기예요.</p>
+  <div class="cz-card rv-up">
+    <div class="cz-head"><span class="cause-no cause-ic ci-1"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-steam"><path d="M12 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M16 7c-1.2-1.4 1.2-2.6 0-4"/><path d="M20 7c-1.2-1.4 1.2-2.6 0-4"/></g><path d="M14 9h4v2.5"/><path d="M14 11.5V9"/><path d="M11 12h10c2.2 0 3.5 1.6 3.5 3.6v8.9c0 2.2-1.6 3.5-3.6 3.5H11.1c-2 0-3.6-1.3-3.6-3.5v-8.9C7.5 13.6 8.8 12 11 12z"/><path class="ci-water" d="M8.5 21c2.5-1.3 5-1.3 7.5 0s5 1.3 7.5 0"/></svg></span><h3>물주머니는</h3></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d1.jpg" alt="다 식은 물주머니를 만지는 손" loading="lazy"></figure><div class="cz-txt"><b>금방 식어요</b><p class="cz-q">“물주머니는 너무 빨리 식고”</p><span class="cz-src">11번가 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c2.jpg" alt="주전자에 물을 데우는 모습" loading="lazy"></figure><div class="cz-txt"><b>물 끓여 담고, 버리는 과정이 번거로워요</b><p class="cz-q">“물 끓여서 담고 버리는 과정이 번거로웠어요”</p><span class="cz-src">11번가 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c1.jpg" alt="물주머니의 식은 물을 쏟아 버리는 손" loading="lazy"></figure><div class="cz-txt"><b>귀찮아서 물을 그대로 둘 때도 많아요</b><p class="cz-q">“사실 귀찮아서 아침에 물도 안 뺄 때가 많다.”</p><span class="cz-src">물주머니 사용기 · 개인 블로그</span></div></div>
+  </div>
+  <div class="cz-card rv-up">
+    <div class="cz-head"><span class="cause-no cause-ic ci-2"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="17" height="14" rx="3"/><path class="ci-zig" d="M7.5 13l2-2.5 2 5 2-5 2 5 2-2.5"/><path d="M21 15h3.5c2 0 3 1.2 3 3v3.5c0 1.8-1 3-3 3"/><rect x="21" y="23" width="5" height="4" rx="1"/><circle class="ci-spark" cx="24.5" cy="15" r="1.4" fill="currentColor" stroke="none"/></svg></span><h3>충전식 온열기는</h3></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c5.jpg" alt="충전 중인 무선 찜질기" loading="lazy"></figure><div class="cz-txt"><b>계속 충전해야 하는 게 번거로워요</b><p class="cz-q">“무선 온열 복대의 단점은 보조배터리를 충전해야 하는 번거로움”</p><span class="cz-src">무선 온열 복대 사용기 · 개인 블로그</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d2.jpg" alt="꺼진 충전식 찜질기를 든 손" loading="lazy"></figure><div class="cz-txt"><b>배터리가 생각보다 금방 닳아요</b><p class="cz-q">“배터리가 생각보다 금방 닳는다 (네시간 정도)”</p><span class="cz-src">충전식 손난로 구매 후기</span></div></div>
+  </div>
+  <div class="cz-card rv-up">
+    <div class="cz-head"><span class="cause-no cause-ic ci-3"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ci-pack"><path d="M7 12h18v14c0 1.4-1.1 2.5-2.5 2.5h-13C8.1 28.5 7 27.4 7 26V12z"/><path d="M7 12l1.5-1.5L10 12l1.5-1.5L13 12l1.5-1.5L16 12l1.5-1.5L19 12l1.5-1.5L22 12l1.5-1.5L25 12"/><text x="16" y="23.5" font-size="7.5" font-weight="800" fill="currentColor" stroke="none" text-anchor="middle" font-family="Pretendard,sans-serif">HOT</text></g><path class="ci-wave" d="M11 7c-.8-1 .8-2 0-3"/><path class="ci-wave w2" d="M16 7c-.8-1 .8-2 0-3"/><path class="ci-wave w3" d="M21 7c-.8-1 .8-2 0-3"/></svg></span><h3>일회용 핫팩은</h3></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_d3.jpg" alt="가방에 핫팩을 챙겨 넣는 손" loading="lazy"></figure><div class="cz-txt"><b>외출할 땐 늘 챙겨 다녀야 해요</b><p class="cz-q">“수족냉증이라 항상 가방에 두개씩 가지고 다녀요”</p><span class="cz-src">핫팩 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c9.jpg" alt="거의 비어 가는 핫팩 상자" loading="lazy"></figure><div class="cz-txt"><b>계속 사다 보니 비용이 부담돼요</b><p class="cz-q">“핫팩을 계속 사용하다보니, 비용도 비용인지라..”</p><span class="cz-src">손난로 구매 후기</span></div></div>
+    <div class="cz-row"><figure class="cz-img"><img src="img/cz_c7.jpg" alt="다 쓴 핫팩 더미" loading="lazy"></figure><div class="cz-txt"><b>매일 쓰고 버리는 쓰레기가 쌓여요</b><p class="cz-q">“이게 하루에 하나씩 소모되니까 버려지는 쓰레기양이 많더라구요…”</p><span class="cz-src">손난로 구매 후기</span></div></div>
+  </div>
+  <p class="note cz-note">후기는 공개된 구매 후기·사용기에서 발췌했으며 맞춤법은 원문 그대로입니다. 사진은 AI로 생성한 연출 이미지입니다.</p>
+  
+  <div class="cause-card key rv-up">
+    <h3 class="cause-title">심지어 전부 사용할때만 따뜻하고<br><strong>사용하지 않을때는 다시 체온이 떨어집니다.</strong></h3>
+    <div class="cause-img hg rv-up"><p class="hg-cap">한 번 쓰고 나서 따뜻함이 유지되는 시간</p><div class="hg-row"><div class="hg-top"><b>물주머니</b><span>약 4.5시간</span></div><div class="hg-track"><i class="hg-bar" style="--w:45%"></i></div><p class="hg-sub">60~80℃ 물 기준, 이불 속 쾌적 온도 유지 <em>→ 다시 데워 채우기</em></p></div><div class="hg-row"><div class="hg-top"><b>충전식 전기 찜질기</b><span>90분 자동 꺼짐</span></div><div class="hg-track"><i class="hg-ext" style="--w:80%"></i><i class="hg-bar" style="--w:15%"></i></div><p class="hg-sub">배터리 최대 8시간 <em>→ 다시 켜기 · 충전</em></p></div><div class="hg-row"><div class="hg-top"><b>붙이는 일회용 핫팩</b><span>약 6~9시간</span></div><div class="hg-track"><i class="hg-ext" style="--w:90%"></i><i class="hg-bar" style="--w:60%"></i></div><p class="hg-sub">40℃ 이상 유지 기준 <em>→ 새로 뜯기</em></p></div><div class="hg-axis"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10시간</span></div><ol class="hg-src"><li>물주머니: 오니시 외, 「물주머니(湯たんぽ)에 의한 이불 속 온도의 시간 경과 변화와 보온 범위」, 일본간호기술학회지 9(2), 2010 — 쾌적 이불 속 온도(32~34℃) 약 4시간 30분 지속</li><li>전기 찜질기: Beurer HK 78 Heaty 제품 사양서(2025) — “Soothing heat for up to 8 hours”, “Safety switch-off after 90 minutes”</li><li>일회용 핫팩: 다이소몰 「붙이는 미니 핫팩」 표시 지속시간 6시간 / 롯데 호카론 붙이는 미니 표시 약 9시간(40℃ 이상 유지)</li></ol><p class="hg-note">* 제품마다 측정 조건과 기준이 달라 서로의 성능을 비교한 자료가 아닙니다. 각 출처의 공개 수치를 옮겨 표시했습니다.</p></div>
+    <p class="cause-body">세 가지 모두 쓰는 동안 몸 바깥에서 열을 전해 주는 방식입니다. 그래서 다 쓰고 나서 다시 추워지면, 또 데우고, 켜고, 새로 뜯게 되죠.</p>
+  </div>
+  
+</section>
+
 <!-- [7b] 원리 3단계 -->
 <section class="how-sec">
   <svg class="how-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
@@ -1052,7 +1066,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <text x="192" y="292" text-anchor="middle">진피</text>
     <path d="M220 24 L300 24" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="27">표피</text>
     <path d="M267 54 L300 54" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="57">마이온도 밴드</text>
-    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#8E1F3F">버건디 도트</text>
+    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#6B1530">버건디 도트</text>
   </g></svg></div><div class="how-txt"><span class="how-no">STEP 01</span><h3>체온 복사</h3><p>밴드 안쪽 버건디 도트가 맨살에 닿아,<br>피부의 온기를 받아들입니다.</p></div></div>
     <div class="how-row s2 rv-up"><div class="how-fig"><svg viewBox="0 0 400 300" role="img" aria-label="버건디 도트에서 원적외선 파동이 피부 쪽으로 퍼지는 모습" font-family="Pretendard,sans-serif"><rect width="400" height="300" fill="url(#hAir)"/>
   <g clip-path="url(#hBody)">
@@ -1079,7 +1093,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <text x="192" y="292" text-anchor="middle">진피</text>
     <path d="M220 24 L300 24" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="27">표피</text>
     <path d="M267 54 L300 54" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="57">마이온도 밴드</text>
-    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#8E1F3F">버건디 도트</text>
+    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#6B1530">버건디 도트</text>
   </g></svg></div><div class="how-txt"><span class="how-no">STEP 02</span><h3>원적외선 방사</h3><p>체온을 받은 도트 속 광물 소재가<br>원적외선과 열에너지를 내보냅니다.</p></div></div>
     <div class="how-row s3 rv-up"><div class="how-fig"><svg viewBox="0 0 400 300" role="img" aria-label="온기가 피부를 지나 피하지방과 근육 쪽 깊은 곳으로 전해지는 모습" font-family="Pretendard,sans-serif"><rect width="400" height="300" fill="url(#hAir)"/>
   <g clip-path="url(#hBody)">
@@ -1106,7 +1120,7 @@ section.info-sec{background:var(--bg-soft);padding:56px 20px 60px}
     <text x="192" y="292" text-anchor="middle">진피</text>
     <path d="M220 24 L300 24" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="27">표피</text>
     <path d="M267 54 L300 54" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="57">마이온도 밴드</text>
-    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#8E1F3F">버건디 도트</text>
+    <path d="M231 84 L300 84" stroke="#7B6A6E" stroke-width=".8" stroke-dasharray="2 2"/><text x="303" y="87" fill="#6B1530">버건디 도트</text>
   </g></svg></div><div class="how-txt"><span class="how-no">STEP 03</span><h3>심부까지 전해지는 온기</h3><p>겉만 뜨겁게 데우는 열이 아니라<br>몸속 깊은 곳까지 온기가 전해지고,<br>벗은 뒤에도 한동안 남습니다.</p></div></div>
   </div>
   <p class="how-tech">약 40여 가지 광물을 융합한 <b>NBT 융복합 기술</b></p>
