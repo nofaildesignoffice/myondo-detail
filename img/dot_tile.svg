@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="576" viewBox="0 0 576 576" role="img" aria-labelledby="title desc">
+  <title id="title">마이온도 버건디 도트 반복 타일 · 사진 기반 재구성</title>
+  <desc id="desc">Background reconstruction using the observed ribbed-dot arrangement, including the confirmed 135-degree diagonal motif. The 6 by 6 block is a reconstructed background tile, not a verified manufacturing repeat. Transparent background. Native editable elliptical vectors. Five tapered elliptical ribs per dot.</desc>
+  <g id="burgundy-dots" fill="#992F50">
+    <g id="dot-r1-c1" transform="translate(48 48) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r1-c2" transform="translate(144 48) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r1-c3" transform="translate(240 48) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r1-c4" transform="translate(336 48) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r1-c5" transform="translate(432 48) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r1-c6" transform="translate(528 48) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r2-c1" transform="translate(48 144) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r2-c2" transform="translate(144 144) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r2-c3" transform="translate(240 144) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r2-c4" transform="translate(336 144) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r2-c5" transform="translate(432 144) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r2-c6" transform="translate(528 144) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r3-c1" transform="translate(48 240) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r3-c2" transform="translate(144 240) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r3-c3" transform="translate(240 240) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r3-c4" transform="translate(336 240) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r3-c5" transform="translate(432 240) rotate(135)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r3-c6" transform="translate(528 240) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r4-c1" transform="translate(48 336) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r4-c2" transform="translate(144 336) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r4-c3" transform="translate(240 336) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r4-c4" transform="translate(336 336) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r4-c5" transform="translate(432 336) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r4-c6" transform="translate(528 336) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r5-c1" transform="translate(48 432) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r5-c2" transform="translate(144 432) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r5-c3" transform="translate(240 432) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r5-c4" transform="translate(336 432) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r5-c5" transform="translate(432 432) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r5-c6" transform="translate(528 432) rotate(0)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r6-c1" transform="translate(48 528) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r6-c2" transform="translate(144 528) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r6-c3" transform="translate(240 528) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r6-c4" transform="translate(336 528) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r6-c5" transform="translate(432 528) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+    <g id="dot-r6-c6" transform="translate(528 528) rotate(90)">
+      <ellipse cx="0" cy="-30" rx="15" ry="6"/>
+      <ellipse cx="0" cy="-15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="0" rx="36" ry="6"/>
+      <ellipse cx="0" cy="15" rx="30" ry="6"/>
+      <ellipse cx="0" cy="30" rx="15" ry="6"/>
+    </g>
+  </g>
+</svg>
