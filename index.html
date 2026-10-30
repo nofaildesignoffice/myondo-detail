@@ -1152,6 +1152,45 @@ section.ask-sec .bcap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin
 section.ask-sec .bcap p{font-size:12.5px;color:#7A6C71;line-height:1.45}
 section.ask-sec .bcap b{display:block;font-size:13.5px;font-weight:800;color:#24141A}
 section.ask-sec .rv-up.shown{opacity:1}
+section.ask-sec .lead{margin-top:14px;font-size:15px;color:#4A3A40;line-height:1.7}
+section.ask-sec .fig{margin-top:34px;background:#fff;border-radius:20px;padding:22px 10px 18px;box-shadow:0 10px 26px rgba(80,20,40,.06)}
+section.ask-sec .fig svg{width:100%;height:auto;display:block;overflow:visible}
+section.ask-sec .heads{display:grid;grid-template-columns:1fr 54px 1fr;margin-top:6px}
+section.ask-sec .heads p{font-size:14.5px;font-weight:800;letter-spacing:-.02em}
+section.ask-sec .heads p span{display:block;font-size:11.5px;font-weight:500;color:#7A6C71}
+section.ask-sec .tbl{margin-top:16px;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 26px rgba(80,20,40,.06)}
+section.ask-sec .row{display:grid;grid-template-columns:1fr 78px 1fr;align-items:center;border-top:1px solid #F2EBED}
+section.ask-sec .row:first-child{border-top:0}
+section.ask-sec .row div{padding:16px 8px;font-size:14px;line-height:1.45;color:#7A6C71}
+section.ask-sec .row .k{font-size:12px;font-weight:700;color:#A89BA0;background:#FBF9F9;align-self:stretch;display:flex;align-items:center;justify-content:center}
+section.ask-sec .row .me{color:#24141A;font-weight:800}
+section.ask-sec .hotglow{opacity:.55}
+section.ask-sec .play .hotglow{animation:ask-hp 3.2s ease-in-out infinite}
+@keyframes ask-hp{0%,100%{opacity:.35}50%{opacity:1}}
+section.ask-sec .skinheat{opacity:0}
+section.ask-sec .play .skinheat{animation:ask-sh 6s ease-in-out infinite}
+@keyframes ask-sh{0%{opacity:0}25%,55%{opacity:1}85%,100%{opacity:.1}}
+section.ask-sec .wave{stroke-dasharray:6 10;opacity:0}
+section.ask-sec .play .wave{opacity:.9;animation:ask-wv 1.4s linear infinite}
+@keyframes ask-wv{to{stroke-dashoffset:-32}}
+section.ask-sec .deep{opacity:0}
+section.ask-sec .play .deep{animation:ask-dp 6s ease-in-out infinite}
+@keyframes ask-dp{0%{opacity:.05}45%,100%{opacity:1}}
+section.ask-sec .coldtxt{font-size:11px;font-weight:700;fill:#4F7499}
+section.ask-sec .warmtxt{font-size:11px;font-weight:800;fill:#fff}
+section.ask-sec .lyr{font-size:11px;fill:#7A6C71;font-weight:600}
+@keyframes bhp{0%,100%{opacity:.6}50%{opacity:1}}
+section.ask-sec{background:#000!important;color:#fff}
+section.ask-sec .who{color:rgba(255,255,255,.55)}
+section.ask-sec .b.q{background:#3A3034}
+section.ask-sec .ttl{color:#fff}
+section.ask-sec .lead{margin-top:14px;text-align:center;color:rgba(255,255,255,.75)}
+section.ask-sec .lead b{color:#fff}
+section.ask-sec .fig{margin-top:26px;color:#24141A;text-align:center}
+section.ask-sec .tbl{color:#24141A;text-align:center}
+section.ask-sec .burn{border-color:#fff;color:#24141A}
+section.ask-sec .end{color:#fff}
+section.ask-sec .note{color:rgba(255,255,255,.45)}
 </style>
 </head>
 <body>
@@ -1212,7 +1251,38 @@ section.ask-sec .rv-up.shown{opacity:1}
 </section>
 
 <!-- [1b-2] 고객 질문 대화: "밴드가 안 따뜻해요" (inside_variants V2) -->
-<svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><defs><linearGradient id="epiG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8E3D8"/><stop offset="1" stop-color="#EFC6B5"/></linearGradient><linearGradient id="derG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0BBA8"/><stop offset="1" stop-color="#E6A894"/></linearGradient><radialGradient id="fatG" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#FFF6D6"/><stop offset="1" stop-color="#F2D58F"/></radialGradient><linearGradient id="musG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9505C"/><stop offset="1" stop-color="#93323F"/></linearGradient><g id="skin">
+<section class="ask-sec">
+  <div class="chat" id="askChat">
+    <p class="who r b" data-d="0">마이온도 구매 고객</p>
+    <p class="b q" data-d="200">택배 받자마자 둘러 봤는데…<br>밴드가 하나도 안 따뜻해요. 불량인가요?</p>
+    <div class="typing" id="askTyping"><i></i><i></i><i></i></div>
+    <p class="who b" data-d="2000">마이온도</p>
+    <p class="b a" data-d="2100"><b>불량이 아니에요!</b> 마이온도는 원래<br>밴드 자체가 뜨거워지지 않아요.</p>
+    <p class="b a" data-d="2900">따뜻해지는 곳은 밴드가 아니라<br><b>고객님 몸속</b>이거든요.</p>
+  </div>
+
+  <h2 class="ttl rv-up">밴드는 따뜻하지 않아도,<br><strong>몸속은 데워지고 있어요</strong></h2>
+
+  <div class="ph rv-up" data-play>
+    <img src="img/v2_body.jpg" alt="허리에 마이온도 밴드를 두른 모습">
+    <span class="glow" aria-hidden="true"></span>
+    <div class="pin p1"><i></i><span>밴드는<b>발열 없음</b></span></div>
+    <div class="pin p2"><i></i><span>몸속은<b>따뜻해지는 중</b></span></div>
+  </div>
+
+  <p class="lead rv-up">핫팩·물주머니·전기 찜질기는 제품이 뜨거워져<br>피부 겉면을 데웁니다. 마이온도는 밴드가 아니라<br><b>피부 속 심부층</b>을 데우는 방식이에요.</p>
+
+  <div class="fig rv-up" data-play>
+    <svg viewBox="0 0 440 330" aria-label="왼쪽은 뜨거운 핫팩이 피부 겉면만 데우고 심부는 그대로인 모습, 오른쪽은 발열이 없는 마이온도 밴드에서 원적외선이 심부까지 전해져 심부가 따뜻해지는 모습의 개념도">
+      <defs>
+        <linearGradient id="skinHot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF6A3D" stop-opacity=".95"/><stop offset=".55" stop-color="#FF9A5A" stop-opacity=".55"/><stop offset="1" stop-color="#FF9A5A" stop-opacity="0"/></linearGradient>
+        <radialGradient id="glow"><stop offset="0" stop-color="#FF7A45" stop-opacity=".9"/><stop offset="1" stop-color="#FF7A45" stop-opacity="0"/></radialGradient>
+        <radialGradient id="deepWarm" cx=".5" cy=".55" r=".7"><stop offset="0" stop-color="#FFB27A"/><stop offset=".6" stop-color="#FF7A45" stop-opacity=".85"/><stop offset="1" stop-color="#E8484F" stop-opacity=".5"/></radialGradient>
+        <linearGradient id="epiG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F8E3D8"/><stop offset="1" stop-color="#EFC6B5"/></linearGradient>
+        <linearGradient id="derG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0BBA8"/><stop offset="1" stop-color="#E6A894"/></linearGradient>
+        <radialGradient id="fatG" cx=".38" cy=".35" r=".7"><stop offset="0" stop-color="#FFF6D6"/><stop offset="1" stop-color="#F2D58F"/></radialGradient>
+        <linearGradient id="musG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9505C"/><stop offset="1" stop-color="#93323F"/></linearGradient>
+        <g id="skin">
         <path d="M-4 223.8 L-4.0,223.8 -1.0,224.5 2.0,225.1 5.0,225.6 8.0,226.0 11.0,226.2 14.0,226.1 17.0,225.9 20.0,225.5 23.0,224.9 26.0,224.3 29.0,223.7 32.0,223.1 35.0,222.7 38.0,222.4 41.0,222.3 44.0,222.3 47.0,222.5 50.0,222.8 53.0,223.1 56.0,223.4 59.0,223.8 62.0,224.1 65.0,224.3 68.0,224.5 71.0,224.6 74.0,224.8 77.0,224.9 80.0,225.0 83.0,225.0 86.0,225.1 89.0,225.1 92.0,225.1 95.0,225.0 98.0,224.7 101.0,224.4 104.0,224.0 107.0,223.6 110.0,223.1 113.0,222.7 116.0,222.3 119.0,222.1 122.0,222.0 125.0,222.2 128.0,222.5 131.0,223.0 134.0,223.6 137.0,224.2 140.0,224.9 143.0,225.5 146.0,225.9 149.0,226.1 152.0,226.2 155.0,226.0 158.0,225.6 161.0,225.1 164.0,224.5 167.0,224.0 170.0,223.4 173.0,223.0 176.0,222.7 179.0,222.5 182.0,222.5 185.0,222.6 188.0,222.8 L190 330 L-4 330Z" fill="url(#musG)"/>
         <path d="M-4 228.0 C40 230.0 90 226.0 190 229.0" stroke="#E79AA0" stroke-width="0.7" opacity="0.35" fill="none"/>
         <path d="M-4 233.8 C40 235.8 90 231.8 190 234.8" stroke="#E79AA0" stroke-width="0.7" opacity="0.35" fill="none"/>
@@ -1365,30 +1435,43 @@ section.ask-sec .rv-up.shown{opacity:1}
         <path d="M184.3 103.1 q2 -1.5 4 0" stroke="#D9A898" stroke-width=".6" fill="none" opacity=".6"/>
         <polyline points="-4.0,110.8 -2.0,111.6 0.0,114.0 2.0,116.4 4.0,117.2 6.0,115.9 8.0,113.3 10.0,111.2 12.0,111.0 14.0,112.7 16.0,115.3 18.0,117.0 20.0,116.8 22.0,114.7 24.0,112.1 26.0,110.8 28.0,111.6 30.0,114.0 32.0,116.4 34.0,117.2 36.0,115.9 38.0,113.3 40.0,111.2 42.0,111.0 44.0,112.7 46.0,115.3 48.0,117.0 50.0,116.8 52.0,114.7 54.0,112.1 56.0,110.8 58.0,111.6 60.0,114.0 62.0,116.4 64.0,117.2 66.0,115.9 68.0,113.3 70.0,111.2 72.0,111.0 74.0,112.7 76.0,115.3 78.0,117.0 80.0,116.8 82.0,114.7 84.0,112.1 86.0,110.8 88.0,111.6 90.0,114.0 92.0,116.4 94.0,117.2 96.0,115.9 98.0,113.3 100.0,111.2 102.0,111.0 104.0,112.7 106.0,115.3 108.0,117.0 110.0,116.8 112.0,114.7 114.0,112.1 116.0,110.8 118.0,111.6 120.0,114.0 122.0,116.4 124.0,117.2 126.0,115.9 128.0,113.3 130.0,111.2 132.0,111.0 134.0,112.7 136.0,115.3 138.0,117.0 140.0,116.8 142.0,114.7 144.0,112.1 146.0,110.8 148.0,111.6 150.0,114.0 152.0,116.4 154.0,117.2 156.0,115.9 158.0,113.3 160.0,111.2 162.0,111.0 164.0,112.7 166.0,115.3 168.0,117.0 170.0,116.8 172.0,114.7 174.0,112.1 176.0,110.8 178.0,111.6 180.0,114.0 182.0,116.4 184.0,117.2 186.0,115.9 188.0,113.3 190.0,111.2" fill="none" stroke="#B9786A" stroke-width="1.4" stroke-dasharray="1.6 1.4" opacity=".8"/>
         <polyline points="-4.0,97.7 -1.0,98.3 2.0,98.9 5.0,99.5 8.0,99.9 11.0,100.0 14.0,99.8 17.0,99.3 20.0,98.7 23.0,98.1 26.0,97.5 29.0,97.2 32.0,97.1 35.0,97.3 38.0,97.7 41.0,98.3 44.0,98.9 47.0,99.4 50.0,99.7 53.0,99.8 56.0,99.6 59.0,99.2 62.0,98.7 65.0,98.2 68.0,97.7 71.0,97.4 74.0,97.4 77.0,97.6 80.0,97.9 83.0,98.4 86.0,98.8 89.0,99.2 92.0,99.4 95.0,99.4 98.0,99.2 101.0,98.9 104.0,98.6 107.0,98.2 110.0,98.0 113.0,97.8 116.0,97.9 119.0,98.0 122.0,98.3 125.0,98.5 128.0,98.8 131.0,98.9 134.0,98.9 137.0,98.9 140.0,98.7 143.0,98.5 146.0,98.3 149.0,98.2 152.0,98.2 155.0,98.3 158.0,98.4 161.0,98.6 164.0,98.8 167.0,98.8 170.0,98.8 173.0,98.7 176.0,98.5 179.0,98.3 182.0,98.1 185.0,98.0 188.0,98.0" fill="none" stroke="#DDB3A3" stroke-width="2"/>
-        </g></defs></svg>
-<section class="ask-sec">
-  <div class="chat" id="askChat">
-    <p class="who r b" data-d="0">마이온도 구매 고객</p>
-    <p class="b q" data-d="200">택배 받자마자 둘러 봤는데…<br>밴드가 하나도 안 따뜻해요. 불량인가요?</p>
-    <div class="typing" id="askTyping"><i></i><i></i><i></i></div>
-    <p class="who b" data-d="2000">마이온도</p>
-    <p class="b a" data-d="2100"><b>불량이 아니에요!</b> 마이온도는 원래<br>밴드 자체가 뜨거워지지 않아요.</p>
-    <p class="b a" data-d="2900">따뜻해지는 곳은 밴드가 아니라<br><b>고객님 몸속</b>이거든요.</p>
+        </g>
+        <clipPath id="cL"><rect x="0" y="96" width="186" height="226" rx="12"/></clipPath>
+        <clipPath id="cR"><rect x="254" y="96" width="186" height="226" rx="12"/></clipPath>
+      </defs>
+      <!-- 층 (공통) -->
+      <g clip-path="url(#cL)">
+        <use href="#skin"/>
+        <rect class="skinheat" x="0" y="96" width="186" height="80" fill="url(#skinHot)"/>
+        <rect x="0" y="224" width="186" height="98" fill="#8FB3D6" opacity=".5"/>
+        <text class="coldtxt" x="93" y="278" text-anchor="middle" fill="#fff" style="fill:#fff">피하심층은 그대로</text>
+      </g>
+      <g clip-path="url(#cR)">
+        <use href="#skin" x="254"/>
+        <rect class="deep" x="254" y="214" width="186" height="108" fill="url(#deepWarm)"/>
+        <g stroke="#FF8A4C" stroke-width="2.4" fill="none" stroke-linecap="round">
+          <path class="wave" d="M300 92 q6 14 0 28 t0 28 t0 28 t0 28 t0 28 t0 28 t0 28"/>
+          <path class="wave" d="M347 92 q6 14 0 28 t0 28 t0 28 t0 28 t0 28 t0 28 t0 28" style="animation-delay:-.45s"/>
+          <path class="wave" d="M394 92 q6 14 0 28 t0 28 t0 28 t0 28 t0 28 t0 28 t0 28" style="animation-delay:-.9s"/>
+        </g>
+        <text class="warmtxt" x="347" y="290" text-anchor="middle">피하심층까지 따뜻하게</text>
+      </g>
+      <!-- 층 이름 -->
+      <g class="lyr" text-anchor="middle"><text x="220" y="109">표피</text><text x="220" y="273">피하심층</text></g>
+      <g stroke="#E2D8DB" stroke-dasharray="2 3"><path d="M190 114h-0M196 114h48M196 224h48"/></g>
+      <!-- 제품 -->
+      <ellipse class="hotglow" cx="93" cy="62" rx="100" ry="46" fill="url(#glow)"/>
+      <image href="img/nk_hotpack2.png" x="48" y="16" width="90" height="94"/>
+      <g stroke="#FF6A3D" stroke-width="2" fill="none" stroke-linecap="round" class="hotglow"><path d="M70 18c-5-6 5-9 0-16M93 14c-5-6 5-9 0-16M116 18c-5-6 5-9 0-16"/></g>
+      <image href="img/nukki.png" x="282" y="22" width="130" height="101"/>
+    </svg>
+    <div class="heads"><p>핫팩·물주머니·찜질기<span>제품이 뜨거워지는 방식</span></p><i></i><p>마이온도<span>몸속이 데워지는 방식</span></p></div>
   </div>
 
-  <h2 class="ttl rv-up">밴드는 따뜻하지 않아도,<br><strong>몸속은 데워지고 있어요</strong></h2>
-
-  <div class="ph rv-up" data-play>
-    <img src="img/v2_body.jpg" alt="허리에 마이온도 밴드를 두른 모습">
-    <span class="glow" aria-hidden="true"></span>
-    <div class="pin p1"><i></i><span>밴드는<b>발열 없음</b></span></div>
-    <div class="pin p2"><i></i><span>몸속은<b>따뜻해지는 중</b></span></div>
-  </div>
-
-  <div class="why">
-    <div class="w rv-up"><span class="n">01</span><h3>열을 내는 건 밴드가 아니에요</h3><p>핫팩·전기 찜질기는 제품 자체가 뜨거워져 피부에 열을 대는 방식이에요. 마이온도는 체온을 받아 원적외선으로 되돌려 보내기 때문에, 밴드는 뜨거워지지 않아요.</p></div>
-    <div class="w rv-up"><span class="n">02</span><h3>겉이 아니라 속부터 데워요</h3><p>피부 겉면에 머무르지 않고 피부 속 심부층까지 전해져, 체온 자체를 끌어올리는 방식입니다.</p></div>
-    <div class="w rv-up"><span class="n">03</span><h3>그래서 확인하는 곳이 달라요</h3><p>밴드를 만져 보는 대신, 1시간쯤 지나 배와 몸이 어떤지 느껴 보세요. 처음엔 아무 느낌이 없을 수 있고, 시점은 사람마다 달라요.</p></div>
+  <div class="tbl rv-up">
+    <div class="row"><div>뜨거워요</div><div class="k">손으로<br>만지면</div><div class="me">발열 없이<br>제품 온도 그대로</div></div>
+    <div class="row"><div>피부 겉면</div><div class="k">데워지는<br>곳</div><div class="me">피부 속<br>심부층까지</div></div>
+    <div class="row"><div>금방 식어요</div><div class="k">떼고<br>나면</div><div class="me">온기가 남아요<br><small style="font-weight:500;color:#7A6C71">최대 10시간*</small></div></div>
   </div>
 
   <div class="burn rv-up" data-play>
