@@ -36,6 +36,10 @@ th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
 .card li{margin-top:4px}
 .card b{color:var(--ink)}
 .closing{margin-top:56px}
+.tag{flex:none;align-self:center;font-size:11px;font-weight:700;color:#fff;background:#111;border-radius:99px;padding:2px 8px;letter-spacing:0}
+.upd{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:13.5px;line-height:1.75;color:#333}
+.upd b{color:var(--ink)}
+.upd ul{margin:4px 0 0 18px}
 @media (max-width:960px){
   .wrap{display:block;height:auto;padding:20px 16px 0}
   .doc{overflow:visible;padding:0 0 60px}
@@ -52,8 +56,12 @@ th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
 <main class="doc" id="doc">
 <header>
   <h1>마이온도 상세페이지 기획 의도</h1>
-  <p class="meta">노페일 디자인 · 2026.10.27</p>
+  <p class="meta">노페일 디자인 · 2026.10.27 작성 · 2026.11.02 업데이트</p>
   <p class="lead">이 페이지는 "잠깐 따뜻한 것"에 익숙한 고객의 생각을 "벗어도 남는 체온"으로 바꾸도록 설계했습니다. 사람의 뇌가 정보를 받아들이고 결정을 내리는 순서에 맞춰 <b>주의 → 욕구 → 신뢰 → 납득 → 불안 해소</b>의 다섯 단계로 구성했습니다.</p>
+  <div class="upd"><b>11/02 업데이트 내용</b><ul>
+<li>섹션 4개 추가: 고객 질문 대화("밴드가 하나도 안 따뜻한데요?"), 온열제품 반론("핫팩·물주머니·전기 찜질기도 체온을 올려주지 않나?"), 착용 루틴, 사용 기간</li>
+<li>내용 보강: 사용시 꼭 알아두세요(느끼는 속도 그래프·불편할 때 대처 추가), +1℃ 카드 사진, Q&amp;A 8개 → 19개</li>
+<li>추가·변경된 항목에는 <b>추가</b> / <b>변경</b> 표시를 달았습니다.</li></ul></div>
   <p class="how">각 항목을 누르면 옆 화면의 상세페이지가 해당 섹션으로 이동합니다. 상세페이지를 스크롤하면 지금 보고 있는 섹션의 설명이 표시됩니다.</p>
 </header>
 
@@ -62,10 +70,10 @@ th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
 <table>
 <tr><th>단계</th><th>뇌가 하는 일</th><th>섹션</th></tr>
 <tr><td>1. 주의를 끈다</td><td>3초 안에 "나와 관련 있다"고 판단</td><td>인트로, 히어로, 매일 같이</td></tr>
-<tr><td>2. 원하게 만든다</td><td>머릿속에서 미리 써 봄</td><td>열감 모델컷, 데일리·요약, MADE IN KOREA, 결과, 10시간</td></tr>
+<tr><td>2. 원하게 만든다</td><td>머릿속에서 미리 써 봄</td><td>열감 모델컷, 고객 질문 대화, 데일리·요약, MADE IN KOREA, 결과, 10시간</td></tr>
 <tr><td>3. 믿게 만든다</td><td>사람과 사람들을 통해 경계를 풂</td><td>창업자, 리뷰</td></tr>
 <tr><td>4. 깊이 납득시킨다</td><td>문제 → 영향 → 목표 → 해답 → 반론 순으로 스스로 결론에 도달</td><td>고민, 낮은 체온, +1℃, 그래서 만들었다, 왜 이 밴드인가, 보온용품 비교, 막대그래프, 결론</td></tr>
-<tr><td>5. 불안을 없앤다</td><td>결제 직전의 작은 의심을 하나씩 해소</td><td>도트, 원리, 소재, 안전·특허, 사용시 꼭 알아두세요, 착용법·사이즈·TIP, 엔딩 컷, Q&amp;A, 상품정보 고시</td></tr>
+<tr><td>5. 불안을 없앤다</td><td>결제 직전의 작은 의심을 하나씩 해소</td><td>도트, 온열제품 반론, 원리, 소재, 안전·특허, 사용시 꼭 알아두세요, 착용법·사이즈·TIP, 착용 루틴, 사용 기간, 엔딩 컷, Q&amp;A, 상품정보 고시</td></tr>
 </table>
 
 <h2><small>STAGE 1</small>주의를 끈다</h2>
@@ -93,32 +101,38 @@ th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
 <li>모델 옷을 모두 검게 하고 밴드만 빛나게 해서 <b>단 하나 다른 것</b>에 시선이 가도록 했습니다(고립 효과).</li>
 <li>열감이 오르고 내리는 리듬은 "몸이 데워지는 감각"을 <b>몸으로 상상</b>하게 합니다.</li></ul></div>
 
-<div class="card" data-sel="section.sub.daily"><h3><span class="no">05</span>데일리 + 요약 — "입던 옷은 그대로, 안에 밴드 하나만"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.ask-sec:not(#askSec2)"><h3><span class="no">05</span>고객 질문 대화 — "밴드가 하나도 안 따뜻한데요?"<span class="tag">추가</span><span class="go">보기 →</span></h3><ul>
+<li>처음 받은 고객이 가장 많이 하는 오해("불량인가요?")를 <b>고객의 말투 그대로</b> 꺼냈습니다. 내가 하려던 질문을 남이 먼저 하면, 뇌는 그 답을 자기 일로 받아들입니다.</li>
+<li>채팅 대화 형식이라 광고가 아니라 <b>상담을 엿듣는 느낌</b>을 줍니다. 판매자가 설명하는 대신 질문에 답하는 구조라 경계가 낮아집니다.</li>
+<li>"따뜻해지는 곳은 밴드가 아니라 몸속"이라는 핵심 차이를 핫팩·물주머니·찜질기와 나란히 놓은 비교표로 정리해, <b>"안 뜨거움"을 단점이 아니라 차이</b>로 바꿔 읽게 했습니다.</li>
+<li>열감 영상 바로 뒤에 두어 "그런데 왜 만져도 안 뜨겁지?"라는 의문이 생기는 순간 <b>곧바로 답</b>합니다.</li></ul></div>
+
+<div class="card" data-sel="section.sub.daily"><h3><span class="no">06</span>데일리 + 요약 — "입던 옷은 그대로, 안에 밴드 하나만"<span class="go">보기 →</span></h3><ul>
 <li>사람은 좋아 보여도 <b>복잡해 보이면 행동하지 않습니다</b>. 앞에서 경쟁 제품의 번거로움을 보여줬으니 바로 "두르기만 하면 끝"을 보여줍니다.</li>
 <li>"STEP 1 + STEP 2" 덧셈 공식은 정보를 <b>두 덩어리로 끊어</b> 한눈에 이해되게 합니다. 이해가 쉬울수록 뇌는 그 대상을 더 믿을 만하다고 느낍니다.</li>
 <li>겉옷을 입으면 밴드가 보이지 않는 장면으로 "남들이 알아챌까" 하는 불안을 미리 없앱니다.</li></ul></div>
 
-<div class="card" data-sel="section.band-sec"><h3><span class="no">06</span>MADE IN KOREA<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.band-sec"><h3><span class="no">07</span>MADE IN KOREA<span class="go">보기 →</span></h3><ul>
 <li>효과를 말하기 전에 <b>기본 신뢰</b>부터 깝니다. 몸에 직접 닿는 제품은 효과보다 안전이 먼저 걸리기 때문입니다.</li>
 <li>흑백 공장 영상은 감성이 아니라 <b>기록</b>으로 읽혀서, 광고가 아니라 사실이라는 인상을 줍니다.</li></ul></div>
 
-<div class="card" data-sel="section.result-sec"><h3><span class="no">07</span>결과 — "평균 37.4℃" + 열화상 + 체온계 사진<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.result-sec"><h3><span class="no">08</span>결과 — "평균 37.4℃" + 열화상 + 체온계 사진<span class="go">보기 →</span></h3><ul>
 <li>숫자 하나를 가장 크게 보여줘 <b>기준점</b>을 심습니다. 처음 본 숫자는 이후 판단 전체의 기준이 됩니다(앵커링).</li>
 <li>열화상은 한눈에 이해되는 증거이고, 정리되지 않은 체온계 사진은 <b>연출이 아닌 실제</b>라는 신호입니다. 너무 깔끔한 증거는 오히려 의심을 부르기 때문에 날것 그대로 붙였습니다.</li></ul></div>
 
-<div class="card" data-sel="section.flow-sec"><h3><span class="no">08</span>10시간 그래프 — "벗은 뒤에도 유지되는 체온"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.flow-sec"><h3><span class="no">09</span>10시간 그래프 — "벗은 뒤에도 유지되는 체온"<span class="go">보기 →</span></h3><ul>
 <li>히어로에서 던진 약속을 그래프로 <b>다시 확인</b>시킵니다. 같은 메시지를 다른 형식으로 반복하면 뇌는 그것을 더 사실로 받아들입니다.</li>
 <li>벗은 뒤 구간만 색을 달리해 <b>시선이 "벗은 뒤"에 머물게</b> 했습니다.</li></ul></div>
 
 <h2><small>STAGE 3</small>믿게 만든다</h2>
 <p class="stage-lead">판매자의 말이 아니라 사람과 사람들의 말로 경계를 풉니다. 이 단계까지가 빠르게 결정하는 고객을 위한 구간이며, 여기서 바로 구매해도 될 만큼 이유를 다 줍니다.</p>
 
-<div class="card" data-sel="section.founder"><h3><span class="no">09</span>창업자 — "여자는 몸이 따뜻해야 한다"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.founder"><h3><span class="no">10</span>창업자 — "여자는 몸이 따뜻해야 한다"<span class="go">보기 →</span></h3><ul>
 <li>사람은 정보보다 <b>이야기에 몰입</b>할 때 경계를 풉니다. 엄마의 말, 네 번의 출산, 딸들을 향한 마음으로 이어지는 서사는 판매자가 아니라 같은 고민을 한 사람으로 느끼게 합니다.</li>
 <li>이 이야기를 맨 앞이 아니라 효과를 보여준 다음에 둔 것은, 먼저 "좋다"고 느낀 뒤에 들어야 <b>"그래서 만든 거구나"로 납득</b>되기 때문입니다.</li>
 <li>대표 얼굴 대신 버건디 도트를 배경에 깔아 엄마의 말과 제품의 핵심 부품을 <b>하나의 기억으로 묶었습니다</b>.</li></ul></div>
 
-<div class="card" data-sel="section.reviews"><h3><span class="no">10</span>리뷰 — "#벗어도_따뜻한_밴드"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.reviews"><h3><span class="no">11</span>리뷰 — "#벗어도_따뜻한_밴드"<span class="go">보기 →</span></h3><ul>
 <li>사람은 불확실할 때 <b>다른 사람의 선택을 따라갑니다</b>(사회적 증거).</li>
 <li>첫 리뷰를 "다 써봤다… 그때뿐"으로 고른 것은 인트로의 주장을 <b>고객이 자기 말로 다시 하게</b> 하려는 것입니다. 같은 말도 구매자가 할 때 훨씬 믿음이 갑니다.</li>
 <li>카톡 캡처, 체온계 사진, 박스 사진처럼 제각각인 실사용 이미지만 써서 <b>진짜라는 느낌</b>을 살렸습니다.</li></ul></div>
@@ -126,74 +140,94 @@ th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
 <h2><small>STAGE 4</small>깊이 납득시킨다</h2>
 <p class="stage-lead">망설이는 고객은 결론이 아니라 과정을 봐야 움직입니다. 그래서 문제 → 영향 → 목표 → 해답 → 반론 처리 순서로 한 계단씩 다시 쌓았습니다.</p>
 
-<div class="card" data-sel="section.worry"><h3><span class="no">11</span>고민 — "몸이 차가워서 매일 겪는 불편함"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.worry"><h3><span class="no">12</span>고민 — "몸이 차가워서 매일 겪는 불편함"<span class="go">보기 →</span></h3><ul>
 <li>사람은 <b>자기 이야기</b>를 가장 잘 기억합니다(자기 참조 효과). 사무실 에어컨, 배만 찬 아침, 키보드 위의 언 손처럼 구체적인 장면으로 "이거 나네" 하고 스스로 찾게 했습니다.</li>
 <li>사진을 모두 회청색 톤으로 맞춰 <b>색만으로 추위를 느끼게</b> 했습니다. 얼굴 없이 손·몸통·발만 보여 자기 몸을 대입하기 쉽습니다.</li>
 <li>스크롤을 따라 내려오는 눈 결정은 이 차가움이 다음 섹션까지 <b>끊기지 않고 이어지게</b> 하는 장치입니다.</li></ul></div>
 
-<div class="card" data-sel="section.low-sec"><h3><span class="no">12</span>낮은 체온의 영향 — "일상의 불편함이 끝이 아니에요"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.low-sec"><h3><span class="no">13</span>낮은 체온의 영향 — "일상의 불편함이 끝이 아니에요"<span class="go">보기 →</span></h3><ul>
 <li>불편함을 건강 문제로 한 단계 키워 <b>"그냥 두면 안 된다"는 긴장</b>을 만듭니다. 해결책을 원하는 마음은 문제가 커졌다고 느낄 때 생깁니다.</li>
 <li>논문 출처를 붙여 <b>권위</b>로 무게를 더했습니다. 엄마의 말이 연구로도 확인된다는 연결입니다.</li>
 <li>사진이 일상에서 병원 침대로 점점 무거워지게 배치해 이 구간에서 <b>감정이 가장 낮은 바닥</b>을 찍도록 했습니다.</li></ul></div>
 
-<div class="card" data-sel="section.up1-sec"><h3><span class="no">13</span>+1℃ — "내 몸의 체온이 1℃ 높아지면, 어떤 변화가 생길까?"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.up1-sec"><h3><span class="no">14</span>+1℃ — "내 몸의 체온이 1℃ 높아지면, 어떤 변화가 생길까?"<span class="tag">변경</span><span class="go">보기 →</span></h3><ul>
 <li>바닥을 찍은 직후에 <b>희망</b>을 보여줍니다. 긴장 뒤에 해소가 오면 뇌는 그 해소를 훨씬 크게 느낍니다.</li>
 <li>이 섹션부터 이미지 색을 회청색에서 <b>주황빛</b>으로 완전히 바꿨습니다. 글을 읽기 전에 색만으로 "차가움 → 따뜻함" 전환이 먼저 느껴집니다.</li>
-<li>사진 대신 몸속 일러스트(면역세포, 혈관, 장 등)를 써서 시점을 <b>"내 몸 안"</b>으로 옮겼습니다.</li>
+<li>여섯 가지 변화 카드에는 공원 산책, 스트레칭, 웃으며 먹는 아침처럼 <b>밝고 가벼운 일상 사진</b>을 붙였습니다. 앞 섹션의 아프고 무거운 장면과 정반대라, 체온이 오른 뒤의 하루를 <b>미리 살아 보게</b> 합니다.</li>
 <li>"1℃"라는 작은 숫자를 목표로 잡아 <b>달성할 수 있을 것처럼</b> 느끼게 했습니다.</li></ul></div>
 
-<div class="card" data-sel="section.made-sec"><h3><span class="no">14</span>그래서, 체온 1℃를 위해 만들었습니다<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.made-sec"><h3><span class="no">15</span>그래서, 체온 1℃를 위해 만들었습니다<span class="go">보기 →</span></h3><ul>
 <li>앞에서 세운 목표에 제품을 <b>정답으로 끼워 넣는</b> 순간입니다. 사람은 스스로 문제를 인식한 뒤 받은 해답을 훨씬 쉽게 받아들입니다.</li>
 <li>흰 배경에 제품만 단독으로 깔끔하게 둬서 이 장면이 <b>결론처럼 또렷하게</b> 남게 했습니다.</li></ul></div>
 
-<div class="card" data-sel="section.why-sec"><h3><span class="no">15</span>왜 다른 보온용품이 아닌 마이온도 밴드여야 하나?<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.why-sec"><h3><span class="no">16</span>왜 다른 보온용품이 아닌 마이온도 밴드여야 하나?<span class="go">보기 →</span></h3><ul>
 <li>해답을 보여주면 뇌는 곧바로 <b>반론</b>을 떠올립니다("핫팩으로도 되잖아?"). 그 반론이 생기기 전에 먼저 꺼내서 답합니다.</li>
 <li>흰 배경에서 검은 배경으로 넘어가는 문 역할을 해서, 여기부터 다시 <b>단호한 주장</b>이 시작된다는 신호를 줍니다.</li></ul></div>
 
-<div class="card" data-sel="section.cause-sec:not(.ka-sec)"><h3><span class="no">16</span>물주머니 / 충전식 온열기 / 일회용 핫팩 말풍선<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.cause-sec:not(.ka-sec)"><h3><span class="no">17</span>물주머니 / 충전식 온열기 / 일회용 핫팩 말풍선<span class="go">보기 →</span></h3><ul>
 <li>경쟁 제품의 단점을 직접 말하면 반발심이 생깁니다. 그래서 <b>다른 고객의 실제 후기</b>로만 채웠습니다. 비난이 아니라 증언으로 들리게 하는 구조입니다.</li>
 <li>말풍선 형식은 <b>대화를 엿듣는 느낌</b>을 줘서 광고라는 경계를 낮춥니다.</li>
 <li>움직이는 아이콘(떨어지는 수은, 닳는 배터리, 열리는 휴지통)은 짧은 문장을 1초 만에 이해시켜 <b>읽는 부담을 줄입니다</b>.</li></ul></div>
 
-<div class="card" data-sel="section.ka-sec"><h3><span class="no">17</span>심지어 + 막대그래프 (약 20분 vs 최대 10시간)<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.ka-sec"><h3><span class="no">18</span>심지어 + 막대그래프 (약 20분 vs 최대 10시간)<span class="go">보기 →</span></h3><ul>
 <li>4단계의 <b>결정타</b>입니다. 회색 막대 세 개가 바닥에 붙어 있고, 마이온도 막대 하나만 색을 가진 채 위로 솟습니다.</li>
 <li>뇌는 숫자보다 <b>길이와 색의 차이</b>를 훨씬 빠르게 받아들입니다. 설명을 읽지 않아도 승부가 끝나 보이게 했습니다.</li></ul></div>
 
-<div class="card" data-sel="section.conclusion"><h3><span class="no">18</span>결론 — "필요한 건 잠깐의 따뜻함이 아니라, 벗은 뒤에도 유지되는 체온입니다"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.conclusion"><h3><span class="no">19</span>결론 — "필요한 건 잠깐의 따뜻함이 아니라, 벗은 뒤에도 유지되는 체온입니다"<span class="go">보기 →</span></h3><ul>
 <li>페이지 처음의 "필요한 건 오직 나의 체온"과 <b>같은 문형</b>으로 닫습니다. 시작과 끝이 맞물리면 뇌는 그 메시지를 완결된 하나로 저장합니다.</li>
 <li>결론 아래 도트 접사 영상을 붙여 "그 체온을 이게 만든다"로 <b>다음 궁금증을 자연스럽게</b> 열어 둡니다.</li></ul></div>
 
 <h2><small>STAGE 5</small>불안을 없앤다</h2>
 <p class="stage-lead">마음이 기운 고객도 결제 직전에는 작은 의심 하나에 멈춥니다. 마지막 구간은 그 의심을 하나씩 지우는 순서로 짰습니다.</p>
 
-<div class="card" data-sel="section.sponge-sec"><h3><span class="no">19</span>도트 사진 (글 없음)<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.sponge-sec"><h3><span class="no">20</span>도트 사진 (글 없음)<span class="go">보기 →</span></h3><ul>
 <li>히어로에서 화산석 위 밴드의 겉면을 보여줬다면, 여기서는 같은 화산석 위에서 <b>뒤집어 속을</b> 보여줍니다. 처음 본 장면과 짝을 이루는 이미지라 낯설지 않게 다음 설명으로 넘어갑니다.</li></ul></div>
 
-<div class="card" data-sel="section.how-sec"><h3><span class="no">20</span>원리 — "체온을 복사한 복사열로 심부 깊숙이 데워"<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="#askSec2"><h3><span class="no">21</span>온열제품 반론 — "핫팩·물주머니·전기 찜질기도 체온을 올려주지 않나?"<span class="tag">추가</span><span class="go">보기 →</span></h3><ul>
+<li>원리를 설명하기 직전에 고객 머릿속의 마지막 반론을 먼저 꺼냅니다. <b>"뜨거운 게 더 좋은 것 아닌가?"</b>라는 생각이 남아 있으면 원리 설명이 들어가지 않기 때문입니다.</li>
+<li>피부 단면 그림에서 높은 열이 겉면에 화상을 남기고 심부는 그대로인 장면을 보여줘, 기존 제품의 한계를 <b>말이 아니라 그림으로</b> 이해시킵니다.</li>
+<li>"그래서 마이온도는 피부 속 심부층으로 열을 보내요"로 끝맺어, 바로 다음 원리 섹션이 <b>그 방법에 대한 답</b>이 되게 이어 붙였습니다.</li></ul></div>
+
+<div class="card" data-sel="section.how-sec"><h3><span class="no">22</span>원리 — "체온을 복사한 복사열로 심부 깊숙이 데워"<span class="go">보기 →</span></h3><ul>
 <li>사람은 <b>작동 방식을 이해하면</b> 효과를 더 믿습니다. 전기도 없이 어떻게 따뜻해지는지에 대한 의문을 그림 세 장으로 풉니다.</li>
 <li>같은 피부 단면을 세 번 반복하고 움직임만 바꿔 <b>변화만 보이게</b> 했습니다. 층도 "표피 / 피하심층" 둘로 줄여 겉과 속 대비 하나만 남겼습니다.</li></ul></div>
 
-<div class="card" data-sel="section.spic-sec"><h3><span class="no">21</span>버건디 도트 7가지 소재<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.spic-sec"><h3><span class="no">23</span>버건디 도트 7가지 소재<span class="go">보기 →</span></h3><ul>
 <li>원리를 가능하게 하는 재료를 <b>해부도처럼</b> 펼쳐 보여줍니다. 원형 확대컷마다 질감이 달라서, 글을 읽기 전에 "많은 게 들어 있다"는 느낌이 먼저 옵니다.</li></ul></div>
 
-<div class="card" data-sel="section.evi-sec"><h3><span class="no">22</span>매일 몸에 닿는 밴드, 안전부터 챙겼어요 + 4개국 특허<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.evi-sec"><h3><span class="no">24</span>매일 몸에 닿는 밴드, 안전부터 챙겼어요 + 4개국 특허<span class="go">보기 →</span></h3><ul>
 <li>광물 소재라는 말을 들으면 뇌는 자동으로 <b>위험부터 점검</b>합니다. 유해물질, 방사능, 라돈처럼 고객이 속으로 떠올릴 질문을 먼저 꺼내고 바로 답합니다.</li>
 <li>성적서와 특허증을 원본 그대로 보여줘 <b>공문서 자체의 권위</b>를 빌렸습니다.</li></ul></div>
 
-<div class="card" data-sel="section.step-sec"><h3><span class="no">23</span>사용시 꼭 알아두세요!<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.step-sec"><h3><span class="no">25</span>사용시 꼭 알아두세요!<span class="tag">변경</span><span class="go">보기 →</span></h3><ul>
 <li>이 제품의 가장 큰 실망 포인트는 "처음엔 안 뜨겁다"입니다. 사람은 <b>예상한 실망에는 덜 실망합니다.</b> 미리 알려 주면 실망이 "역시 안내대로네"로 바뀌어 반품과 낮은 평점을 막습니다.</li>
-<li>경고 내용이지만 검은 배경과 모델 화보로 만들어 주의사항이 <b>불안이 아니라 배려</b>로 느껴지게 했습니다.</li></ul></div>
+<li>경고 내용이지만 모델 화보로 문을 열고, 검은 배경 위에 흰 카드를 띄워 주의사항이 <b>불안이 아니라 배려</b>로 느껴지게 했습니다. 각 카드에 CHECK 01~04를 달아 <b>체크리스트처럼</b> 하나씩 확인하게 합니다.</li>
+<li>CHECK 02에는 "몸이 덜 찬 분 0 → 10, 많이 찬 분 -10 → 0" 계단 그래프와 1시간 남짓·며칠·수주 시점 카드를 넣었습니다. 늦게 느끼는 이유를 <b>그림으로 이해</b>하면, 느낌이 늦어도 불량이 아니라 "나는 출발점이 낮구나"로 받아들입니다.</li>
+<li>CHECK 03은 "잠시 쉬었다가 착용"할 경우와 "착용을 멈출" 경우로 나눴습니다. 대처법을 <b>미리 손에 쥐여 주면</b> 따끔거림이나 도트 자국을 봐도 당황하지 않고, 정말 멈춰야 할 때는 분명히 멈추게 합니다.</li></ul></div>
 
-<div class="card" data-sel="section.htu-sec"><h3><span class="no">24</span>착용법 → 사이즈 → 착용 TIP<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.htu-sec"><h3><span class="no">26</span>착용법 → 사이즈 → 착용 TIP<span class="go">보기 →</span></h3><ul>
 <li>결정한 고객이 마지막에 확인하는 실무 정보입니다. 같은 모델, 같은 조명, 같은 배경으로 통일해 <b>정보만 눈에 들어오게</b> 했습니다.</li>
 <li>사이즈를 표 대신 실제 밴드 길이 사진으로 비교하게 해 <b>"나는 어느 사이즈지?" 고민 시간</b>을 줄였습니다. 고민이 길어지면 결제를 미루기 때문입니다.</li></ul></div>
 
-<div class="card" data-sel="div.full-img"><h3><span class="no">25</span>엔딩 컷 (모델 + 로고)<span class="go">보기 →</span></h3><ul>
+<div class="card" data-sel="section.routine-sec"><h3><span class="no">27</span>착용 루틴 — "이렇게 두르면 더 잘 느껴요"<span class="tag">추가</span><span class="go">보기 →</span></h3><ul>
+<li>"오래 두를수록 좋겠지"라는 직관과 반대로 <b>"짧게, 매일"</b>을 먼저 말합니다. 예상과 다른 정보는 뇌가 더 오래 붙잡습니다.</li>
+<li>아침·낮·저녁·잘 때 네 장면을 착용법과 같은 카드 형식으로 보여줘, 하루 일과에 <b>그대로 끼워 넣을 수 있는 계획</b>으로 만들었습니다. 언제 할지 정해진 행동은 실제로 할 확률이 훨씬 높아집니다.</li>
+<li>"덜 느껴지면 잠시 쉬었다 다시", "오래 쉬면 처음 상태로", "위치보다 밀착" 세 가지 규칙으로 쓰다가 생길 <b>"효과가 줄었나?" 하는 의심</b>을 미리 막습니다.</li>
+<li>배경을 착용 TIP과 같은 연회색으로 맞춰, 착용법부터 루틴까지 <b>하나의 사용 설명</b>으로 이어 읽게 했습니다.</li></ul></div>
+
+<div class="card" data-sel="section.life-sec"><h3><span class="no">28</span>사용 기간 — "고장은 없지만, 오래 쓰면 닳아요"<span class="tag">추가</span><span class="go">보기 →</span></h3><ul>
+<li>결제 직전 마지막으로 떠오르는 질문은 <b>"얼마나 쓸 수 있지?"</b>입니다. 매일 쓰면 약 2년, 가끔 쓰면 최대 5년이라는 기준을 숫자로 크게 보여줘 가격을 <b>사용 기간으로 나눠 보게</b> 합니다.</li>
+<li>"고장은 없지만"이라고 먼저 말해 전자제품의 고장 걱정을 지우고, 닳는 이유는 옷처럼 자연스러운 일로 설명해 <b>솔직함이 곧 신뢰</b>가 되게 했습니다.</li>
+<li>히어로와 같은 화산석 위 밴드 사진을 배경에 깔아, 페이지 처음 본 장면을 <b>끝에서 다시 떠올리게</b> 합니다.</li></ul></div>
+
+<div class="card" data-sel="div.full-img"><h3><span class="no">29</span>엔딩 컷 (모델 + 로고)<span class="go">보기 →</span></h3><ul>
 <li>사람은 경험 전체가 아니라 <b>가장 강렬했던 순간과 마지막 순간</b>으로 기억합니다(피크-엔드 법칙).</li>
 <li>긴 정보 끝에 첫 모델 사진과 이어지는 차분한 컷을 두고 문구 없이 로고만 남겨, 마지막 기억이 <b>정보가 아니라 브랜드</b>가 되게 했습니다.</li></ul></div>
 
-<div class="card" data-sel="section.qna"><h3><span class="no">26</span>Q&amp;A → 상품정보 고시<span class="go">보기 →</span></h3><ul>
-<li>남은 질문을 모두 답해 둔 부록입니다. 배경색을 하나로 맞춰 <b>"이제 다 확인했다"는 완결감</b>을 줍니다.</li></ul></div>
+<div class="card" data-sel="section.qna"><h3><span class="no">30</span>Q&amp;A → 상품정보 고시<span class="tag">변경</span><span class="go">보기 →</span></h3><ul>
+<li>남은 질문을 모두 답해 둔 부록입니다. 배경색을 하나로 맞춰 <b>"이제 다 확인했다"는 완결감</b>을 줍니다.</li>
+<li>실제 고객 문의를 바탕으로 질문을 8개에서 19개로 늘렸습니다. 느끼는 속도, 착용 시간, 피부 반응, 생리 기간, 사용 기간처럼 <b>구매 후에 생길 질문</b>까지 미리 답해 둡니다.</li>
+<li>본문 섹션(사용시 꼭 알아두세요, 착용 루틴, 사용 기간)에서 그림으로 보여준 내용을 여기서 <b>글로 한 번 더</b> 확인하게 해, 같은 안내가 두 번 반복되며 기억에 남습니다.</li></ul></div>
 
 <h2 class="closing">페이지 전체를 관통하는 설계 원칙</h2>
 <p class="stage-lead">모든 섹션은 "잠깐 따뜻함 vs 벗어도 남는 체온"이라는 대비 하나를 형식만 바꿔 반복합니다.</p>
@@ -204,7 +238,7 @@ th{background:#FAFAFA;font-weight:700;font-size:13px;color:var(--sub)}
 <tr><td>배경으로 말하기와 듣기를 나눈다</td><td>검은 배경은 주장, 흰 배경은 공감과 설명. 번갈아 배치해 긴 페이지를 리듬 있게 읽게 함</td></tr>
 <tr><td>얼굴을 빼서 자기를 대입하게 한다</td><td>고민·낮은 체온 사진은 손·몸통·발만 보여 보는 사람이 자기 몸으로 받아들이게 함</td></tr>
 <tr><td>두 번 설득한다</td><td>상단은 빠르게 결정하는 고객을 위해 결론부터, 하단은 망설이는 고객을 위해 문제부터</td></tr>
-<tr><td>반론은 생기기 전에 꺼낸다</td><td>경쟁 제품 비교, 안전성, "처음엔 안 뜨거움"까지 고객이 떠올리기 전에 먼저 답함</td></tr>
+<tr><td>반론은 생기기 전에 꺼낸다</td><td>"밴드가 안 따뜻해요", "핫팩도 체온을 올려주지 않나?", 안전성, 느끼는 속도, 사용 기간까지 고객이 떠올리기 전에 먼저 답함</td></tr>
 </table>
 </main>
 
